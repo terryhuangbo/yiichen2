@@ -1,0 +1,50 @@
+@charset "utf-8";
+/*
+Theme Name: Young China Reviews
+Theme URI: http://review.youngchina.org
+Description: 本主题设计开发由: 创想之翼工作室.
+Version: 1.0
+Author: 张广昌
+Author URI: http://www.cxzy.com/
+Tags: Young, China, Reviews
+*/
+/* Global CSS */
+.clearfix{clear:both;font-size:1px;width:1px;height:0;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0}
+
+.wpyounavi{ margin:2em 0em 1em; padding-left:1em; font-size:16px; height:36px; line-height:38px; color:#FFF; background:#1D6385 url(../images/navi.png) repeat-x 0 0;}
+.wpyounavi span{ float:left; padding:0px 10px; width:120px; height:36px; text-align:center; display:block; cursor:pointer;}
+.wpyounavi span.mouseover{ color:#123E52; background:url(../images/menu_active.gif) no-repeat center -10px;}
+#homepage-options, #ad-options{ display:none;}
+
+.wpyoutitle{ margin:2em 0em 1em; padding-left:1em; font-size:13px; height:32px; line-height:34px; color:#154760; background-color:#777; border:1px solid #454545; border-bottom:none;}
+.wpyoutitle span{ float:left; margin-right:20px; padding:0px 10px; width:120px; height:32px; text-align:center; background:url(../images/menu_active.gif) no-repeat center -13px; display:block; text-shadow:1px 1px 0px #FFF; cursor:pointer;}
+
+.wpyou-form{ border:1px solid #E5E5E5; background-color:#F1F1F1;}
+.wpyou-form tr{ background-color:#FFF;}
+.wpyou-form tr.alt{ background-color:#EEF3F7;}
+.wpyou-form tr:hover, .wpyou-form td:hover{ border-bottom:1px dotted #787878; background-color:#FEF4EF;}
+.wpyou-form th, .wpyou-form td{ border-bottom:1px dotted #CCC;}
+.wpyou-form th{ padding-right:15px; width:220px !important; font-weight:bold; text-align:right; background-color:#F1F1F1;}
+.wpyou-form td{ line-height:24px !important; _background-color:#FFF;}
+.wpyou-form th:hover{ background-color:#EFE8E7;}
+.wpyou-form span.description{ padding-left:4px; font-style:normal !important; font-weight:normal;} 
+.wpyou-form input.button-primary{ padding:5px 180px 6px; font-size:16px !important; -moz-border-radius:5px; border-radius:5px; background-color:#288AB7;}
+.wpyou-form textarea:hover, input:hover, select:hover{ border-color:#007777 !important;}
+
+.wpyousub{ margin-bottom:20px; padding-left:20px; color:#BBB !important;}
+.columntitle{ padding:5px 8px 6px; font-size:14px; font-weight:bold; text-shadow:none; color:#FFF; background:#21759B; -moz-border-radius:5px; -webkit-border-radius:5px;}
+
+.catid-text{ width:10em !important;}
+
+.allcatsid{ float:left; border:1px solid #FFD59B;  background-color:#EFE8E7; clear:both;}
+.allcatsid ul li{ float:left; margin-bottom:0px; padding:5px 5px; line-height:24px; text-align:center; border-right:1px solid #FFD59B; border-bottom:1px solid #FFD59B; color:#787878;}
+.allcatsid ul li strong{ color:#222;}
+
+.setcolumn{ margin-bottom:30px;}
+.wpyoutips{ margin:5px 0 15px; padding:0px 10px; background-color:#FFFFE0; border:1px solid #E6DB55; -moz-border-radius:3px; border-radius:3px;}
+.wpyoutips p{ margin:5px 0px 6px;}
+.wpyoutips p em{ font-style:normal; color:#1D6385;}
+
+.txtad{ width:35em; height:10em;}
+
+.form-table td{ font-size:12px !important;}

@@ -1,0 +1,13 @@
+.use-modern-browser {
+  width: 100%;
+  display: block!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffef36;
+  z-index: 99999;
+  color: red;
+  text-align: center;
+  line-height: 65px;
+  font-weight: 700;
+}
