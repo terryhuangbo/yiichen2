@@ -1,11 +1,7 @@
 <?php
 $Tool = new Tools();
-$memcache = memcache_connect($Tool->_params('memcache_host'), $Tool->_params('memcache_port'));
-$memcache = new Memcache;
-$memcache->connect('127.0.0.1', 11211);
-$memcache->set('mem_key', 'Hello Memcache!', 0, 180);
-$val = $memcache->get('mem_key');
-echo $val;
+$Cache = new Cache();
+
 ?>
 <!DOCTYPE html>
 <html xmlns:wb="http://open.weibo.com/wb">

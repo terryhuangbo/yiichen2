@@ -68,7 +68,7 @@ function customSetting(){ ?>
                 </tr>
                 <tr>
                     <th scope="row">网站介绍</th>
-                    <td><input type="text" name="site-logo" id="site-info" value="<?php echo get_option('site-intro'); ?>" /></td>
+                    <td><input type="text" name="site-intro" id="site-info" value="<?php echo get_option('site-intro'); ?>" /></td>
                 </tr>
                 <tr>
                     <th scope="row">网站公告（请填写图片链接）:</th>
@@ -85,15 +85,31 @@ function customSetting(){ ?>
 }
 //缓存页面
 function customCacheSetting(){ ?>
+
     <div class="wrap">
         <h2>缓存设置</h2>
         <?php
-
+        $_expire_array = [
+            '-1' => '关闭',
+            '15' => '15秒',
+            '50' => '1分钟',
+            '300' => '5分钟',
+            '600' => '10分钟',
+            '1800' => '30分钟',
+            '3600' => '1小时',
+            '21600' => '6小时',
+            '43200' => '12小时',
+            '86400' => '一天',
+            '604800' => '1周',
+        ];
         if (count($_POST) > 0 && isset($_POST['update_options'])) {
 
             $options = [
                 //缓存是否需开启
-                'cache',
+                'cache-switch',
+                //首页缓存是否需开启
+                'cache-index-expire',
+
 
             ];
 
@@ -115,13 +131,22 @@ function customCacheSetting(){ ?>
                 <tr>
                     <th scope="row">缓存是否开启:</th>
                     <td>
-                        <select name="cache">
-                            <option value="off">关闭</option>
-                            <option value="on">开启</option>
+                        <select name="cache-switch">
+                            <option value="off" <?php echo get_option('cache-switch') == 'off' ? 'selected = "selected"' : '' ?>>关闭</option>
+                            <option value="on" <?php echo get_option('cache-switch') == 'on' ? 'selected = "selected"' : '' ?>>开启</option>
                         </select>
                     </td>
                 </tr>
-
+                <tr>
+                    <th scope="row">首页缓存:</th>
+                    <td>
+                        <select name="cache-index-expire">
+                            <?php foreach($_expire_array as $k => $v ): ?>
+                                <option value="<?php echo $k ?>" <?php echo get_option('cache-index-expire ') == $k ? 'selected = "selected"' : '' ?>><?php echo $v ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </td>
+                </tr>
 
 
             </table>

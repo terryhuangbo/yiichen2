@@ -195,4 +195,5 @@
 </html>
 <?php
 unset($Tool);
+unset($Cache);
 ?>

@@ -4,7 +4,21 @@
  **/
 
 get_header();
-$fields = get_fields($post->ID);
+//扩展字段
+$fields = $Cache->_get('cache-index-field');
+$fields = $fields ? $fields : $Cache->_set('cache-index-field', get_fields($post->ID), 'cache-index-expire');
+//最新文章$_push_1，$_push_2，$_push_3三个推荐位
+$_push_1 = 3;
+$_push_2 = 3;
+$_push_3 = 3;
+$_push_post_total = $_push_1 + $_push_2 + $_push_3;
+$_index_posts = $Cache->_get('cache-index-latest-posts');
+$_index_posts = $_index_posts ? $_index_posts
+    : $Cache->_set('cache-index-latest-posts', _get_index_posts($_push_post_total), 'cache-index-expire');
+//首页视频
+$videos = $Cache->_get('cache-index-videos');
+$videos = $videos ? $videos : $Cache->_set('cache-index-videos', _get_index_videos(10), 'cache-index-expire');
+
 ?>
 
 <div id="content-outer" class="content-outer clearfix fix-header-height">
@@ -137,68 +151,51 @@ $fields = get_fields($post->ID);
 <div class="main">
     <div class="index-content-normal posts-list">
         <!-- 第一个推荐位，只能有三个-->
-        <?php
-        $args = [
-            'post_type' => 'post',
-            'offset' => 0,
-            'posts_per_page' => 3,
-            'post_status' => 'publish',
-            'orderby'=>'post_date',
-        ];
-        $query = new WP_Query($args);
-        if($query->have_posts()){
-            while($query->have_posts()){
-                $query->the_post();
-                ?>
-                <article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID() ?>"
-                         class="row post-item-container">
-                    <div class="new-post-item-content">
-                        <a rel="canonical" class="news-pic" itemprop="thumbnailUrl" href="<?php the_permalink() ?>" target="_blank"
-                           style="background-image:url('<?php echo $Tool->_get_img_from_html(get_the_content()) ?>')">
-                        </a>
-                        <h2>
-                            <a rel="external" href="<?php the_permalink() ?>" title="Permalink to <?php the_title() ?>">
-                    <span itemprop="headline">
-                      <?php echo $Tool->_str_cut(get_the_title(), 0, 20, false) ?>
-                    </span>
-                            </a>
-                            <div class="comment-count new-comment-count">
-                                <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
-                                   ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                    <i class="ifanr2015 ifanr2015-pinglun">
-                                    </i>
-                                    <?php comments_number() ?>
-                                </a>
-                                <meta itemprop="commentCount" content="0" />
-                            </div>
-                        </h2>
-                        <p itemprop="description" class="js-excerpt" data-clamp="2">
-                            <?php echo get_the_excerpt(); ?>
-                        </p>
-                        <div class="tag-label">
-                            <?php $cat = $Tool->_object_to_array(get_the_category()) ?>
-                            <a class="tag" itemprop="keywords" href="<?php echo get_category_link($Tool->_value($cat[0]['term_id'], 0)); ?>" target="_blank">
-                                <?php echo $Tool->_value($cat[0]['name']); ?>
-                            </a>
-                  <span class="seperator">
-                    |
-                  </span>
-                  <span class="author">
-                    <a href="javaScript:viod(0);" title="Posts by <?php the_author() ;?>"
-                       rel="author">
-                        <?php the_author() ;?>
+        <?php foreach(array_splice($_index_posts, 0, $_push_1) as $p):   ?>
+            <article itemscope itemtype="http://schema.org/Article" id="post-<?php echo $p['ID'] ?>"
+                     class="row post-item-container">
+                <div class="new-post-item-content">
+                    <a rel="canonical" class="news-pic" itemprop="thumbnailUrl" href="<?php echo $p['link'] ?>" target="_blank"
+                       style="background-image:url('<?php echo $p["image"] ?>')">
                     </a>
-                  </span>
-                            <meta itemprop="author" content="<?php the_author() ;?>" />
-                  <span class="date" itemprop="datePublished" datetime="<?php the_date('Y-m-d') ?>">
-                    <?php echo $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))) ?>
-                  </span>
+                    <h2>
+                        <a rel="external" href="<?php echo $p['link'] ?>" title="Permalink to <?php echo $p['title'] ?>">
+                            <span itemprop="headline">
+                              <?php echo $p['title'] ?>
+                            </span>
+                        </a>
+                        <div class="comment-count new-comment-count">
+                            <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
+                               ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
+                                <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
+                            </a>
+                            <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
                         </div>
+                    </h2>
+                    <p itemprop="description" class="js-excerpt" data-clamp="2">
+                        <?php echo $p['introduce']  ?>
+                    </p>
+                    <div class="tag-label">
+                        <a class="tag" itemprop="keywords" href="<?php echo $p['category_link']  ?>" target="_blank">
+                            <?php echo $p['category']  ?>
+                        </a>
+                        <span class="seperator">
+                            |
+                        </span>
+                        <span class="author">
+                            <a href="javaScript:viod(0);" title="Posts by <?php echo $p['author']; ?>"
+                               rel="author">
+                                <?php echo $p['author']; ?>
+                            </a>
+                        </span>
+                        <meta itemprop="author" content="<?php echo $p['author'] ;?>" />
+                        <span class="date" itemprop="datePublished" datetime="<?php echo $p['pubDate'] ?>">
+                            <?php echo $p['difDate'] ?>
+                        </span>
                     </div>
-                </article>
-            <?php  } ?>
-        <?php  } ?>
-        <?php  wp_reset_postdata(); ?>
+                </div>
+            </article>
+        <?php  endforeach; ?>
         <div class="dasheng-wrapper">
             <div class="fullwidth row">
             <span class="dasheng-icon">
@@ -242,68 +239,51 @@ $fields = get_fields($post->ID);
         </div>
 
         <!-- 第二个推荐位，只能有三个-->
-        <?php
-        $args = [
-            'post_type' => 'post',
-            'offset' => 3,
-            'posts_per_page' => 3,
-            'post_status' => 'publish',
-            'orderby'=>'post_date',
-        ];
-        $query = new WP_Query($args);
-        if($query->have_posts()){
-            while($query->have_posts()){
-                $query->the_post();
-                ?>
-                <article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID() ?>"
-                         class="row post-item-container">
-                    <div class="new-post-item-content">
-                        <a rel="canonical" class="news-pic" itemprop="thumbnailUrl" href="<?php the_permalink() ?>" target="_blank"
-                           style="background-image:url('<?php echo $Tool->_get_img_from_html(get_the_content()) ?>')">
-                        </a>
-                        <h2>
-                            <a rel="external" href="<?php the_permalink() ?>" title="Permalink to <?php the_title() ?>">
-                                <span itemprop="headline">
-                                  <?php echo $Tool->_str_cut(get_the_title(), 0, 20, false) ?>
-                                </span>
-                            </a>
-                            <div class="comment-count new-comment-count">
-                                <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
-                                   ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                    <i class="ifanr2015 ifanr2015-pinglun">
-                                    </i>
-                                    <?php comments_number() ?>
-                                </a>
-                                <meta itemprop="commentCount" content="0" />
-                            </div>
-                        </h2>
-                        <p itemprop="description" class="js-excerpt" data-clamp="2">
-                            <?php echo get_the_excerpt(); ?>
-                        </p>
-                        <div class="tag-label">
-                            <?php $cat = $Tool->_object_to_array(get_the_category()) ?>
-                            <a class="tag" itemprop="keywords" href="<?php echo get_category_link($Tool->_value($cat[0]['term_id'], 0)); ?>" target="_blank">
-                                <?php echo $Tool->_value($cat[0]['name']); ?>
-                            </a>
-                  <span class="seperator">
-                    |
-                  </span>
-                  <span class="author">
-                    <a href="javaScript:viod(0);" title="Posts by <?php the_author() ;?>"
-                       rel="author">
-                        <?php the_author() ;?>
+        <?php foreach(array_splice($_index_posts, $_push_1, $_push_2) as $p):   ?>
+            <article itemscope itemtype="http://schema.org/Article" id="post-<?php echo $p['ID'] ?>"
+                     class="row post-item-container">
+                <div class="new-post-item-content">
+                    <a rel="canonical" class="news-pic" itemprop="thumbnailUrl" href="<?php echo $p['link'] ?>" target="_blank"
+                       style="background-image:url('<?php echo $p["image"] ?>')">
                     </a>
-                  </span>
-                            <meta itemprop="author" content="<?php the_author() ;?>" />
-                  <span class="date" itemprop="datePublished" datetime="<?php the_date('Y-m-d') ?>">
-                    <?php echo $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))) ?>
-                  </span>
+                    <h2>
+                        <a rel="external" href="<?php echo $p['link'] ?>" title="Permalink to <?php echo $p['title'] ?>">
+                            <span itemprop="headline">
+                              <?php echo $p['title'] ?>
+                            </span>
+                        </a>
+                        <div class="comment-count new-comment-count">
+                            <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
+                               ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
+                                <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
+                            </a>
+                            <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
                         </div>
+                    </h2>
+                    <p itemprop="description" class="js-excerpt" data-clamp="2">
+                        <?php echo $p['introduce']  ?>
+                    </p>
+                    <div class="tag-label">
+                        <a class="tag" itemprop="keywords" href="<?php echo $p['category_link']  ?>" target="_blank">
+                            <?php echo $p['category']  ?>
+                        </a>
+                        <span class="seperator">
+                            |
+                        </span>
+                        <span class="author">
+                            <a href="javaScript:viod(0);" title="Posts by <?php echo $p['author']; ?>"
+                               rel="author">
+                                <?php echo $p['author']; ?>
+                            </a>
+                        </span>
+                        <meta itemprop="author" content="<?php echo $p['author'] ;?>" />
+                        <span class="date" itemprop="datePublished" datetime="<?php echo $p['pubDate'] ?>">
+                            <?php echo $p['difDate'] ?>
+                        </span>
                     </div>
-                </article>
-            <?php  } ?>
-        <?php  } ?>
-        <?php  wp_reset_postdata(); ?>
+                </div>
+            </article>
+        <?php  endforeach; ?>
     </div>
 </div>
 
@@ -483,55 +463,34 @@ $fields = get_fields($post->ID);
             </div>
         </div>
         <div class="video-list-container">
-            <?php
-            $args = [
-                'post_type' => 'post',
-                'offset' => 0,
-                'posts_per_page' => 10,
-                'post_status' => 'publish',
-                'orderby'=>'post_date',
-                'tax_query' => [
-                    [
-                        'taxonomy' => 'category',
-                        'field'    => 'slug',
-                        'terms'    => 'video',
-                    ],
-                ]
-            ];
-            $query = new WP_Query($args);
-            if($query->have_posts()){
-                while($query->have_posts()){
-                    $query->the_post();
-                    $video_fields = get_fields(get_the_ID());
-                    ?>
-                    <a class="list-item-container js-list-video" href="http://www.ifanr.com/video/626463"
-                       data-video-iframe="<iframe src='<?php echo $Tool->_value($video_fields['video_link']) ?>' frameborder=0 allowfullscreen></iframe>"
-                       ga-track="event" ga-action="click" ga-event-category="video" ga-event-label="爱范视频">
-                        <div class="mask video-mask-black">
+            <?php foreach($videos as $video): ?>
+                <a class="list-item-container js-list-video" href="http://www.ifanr.com/video/626463"
+                   data-video-iframe="<iframe src='<?php echo $video['video_link'] ?>' frameborder=0 allowfullscreen></iframe>"
+                   ga-track="event" ga-action="click" ga-event-category="video" ga-event-label="少年中国视频">
+                    <div class="mask video-mask-black">
+                    </div>
+                    <div class="mask video-play-mask">
+                        <i class="ifanr2015 ifanr2015-bofang">
+                        </i>
+                        <span class="play-text">
+                          播放中...
+                        </span>
+                    </div>
+                    <div class="bg-img" style="background-image:url('<?php echo $video['video_cover'] ?>')">
+                    </div>
+                    <div class="video-info-container">
+                        <div class="video-headline">
+                            <?php echo $video['title'] ?>
                         </div>
-                        <div class="mask video-play-mask">
-                            <i class="ifanr2015 ifanr2015-bofang">
-                            </i>
-                            <span class="play-text">
-                              播放中...
-                            </span>
+                        <div class="video-time">
+                            时长：<?php echo $video['video_duartion'] ?>
                         </div>
-                        <div class="bg-img" style="background-image:url('<?php echo $Tool->_value($video_fields['video_cover']['url']) ?>')">
+                        <div class="video-date">
+                            <?php echo $video['difDate'] ?>
                         </div>
-                        <div class="video-info-container">
-                            <div class="video-headline">
-                                <?php the_title() ?>
-                            </div>
-                            <div class="video-time">
-                                时长：<?php echo $Tool->_value($video_fields['video_duartion']) ?>
-                            </div>
-                            <div class="video-date">
-                                <?php echo $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))) ?>
-                            </div>
-                        </div>
-                    </a>
-                <?php } ?>
-            <?php } ?>
+                    </div>
+                </a>
+            <?php endforeach ?>
         </div>
     </div>
     <div class="mask video-mask-left mask-bg-left">
@@ -543,68 +502,51 @@ $fields = get_fields($post->ID);
     <div class="main js-index-part-two">
         <div class="index-content-normal posts-list">
             <!-- 第三个推荐位，只能有六个-->
-            <?php
-            $args = [
-                'post_type' => 'post',
-                'offset' => 6,
-                'posts_per_page' => 6,
-                'post_status' => 'publish',
-                'orderby'=>'post_date',
-            ];
-            $query = new WP_Query($args);
-            if($query->have_posts()){
-                while($query->have_posts()){
-                    $query->the_post();
-                    ?>
-                    <article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID() ?>"
-                             class="row post-item-container">
-                        <div class="new-post-item-content">
-                            <a rel="canonical" class="news-pic" itemprop="thumbnailUrl" href="<?php the_permalink() ?>" target="_blank"
-                               style="background-image:url('<?php echo $Tool->_get_img_from_html(get_the_content()) ?>')">
+            <?php foreach(array_splice($_index_posts, $_push_1 + $_push_2, $_push_3) as $p):   ?>
+                <article itemscope itemtype="http://schema.org/Article" id="post-<?php echo $p['ID'] ?>"
+                         class="row post-item-container">
+                    <div class="new-post-item-content">
+                        <a rel="canonical" class="news-pic" itemprop="thumbnailUrl" href="<?php echo $p['link'] ?>" target="_blank"
+                           style="background-image:url('<?php echo $p["image"] ?>')">
+                        </a>
+                        <h2>
+                            <a rel="external" href="<?php echo $p['link'] ?>" title="Permalink to <?php echo $p['title'] ?>">
+                            <span itemprop="headline">
+                              <?php echo $p['title'] ?>
+                            </span>
                             </a>
-                            <h2>
-                                <a rel="external" href="<?php the_permalink() ?>" title="Permalink to <?php the_title() ?>">
-                                    <span itemprop="headline">
-                                      <?php echo $Tool->_str_cut(get_the_title(), 0, 20, false) ?>
-                                    </span>
+                            <div class="comment-count new-comment-count">
+                                <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
+                                   ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
+                                    <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
                                 </a>
-                                <div class="comment-count new-comment-count">
-                                    <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
-                                       ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                        <i class="ifanr2015 ifanr2015-pinglun">
-                                        </i>
-                                        <?php comments_number() ?>
-                                    </a>
-                                    <meta itemprop="commentCount" content="0" />
-                                </div>
-                            </h2>
-                            <p itemprop="description" class="js-excerpt" data-clamp="2">
-                                <?php echo get_the_excerpt(); ?>
-                            </p>
-                            <div class="tag-label">
-                                <?php $cat = $Tool->_object_to_array(get_the_category()) ?>
-                                <a class="tag" itemprop="keywords" href="<?php echo get_category_link($Tool->_value($cat[0]['term_id'], 0)); ?>" target="_blank">
-                                    <?php echo $Tool->_value($cat[0]['name']); ?>
-                                </a>
-                                  <span class="seperator">
-                                    |
-                                  </span>
-                                  <span class="author">
-                                    <a href="javaScript:viod(0);" title="Posts by <?php the_author() ;?>"
-                                       rel="author">
-                                        <?php the_author() ;?>
-                                    </a>
-                                  </span>
-                                <meta itemprop="author" content="<?php the_author() ;?>" />
-                                  <span class="date" itemprop="datePublished" datetime="<?php the_date('Y-m-d') ?>">
-                                    <?php echo $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))) ?>
-                                  </span>
+                                <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
                             </div>
+                        </h2>
+                        <p itemprop="description" class="js-excerpt" data-clamp="2">
+                            <?php echo $p['introduce']  ?>
+                        </p>
+                        <div class="tag-label">
+                            <a class="tag" itemprop="keywords" href="<?php echo $p['category_link']  ?>" target="_blank">
+                                <?php echo $p['category']  ?>
+                            </a>
+                        <span class="seperator">
+                            |
+                        </span>
+                        <span class="author">
+                            <a href="javaScript:viod(0);" title="Posts by <?php echo $p['author']; ?>"
+                               rel="author">
+                                <?php echo $p['author']; ?>
+                            </a>
+                        </span>
+                            <meta itemprop="author" content="<?php echo $p['author'] ;?>" />
+                        <span class="date" itemprop="datePublished" datetime="<?php echo $p['pubDate'] ?>">
+                            <?php echo $p['difDate'] ?>
+                        </span>
                         </div>
-                    </article>
-                <?php  } ?>
-            <?php  } ?>
-            <?php  wp_reset_postdata(); ?>
+                    </div>
+                </article>
+            <?php  endforeach; ?>
         </div>
     </div>
     <div class="sbl row">
