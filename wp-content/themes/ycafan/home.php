@@ -18,7 +18,12 @@ $_index_posts = $_index_posts ? $_index_posts
 //首页视频
 $videos = $Cache->_get('cache-index-videos');
 $videos = $videos ? $videos : $Cache->_set('cache-index-videos', _get_index_videos(10), 'cache-index-expire');
-
+//专题文章区
+$_special_slug = $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special');
+$_special_num = $Tool->_value($fields['right_recommend'][0]['right_recommend_num'], 10);
+$_special_posts = $Cache->_get('cache-index-special-posts');
+$_special_posts = $_special_posts ? $_special_posts
+    : $Cache->_set('cache-index-special-posts', _get_index_specials($_special_slug, $_special_num), 'cache-index-expire');
 ?>
 
 <div id="content-outer" class="content-outer clearfix fix-header-height">
@@ -305,51 +310,31 @@ $videos = $videos ? $videos : $Cache->_set('cache-index-videos', _get_index_vide
                     <i class="iconfont iconfont-buzz">
                     </i>
                     <h1 class="widget-buzz-title">
-                        <?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_title']) ?>
+                        <?php echo $_special_slug ?>
                     </h1>
                 </div>
                 <div class="nano buzz-list-container js-nano">
                     <ul class="buzz-list nano-content js-buzz-list"
                         category="<?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special')  ?>">
                         <!-- buzz item -->
-                        <?php
-                        $args = [
-                            'post_type' => 'post',
-                            'offset' => 0,
-                            'posts_per_page' => $Tool->_value($fields['right_recommend'][0]['right_recommend_num'], 10),
-                            'post_status' => 'publish',
-                            'orderby'=>'post_date',
-                            'tax_query' => [
-                                [
-                                    'taxonomy' => 'category',
-                                    'field'    => 'slug',
-                                    'terms'    => $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special'),
-                                ],
-                            ]
-                        ];
-                        $query = new WP_Query($args);
-                        if($query->have_posts()){
-                            while($query->have_posts()){
-                                $query->the_post();
-                        ?>
+                        <?php foreach($_special_posts as $p): ?>
                             <li class="buzz-item">
                                 <div class="buzz-item-container">
                                     <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget"
                                         ga-event-label="ifanr-buzz">
-                                        <a target="_blank" href="<?php the_permalink() ?>" data-source-url="<?php the_permalink() ?>"
+                                        <a target="_blank" href="<?php echo $p['link'] ?>" data-source-url="<?php echo $p['link'] ?>"
                                            itemprop="url" class="buzz-item-link">
-                                            <?php the_title(); ?>
+                                            <?php echo $p['title'] ?>
                                         </a>
                                     </h2>
                                     <div class="buzz-item-footer">
-                                          <span class="buzz-item-date" itemprop="datePublished" datetime="<? get_the_modified_time('Y-m-d H:i:s') ?>">
-                                            <?php echo $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))) ?>
+                                          <span class="buzz-item-date" itemprop="datePublished" datetime="<?php echo $p['post_modified'] ?>">
+                                            <?php echo $p['difDate'] ?>
                                           </span>
                                     </div>
                                 </div>
                             </li>
-                            <?php } ?>
-                        <?php } ?>
+                        <?php endforeach ?>
                         <!-- buzz item -->
                         <li class="loading js-loading">
                             <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"

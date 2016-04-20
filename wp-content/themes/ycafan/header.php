@@ -1,7 +1,6 @@
 <?php
 $Tool = new Tools();
 $Cache = new Cache();
-
 ?>
 <!DOCTYPE html>
 <html xmlns:wb="http://open.weibo.com/wb">

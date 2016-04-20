@@ -86,6 +86,7 @@ class Cache extends Memcache
             $this->message = 'Memcache get failed: Gerneral Cache Switch is off';
             return false;
         }
+
         $_cache_val = $this->get($key);
         if(!$_cache_val){
             $this->message = 'Memcache get Successfully: but the key is not found';
