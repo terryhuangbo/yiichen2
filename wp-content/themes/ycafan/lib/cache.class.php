@@ -21,11 +21,6 @@ class Cache extends Memcache
      * @return mixed mix
      **/
     public function _set($key, $val, $expire){
-        //$key或者$val或者$expire为空
-        if(empty($key) || empty($val) || empty($expire)){
-            $this->message = 'Memcache set failed: Parameters are illegal';
-            return $val;
-        }
         //无法连接memcache服务器
         if(!$this->cache){
             $this->message = 'Memcache set failed: Con not connect to Memcache Server';
@@ -37,7 +32,11 @@ class Cache extends Memcache
             $this->message = 'Memcache set failed: Gerneral Cache Switch is off';
             return $val;
         }
-
+        //$key或者$val或者$expire为空
+        if(empty($key) || empty($val) || empty($expire)){
+            $this->message = 'Memcache set failed: Parameters are illegal';
+            return $val;
+        }
         //如果$expire为数值
         if(is_numeric($expire)){
             $this->set($key, $val, 0, $expire);
@@ -67,15 +66,11 @@ class Cache extends Memcache
 
     /**
      * 获取缓存
-     * * * @param $key string 缓存的key
+     * @param $key string 缓存的key
+     *  @param $expire string 过期的时间，如果为string 则从get_option中获取
      * @return mixed mix
      **/
-    public function _get($key){
-        //$key为空
-        if(empty($key)){
-            $this->message = 'Memcache get failed: Parameters $key is illegal';
-            return false;
-        }
+    public function _get($key, $expire = ''){
         //无法连接memcache服务器
         if(!$this->cache){
             $this->message = 'Memcache get failed: Con not connect to Memcache Server';
@@ -86,7 +81,22 @@ class Cache extends Memcache
             $this->message = 'Memcache get failed: Gerneral Cache Switch is off';
             return false;
         }
-
+        //$key为空
+        if(empty($key)){
+            $this->message = 'Memcache get failed: Parameters $key is illegal';
+            return false;
+        }
+        if(!empty($expire)){
+            //判断是否设置该缓存过期时间，如果没有设置，取默认值
+            $expire_time = get_option($expire);
+            if($expire_time == ''){
+                $this->message = 'Memcache set failed: Key is not set';
+                return false;
+            }else if(intval($expire_time) < 0){
+                $this->message = 'Memcache '. $key .' has been closed';
+                return false;
+            }
+        }
         $_cache_val = $this->get($key);
         if(!$_cache_val){
             $this->message = 'Memcache get Successfully: but the key is not found';

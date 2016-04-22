@@ -127,9 +127,6 @@ function _get_index_specials($slug, $num){
 }
 
 
-
-
-
 //获取分类文章
 add_action('wp_ajax_nopriv_get_cate', 'ajax_get_cate');
 add_action('wp_ajax_get_cate', 'ajax_get_cate');
