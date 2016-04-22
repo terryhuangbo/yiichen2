@@ -26,6 +26,8 @@ $_special_posts = $Cache->_get('cache-index-special-posts', $_ex_field);
 $_special_posts = $_special_posts ? $_special_posts
     : $Cache->_set('cache-index-special-posts', _get_index_specials($_special_slug, $_special_num), $_ex_field);
 
+hb($_index_posts);
+
 ?>
 
 <div id="content-outer" class="content-outer clearfix fix-header-height">

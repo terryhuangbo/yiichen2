@@ -352,15 +352,15 @@
             a = $.extend({},
             c.options.params, a);
             if (a.action === "mindstore") {
-                $.ajax({
-                    url: "http://mindstore.io/api/v1.2/mind/",
-                    data: $.extend(a),
-                    dataType: "json",
-                    method: "get",
-                    success: function(a) {
-                        b(a.objects)
-                    }
-                })
+                //$.ajax({
+                //    url: "http://mindstore.io/api/v1.2/mind/",
+                //    data: $.extend(a),
+                //    dataType: "json",
+                //    method: "get",
+                //    success: function(a) {
+                //        b(a.objects)
+                //    }
+                //})
             } else if ( 1 ) {
                 //huangbo
                 $.ajax({
@@ -4319,7 +4319,7 @@ default = {
         }
     };
     a.IndexMindStoreArticlesList = d
-})(window, jQuery, $clamp); 
+})(window, jQuery, $clamp);
 (function() {
     "use strict";
     var a = $(".js-video-container");
@@ -5460,7 +5460,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        return undefined;//huangbo remove cache
+        //return undefined;//huangbo remove cache
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {
@@ -5622,7 +5622,8 @@ default = {
     if (ns.wpPageNowIs("home") || ns.wpPageNowIs("archive")) {
         c()
     }
-    if (ns.wpPageNowIs("home")) { (new IndexMindStoreArticlesList).init().render()
+    if (ns.wpPageNowIs("home")) {
+        //(new IndexMindStoreArticlesList).init().render()
     }
 })(jQuery, ga); 
 (function(a, b, c) {

@@ -24,7 +24,7 @@
           <ul>
             <li><a href="/app">AppSolution</a></li>
             <li><a href="/coolbuy">玩物志</a></li>
-            <li><a href="http://mindstore.io/">MindStore</a></li>
+            <li><a href="/coolbuy">MindStore</a></li>
             <li><a href="/data">数读</a></li>
             <li><a href="https://socialbase.cn/">SocialBase</a></li>
           </ul>
