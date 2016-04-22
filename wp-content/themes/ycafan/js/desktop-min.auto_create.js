@@ -1394,7 +1394,7 @@ function(a) {
         p += d(f);
         p += '" style="background-image:url(\'';
         p += d(g);
-        p += '!400\')"></a> <h2> <a href="';
+        p += '\')"></a> <h2> <a href="';
         p += d(f);
         p += '" rel="external" title="Permalink to ';
         p += d(h);
@@ -5460,7 +5460,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        //return undefined;//huangbo remove cache
+        return undefined;//huangbo remove cache
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {
@@ -5509,12 +5509,10 @@ default = {
             nextPageNum: 1
         };
         var q = {
-            //expiresIn: 43200
-            expiresIn: 1
+            expiresIn: 43200
         };
         var r;
         var s;
-        console.log(b);
         var t = function(b, i) {
             var k;
             s = i;
