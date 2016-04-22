@@ -57,10 +57,10 @@ $Cache = new Cache();
         IFR.user.avatarUrl = '';
 
         // sso 用户中心 url 统一配置, 见 config
-        ns.SSO_URL_MYACCOUNT = "https://sso.ifanr.com/myaccount/";
-        ns.SSO_URL_LOGIN = "https://sso.ifanr.com/login/";
-        ns.SSO_URL_REGISTER = "https://sso.ifanr.com/register/";
-        ns.SSO_URL_LOGOUT = "https://sso.ifanr.com/logout/";
+        ns.SSO_URL_MYACCOUNT = "";
+        ns.SSO_URL_LOGIN = "";
+        ns.SSO_URL_REGISTER = "";
+        ns.SSO_URL_LOGOUT = "";
 
         ns.COMMENTER_EMAIL = 'commenter_email';
         ns.COMMENTER_NAME = 'commenter_name';
@@ -208,7 +208,7 @@ $Cache = new Cache();
                 <div id="nav-user-button">
                   <div class="ifr-user-nav-menu">
                     <ul class="nav-user-subs ifr-user-dropdown-menu hide m-t-10" id="nav-user-subs">
-                      <li class="sub-item"><a href="https://sso.ifanr.com/myaccount/">个人中心</a></li>
+                      <li class="sub-item"><a href="">个人中心</a></li>
                       <li class="sub-item"><a href="javascript:void(0);" class="js-logout">退出登录</a></li>
                     </ul>
                   </div>

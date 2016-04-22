@@ -2460,6 +2460,7 @@ function(a) {
     ns = ns || {};
     ns.defaultUserAvatar = "http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/gravatar.jpg";
     ns.prepareCommenterInfo = function() {
+        return //huangbo
         a.ajax({
             url: "https://sso.ifanr.com/api/v1/user_profile/",
             type: "get",
@@ -3041,8 +3042,8 @@ function(a) {
         indexName: "prod_ifanrcom"
     };
     c.init = function() {
-        this.algolia = this.algolia || algoliasearch(this.applicationID, this.apiKey);
-        this.searchIndex = this.searchIndex || this.algolia.initIndex(this.indexName)
+        //this.algolia = this.algolia || algoliasearch(this.applicationID, this.apiKey);
+        //this.searchIndex = this.searchIndex || this.algolia.initIndex(this.indexName)
     };
     c.init();
     var d = function() {};
