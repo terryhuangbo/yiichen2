@@ -26,6 +26,22 @@ function _get_index_posts($num){
         'posts_per_page' => $num,
         'post_status' => 'publish',
         'orderby'=>'post_date',
+        'tax_query' => [
+            'relation' => 'AND',
+            [
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms'    => 'video',
+                'operator' => 'NOT IN'
+            ],
+            [
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms'    => 'quotation',
+                'operator' => 'NOT IN'
+            ],
+
+        ],
     ];
     $query = new WP_Query($args);
     while($query->have_posts()) {
