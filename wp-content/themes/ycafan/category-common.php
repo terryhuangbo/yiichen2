@@ -1,20 +1,10 @@
 <!-- 获取头部 -->
 <?php get_header();
 $cat = array_shift(get_the_category());
-$args = [
-    'post_type' => 'post',
-    'offset' => 0,
-    'posts_per_page' => 10,
-    'post_status' => 'publish',
-    'orderby'=>'post_date',
-    'tax_query' => [
-        [
-            'taxonomy' => 'category',
-            'field'    => 'id',
-            'terms'    => $cat->term_id,
-        ],
-    ]
-];
+$_ex_field = 'cache-category-expire';
+$_cat_posts = $Cache->_get('cache-category-posts', $_ex_field);
+$_cat_posts = $_cat_posts ? $_cat_posts
+    : $Cache->_set('cache-category-posts', _get_category_posts($cat->slug), $_ex_field);
 
 ?>
 
@@ -34,45 +24,51 @@ $args = [
 
         <div class="fullwidth container-main row">
         <div class="main main-archive posts-list js-loading-posts-wrapper"><!--begin entry-->
-        <?php
-        $query = new WP_Query($args);
-        if($query->have_posts()){
-            while($query->have_posts()){
-                $query->the_post();
-        ?>
-            <article itemscope itemtype="http://schema.org/Article" id="post-<?php the_ID() ?>" class="row post-item-container">
-                <div class="new-post-item-content">
-                    <a rel="canonical" class="news-pic" itemprop="thumbnailUrl"  href="<?php the_permalink() ?>" style="background-image:url('<?php echo $Tool->_get_img_from_html(get_the_content()) ?>')"></a>
-
-                    <h2>
-                        <a rel="external" href="<?php the_permalink() ?>" title="Permalink to <?php the_title() ?>">
-                            <span itemprop="headline"><?php echo $Tool->_str_cut(get_the_title(), 0, 20, false) ?></span>
+            <?php foreach($_cat_posts as $p):   ?>
+                <article itemscope itemtype="http://schema.org/Article" id="post-<?php echo $p['ID'] ?>"
+                         class="row post-item-container">
+                    <div class="new-post-item-content">
+                        <a rel="canonical" class="news-pic" itemprop="thumbnailUrl" href="<?php echo $p['link'] ?>" target="_blank"
+                           style="background-image:url('<?php echo $p["image"] ?>')">
                         </a>
-                        <div class="comment-count new-comment-count">
-                            <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/coolbuy/644413#comments" ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                <i class="ifanr2015 ifanr2015-pinglun"></i>
-                                <?php comments_number() ?>
+                        <h2>
+                            <a rel="external" href="<?php echo $p['link'] ?>" title="Permalink to <?php echo $p['title'] ?>">
+                            <span itemprop="headline">
+                              <?php echo $p['title'] ?>
+                            </span>
                             </a>
-                            <meta itemprop="commentCount" content="<?php comments_number() ?>" />
+                            <div class="comment-count new-comment-count">
+                                <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
+                                   ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
+                                    <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
+                                </a>
+                                <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
+                            </div>
+                        </h2>
+                        <p itemprop="description" class="js-excerpt" data-clamp="2">
+                            <?php echo $p['introduce']  ?>
+                        </p>
+                        <div class="tag-label">
+                            <a class="tag" itemprop="keywords" href="<?php echo $p['category_link']  ?>" target="_blank">
+                                <?php echo $p['category']  ?>
+                            </a>
+                        <span class="seperator">
+                            |
+                        </span>
+                        <span class="author">
+                            <a href="javaScript:viod(0);" title="Posts by <?php echo $p['author']; ?>"
+                               rel="author">
+                                <?php echo $p['author']; ?>
+                            </a>
+                        </span>
+                            <meta itemprop="author" content="<?php echo $p['author'] ;?>" />
+                        <span class="date" itemprop="datePublished" datetime="<?php echo $p['pubDate'] ?>">
+                            <?php echo $p['difDate'] ?>
+                        </span>
                         </div>
-                    </h2>
-
-                    <p itemprop="description" class="js-excerpt" data-clamp="2"><?php echo get_the_excerpt(); ?></p>
-
-                    <div class="tag-label">
-                        <a class="tag" itemprop="keywords" href="http://www.ifanr.com/coolbuy/"><?php echo $cat->name ?></a>
-                        <span class="seperator">|</span>
-                        <span class="author"><a href="http://www.ifanr.com/author/coolbuy" title="Posts by <?php echo $cat->name ?>" rel="author"><?php echo $cat->name ?></a></span>
-                        <meta itemprop="author" content="<?php echo $cat->name ?>" />
-                        <span class="date" itemprop="datePublished" datetime="2016-04-13T03:50:35+0000"><?php echo $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))) ?></span>
                     </div>
-
-                </div>
-
-            </article>
-            <?php } ?>
-        <?php } ?>
-        <?php  wp_reset_postdata(); ?>
+                </article>
+            <?php  endforeach; ?>
         </div>
             <div class="sbl">
             </div>

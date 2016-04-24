@@ -43,27 +43,7 @@ function _get_index_posts($num){
 
         ],
     ];
-    $query = new WP_Query($args);
-    while($query->have_posts()) {
-        $query->the_post();
-        $cat = array_shift(get_the_category());
-        $_posts[] = [
-            'ID' => get_the_ID(),
-            'title' => $Tool->_str_cut(get_the_title(), 0, 20, false),
-            'image' => $Tool->_get_img_from_html(get_the_content()),
-            'author' => get_the_author(),
-            'pubDate' => get_the_time('Y-m-d H:i:s'),
-            'difDate' => $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))),
-            'introduce' => $Tool->_str_cut(get_the_content(), 0, 100, false),
-            'link' => get_page_link(),
-            'comments' => get_comments_number(),
-            'category' => get_cat_name($cat->term_id),
-            'category_link' => get_category_link($cat->term_id),
-            'tags' => get_the_tag_list('', '|', ''),
-        ];
-    }
-    wp_reset_postdata();
-    return $_posts;
+    return _get_post_item($args);
 }
 
 //获取首页视频
@@ -137,11 +117,28 @@ function _get_index_specials($slug, $num){
             'tags' => get_the_tag_list('', '|', ''),
         ];
     }
-    hb($_posts);
     wp_reset_postdata();
     return $_posts;
 }
 
+//获取首页文章
+function _get_category_posts($slug){
+    $args = [
+        'post_type' => 'post',
+        'offset' => 0,
+        'posts_per_page' => 10,
+        'post_status' => 'publish',
+        'orderby'=>'post_date',
+        'tax_query' => [
+            [
+                'taxonomy' => 'category',
+                'field'    => 'slug',
+                'terms'    => $slug,
+            ],
+        ]
+    ];
+    return _get_post_item($args);
+}
 
 //获取分类文章
 add_action('wp_ajax_nopriv_get_cate', 'ajax_get_cate');
@@ -368,7 +365,33 @@ function ajax_get_buzz(){
     die();
 }
 
-
+//获取首页，分类页文章
+function _get_post_item($args){
+    $Tool = new Tools();
+    $_posts = [];
+    $query = new WP_Query($args);
+    while($query->have_posts()) {
+        $query->the_post();
+        $cat = array_shift(get_the_category());
+        $_posts[] = [
+            'ID' => get_the_ID(),
+            'title' => $Tool->_str_cut(get_the_title(), 0, 20, false),
+            'image' => $Tool->_get_img_from_html(get_the_content()),
+            'author' => get_the_author(),
+            'pubDate' => get_the_time('Y-m-d H:i:s'),
+            'difDate' => $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))),
+            'introduce' => $Tool->_str_cut(get_the_content(), 0, 100, false),
+            'link' => get_page_link(),
+            'comments' => get_comments_number(),
+            'category' => get_cat_name($cat->term_id),
+            'category_link' => get_category_link($cat->term_id),
+            'tags' => get_the_tag_list('', '|', ''),
+        ];
+    }
+    wp_reset_postdata();
+    unset($Tool);
+    return $_posts;
+}
 
 
 //测试-打印函数

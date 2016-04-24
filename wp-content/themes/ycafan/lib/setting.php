@@ -109,6 +109,9 @@ function customCacheSetting(){ ?>
                 'cache-switch',
                 //首页缓存是否需开启
                 'cache-index-expire',
+                //分类页缓存是否需开启
+                'cache-category-expire',
+
 
 
             ];
@@ -147,6 +150,17 @@ function customCacheSetting(){ ?>
                         </select>
                     </td>
                 </tr>
+                <tr>
+                    <th scope="row">分类页缓存:</th>
+                    <td>
+                        <select name="cache-category-expire">
+                            <?php foreach($_expire_array as $k => $v ): ?>
+                                <option value="<?php echo $k ?>" <?php echo get_option('cache-category-expire ') == $k ? 'selected = "selected"' : '' ?>><?php echo $v ?></option>
+                            <?php endforeach ?>
+                        </select>
+                    </td>
+                </tr>
+
 
 
             </table>
