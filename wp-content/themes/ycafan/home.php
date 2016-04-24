@@ -21,12 +21,11 @@ $videos = $Cache->_get('cache-index-videos', $_ex_field);
 $videos = $videos ? $videos : $Cache->_set('cache-index-videos', _get_index_videos(10), $_ex_field);
 //专题文章区
 $_special_slug = $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special');
+$_special_title = $Tool->_value($fields['right_recommend'][0]['right_recommend_title'], '专题');
 $_special_num = $Tool->_value($fields['right_recommend'][0]['right_recommend_num'], 10);
 $_special_posts = $Cache->_get('cache-index-special-posts', $_ex_field);
 $_special_posts = $_special_posts ? $_special_posts
     : $Cache->_set('cache-index-special-posts', _get_index_specials($_special_slug, $_special_num), $_ex_field);
-
-hb($_index_posts);
 
 ?>
 
@@ -314,7 +313,7 @@ hb($_index_posts);
                     <i class="iconfont iconfont-buzz">
                     </i>
                     <h1 class="widget-buzz-title">
-                        <?php echo $_special_slug ?>
+                        <?php echo $_special_title ?>
                     </h1>
                 </div>
                 <div class="nano buzz-list-container js-nano">
