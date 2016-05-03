@@ -34,7 +34,8 @@ $Cache = new Cache();
             external: "1",
             avatarSize: "48",
             avatarPosition: "left",
-            anonymous: "Anonymous"
+            anonymous: "Anonymous",
+            wpAjaxUrl: "http://www.yca.com",
         };
     </script>
     <script type="text/javascript">

@@ -364,7 +364,7 @@
             } else if ( 1 ) {
                 //huangbo
                 $.ajax({
-                    url: "../wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
+                    url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
                     data: $.extend({}, a, {action : 'get_cate'}),
                     dataType: "json",
                     method: "post",
@@ -5577,7 +5577,7 @@ default = {
             u();
             //huangbo
             $.ajax({
-                url: "../wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
+                url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
                 data: $.extend({}, j, {action : 'get_latest'}),
                 dataType: "json",
                 method: "post",
@@ -6028,7 +6028,7 @@ default = {
                 author_id: b.attr("data-author-id")
             };
             $.ajax({
-                url: "../wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
+                url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
                 data: $.extend({}, data, {action : 'get_author_latest'}),
                 dataType: "json",
                 method: "post",
