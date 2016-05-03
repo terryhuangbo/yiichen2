@@ -35,7 +35,7 @@ $Cache = new Cache();
             avatarSize: "48",
             avatarPosition: "left",
             anonymous: "Anonymous",
-            wpAjaxUrl: "http://www.yca.com",
+            wpAjaxUrl: "<?php  bloginfo('url') ?>",
         };
     </script>
     <script type="text/javascript">
