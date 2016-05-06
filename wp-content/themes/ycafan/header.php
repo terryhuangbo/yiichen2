@@ -76,7 +76,7 @@ $Cache = new Cache();
         };
     </script>
     <!--[if lt IE 9]>
-    <script src="<?php bloginfo('template_url'); ?>js/html5.js" type="text/javascript"></script>
+    <script src="<?php bloginfo('template_url'); ?>/js/html5.js" type="text/javascript"></script>
     <link rel="stylesheet"
           href="<?php bloginfo('template_url'); ?>/css/use-modern-browser.css"/>
     <![endif]-->
