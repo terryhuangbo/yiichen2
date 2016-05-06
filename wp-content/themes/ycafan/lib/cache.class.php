@@ -3,17 +3,14 @@
 /**
  * 公共缓存类
  **/
-class Cache
+class Cache extends Memcache
 {
     private $cache;
     private $on;
     public $message;
     public function __construct()
     {
-//        $this->cache = parent::connect('127.0.0.1', 11211);
-//        $this->cache = memcache_connect('127.0.0.1', 11211);
-        $this->cache = false;
-        $this->on = $this->cache ? true : false;
+        $this->cache = parent::connect('127.0.0.1', 11211);
         $this->on = get_option('cache-switch') == 'on' ? true : false;
     }
     /**
@@ -53,7 +50,7 @@ class Cache
                 $this->message = 'Memcache set failed: Key is not set';
                 return $val;
             }else if(intval($expire_time) < 0){
-                $this->cache->delete($key);
+                $this->delete($key);
                 $this->message = 'Memcache '. $key .' has been deleted';
                 return $val;
             }else{
