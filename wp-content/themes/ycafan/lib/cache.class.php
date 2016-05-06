@@ -10,11 +10,14 @@ class Cache
     public $message;
     public function __construct()
     {
-//        $this->cache = parent::connect('127.0.0.1', 11211);
-//        $this->cache = memcache_connect('127.0.0.1', 11211);
-        $this->cache = false;
-        $this->on = $this->cache ? true : false;
-        $this->on = get_option('cache-switch') == 'on' ? true : false;
+        try {
+            $this->cache = memcache_connect('127.0.0.1', 11211);
+            $this->on = get_option('cache-switch') == 'on' ? true : false;
+        } catch (Exception $e) {
+            $this->cache = false;
+            $this->on = get_option('cache-switch') == 'on' ? true : false;
+            $this->message = $e->getMessage();
+        }
     }
     /**
      * 设置缓存
