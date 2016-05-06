@@ -295,7 +295,7 @@ $_special_posts = $_special_posts ? $_special_posts
 </div>
 
 <div class="sbl row">
-    <div data-cmpt-autofixed data-autofixed-follow-to=".js-index-part-one">
+    <div >
         <div class="ifanr-sudu-border">
         </div>
         <div id="ifanr_side_jiong_widget-81" class="widget-container widget_ifanr_jiong_new clearfix">
