@@ -105,7 +105,7 @@ $Cache = new Cache();
 
           <div class="sns row js-sns">
             <a class="sns-item" target="_blank" href="<?php echo _get_page_url('wechat') ?>"><i class="ifanr2015 ifanr2015-weixin"></i></a>
-            <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/ifanr"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a>
+            <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/youngchina"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a>
             <a rel="nofollow" class="sns-item" target="_blank" href="http://twitter.com/ifanr"><i class="ifanr2015 ifanr2015-twitter"></i></a>
             <a class="sns-item" target="_blank" href="http://www.ifanr.com/feed"><i class="ifanr2015 ifanr2015-rss"></i></a>
           </div>
