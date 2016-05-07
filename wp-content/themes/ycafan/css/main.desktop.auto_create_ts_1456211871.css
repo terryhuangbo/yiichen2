@@ -7584,23 +7584,62 @@ footer .sns a .ifanr2015 {
 }
 
 #recommend-post .post-mask.post-mask-top {
-    background: -webkit-linear-gradient(-7.38deg, #7e78cc 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(201, 83, 115, 0.4) 69.21%, rgba(216, 79, 98, 0.79) 89.5%, #e34c56 100%);
-    background: -webkit-gradient(linear, 4.62% 36.26%, 88.5% 61.65%, color-stop(0, #7e78cc), color-stop(0.1099, rgba(135, 115, 194, 0.82)), color-stop(0.2997, rgba(158, 103, 166, 0.5)), color-stop(0.5417, rgba(195, 84, 121, 0.1)), color-stop(0.6921, rgba(201, 83, 115, 0.4)), color-stop(0.895, rgba(216, 79, 98, 0.79)), color-stop(1, #e34c56));
-    background: -ms-linear-gradient(-7.38deg, #7e78cc 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(201, 83, 115, 0.4) 69.21%, rgba(216, 79, 98, 0.79) 89.5%, #e34c56 100%);
+    background:
+
+
+
+
+
+
+    -webkit-linear-gradient(-7.38deg, #7e78cc 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(201, 83, 115, 0.4) 69.21%, rgba(216, 79, 98, 0.79) 89.5%, #e34c56 100%);
+    background:
+
+
+
+
+
+
+    -webkit-gradient(linear, 4.62% 36.26%, 88.5% 61.65%, color-stop(0, #7e78cc), color-stop(0.1099, rgba(135, 115, 194, 0.82)), color-stop(0.2997, rgba(158, 103, 166, 0.5)), color-stop(0.5417, rgba(195, 84, 121, 0.1)), color-stop(0.6921, rgba(201, 83, 115, 0.4)), color-stop(0.895, rgba(216, 79, 98, 0.79)), color-stop(1, #e34c56));
+    background:
+
+
+
+
+
+
+    -ms-linear-gradient(-7.38deg, #7e78cc 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(201, 83, 115, 0.4) 69.21%, rgba(216, 79, 98, 0.79) 89.5%, #e34c56 100%);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#7E78CC', endColorstr='#E34C56' ,GradientType=0)";
-    background: -webkit-linear-gradient(352.62deg, #7e78cc 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(201, 83, 115, 0.4) 69.21%, rgba(216, 79, 98, 0.79) 89.5%, #e34c56 100%);
-    background: linear-gradient(97.38deg, #7e78cc 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(201, 83, 115, 0.4) 69.21%, rgba(216, 79, 98, 0.79) 89.5%, #e34c56 100%);
+    background:
+
+
+
+
+
+
+    -webkit-linear-gradient(352.62deg, #7e78cc 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(201, 83, 115, 0.4) 69.21%, rgba(216, 79, 98, 0.79) 89.5%, #e34c56 100%);
+    background: linear-gradient(97.38deg, #7E78CC 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(158, 103, 166, 0.5) 69.21%, rgba(135, 115, 194, 0.82)89.5%, #7E78CC 100%);
     filter: alpha(opacity=60) progid : DXImageTransform . Microsoft . gradient(startColorstr = '#7E78CC', endColorstr = '#E34C56', GradientType = 1)
+
+
+
+
+
+
+
 }
 
 #recommend-post .post-mask.post-mask-bottom {
-    background: -webkit-linear-gradient(0deg, #2678ff 31.01%, #3373f0 38.26%, #5365c9 52.2%, #884e89 71.43%, #d13032 94.97%, #e1291f 100%);
-    background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0.3101, #2678ff), color-stop(0.3826, #3373f0), color-stop(0.522, #5365c9), color-stop(0.7143, #884e89), color-stop(0.9497, #d13032), color-stop(1, #e1291f));
-    background: -ms-linear-gradient(0deg, #2678ff 31.01%, #3373f0 38.26%, #5365c9 52.2%, #884e89 71.43%, #d13032 94.97%, #e1291f 100%);
+    background:
+    -webkit-linear-gradient(0deg, #2678ff 31.01%, #3373f0 38.26%, #5365c9 52.2%, #884e89 71.43%, #d13032 94.97%, #e1291f 100%);
+    background:
+    -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0.3101, #2678ff), color-stop(0.3826, #3373f0), color-stop(0.522, #5365c9), color-stop(0.7143, #884e89), color-stop(0.9497, #d13032), color-stop(1, #e1291f));
+    background:
+    -ms-linear-gradient(0deg, #2678ff 31.01%, #3373f0 38.26%, #5365c9 52.2%, #884e89 71.43%, #d13032 94.97%, #e1291f 100%);
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#2678FF', endColorstr='#E1291F' ,GradientType=0)";
-    background: linear-gradient(90deg, #2678ff 31.01%, #3373f0 38.26%, #5365c9 52.2%, #884e89 71.43%, #d13032 94.97%, #e1291f 100%);
+    background: linear-gradient(97.38deg, #7E78CC 0%, rgba(135, 115, 194, 0.82) 10.99%, rgba(158, 103, 166, 0.5) 29.97%, rgba(195, 84, 121, 0.1) 54.17%, rgba(158, 103, 166, 0.5) 69.21%, rgba(135, 115, 194, 0.82)89.5%, #7E78CC 100%);
     opacity: 0.4;
     filter: alpha(opacity=40) progid : DXImageTransform . Microsoft . Alpha(opacity = 40) progid : DXImageTransform . Microsoft . gradient(startColorstr = '#2678FF', endColorstr = '#E1291F', GradientType = 1)
+
 }
 
 #recommend-post .slider ul {
