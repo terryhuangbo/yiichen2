@@ -100,7 +100,7 @@ $Cache = new Cache();
         <!-- header-row -->
         <div class="header-row clearfix">
           <a class="logo js-logo" ga-track="event" ga-action="click" ga-event-category="logo" ga-event-label="Logo" href="<?php  bloginfo('url') ?>" title="少年中国评论">
-            <img src="<?php echo get_option('site-logo'); ?>" alt="少年中国评论"/>
+            <img src="<?php bloginfo('template_url'); ?>/images/yca-logo.jpg" alt="少年中国评论"/>
           </a>
 
           <div class="sns row js-sns">

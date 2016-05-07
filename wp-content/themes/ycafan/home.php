@@ -302,8 +302,7 @@ $_special_posts = $_special_posts ? $_special_posts
         <div id="ifanr_side_jiong_widget-81" class="widget-container widget_ifanr_jiong_new clearfix">
             <div class="ifanr-text-content">
                 <a id="video" rel="external" href="http://go.ifanr.cn/1S">
-                    <img src="<?php echo get_option('site-info') ?>"
-                        />
+                    <img src="<?php bloginfo('template_url'); ?>/images/info.jpg"/>
                 </a>
             </div>
         </div>
