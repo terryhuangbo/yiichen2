@@ -76,23 +76,22 @@ $_special_posts = $_special_posts ? $_special_posts
                                                                 <meta itemscope="thumbnailUrl" content="http://images.ifanr.cn/wp-content/uploads/2016/03/DIY-3.jpg" />
                                                                 <div class="tag-label">
                                                                     <a class="tag" itemprop="keywords"
-                                                                       href="http://www.ifanr.com/category/special/product">
+                                                                       href="<?php echo $val['banner_post'] ?>">
                                                                         <?php echo $Tool->_value(explode('|', $val['banner_titie'])[0]) ?>
                                                                     </a>
                                                                   <span class="seperator">
                                                                     |
                                                                   </span>
                                                                   <span class="author">
-                                                                    <a href="http://www.ifanr.com/author/ifanrvideo" title="Posts by 爱范儿视频"
+                                                                    <a href="<?php echo $val['banner_post'] ?>" title=""
                                                                        rel="author">
                                                                         <?php echo $Tool->_value(explode('|', $val['banner_titie'])[1]) ?>
                                                                     </a>
                                                                   </span>
-                                                                    <meta itemprop="author" content="爱范儿视频"/>
                                                                 </div>
                                                                 <h2 itemprop="headline">
                                                                     <a rel="canonical" itemprop="url"
-                                                                       href="http://www.ifanr.com/628741"
+                                                                       href="<?php echo $val['banner_post'] ?>"
                                                                        class="js-multiline">
                                                                         <div class="title-part-container">
                                                                           <span class="title-part">
