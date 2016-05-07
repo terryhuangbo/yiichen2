@@ -4587,6 +4587,8 @@ article.dasheng .entry-blockquote .post-author {
     padding-top: 70px;
     background: url('http://images.ifanr.cn/wp-content/themes/ifanr-2.0/static/images/common/line.png?1448625797') no-repeat;
     background-size: 700px 100%
+;
+    text-align: center;
 }
 
 .weixin-container .weixin-bg-line {
@@ -4598,7 +4600,7 @@ article.dasheng .entry-blockquote .post-author {
 }
 
 .weixin-item {
-    float: left;
+    /* float: left; */
     width: 250px;
     height: 380px;
     margin-left: 40px;
@@ -4607,6 +4609,9 @@ article.dasheng .entry-blockquote .post-author {
     text-align: center;
     color: #373737;
     background-color: #fff
+
+;
+    display: inline-block;
 }
 
 .weixin-item:hover {
