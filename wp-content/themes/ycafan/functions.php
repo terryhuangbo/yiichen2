@@ -394,7 +394,7 @@ function _get_post_item($args){
 }
 
 //通过页面别名获取页面链接
-function _get_url($slug = ''){
+function _get_page_url($slug = ''){
     if(empty($slug)){
         return '';
     }
