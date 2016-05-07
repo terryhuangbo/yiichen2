@@ -393,10 +393,25 @@ function _get_post_item($args){
     return $_posts;
 }
 
+//通过页面别名获取页面链接
+function _get_url($slug = ''){
+    if(empty($slug)){
+        return '';
+    }
+    global $wpdb;
+    $db = new Db($wpdb, $wpdb->posts);
+    $post = $db->_select_one(['post_name ' => $slug]);
+    if(!$post){
+        return '';
+    }
+    unset($db);
+    return get_permalink($post->ID);
+
+}
 
 //测试-打印函数
-function hb($data) {
-    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-}
+//function hb($data) {
+//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+//}
 
 ?>

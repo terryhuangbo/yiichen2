@@ -4,6 +4,7 @@
  **/
 
 get_header();
+
 ?>
 <div class="weixin-caontainer-bg">
     <ol class="weixin-container">
