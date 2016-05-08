@@ -155,7 +155,7 @@ function customCacheSetting(){ ?>
                     <td>
                         <select name="cache-category-expire">
                             <?php foreach($_expire_array as $k => $v ): ?>
-                                <option value="<?php echo $k ?>" <?php echo get_option('cache-category-expire ') == $k ? 'selected = "selected"' : '' ?>><?php echo $v ?></option>
+                                <option value="<?php echo $k ?>" <?php echo get_option('cache-category-expire') == $k ? 'selected = "selected"' : '' ?>><?php echo $v ?></option>
                             <?php endforeach ?>
                         </select>
                     </td>

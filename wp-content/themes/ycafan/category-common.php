@@ -9,9 +9,10 @@ $_ex_field = 'cache-category-expire';
 $_cat_posts = $Cache->_get('cache-category-posts', $_ex_field);
 $_cat_posts = $_cat_posts ? $_cat_posts
     : $Cache->_set('cache-category-posts', _get_category_posts($cat->slug), $_ex_field);
-$fields = get_template_fields('category-common.php');
+$fields = $Cache->_get('cache-category-banners', $_ex_field);
+$fields = $fields ? $fields
+    : $Cache->_set('cache-category-banners', get_template_fields('category-common.php'), $_ex_field);
 $_cat_banner = $Tool->_value($fields['category_banners'][0]['category_banner_' . $cat->slug]['url'], '');
-
 ?>
 
 <div id="content-outer" class="content-outer clearfix fix-header-height">

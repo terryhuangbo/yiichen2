@@ -34,7 +34,7 @@ class Cache
         }
         //缓存关闭
         if(!$this->on){
-            $this->flush();
+            $this->cache->flush();
             $this->message = 'Memcache set failed: Gerneral Cache Switch is off';
             return $val;
         }
@@ -45,7 +45,7 @@ class Cache
         }
         //如果$expire为数值
         if(is_numeric($expire)){
-            $this->set($key, $val, 0, $expire);
+            $this->cache->set($key, $val, 0, $expire);
             $this->message = 'Memcache set Successfully';
             return $val;
         //如果$expire为字符串
@@ -60,7 +60,7 @@ class Cache
                 $this->message = 'Memcache '. $key .' has been deleted';
                 return $val;
             }else{
-                $this->set($key, $val, 0, $expire_time);
+                $this->cache->set($key, $val, 0, $expire_time);
                 $this->message = 'Memcache set Successfully: The expired time is '. $expire_time .' second';
                 return $val;
             }
@@ -103,7 +103,7 @@ class Cache
                 return false;
             }
         }
-        $_cache_val = $this->get($key);
+        $_cache_val = $this->cache->get($key);
         if(!$_cache_val){
             $this->message = 'Memcache get Successfully: but the key is not found';
             return false;
