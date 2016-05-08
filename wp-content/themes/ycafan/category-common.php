@@ -1,17 +1,23 @@
-<!-- 获取头部 -->
-<?php get_header();
+<?php
+/**
+ * Template Name: 文章分类页
+ **/
+//获取头部
+get_header();
 $cat = array_shift(get_the_category());
 $_ex_field = 'cache-category-expire';
 $_cat_posts = $Cache->_get('cache-category-posts', $_ex_field);
 $_cat_posts = $_cat_posts ? $_cat_posts
     : $Cache->_set('cache-category-posts', _get_category_posts($cat->slug), $_ex_field);
+$fields = get_template_fields('category-common.php');
+$_cat_banner = $Tool->_value($fields['category_banners'][0]['category_banner_' . $cat->slug]['url'], '');
 
 ?>
 
 <div id="content-outer" class="content-outer clearfix fix-header-height">
     <div id="content" class="content clearfix">
 
-        <div class="content-header-archive" style="background-image:url(http://images.ifanr.cn/wp-content/uploads/2015/02/product.jpg);">
+        <div class="content-header-archive" style="background-image:url(<?php echo $_cat_banner ?>);">
             <div class="overlay"></div>
             <h1 class="yahei fullwidth">
                 <?php echo $cat->name ?><span class="slogan"></span>

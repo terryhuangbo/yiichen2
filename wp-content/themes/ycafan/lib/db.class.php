@@ -197,6 +197,23 @@ class Db
         return ' `' . $field . '` ' . $operator . ' ' . $_val_str;
     }
 
+    /**
+     * 通过页面模板获取页面ID
+     * @param $template string
+     * @return int
+     **/
+    public function _get_page_id_from_template($template) {
+        //只能适用于一个模板一个页面的情况
+        $page_id = $this->db->get_var($this->db->prepare("SELECT post_id
+       FROM {$this->db->postmeta}, {$this->db->posts}
+       WHERE post_id = ID
+          AND post_status = 'publish'
+          AND meta_key = '_wp_page_template'
+          AND meta_value = %s
+          LIMIT 1;", $template));
+        return $page_id;
+    }
+
 }
 
 ?>

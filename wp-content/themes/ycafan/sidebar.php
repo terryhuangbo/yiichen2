@@ -85,7 +85,7 @@
                     $wpdb->posts.ID)
                     WHERE comment_approved = '1' AND comment_type = '' AND
                     post_password = ''
-                    ORDER BY comment_date_gmt DESC
+                    ORDER $wpdb comment_date_gmt DESC
                     LIMIT 10";
                     $comments = $wpdb->get_results($sql);
                     $output = $pre_HTML;

@@ -2,7 +2,6 @@
 /**
  * Template Name: 首页
  **/
-
 get_header();
 //扩展字段
 $_ex_field = 'cache-index-expire';

@@ -409,7 +409,19 @@ function _get_page_url($slug = ''){
 
 }
 
-//测试-打印函数
+//获取某个模板页面的扩展字段
+function get_template_fields($template){
+    if(empty($template)){
+        return false;
+    }
+    global $wpdb;
+    $db = new Db($wpdb, $wpdb->posts);
+    $page_id = $db->_get_page_id_from_template($template);
+    unset($db);
+    return get_fields($page_id);
+}
+
+////测试-打印函数
 //function hb($data) {
 //    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
 //}
