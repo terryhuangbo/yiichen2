@@ -214,63 +214,44 @@ the_post();
 
 <div class="article-footer row">
     <div class="fullwidth">
-
-
         <!-- comments-wrapper -->
-        <div id="comments" class="comments-wrapper" data-cmpt-autofixed-container cmpt-article-footer
-             data-post-id="628698">
-
-            <div data-cmpt-autofixed data-autofixed-follow-to="#comments-box" id="comments-head"
-                 class="J_CmtHead post-item-container">
+        <div id="comments" class="comments-wrapper" data-cmpt-autofixed-container cmpt-article-footer data-post-id="628698">
+            <div data-cmpt-autofixed data-autofixed-follow-to="#comments-box" id="comments-head" class="J_CmtHead post-item-container">
                 <div class="post-item-addon comment-count">
                     <span class="cmt-number">0</span>
                     <span class="cmt-arrow"></span>
                 </div>
                 <p class="post-title">
-                    全世界无产者，联合起来！ </p>
+                    全世界无产者，联合起来！
+                </p>
                 <a href="javascript:void(0)" class="js-scroll-to">&#8593; 返回文章</a>
             </div>
 
-            <div data-cmpt-comments data-post-id="628698" id="comments-box"
-                 class="comments-box BoxShadow clearfix">
-
-
+            <div data-cmpt-comments data-post-id="628698" id="comments-box" class="comments-box BoxShadow clearfix">
                 <div data-cmpt-respond-form data-post-id="628698" id="respond" class="respond clearfix">
-
                     <h2 class="js-reply-title reply-title yahei">回复</h2>
-
                     <div class="js-cancel-comment-reply cancel-comment-reply hide">
                         <a rel="nofollow" id="cancel-comment-reply-link" href="javascript:void(0);"
                            class="js-cancel-button reverse-icon"><i class="ifanr2015 ifanr2015-guanbi"></i></a>
                     </div>
-
                     <form id="commentform" class="JS_formInFieldLabels js-respond-form">
-
                         <div class="comment-form-slide">
 
                             <div id="J_Commenter" class="js-commenter js-not-login hide">
-
-
                                 <p class="comment-form-email">
                                     <input type="text" placeholder="邮箱 *" autocapitalize="off" name="email" id="email"
-                                           value="" size="30" aria-required="true"
-                                           tabindex="1"/>
+                                           value="" size="30" aria-required="true tabindex="1"/>
                                 </p>
-
                                 <p class="comment-form-author">
                                     <input type="text" placeholder="昵称 *" name="author" id="author" value="" size="30"
                                            aria-required="true" tabindex="2"/>
                                 </p>
-
                             </div>
-
                         </div>
-
                         <p class="comment-form-comment">
                             <textarea id="comment" class="js-comment-content" name="comment" cols="45" rows="8"
                                       aria-required="true" tabindex="3"></textarea>
                         </p>
-
                         <div id="ajax-cmt-loading" class="js-comment-processing hide">
                             <img
                                 src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/loader/ajax-loader-light.gif"
@@ -278,7 +259,6 @@ the_post();
                             正在提交, 请稍候...
                         </div>
                         <div id="error" class="js-error-msg hide">#</div>
-
 
                         <div id="J_LoggedIn" class="js-login hide">
                             <div class="logged-in-as">
@@ -315,18 +295,16 @@ the_post();
                             <label class="js-notify-btn">回复邮件通知</label>
                         </p>
                         <input type="hidden" class="js-cmt-hidden" name="cmt_hidden_js" value="oh"/>
-
                     </form>
-
                 </div>
 
-                <div class="comments-type js-comments-type hide">
+                <div class="comments-type js-comments-type ">
                     <a href="javascript:;" class="active" data-comment-type="time">时间</a>
                     <span>|</span>
                     <a href="javascript:;" data-comment-type="hot">热度</a>
                 </div>
                 <div id="J_commentlist" class="js-comments-list-container comments-list-container">
-                    <div id="JS_loading" class="js-comments-loading" style="background: none; display: none;"
+                    <div id="JS_loading" class="js-comments-loading" style="background: none; display: block;"
                          class="no-ajax load-more-link loading">
                         <img height="8"
                              src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/loader/loadingb.gif"/>
@@ -337,7 +315,8 @@ the_post();
             </div>
             <!-- #comments -->
         </div>
-        <!-- end comments-wrapper -->      </div>
+        <!-- end comments-wrapper -->
+    </div>
 </div>
 
 <script>
