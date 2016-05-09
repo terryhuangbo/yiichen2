@@ -291,10 +291,10 @@ the_post();
 
                         <div class="submit-zone clearfix">
                             <p class="login-in-buttons js-not-login hide">
-            <span class="J_LoginButtons login-in-button">
-              或 <a href="https://sso.ifanr.com/login/" class="link" title="登录" rel="internal">登录</a>&nbsp;|&nbsp;<a
-                    href="https://sso.ifanr.com/register/" class="link" title="注册" rel="internal">注册</a> 参与评论
-            </span>
+                                <span class="J_LoginButtons login-in-button">
+                                  或 <a href="https://sso.ifanr.com/login/" class="link" title="登录" rel="internal">登录</a>&nbsp;|&nbsp;<a
+                                        href="https://sso.ifanr.com/register/" class="link" title="注册" rel="internal">注册</a> 参与评论
+                                </span>
                             </p>
 
                             <p class="form-submit">
@@ -312,10 +312,9 @@ the_post();
                                 class="comment-mail-notify-check comment-mail-notify-checked js-notify-checked"></span>
                             <span
                                 class="hide comment-mail-notify-check comment-mail-notify-unchecked js-notify-unchecked"></span>
-                            <label class="js-notify-btn">回复邮件通知</label></p>          <input type="hidden"
-                                                                                            class="js-cmt-hidden"
-                                                                                            name="cmt_hidden_js"
-                                                                                            value="oh"/>
+                            <label class="js-notify-btn">回复邮件通知</label>
+                        </p>
+                        <input type="hidden" class="js-cmt-hidden" name="cmt_hidden_js" value="oh"/>
 
                     </form>
 
