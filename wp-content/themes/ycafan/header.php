@@ -14,12 +14,10 @@ $Cache = new Cache();
     <meta name="description" content="少年中国学会,少年中国,马克思主义,阿尔都塞,葛兰西,YCA,邵钟萍,杨钗娜"/>
 
     <!-- BEGIN Metadata added by Add-Meta-Tags WordPress plugin -->
-    <link rel='stylesheet' id='main-desktop-app-css'
-          href='<?php bloginfo('template_url'); ?>/css/main.desktop.auto_create_ts_1456211871.css' type='text/css'
-          media=''/>
-    <link rel='stylesheet' id='widgetbuzz-css'
-          href='<?php bloginfo('template_url'); ?>/css/buzz.auto_create_ts_1446046962.css?ver=4.2.4' type='text/css'
-          media='all'/>
+    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/css/main.desktop.auto_create.css' type='text/css' />
+    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/css/buzz.auto_create.css' type='text/css'/>
+    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/css/create.css' type='text/css'/>
+    <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/css/desktop.css' type='text/css' />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.ifanr.com/xmlrpc.php?rsd"/>
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="xml/wlwmanifest.xml"/>
     <script type="text/javascript">

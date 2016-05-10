@@ -6,7 +6,6 @@
 get_header();
 $cat = array_shift(get_the_category());
 the_post();
-
 ?>
 
 <div id="content-outer" class="content-outer clearfix fix-header-height">
