@@ -16,10 +16,8 @@
 if ( post_password_required() ) {
     return;
 }
-$commenter = wp_get_current_commenter();
-
-
 ?>
+
 <div class="o-single-content__body__content">
     <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
          data-post-id="654732">
@@ -32,20 +30,26 @@ $commenter = wp_get_current_commenter();
             <div class="c-article-comments-item__info">
                 <form class="c-article-comments-form is-unauthenticated js-article-comments-post-form">
                     <div class="c-article-comments-form__headline">回复
-                        <button type="button" class="c-article-comments-form__close js-close-reply-form"></button>
+                        <button type="button"
+                                class="c-article-comments-form__close js-close-reply-form"></button>
                     </div>
-                    <input class="c-article-comments-form__input c-article-comments-form__user" type="email" name="email" placeholder="你的邮箱*" required>
-                    <input class="c-article-comments-form__input c-article-comments-form__user" type="text" name="author" placeholder="你的昵称*" required>
+                    <input class="c-article-comments-form__input c-article-comments-form__user" type="email"
+                           name="email" placeholder="你的邮箱*" required>
+                    <input class="c-article-comments-form__input c-article-comments-form__user" type="text"
+                           name="author" placeholder="你的昵称*" required>
+
                     <div class="c-article-comments-form__textarea ">
                         <textarea
-                            class="c-article-comments-form__input c-article-comments-form__input--textarea" name="comment" placeholder="你有什么看法呢"></textarea>
+                            class="c-article-comments-form__input c-article-comments-form__input--textarea"
+                            name="comment" placeholder="你有什么看法呢"></textarea>
                     </div>
-                    <label class="c-article-comments-form__notifier" for="comment-email-notifier">
-                        <input type="checkbox" id="comment-email-notifier">回复邮件通知
-                    </label>
-                    <button type="button" class="c-article-comments-form__submit js-submit-comment">发表评论</button>
+                    <label class="c-article-comments-form__notifier" for="comment-email-notifier"><input
+                            type="checkbox" id="comment-email-notifier">回复邮件通知</label>
+                    <button type="button" class="c-article-comments-form__submit js-submit-comment">发表评论
+                    </button>
                     <input type='hidden' name='comment_post_ID' value='654732' id='comment_post_ID'/>
                     <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
+
                     <input type="hidden" name="post_id" value="654732">
                     <input type="hidden" name="cmt_hidden_js" value="oh"/>
                 </form>
@@ -78,7 +82,6 @@ $commenter = wp_get_current_commenter();
 
                             <div class="c-article-comments-item__content"><p>没有杀手级应用，就说明还是个玩具。</p></div>
                             <button class="c-article-comments-item__reply js-reply-comment">回复</button>
-
                             <button
                                 class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down ">
                                 2
