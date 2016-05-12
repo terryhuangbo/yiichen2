@@ -315,8 +315,6 @@ function ajax_get_author_latest(){
     die();
 }
 
-
-
 //获取右侧栏推荐位
 add_action('wp_ajax_nopriv_get_buzz', 'ajax_get_buzz');
 add_action('wp_ajax_get_buzz', 'ajax_get_buzz');
@@ -364,6 +362,37 @@ function ajax_get_buzz(){
     unset($Tool);
     die();
 }
+
+//添加评论
+add_action('wp_ajax_nopriv_add_comment', 'ajax_add_comment');
+add_action('wp_ajax_add_comment', 'ajax_add_comment');
+function ajax_add_comment(){
+    global $wpdb;
+    $Tool = new Tools();
+    $db = new Db($wpdb, 'wp_comments_meta');
+    $email = $Tool->_request('email', '');
+    $comment = $Tool->_request('comment', '');
+    $author = $Tool->_request('author', '');
+    $post_id = $Tool->_request('post_id', '');
+    $res = $db->_insert([
+        'pid' => 0,
+        'post_id' => $post_id,
+        'from_email' => $email,
+        'from_nick' => $author,
+        'content' => $comment,
+        'created_at' => time()
+    ]);
+    if($res){
+        $Tool->_json([], 10000);
+    }else{
+        $Tool->_json([], -10000);
+    }
+    unset($Tool);
+    unset($db);
+    die();
+}
+
+
 
 //获取详情页相关文章 $type 1-分类相关 2-标签相关
 function _get_rel_posts($cat_id, $post_id, $type = 1, $size = 5){

@@ -18,8 +18,8 @@ if ( post_password_required() ) {
 }
 $commenter = wp_get_current_commenter();
 
-
 ?>
+
 <div class="o-single-content__body__content">
     <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
          data-post-id="654732">
@@ -30,12 +30,12 @@ $commenter = wp_get_current_commenter();
             <img class="c-article-comments-item__avatar js-user-avatar" src="" alt="">
 
             <div class="c-article-comments-item__info">
-                <form class="c-article-comments-form is-unauthenticated js-article-comments-post-form">
+                <form id="publish_form" class="c-article-comments-form is-unauthenticated js-article-comments-post-form">
                     <div class="c-article-comments-form__headline">回复
                         <button type="button" class="c-article-comments-form__close js-close-reply-form"></button>
                     </div>
-                    <input class="c-article-comments-form__input c-article-comments-form__user" type="email" name="email" placeholder="你的邮箱*" required>
-                    <input class="c-article-comments-form__input c-article-comments-form__user" type="text" name="author" placeholder="你的昵称*" required>
+                    <input class="c-article-comments-form__input c-article-comments-form__user required" type="email" name="email" placeholder="你的邮箱*" required>
+                    <input class="c-article-comments-form__input c-article-comments-form__user required" type="text" name="author" placeholder="你的昵称*" required>
                     <div class="c-article-comments-form__textarea ">
                         <textarea
                             class="c-article-comments-form__input c-article-comments-form__input--textarea" name="comment" placeholder="你有什么看法呢"></textarea>
@@ -43,11 +43,11 @@ $commenter = wp_get_current_commenter();
                     <label class="c-article-comments-form__notifier" for="comment-email-notifier">
                         <input type="checkbox" id="comment-email-notifier">回复邮件通知
                     </label>
-                    <button type="button" class="c-article-comments-form__submit js-submit-comment">发表评论</button>
-                    <input type='hidden' name='comment_post_ID' value='654732' id='comment_post_ID'/>
+                    <input type='hidden' name='comment_post_ID' value='<?php echo $post->ID ?>' id='comment_post_ID'/>
                     <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
-                    <input type="hidden" name="post_id" value="654732">
+                    <input type="hidden" name="post_id" value="<?php echo $post->ID ?>">
                     <input type="hidden" name="cmt_hidden_js" value="oh"/>
+                    <button type="button" id="publish_comment" class="c-article-comments-form__submit js-submit-comment">发表评论</button>
                 </form>
             </div>
         </div>
@@ -87,6 +87,7 @@ $commenter = wp_get_current_commenter();
                                 class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">
                                 0
                             </button>
+
                         </div>
                         <ul class="c-article-comments-replies c-article-comments-item__info js-child-comments">
                             <li id="comment-1014334" class="c-article-comments-replies__item  js-single-comment"
@@ -114,6 +115,7 @@ $commenter = wp_get_current_commenter();
                                         0
                                     </button>
                                 </div>
+
                             </li>
                             <li id="comment-1014415" class="c-article-comments-replies__item  js-single-comment"
                                 data-comment-username="Jack" data-comment-id="1014415">
