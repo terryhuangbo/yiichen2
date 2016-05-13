@@ -370,20 +370,32 @@ function ajax_add_comment(){
     global $wpdb;
     $Tool = new Tools();
     $db = new Db($wpdb, 'wp_comments_meta');
-    $email = $Tool->_request('email', '');
+    $from_email = $Tool->_request('from_email', '');
+    $from_author = $Tool->_request('from_author', '');
+    $to_email = $Tool->_request('to_email', '');
+    $to_author = $Tool->_request('to_author', '');
     $comment = $Tool->_request('comment', '');
-    $author = $Tool->_request('author', '');
-    $post_id = $Tool->_request('post_id', '');
+    $post_id = $Tool->_request('post_id', 0);
+    $pid = $Tool->_request('comment_id', 0);
     $res = $db->_insert([
-        'pid' => 0,
+        'pid' => $pid,
         'post_id' => $post_id,
-        'from_email' => $email,
-        'from_nick' => $author,
+        'from_email' => $from_email,
+        'from_author' => $from_author,
+        'to_author' => $to_author,
+        'to_email' => $to_email,
         'content' => $comment,
         'created_at' => time()
     ]);
     if($res){
-        $Tool->_json([], 10000);
+        $_info = $db->_select_one(['id' => $wpdb->insert_id]);
+        $_data = [
+            'comment_id' => $wpdb->insert_id,
+            'avarta' => '',
+            'content' => $_info->content,
+            'publish_time' => date('Y-m-d H:i:s', $_info->created_at),
+        ];
+        $Tool->_json($_data, 10000);
     }else{
         $Tool->_json([], -10000);
     }
