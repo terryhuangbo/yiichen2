@@ -146,7 +146,7 @@
                 '        <span class="c-article-comments-item__meta">'+ publish_time +'</span>'+
                 '        <span class="c-article-comments-item__hint js-show-comment">*评分过低，点击显示隐藏评论*</span>'+
                 '        <div class="c-article-comments-item__content"><p>'+ content +'</p></div>'+
-                '        <button class="c-article-comments-item__reply js-reply-comment" data-author="'+ author +'" data-email="'+ email +'" data-comment_id="'+ comment_id +'">回复</button>'+
+                '        <button class="c-article-comments-item__reply js-reply-comment" data-post_id="'+ post_id +'" data-author="'+ author +'" data-email="'+ email +'" data-comment_id="'+ comment_id +'">回复</button>'+
                 '        <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down ">'+ vote_down +'</button>'+
                 '        <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">'+ vote_up +'</button>'+
                 '        </div>'+
@@ -179,7 +179,7 @@
                 '           <div class="c-article-comments-item__content">'+
                 '               <p>'+ content +'</p>'+
                 '           </div>'+
-                '           <button class="c-article-comments-item__reply c-article-comments-replies__reply js-reply-comment" data-author="'+ from_author +'" data-email="'+ from_email +'" data-comment_id="'+ comment_id +'">回复</button>'+
+                '           <button class="c-article-comments-item__reply c-article-comments-replies__reply js-reply-comment" data-post_id="'+ post_id +'" data-author="'+ from_author +'" data-email="'+ from_email +'" data-comment_id="'+ comment_id +'">回复</button>'+
                 '           <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down ">'+ vote_down +'</button>'+
                 '           <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">'+ vote_up +'</button>'+
                 '       </div>'+

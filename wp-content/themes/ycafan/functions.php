@@ -392,6 +392,7 @@ function ajax_add_comment(){
         $_data = [
             'comment_id' => $wpdb->insert_id,
             'avarta' => '',
+            'post_id' => $_info->post_id,
             'content' => $_info->content,
             'publish_time' => date('Y-m-d H:i:s', $_info->created_at),
         ];
@@ -404,6 +405,55 @@ function ajax_add_comment(){
     die();
 }
 
+function get_comment_list(){
+    $post_id = 12842;
+    global $wpdb;
+    $Tool = new Tools();
+    $db = new Db($wpdb, 'wp_comments_meta');
+
+    $_list = $db->_select(['post_id' => $post_id]);
+    $_list = $Tool->_object_to_array($_list);
+    $descend = [];
+    $res = _get_comment_descendants(0, $_list, $descend);
+
+    unset($Tool);
+    unset($db);
+}
+
+//通过父评论找到所有后代评论
+function _get_comment_descendants($pid = 0, $list = [], $descend = []){
+    if($list){
+        foreach($list as $key => $val){
+            if($pid == $val['pid']){
+                $descend[$val['id']] = $val;
+                $descend[$val['id']]['childen'] = [];
+                unset($list[$key]);
+            }
+        }
+    }
+    $parry = $descend;
+    $sarry = $list;
+    _get_comment($sarry, $parry);
+
+
+
+    return $descend;
+}
+
+function _get_comment($sarry, $parry){
+    foreach($sarry as $m => $n){
+        foreach($parry as $i => $j){
+            if($n['pid'] == $j['id'] || in_array($n['pid'], array_column($j['childen'], 'id'))){
+                array_push($j['childen'], $n);
+                unset($sarry[$m]);
+                continue;
+            }
+        }
+    }
+
+
+
+}
 
 
 //获取详情页相关文章 $type 1-分类相关 2-标签相关
