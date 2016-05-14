@@ -420,38 +420,21 @@ function ajax_load_comments(){
     $_list = $Tool->_object_to_array($_list);
     $tree = _get_all_children_comments($_list);
     $_blist = $Tool->_index_array($_list, 'id');
-
+    foreach($_blist as $k => $v){
+        $_blist[$k]['comment_id'] = $v['id'];
+        $_blist[$k]['avarta'] = '';
+        $_blist[$k]['publish_time'] = date('Y-m-d H:i:s', $v['created_at']);
+    }
     $_data = [
         'list' => $_blist,
         'tree' => $tree,
     ];
-//    hb($_data);
     $Tool->_json($_data, 10000);
     unset($Tool);
     unset($db);
     die();
 }
 
-function get_comment_list(){
-    $post_id = 12842;
-    global $wpdb;
-    $Tool = new Tools();
-    $db = new Db($wpdb, 'wp_comments_meta');
-
-    $_list = $db->_select(['post_id' => $post_id]);
-    $_list = $Tool->_object_to_array($_list);
-    $tree = _get_all_children_comments($_list);
-    $_blist = $Tool->_index_array($_list, 'id');
-
-    hb($_blist);
-    $_data = [
-        'comment_list' => $_blist,
-        'tree' => $tree,
-    ];
-//    $Tool->_json($_data, 10000);
-    unset($Tool);
-    unset($db);
-}
 
 //获取所有子评论
 function _get_all_children_comments($_list){

@@ -75,16 +75,7 @@ $commenter = wp_get_current_commenter();
                                     data-author="huangbo" data-email="1234@qq.com" data-comment_id="42">回复</button>
                             <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down ">2</button>
                             <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">0 </button>
-                            <form id="reply_modal" class="c-article-comments-form is-unauthenticated js-article-comments-post-form c-article-comments-form--reply" data-replied="@wakaka123 " style="display: none">
-                                <div class="c-article-comments-form__headline">回复<button id="reply_modal_close" type="button" class="c-article-comments-form__close js-close-reply-form"></button></div>
-                                <input class="c-article-comments-form__input c-article-comments-form__user" type="email" name="from_email" placeholder="你的邮箱*" required="">
-                                <input class="c-article-comments-form__input c-article-comments-form__user" type="text" name="from_author" placeholder="你的昵称*" required="">
-                                <div class="c-article-comments-form__textarea ">
-                                    <textarea id="reply_modal_content" class="c-article-comments-form__input c-article-comments-form__input--textarea" name="comment" placeholder="你有什么看法呢"></textarea>
-                                </div>
-                                <label class="c-article-comments-form__notifier" for="comment-email-notifier"><input type="checkbox" id="comment-email-notifier">回复邮件通知</label>
-                                <button type="button" id="reply_modal_submit" class="c-article-comments-form__submit js-submit-comment">回复评论</button>
-                            </form>
+
                         </div>
                         <ul id="reply-content-1014329" class="c-article-comments-replies c-article-comments-item__info js-child-comments">
                             <li id="comment-1014334" class="c-article-comments-replies__item  js-single-comment" data-comment-username="王 飞" data-comment-id="1014334">
@@ -104,6 +95,7 @@ $commenter = wp_get_current_commenter();
                                     <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">0</button>
                                 </div>
                             </li>
+
                             <li id="comment-130" class="c-article-comments-replies__item  js-single-comment"
                                 data-comment-username="ss" data-comment-id="130">
                                 <div class="c-article-comments-replies__item__wrapper reply_item_li"><span
@@ -162,6 +154,17 @@ $commenter = wp_get_current_commenter();
                 <?php endforeach ?>
 
             </ul>
+
+            <form id="reply_modal" class="c-article-comments-form is-unauthenticated js-article-comments-post-form c-article-comments-form--reply" data-replied="@wakaka123 " style="display: none">
+                <div class="c-article-comments-form__headline">回复<button id="reply_modal_close" type="button" class="c-article-comments-form__close js-close-reply-form"></button></div>
+                <input class="c-article-comments-form__input c-article-comments-form__user" type="email" name="from_email" placeholder="你的邮箱*" required="">
+                <input class="c-article-comments-form__input c-article-comments-form__user" type="text" name="from_author" placeholder="你的昵称*" required="">
+                <div class="c-article-comments-form__textarea ">
+                    <textarea id="reply_modal_content" class="c-article-comments-form__input c-article-comments-form__input--textarea" name="comment" placeholder="你有什么看法呢"></textarea>
+                </div>
+                <label class="c-article-comments-form__notifier" for="comment-email-notifier"><input type="checkbox" id="comment-email-notifier">回复邮件通知</label>
+                <button type="button" id="reply_modal_submit" class="c-article-comments-form__submit js-submit-comment">回复评论</button>
+            </form>
 
             <div class="c-article-comments-item__info">
                 <a class="c-article-comments__submit-shortcut" href="#article-comments">说说你的看法</a>

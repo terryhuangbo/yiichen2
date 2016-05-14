@@ -23,10 +23,18 @@
                 if(json.code > 0){
                     var tree = json.ret.tree || [];
                     var list = json.ret.list || [];
-                    $.each(data.tree, function(i, v){
-
-                        console.log(v);
-
+                    var html = '';
+                    $.each(tree, function(i, v){
+                        html += self.tpl.template_comment(list[i]);
+                        $(".js-comments-list").html('');
+                        $(html).appendTo(".js-comments-list");
+                        var rp_html = '';
+                        if(v.length > 0){
+                            $.each(v, function(j, n){
+                                rp_html += self.tpl.template_reply(list[n])
+                            });
+                            $(rp_html).appendTo("#reply-content-" + list[i].comment_id);
+                        }
                     });
                     self.bind();
                 }else{
@@ -115,13 +123,9 @@
             $("#reply_modal")._clear_form(true);
             $("#reply_modal").show();
         },
-
-
     };
 
-    var template = function(){
-        self = this;
-    };
+    var template = function(){};
     template.prototype = {
         template_modal: function(param){
             var to_email = param.email || '';
@@ -154,7 +158,7 @@
             var post_id = param.post_id || 0;
             var comment_id = param.comment_id || 0;
             var avarta = param.avarta || '';
-            var content = param.comment || '';
+            var content = param.content || '';
             var vote_up = param.vote_up || 0;
             var vote_down = param.vote_down || 0;
             var publish_time = param.publish_time || '';
