@@ -2,7 +2,8 @@
     var comment =  function(){
         self = this;
         self.params = {
-            post_id: $('#publish_form').find('input[name=post_id]').val()
+            post_id: $('#publish_form').find('input[name=post_id]').val(),
+            url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
         };
         self.dom = {
             pform: '#publish_form'
@@ -18,8 +19,7 @@
         },
         load: function(post_id){
             var self = this;
-            var url = rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime();
-            $._ajax(url, {post_id: post_id, action: 'load_comments'}, 'POST', 'JSON', function(json){
+            $._ajax(self.params.url, {post_id: post_id, action: 'load_comments'}, 'POST', 'JSON', function(json){
                 if(json.code > 0){
                     var tree = json.ret.tree || [];
                     var list = json.ret.list || [];
@@ -33,12 +33,15 @@
                             $.each(v, function(j, n){
                                 rp_html += self.tpl.template_reply(list[n])
                             });
-                            $(rp_html).appendTo("#reply-content-" + list[i].comment_id);
+                            setTimeout(function(){
+                                $("#reply-content-" + list[i].comment_id).html(rp_html);
+                            }, 0);
                         }
                     });
-                    self.bind();
+                    setTimeout(function(){
+                        self.bind();
+                    }, 0);
                 }else{
-                    $._alert('提示', '添加失败');
                 }
             });
         },
@@ -50,6 +53,7 @@
             $('.js-reply-comment').off('click').on('click', function(){
                 var _this = this;
                 self.modal_show();
+                $('.js-reply-comment').show();
                 $(_this).hide();
 
                 $("#reply_modal").appendTo("#comment-cont-"+ $(_this).data().comment_id +"").show();
@@ -58,7 +62,7 @@
                     self.reply(_this);
                 });
                 $("#reply_modal_close").off('click').on('click', function(){
-                    $("#reply_modal").hide();
+                    self.modal_show();
                     $('.js-reply-comment').show();
                 });
 
@@ -71,8 +75,7 @@
                 action : 'add_comment'
             };
             if($._check_form(self.dom.pform)){
-                var url = rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime();
-                $._ajax(url, $.extend({}, param, extend), 'POST', 'JSON', function(json){
+                $._ajax(self.params.url, $.extend({}, param, extend), 'POST', 'JSON', function(json){
                     if(json.code > 0){
                         $(self.dom.pform)._clear_form(false);
 
@@ -102,8 +105,7 @@
                 action : 'add_comment'
             };
             var param = $.extend({}, to_param, from_param, extend);
-            var url = rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime();
-            $._ajax(url, param, 'POST', 'JSON', function(json){
+            $._ajax(self.params.url, param, 'POST', 'JSON', function(json){
                 if(json.code > 0){
                     self.modal_hide();
                     var ul = $(dom).parents('.c-article-comments-item').find('ul.js-child-comments') || $(dom).parents('ul.js-child-comments');
@@ -117,7 +119,7 @@
         modal_hide: function(){
             $("#reply_modal")._clear_form(true);
             $("#reply_modal").hide();
-            $('.js-reply-comment').show();
+
         },
         modal_show: function(){
             $("#reply_modal")._clear_form(true);
