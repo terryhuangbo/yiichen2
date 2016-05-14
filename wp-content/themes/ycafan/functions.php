@@ -10,6 +10,7 @@
 require_once dirname(__FILE__) .'/lib/tools.class.php';
 require_once dirname(__FILE__) .'/lib/db.class.php';
 require_once dirname(__FILE__) .'/lib/cache.class.php';
+require_once dirname(__FILE__) .'/lib/category.class.php';
 require_once dirname(__FILE__) .'/lib/setting.php';
 $Tool = new Tools();
 $Cache = new Cache();
@@ -413,46 +414,58 @@ function get_comment_list(){
 
     $_list = $db->_select(['post_id' => $post_id]);
     $_list = $Tool->_object_to_array($_list);
-    $descend = [];
-    $res = _get_comment_descendants(0, $_list, $descend);
+//    $tree = generateTree($_list);
+//    $arr = array_column($_list, 'pid', 'id');
+//    $id = 14;
+//    while($arr[$id]) {
+//        $id = $arr[$id];
+//    }
+    $items = array(
+        1 => array('id' => 1, 'pid' => 0, 'name' => '安徽省'),
+        2 => array('id' => 2, 'pid' => 0, 'name' => '浙江省'),
+        3 => array('id' => 3, 'pid' => 1, 'name' => '合肥市'),
+        4 => array('id' => 4, 'pid' => 3, 'name' => '长丰县'),
+        5 => array('id' => 5, 'pid' => 1, 'name' => '安庆市'),
+    );
+//    $res = generateTree($_list);
+    $cat = new Category();
+    $arr = $cat->_son_father($_list);
+    hb($arr);
+    $res = $cat->_ancestor($_list, );
+
 
     unset($Tool);
     unset($db);
 }
 
 //通过父评论找到所有后代评论
-function _get_comment_descendants($pid = 0, $list = [], $descend = []){
-    if($list){
-        foreach($list as $key => $val){
-            if($pid == $val['pid']){
-                $descend[$val['id']] = $val;
-                $descend[$val['id']]['childen'] = [];
-                unset($list[$key]);
-            }
-        }
+function _get_comment_descendants($lists){
+    foreach($lists as $key => $list){
+//        isset($list['son']){}
     }
-    $parry = $descend;
-    $sarry = $list;
-    _get_comment($sarry, $parry);
 
 
 
-    return $descend;
+    return [];
 }
 
-function _get_comment($sarry, $parry){
-    foreach($sarry as $m => $n){
-        foreach($parry as $i => $j){
-            if($n['pid'] == $j['id'] || in_array($n['pid'], array_column($j['childen'], 'id'))){
-                array_push($j['childen'], $n);
-                unset($sarry[$m]);
-                continue;
-            }
+function tree($list,$pid=0,$level=0,$html='--'){
+    static $tree = array();
+    foreach($list as $v){
+        if($v['pid'] == $pid){
+            $v['sort'] = $level;
+            $v['html'] = str_repeat($html,$level);
+            $tree[] = $v;
+            tree($list,$v['id'],$level+1);
         }
     }
+    return $tree;
+}
 
-
-
+function generateTree($items){
+    foreach($items as $item)
+        $items[$item['pid']]['son'][$item['id']] = &$items[$item['id']];
+    return isset($items[0]['son']) ? $items[0]['son'] : array();
 }
 
 
