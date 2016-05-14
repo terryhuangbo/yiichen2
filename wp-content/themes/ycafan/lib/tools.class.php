@@ -121,6 +121,30 @@ class Tools
     }
 
     /**
+     * 重新索引某个数组
+     * @param $array array
+     * @param $index string 索引值，必须为数组里面的一个关联key值
+     * @return array | bool
+     **/
+    function _index_array($array, $index = '')
+    {
+        $barray = [];
+        if(empty($index)){
+            return false;
+        }
+        foreach($array as $key => $val){
+            if(isset($val[$index])){
+                $barray[$val[$index]] = $val;
+            }else{
+                return false;
+            }
+        }
+        return $barray;
+    }
+
+
+
+    /**
      * 从html中获取img元素
      * @param $html string
      * @param $default bool|string

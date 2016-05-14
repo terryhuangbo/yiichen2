@@ -12,7 +12,27 @@
     };
     comment.prototype = {
         run: function(){
+            var self = this;
             this.bind();
+            this.load(self.params.post_id);
+        },
+        load: function(post_id){
+            var self = this;
+            var url = rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime();
+            $._ajax(url, {post_id: post_id, action: 'load_comments'}, 'POST', 'JSON', function(json){
+                if(json.code > 0){
+                    var tree = json.ret.tree || [];
+                    var list = json.ret.list || [];
+                    $.each(data.tree, function(i, v){
+
+                        console.log(v);
+
+                    });
+                    self.bind();
+                }else{
+                    $._alert('提示', '添加失败');
+                }
+            });
         },
         bind: function(){
             var self = this;

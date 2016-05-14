@@ -406,6 +406,32 @@ function ajax_add_comment(){
     die();
 }
 
+//添加评论
+add_action('wp_ajax_nopriv_load_comments', 'ajax_load_comments');
+add_action('wp_ajax_load_comment', 'ajax_load_comments');
+function ajax_load_comments(){
+    global $wpdb;
+    $Tool = new Tools();
+    $post_id = $Tool->_request('post_id', 0);
+    $Tool = new Tools();
+    $db = new Db($wpdb, 'wp_comments_meta');
+
+    $_list = $db->_select(['post_id' => $post_id]);
+    $_list = $Tool->_object_to_array($_list);
+    $tree = _get_all_children_comments($_list);
+    $_blist = $Tool->_index_array($_list, 'id');
+
+    $_data = [
+        'list' => $_blist,
+        'tree' => $tree,
+    ];
+//    hb($_data);
+    $Tool->_json($_data, 10000);
+    unset($Tool);
+    unset($db);
+    die();
+}
+
 function get_comment_list(){
     $post_id = 12842;
     global $wpdb;
@@ -414,59 +440,39 @@ function get_comment_list(){
 
     $_list = $db->_select(['post_id' => $post_id]);
     $_list = $Tool->_object_to_array($_list);
-//    $tree = generateTree($_list);
-//    $arr = array_column($_list, 'pid', 'id');
-//    $id = 14;
-//    while($arr[$id]) {
-//        $id = $arr[$id];
-//    }
-    $items = array(
-        1 => array('id' => 1, 'pid' => 0, 'name' => '安徽省'),
-        2 => array('id' => 2, 'pid' => 0, 'name' => '浙江省'),
-        3 => array('id' => 3, 'pid' => 1, 'name' => '合肥市'),
-        4 => array('id' => 4, 'pid' => 3, 'name' => '长丰县'),
-        5 => array('id' => 5, 'pid' => 1, 'name' => '安庆市'),
-    );
-//    $res = generateTree($_list);
-    $cat = new Category();
-    $arr = $cat->_son_father($_list);
-    hb($arr);
-    $res = $cat->_ancestor($_list, );
+    $tree = _get_all_children_comments($_list);
+    $_blist = $Tool->_index_array($_list, 'id');
 
-
+    hb($_blist);
+    $_data = [
+        'comment_list' => $_blist,
+        'tree' => $tree,
+    ];
+//    $Tool->_json($_data, 10000);
     unset($Tool);
     unset($db);
 }
 
-//通过父评论找到所有后代评论
-function _get_comment_descendants($lists){
-    foreach($lists as $key => $list){
-//        isset($list['son']){}
-    }
-
-
-
-    return [];
-}
-
-function tree($list,$pid=0,$level=0,$html='--'){
-    static $tree = array();
-    foreach($list as $v){
-        if($v['pid'] == $pid){
-            $v['sort'] = $level;
-            $v['html'] = str_repeat($html,$level);
-            $tree[] = $v;
-            tree($list,$v['id'],$level+1);
+//获取所有子评论
+function _get_all_children_comments($_list){
+    $cat = new Category();
+    $arr = $cat->_son_father($_list);
+    $p_arr = [];
+    $s_arr = [];
+    foreach($arr as $s => $f){
+        if($f == 0){
+            $p_arr[$s] = array();
+        }else{
+            $s_arr[] = $s;
         }
     }
-    return $tree;
+    foreach($s_arr as $k => $v){
+        $p = $cat->_ancestor($_list, $v);
+        array_push($p_arr[$p], $v);
+    }
+    return $p_arr;
 }
 
-function generateTree($items){
-    foreach($items as $item)
-        $items[$item['pid']]['son'][$item['id']] = &$items[$item['id']];
-    return isset($items[0]['son']) ? $items[0]['son'] : array();
-}
 
 
 //获取详情页相关文章 $type 1-分类相关 2-标签相关
