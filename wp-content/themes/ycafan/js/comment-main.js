@@ -15,11 +15,12 @@
         run: function(){
             var self = this;
             this.bind();
-            this.load(self.params.post_id);
+            this.bindEvt();
+            this.load(self.params.post_id, 'created_at desc');
         },
-        load: function(post_id){
+        load: function(post_id, sort){
             var self = this;
-            $._ajax(self.params.url, {post_id: post_id, action: 'load_comments'}, 'POST', 'JSON', function(json){
+            $._ajax(self.params.url, {post_id: post_id,sort: sort, action: 'load_comments'}, 'POST', 'JSON', function(json){
                 if(json.code > 0){
                     var tree = json.ret.tree || [];
                     var list = json.ret.list || [];
@@ -68,6 +69,15 @@
 
             });
         },
+        bindEvt: function(){
+            var self = this;
+            $(".js-comments-sorting").on('click', function(){
+                var _this = $(this);
+                var sort = _this.data().commentSort == 'time' ? 'created_at desc' : 'vote_up desc';
+                self.load(self.params.post_id, sort);
+            });
+        },
+
         publish: function(dom){
             var self = this;
             var param = $._get_form_json(self.dom.pform);

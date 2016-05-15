@@ -413,10 +413,10 @@ function ajax_load_comments(){
     global $wpdb;
     $Tool = new Tools();
     $post_id = $Tool->_request('post_id', 0);
+    $sort = $Tool->_request('sort', 'created at desc');
     $Tool = new Tools();
     $db = new Db($wpdb, 'wp_comments_meta');
-
-    $_list = $db->_select(['post_id' => $post_id]);
+    $_list = $db->_select(['post_id' => $post_id], 0, 0, $sort);
     $_list = $Tool->_object_to_array($_list);
     $tree = _get_all_children_comments($_list);
     $_blist = $Tool->_index_array($_list, 'id');
@@ -572,9 +572,9 @@ function get_template_fields($template){
     return get_fields($page_id);
 }
 
-////测试-打印函数
-function hb($data) {
-    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-}
+//测试-打印函数
+//function hb($data) {
+//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+//}
 
 ?>
