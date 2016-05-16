@@ -378,6 +378,16 @@ function ajax_add_comment(){
     $comment = $Tool->_request('comment', '');
     $post_id = $Tool->_request('post_id', 0);
     $pid = $Tool->_request('comment_id', 0);
+    $pattern = '/^[0-9a-zA-Z]+@(([0-9a-zA-Z]+)[.])+[a-z]{2,4}$/i';
+    if(!preg_match($pattern, $from_email)){
+        $Tool->_json([], -10002);
+    }
+    if(strlen($from_author) > 90){
+        $Tool->_json([], -10003);
+    }
+    if(strlen($comment) > 300){
+        $Tool->_json([], -10004);
+    }
     $res = $db->_insert([
         'pid' => $pid,
         'post_id' => $post_id,
@@ -417,6 +427,9 @@ function ajax_load_comments(){
     $Tool = new Tools();
     $db = new Db($wpdb, 'wp_comments_meta');
     $_list = $db->_select(['post_id' => $post_id], 0, 0, $sort);
+    if(empty($_list)){
+        $Tool->_json([], -10000);
+    }
     $_list = $Tool->_object_to_array($_list);
     $tree = _get_all_children_comments($_list);
     $_blist = $Tool->_index_array($_list, 'id');
@@ -438,6 +451,9 @@ function ajax_load_comments(){
 
 //获取所有子评论
 function _get_all_children_comments($_list){
+    if(empty($_list)){
+        return false;
+    }
     $cat = new Category();
     $arr = $cat->_son_father($_list);
     $p_arr = [];

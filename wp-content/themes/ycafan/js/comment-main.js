@@ -3,6 +3,7 @@
         self = this;
         self.params = {
             post_id: $('#publish_form').find('input[name=post_id]').val(),
+            orderby: 'created_at asc',
             url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
         };
         self.dom = {
@@ -16,7 +17,7 @@
             var self = this;
             this.bind();
             this.bindEvt();
-            this.load(self.params.post_id, 'created_at desc');
+            this.load(self.params.post_id, self.params.orderby);
         },
         load: function(post_id, sort){
             var self = this;
@@ -48,9 +49,6 @@
         },
         bind: function(){
             var self = this;
-            $('.js-submit-comment').on('click', function(){
-                self.publish(this);
-            });
             $('.js-reply-comment').off('click').on('click', function(){
                 var _this = this;
                 self.modal_show();
@@ -71,16 +69,58 @@
         },
         bindEvt: function(){
             var self = this;
+            $('.js-submit-comment').on('click', function(){
+                $._form_notice_tips(this);
+                self.publish(this);
+
+            });
             $(".js-comments-sorting").on('click', function(){
                 var _this = $(this);
-                var sort = _this.data().commentSort == 'time' ? 'created_at desc' : 'vote_up desc';
+                var timeArr = ['created_at desc', 'created_at asc'];
+                var voteArr = ['vote_up desc', 'vote_up asc'];
+                var sort = '';
+                var num = parseInt(_this.attr('num'));
+                if(_this.data().commentSort == 'time'){
+                    var num = parseInt(_this.attr('num'));
+                    sort = timeArr[num%2];
+                }else{
+                    sort = voteArr[num%2];
+                }
+                _this.attr('num', num+1);
                 self.load(self.params.post_id, sort);
             });
         },
-
+        validate: function(el){
+            //验证邮箱
+            var pat = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+            var email = $.trim($(el).find('input[name=from_email]').val());
+            var from_author = $.trim($(el).find('input[name=from_author]').val());
+            var comment = $.trim($(el).find('textarea[name=comment]').val());
+            if(email == '' || !email.match(pat)){
+                alert('请填写正确邮箱');
+                return false;
+            }
+            if(from_author == '' ){
+                alert('请填写您的昵称');
+                return false;
+            }
+            if(comment == '' ){
+                alert('请填写评论内容');
+                return false;
+            }
+            if($._str_len(comment.length) > 300){
+                alert('评论内容超过字数限制');
+                return false;
+            }
+            return true;
+        },
         publish: function(dom){
             var self = this;
+            if(!self.validate('#publish_form')){
+                return false;
+            };
             var param = $._get_form_json(self.dom.pform);
+            self.validate(self.dom.pform);
             var extend = {
                 action : 'add_comment'
             };
@@ -103,6 +143,9 @@
         },
         reply: function(dom){
             var self = this;
+            if(!self.validate('#reply_modal')){
+                return false;
+            };
             var to_pm = $(dom).data();
             var to_param = {
                 post_id: to_pm.post_id,

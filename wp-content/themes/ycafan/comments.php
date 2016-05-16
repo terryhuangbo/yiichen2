@@ -18,12 +18,12 @@ if ( post_password_required() ) {
 }
 $commenter = wp_get_current_commenter();
 ?>
-
 <div class="o-single-content__body__content">
     <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
          data-post-id="654732">
         <h5 class="c-card-category c-article-comments__headline">文章评论(<span
-                class="js-placeholder-comments-counter">12</span>)</h5>
+                class="js-placeholder-comments-counter">12</span>)
+        </h5>
 
         <div class="c-article-comments-item is-unauthenticated js-article-comments-post-field">
             <img class="c-article-comments-item__avatar js-user-avatar" src="" alt="">
@@ -33,11 +33,11 @@ $commenter = wp_get_current_commenter();
                     <div class="c-article-comments-form__headline">回复
                         <button type="button" class="c-article-comments-form__close js-close-reply-form"></button>
                     </div>
-                    <input class="c-article-comments-form__input c-article-comments-form__user required" type="email" name="from_email" placeholder="你的邮箱*" required>
+                    <input class="c-article-comments-form__input c-article-comments-form__user required"  type="email" name="from_email" placeholder="你的邮箱*" required>
                     <input class="c-article-comments-form__input c-article-comments-form__user required" type="text" name="from_author" placeholder="你的昵称*" required>
                     <div class="c-article-comments-form__textarea ">
                         <textarea
-                            class="c-article-comments-form__input c-article-comments-form__input--textarea" name="comment" placeholder="你有什么看法呢"></textarea>
+                            class="c-article-comments-form__input c-article-comments-form__input--textarea" name="comment" placeholder="你有什么看法呢" required></textarea>
                     </div>
                     <label class="c-article-comments-form__notifier" for="comment-email-notifier">
                         <input type="checkbox" id="comment-email-notifier">回复邮件通知
@@ -57,8 +57,8 @@ $commenter = wp_get_current_commenter();
 
         <div class="c-article-comments__body is-hidden js-comments-body" style="display: block">
             <nav class="c-article-comments__nav">
-                <button class="is-active js-comments-sorting" data-comment-sort="time">时间</button>
-                <button class="js-comments-sorting" data-comment-sort="rate">热度</button>
+                <button class="is-active js-comments-sorting" data-comment-sort="time" num="0" data-num="0">时间</button>
+                <button class="js-comments-sorting" data-comment-sort="rate" num="0" data-num="0">热度</button>
             </nav>
 
             <ul class="c-article-comments__list js-comments-list">

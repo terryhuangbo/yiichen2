@@ -67,6 +67,9 @@ class Category
      **/
     public function _son_father($list)
     {
+        if(empty($list)){
+            return false;
+        }
         return array_column($list, 'pid', 'id');
     }
 
