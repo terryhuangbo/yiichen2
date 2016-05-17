@@ -6,7 +6,7 @@
 get_header();
 $cat = array_shift(get_the_category());
 the_post();
-$_rel_posts = _get_rel_posts($cat->term_id, get_the_ID());
+$_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-type'));
 ?>
 
 <div class="o-single">

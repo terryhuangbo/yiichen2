@@ -44,6 +44,9 @@ function customSetting(){ ?>
                 'site-intro',
                 //网站公告图片
                 'site-info',
+                //网站公告图片
+                'relpost-type',
+
 
             ];
 
@@ -74,6 +77,16 @@ function customSetting(){ ?>
                     <th scope="row">网站公告（请填写图片链接）:</th>
                     <td><input type="text" name="site-info" id="site-info" value="<?php echo get_option('site-info'); ?>" /></td>
                 </tr>
+                <tr>
+                    <th scope="row">相关文章类型:</th>
+                    <td>
+                        <select name="relpost-type">
+                                <option value="1" <?php echo get_option('relpost-type') == '1' ? 'selected = "selected"' : '' ?>>分类相关文章</option>
+                                <option value="2" <?php echo get_option('relpost-type') == '2' ? 'selected = "selected"' : '' ?>>标签相关文章</option>
+                        </select>
+                    </td>
+                </tr>
+
 
 
             </table>
