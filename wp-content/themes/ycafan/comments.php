@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 $commenter = wp_get_current_commenter();
 ?>
-<div class="o-single-content__body__content">
+<div class="o-single-content__body__content" id="comments">
     <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
          data-post-id="654732">
         <h5 class="c-card-category c-article-comments__headline">文章评论(<span

@@ -17,7 +17,7 @@ class Db
     }
 
     /**
-     * 读取数据信息
+     * 获取数据信息
      * @param $where string|array
      * @return array | bool
      **/
@@ -37,7 +37,7 @@ class Db
     }
 
     /**
-     * 读取数据列表
+     * 获取数据列表
      * @param $where string|array
      * @param $page int
      * @param $pageSize int
@@ -195,6 +195,26 @@ class Db
             }
         }
         return ' `' . $field . '` ' . $operator . ' ' . $_val_str;
+    }
+
+    /**
+     * 获取数据记录数量
+     * @param $where string|array
+     * @return array | bool
+     **/
+    public function _count($where = [])
+    {
+        $sql = 'SELECT COUNT(*) FROM ' . $this->tb;
+        //where
+        if ($where) {
+            $_where = self::where($where);
+            if (!$_where) {
+                return false;
+            }
+            $sql .= ' WHERE' . $_where;
+        }
+        $result = $this->db->get_var($sql);
+        return $result;
     }
 
     /**

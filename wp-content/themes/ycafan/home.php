@@ -170,7 +170,7 @@ $_special_posts = $_special_posts ? $_special_posts
                             </span>
                         </a>
                         <div class="comment-count new-comment-count">
-                            <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
+                            <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
                                ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
                                 <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
                             </a>
@@ -258,7 +258,7 @@ $_special_posts = $_special_posts ? $_special_posts
                             </span>
                         </a>
                         <div class="comment-count new-comment-count">
-                            <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
+                            <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
                                ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
                                 <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
                             </a>
@@ -501,7 +501,7 @@ $_special_posts = $_special_posts ? $_special_posts
                             </span>
                             </a>
                             <div class="comment-count new-comment-count">
-                                <a rel="canonical" class="comment-count-container" href="http://www.ifanr.com/628698#comments"
+                                <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
                                    ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
                                     <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
                                 </a>

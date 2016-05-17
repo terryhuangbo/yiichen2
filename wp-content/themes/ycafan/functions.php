@@ -112,7 +112,7 @@ function _get_index_specials($slug, $num){
             'post_modified' => get_the_modified_time('Y-m-d H:i:s'),
             'introduce' => $Tool->_str_cut(get_the_content(), 0, 100, false),
             'link' => get_page_link(),
-            'comments' => get_comments_number(),
+            'comments' => _get_comments_num(get_the_ID()),
             'category' => get_cat_name($cat->term_id),
             'category_link' => get_category_link($cat->term_id),
             'tags' => get_the_tag_list('', '|', ''),
@@ -244,7 +244,7 @@ function ajax_get_latest(){
                 'excerpt' => $Tool->_str_cut(get_the_content(), 0, $excerpt_length, false),
                 'introduce' => $Tool->_str_cut(get_the_content(), 0, $excerpt_length, false),
                 'link' => get_page_link(),
-                'comments' => get_comments_number(),
+                'comments' => _get_comments_num(get_the_ID()),
                 'category' => get_cat_name($cat->term_id),
                 'category_link' => get_category_link($cat->term_id),
                 'post_type' => $cat->slug,
@@ -298,7 +298,7 @@ function ajax_get_author_latest(){
                 'cwb_image_url' => $Tool->_get_img_from_html(get_the_content()),
                 'introduce' => $Tool->_str_cut(get_the_content(), 0, 100, false),
                 'link' => get_page_link(),
-                'comments' => get_comments_number(),
+                'comments' => _get_comments_num(get_the_ID()),
                 'category' => get_cat_name($cat->term_id),
                 'category_link' => get_category_link($cat->term_id),
                 'post_type' => $cat->slug,
@@ -470,6 +470,17 @@ function _get_all_children_comments($_list){
     return $p_arr;
 }
 
+//获取评论数量
+function _get_comments_num($post_id = 0){
+    if(!is_int($post_id)){
+        return false;
+    }
+    global $wpdb;
+    $db = new Db($wpdb, 'wp_comments_meta');
+    $count = $db->_count(['post_id' => $post_id]);
+    unset($db);
+    return $count;
+}
 
 
 //获取详情页相关文章 $type 1-分类相关 2-标签相关
@@ -515,7 +526,7 @@ function _get_rel_posts($cat_id, $post_id, $type = 1, $size = 5){
             'difDate' => $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))),
             'introduce' => $Tool->_str_cut(get_the_content(), 0, 100, false),
             'link' => get_page_link(),
-            'comments' => get_comments_number(),
+            'comments' => _get_comments_num(get_the_ID()),
             'category' => get_cat_name($cat->term_id),
             'category_link' => get_category_link($cat->term_id),
             'tags' => get_the_tag_list('', '|', ''),
@@ -544,7 +555,7 @@ function _get_post_item($args){
             'difDate' => $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))),
             'introduce' => $Tool->_str_cut(get_the_content(), 0, 100, false),
             'link' => get_page_link(),
-            'comments' => get_comments_number(),
+            'comments' => _get_comments_num(get_the_ID()),
             'category' => get_cat_name($cat->term_id),
             'category_link' => get_category_link($cat->term_id),
             'tags' => get_the_tag_list('', '|', ''),

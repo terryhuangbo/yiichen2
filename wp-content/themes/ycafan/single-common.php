@@ -7,6 +7,7 @@ get_header();
 $cat = array_shift(get_the_category());
 the_post();
 $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-type'));
+
 ?>
 
 <div class="o-single">
@@ -64,7 +65,7 @@ $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-ty
                      data-post-id="654732">
                     <button
                         class="c-article-sns__info c-card-meta__info c-card-meta__info--comments js-article-comment-count js-goto-comments">
-                        <?php echo get_comments_number() ?>
+                        <?php echo _get_comments_num(get_the_ID()) ?>
                     </button>
                     <button class="c-article-sns__info c-card-meta__info c-card-meta__info--like js-article-like-count">--
                     </button>
