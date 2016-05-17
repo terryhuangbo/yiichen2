@@ -7,8 +7,7 @@ if(in_category('quotation')){//语录
 }else if(in_category('video')){ //视频
     include(TEMPLATEPATH . '/single-video.php');
 }else{
-//    include(TEMPLATEPATH . '/single-common.php');
-    include(TEMPLATEPATH . '/single-new.php');
+    include(TEMPLATEPATH . '/single-common.php');
 }
 
 

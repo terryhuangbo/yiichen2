@@ -15,7 +15,7 @@
     comment.prototype = {
         run: function(){
             var self = this;
-            this.bind();
+            //this.bind();
             this.bindEvt();
             this.load(self.params.post_id, self.params.orderby);
         },
