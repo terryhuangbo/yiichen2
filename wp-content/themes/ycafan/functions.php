@@ -451,11 +451,16 @@ function ajax_load_comments(){
 
 //获取所有子评论
 function _get_all_children_comments($_list){
+<<<<<<< HEAD
     if(empty($_list)){
         return false;
     }
     $cat = new Category();
     $arr = $cat->_son_father($_list);
+=======
+    $cat = new Category($_list);
+    $arr = $cat->_son_father();
+>>>>>>> feature_comment
     $p_arr = [];
     $s_arr = [];
     foreach($arr as $s => $f){
@@ -466,9 +471,10 @@ function _get_all_children_comments($_list){
         }
     }
     foreach($s_arr as $k => $v){
-        $p = $cat->_ancestor($_list, $v);
+        $p = $cat->_ancestor($v, false);
         array_push($p_arr[$p], $v);
     }
+    unset($cat);
     return $p_arr;
 }
 
@@ -589,8 +595,8 @@ function get_template_fields($template){
 }
 
 //测试-打印函数
-//function hb($data) {
-//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-//}
+function hb($data) {
+    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+}
 
 ?>
