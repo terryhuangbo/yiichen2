@@ -451,16 +451,8 @@ function ajax_load_comments(){
 
 //获取所有子评论
 function _get_all_children_comments($_list){
-<<<<<<< HEAD
-    if(empty($_list)){
-        return false;
-    }
-    $cat = new Category();
-    $arr = $cat->_son_father($_list);
-=======
     $cat = new Category($_list);
     $arr = $cat->_son_father();
->>>>>>> feature_comment
     $p_arr = [];
     $s_arr = [];
     foreach($arr as $s => $f){
