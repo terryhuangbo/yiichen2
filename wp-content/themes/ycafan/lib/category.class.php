@@ -165,17 +165,10 @@ class Category
      **/
     public function _son_father()
     {
-<<<<<<< HEAD
-        if(empty($list)){
-            return false;
-        }
-        return array_column($list, 'pid', 'id');
-=======
         if(empty($this->list)){
             return false;
         }
         return $this->sp_list;
->>>>>>> feature_comment
     }
 
     /**
