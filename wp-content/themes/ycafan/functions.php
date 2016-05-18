@@ -371,6 +371,7 @@ function ajax_get_recent_comments(){
     $Tool = new Tools();
     $page = intval($Tool->_request('page', 1));
     $posts_per_page = 10;
+    hb($Tool->_request());
     $_data = [];
     echo $Tool->_json($_data, 10000);
     unset($Tool);
@@ -431,7 +432,7 @@ function ajax_add_comment(){
     die();
 }
 
-//添加评论
+//异步加载评论
 add_action('wp_ajax_nopriv_load_comments', 'ajax_load_comments');
 add_action('wp_ajax_load_comment', 'ajax_load_comments');
 function ajax_load_comments(){
@@ -613,8 +614,8 @@ function get_template_fields($template){
 }
 
 //测试-打印函数
-//function hb($data) {
-//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-//}
+function hb($data) {
+    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+}
 
 ?>

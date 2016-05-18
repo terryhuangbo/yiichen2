@@ -329,10 +329,11 @@ template("desktop-buzz-item",
     function(t, i) {
         "use strict";
         var n = function(i) {
-            return this.$el = t(i),
-                this.init(),
-                this
-        };
+                this.$el = t(i);
+                this.ty = i == 'ifanr_widget_buzz-2' ? 2 : 3;
+                this.init();
+                //this
+            };
         n.prototype = {
             _page: 1,
             _lock: !1,
@@ -361,14 +362,14 @@ template("desktop-buzz-item",
                     page: t,
                     cat: cat,
                 };
-                data.action = (i == 'ifanr_widget_buzz-2') ? 'get_buzz' : 'get_recent_comments';
+                data.action = (i.ty == 2) ? 'get_buzz' : 'get_recent_comments';
                 $.ajax({
                     url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
                     data: data,
                     dataType: "json",
                     method: "post",
                     success: function(t) {
-                        t.code > 0 && i.renderData(t.ret),
+                        t.code > 0 && i.renderData(t.ret, i.ty),
                             i.$loading.detach()
                     }
                 });
@@ -386,11 +387,18 @@ template("desktop-buzz-item",
                 //    }
                 //})
             },
-            renderData: function(i) {
+            renderData: function(i, ty) {
                 var n;
-                return i.length <= 0 ? void this.$listContainer.off("scroll") : (n = t(template("desktop-buzz-item", {
-                    list: i
-                })), this.$listContainer.append(n), void(this._lock = !1))
+                if(ty == 2){
+                    return i.length <= 0 ? void this.$listContainer.off("scroll") : (n = t(template("desktop-buzz-item", {
+                        list: i
+                    })), this.$listContainer.append(n), void(this._lock = !1))
+                }else if(ty == 3){
+                    return i.length <= 0 ? void this.$listContainer.off("scroll") : (n = t(template("desktop-buzz-item2", {
+                        list: i
+                    })), this.$listContainer.append(n), void(this._lock = !1))
+                }
+
             },
             bindEvents: function() {
                 this.$nano.nanoScroller({
