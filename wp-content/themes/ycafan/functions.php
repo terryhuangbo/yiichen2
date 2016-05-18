@@ -364,6 +364,21 @@ function ajax_get_buzz(){
     die();
 }
 
+//获取最新评论
+add_action('wp_ajax_nopriv_get_recent_comments', 'ajax_get_recent_comments');
+add_action('wp_ajax_get_recent_comments', 'ajax_get_recent_comments');
+function ajax_get_recent_comments(){
+    $Tool = new Tools();
+    $page = intval($Tool->_request('page', 1));
+    $posts_per_page = 10;
+    $_data = [];
+    echo $Tool->_json($_data, 10000);
+    unset($Tool);
+    die();
+}
+
+
+
 //添加评论
 add_action('wp_ajax_nopriv_add_comment', 'ajax_add_comment');
 add_action('wp_ajax_add_comment', 'ajax_add_comment');

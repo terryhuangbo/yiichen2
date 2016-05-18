@@ -361,9 +361,10 @@ template("desktop-buzz-item",
                     page: t,
                     cat: cat,
                 };
+                data.action = (i == 'ifanr_widget_buzz-2') ? 'get_buzz' : 'get_recent_comments';
                 $.ajax({
                     url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
-                    data: $.extend({}, data, {action : 'get_buzz'}),
+                    data: data,
                     dataType: "json",
                     method: "post",
                     success: function(t) {

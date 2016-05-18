@@ -371,7 +371,7 @@ $_special_posts = $_special_posts ? $_special_posts
             </div>
         </div>
 
-        <div id="ifanr_widget_buzz-2" class="widget-container widget_ifanr_widget_buzz clearfix">
+        <div id="ifanr_widget_buzz-3" class="widget-container widget_ifanr_widget_buzz clearfix" style="display: block">
             <div class="widget-buzz-container">
                 <div class="o-widget__header c-hot-comment-widget-header">
                     <h1 class="o-widget__header__title c-hot-comment-widget-header__title">最近评论</h1>
@@ -380,7 +380,8 @@ $_special_posts = $_special_posts ? $_special_posts
                     <ul class="buzz-list nano-content js-buzz-list"
                         category="<?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special')  ?>">
                         <!-- buzz item -->
-                        <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        <?php foreach([1,2,3,4,5,6,7] as $val): ?>
+                        <li class=" c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
                                 class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657816" target="_blank"><p
                                     class="c-hot-comment-widget-item__main">接到要求，关闭网盘业务</p>
 
@@ -394,67 +395,11 @@ $_special_posts = $_special_posts ? $_special_posts
                                         class="c-hot-comment-widget-item__user-info__avatar"
                                         src="http://gravatar.ifanrx.com/avatar/2a35af8c62068558688f2aaa7fda3f3b?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
                                 </div>
-                            </a></li>
-                        <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
-                                class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657816" target="_blank"><p
-                                    class="c-hot-comment-widget-item__main">Nexus 的系统体验很赞，就是没有哪台特好看</p>
+                            </a>
+                        </li>
+                        <?php endforeach ?>
 
-                                <p class="c-hot-comment-widget-item__meta"><span
-                                        class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
-                                        class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">未来后天就来，爱范儿告诉你为何今年 Google I/O 值得熬夜看</span>
-                                </p>
 
-                                <div class="c-hot-comment-widget-item__user-info"><span
-                                        class="c-hot-comment-widget-item__user-info__username">李 谋</span> <img
-                                        class="c-hot-comment-widget-item__user-info__avatar"
-                                        src="http://gravatar.ifanrx.com/avatar/8df3c436790c8239753eefce779a9f99?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
-                                </div>
-                            </a></li>
-                        <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
-                                class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657744" target="_blank"><p
-                                    class="c-hot-comment-widget-item__main">因为魅族起家于 MP3 播放器，所以本源普遍认为是在音乐播放领域</p>
-
-                                <p class="c-hot-comment-widget-item__meta"><span
-                                        class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
-                                        class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">魅族在美国发了一款炫酷音箱，想要证明中国也有高端货</span>
-                                </p>
-
-                                <div class="c-hot-comment-widget-item__user-info"><span
-                                        class="c-hot-comment-widget-item__user-info__username">Kesen</span> <img
-                                        class="c-hot-comment-widget-item__user-info__avatar"
-                                        src="http://gravatar.ifanrx.com/avatar/e421b902014216b537bde82f6d0ac0a2?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
-                                </div>
-                            </a></li>
-                        <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
-                                class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/app/657565" target="_blank">
-                                <p class="c-hot-comment-widget-item__main">题图这个广告我印象深刻啊，太棒了</p>
-
-                                <p class="c-hot-comment-widget-item__meta"><span
-                                        class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
-                                        class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">没有乐器、不懂乐理也能玩音乐！苹果 GarageBand 为中国发布重大更新</span>
-                                </p>
-
-                                <div class="c-hot-comment-widget-item__user-info"><span
-                                        class="c-hot-comment-widget-item__user-info__username">异次元非骇客</span> <img
-                                        class="c-hot-comment-widget-item__user-info__avatar"
-                                        src="http://gravatar.ifanrx.com/avatar/23d47a15e3b9af8b17a186e3f5c63550?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
-                                </div>
-                            </a></li>
-                        <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
-                                class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/658268" target="_blank"><p
-                                    class="c-hot-comment-widget-item__main">的确不错</p>
-
-                                <p class="c-hot-comment-widget-item__meta"><span
-                                        class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
-                                        class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">Facebook 拍摄的第一部 VR 视频什么样？</span>
-                                </p>
-
-                                <div class="c-hot-comment-widget-item__user-info"><span
-                                        class="c-hot-comment-widget-item__user-info__username">小峰峰</span> <img
-                                        class="c-hot-comment-widget-item__user-info__avatar"
-                                        src="http://gravatar.ifanrx.com/avatar/d298e6316349cdcec13bfc4711b0e585?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
-                                </div>
-                            </a></li>
                         <!-- buzz item -->
                         <li class="loading js-loading">
                             <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"

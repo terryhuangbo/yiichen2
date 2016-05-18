@@ -163,35 +163,51 @@
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/tools.js'></script>
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/comment-main.js'></script>
   <!--[if gte IE 9]>
-  <script src="http://cdn.ifanr.cn/vendor/raven.min.js"></script>
-  <script type="text/javascript">
-    Raven.config(
-      'https://d19b2d48c27542a2af4f6ff35063ebaf@app.getsentry.com/41363', {}
-    ).install();
-    window.onerror = Raven.process;
-  </script>
-  <![endif]-->
-  <script type="text/javascript">
-  _atrk_opts = { atrk_acct:"M/54m1aU8KL352", domain:"ifanr.com",dynamic: true};
-  (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
-  </script>
-  <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=M/54m1aU8KL352" style="display:none" height="1" width="1" alt="" /></noscript>
-  <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  </script>
-    <script type="text/javascript">
-      jQuery(document).ready(function () {
-        var widgetId = 'ifanr_widget_buzz-2';
-        if (widgetId) {
-          return new window.WidgetBuzz('#' + widgetId);
+<script src="http://cdn.ifanr.cn/vendor/raven.min.js"></script>
+<script type="text/javascript">
+Raven.config(
+  'https://d19b2d48c27542a2af4f6ff35063ebaf@app.getsentry.com/41363', {}
+).install();
+window.onerror = Raven.process;
+</script>
+<![endif]-->
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"M/54m1aU8KL352", domain:"ifanr.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=M/54m1aU8KL352" style="display:none" height="1" width="1" alt="" /></noscript>
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+</script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        var widgetId2 = 'ifanr_widget_buzz-2';
+        if (widgetId2) {
+            return new window.WidgetBuzz('#' + widgetId2);
+        }
+        var widgetId3 = 'ifanr_widget_buzz-3';
+        return;
+    });
+    jQuery(document).ready(function () {
+        var widgetId3 = 'ifanr_widget_buzz-3';
+        if (widgetId3) {
+            return new window.WidgetBuzz('#' + widgetId3);
         }
         return;
-      });
-    </script>
-    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"eee3fec2bc","applicationID":"3953741","transactionName":"M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==","queueTime":0,"applicationTime":4,"atts":"HxZYEVlOTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+    });
+
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"eee3fec2bc","applicationID":"3953741","transactionName":"M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==","queueTime":0,"applicationTime":4,"atts":"HxZYEVlOTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
 <?php
 unset($Tool);
