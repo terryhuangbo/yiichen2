@@ -370,30 +370,228 @@ $_special_posts = $_special_posts ? $_special_posts
                 </a>
             </div>
         </div>
-        <div id="recentcomments2" class="widget-container widget_recentcomments ifr-post-list-widget  clearfix">
-            <div class="title">
-                <img class="ifanr2015" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/latest-comments-icon.png"
-                     alt="" />
-                <h2>
-                    最近评论
-                </h2>
+<!--        <div id="recentcomments2" class="widget-container widget_recentcomments ifr-post-list-widget  clearfix">-->
+<!--            <div class="title">-->
+<!--                <img class="ifanr2015" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/latest-comments-icon.png"-->
+<!--                     alt="" />-->
+<!--                <h2>-->
+<!--                    最近评论-->
+<!--                </h2>-->
+<!--            </div>-->
+<!--            <ul>-->
+<!--                <li class="rc-navi clearfix">-->
+<!--              <span class="rc-loading">-->
+<!--                Loading...-->
+<!--              </span>-->
+<!--                </li>-->
+<!--                <li id="rc-comment-temp" class="rc-item rc-comment clearfix">-->
+<!--                    <div class="rc-excerpt">-->
+<!--                    </div>-->
+<!--                    <div class="rc-info">-->
+<!--                    </div>-->
+<!--                    <div class="rc-timestamp">-->
+<!--                    </div>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+
+        <section class="o-widget c-hot-comment-widget" data-component="RecentCommentsWidget">
+            <div class="o-widget__header c-hot-comment-widget-header">
+                <h1 class="o-widget__header__title c-hot-comment-widget-header__title">最近评论</h1>
             </div>
-            <ul>
-                <li class="rc-navi clearfix">
-              <span class="rc-loading">
-                Loading...
-              </span>
-                </li>
-                <li id="rc-comment-temp" class="rc-item rc-comment clearfix">
-                    <div class="rc-excerpt">
-                    </div>
-                    <div class="rc-info">
-                    </div>
-                    <div class="rc-timestamp">
-                    </div>
-                </li>
+            <ul class="o-widget__items c-hot-comment-widget-items js-recent-comment-items ps-container ps-theme-default ps-active-y"
+                data-component="Scrollbar" data-ps-id="402e4162-f5c4-4434-c9f5-d809816da645">
+
+                <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
+                    <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                </div>
+                <div class="ps-scrollbar-y-rail" style="top: 0px; right: 3px; height: 510px;">
+                    <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 141px;"></div>
+                </div>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657816" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">接到要求，关闭网盘业务</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">未来后天就来，爱范儿告诉你为何今年 Google I/O 值得熬夜看</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">欧阳</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/2a35af8c62068558688f2aaa7fda3f3b?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657816" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">Nexus 的系统体验很赞，就是没有哪台特好看</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">未来后天就来，爱范儿告诉你为何今年 Google I/O 值得熬夜看</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">李 谋</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/8df3c436790c8239753eefce779a9f99?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657744" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">因为魅族起家于 MP3 播放器，所以本源普遍认为是在音乐播放领域</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">魅族在美国发了一款炫酷音箱，想要证明中国也有高端货</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">Kesen</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/e421b902014216b537bde82f6d0ac0a2?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/app/657565" target="_blank">
+                        <p class="c-hot-comment-widget-item__main">题图这个广告我印象深刻啊，太棒了</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">没有乐器、不懂乐理也能玩音乐！苹果 GarageBand 为中国发布重大更新</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">异次元非骇客</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/23d47a15e3b9af8b17a186e3f5c63550?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/658268" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">的确不错</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">Facebook 拍摄的第一部 VR 视频什么样？</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">小峰峰</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/d298e6316349cdcec13bfc4711b0e585?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/app/655328" target="_blank">
+                        <p class="c-hot-comment-widget-item__main">太好了，我的公众号「日纸」每天推送的壁纸很多都是从 unsplash 取材的。爱范儿么么哒</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">想要高清大图又不愿花钱？收下这 11 个超赞的摄影图库 | 领客专栏 · 電腦玩物</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">Kesen</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/e421b902014216b537bde82f6d0ac0a2?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657744" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">诸位好像忘了一加当初是如何打入美国市场，再回归国内了。</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">魅族在美国发了一款炫酷音箱，想要证明中国也有高端货</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">诡马</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/f4f543de7b0ff9ae72c36fe32de05f06?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/658004" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">不要搞笑了，iphone6s
+                            plus的屏幕分辨率和小米MAX一样，都是1920x1080，大家能显</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">小米 Max 评测：电量持久，有一个功能让 iPhone 望尘莫及</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">天音怒放</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/da327ef33c6edec50e2cd434052c54a7?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/658131" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">我服了爱范儿了，就不能买2个机器自己拆开分析么？这种文章也要转载，价值到底何在？</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">拆开看两大黑科技 HTC Vive 与 Oculus Rift 的同与不同</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">terry</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/c2cf98edeab057ab9c913da5d5543ea7?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/658228" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">
+                            “黄丽表示第五季微信公开课上公布的新版会员卡“支付+会员”解决方案可以将顾客在微信支付的一瞬间直接转</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">“扫一扫”与会员升级，微信并没有想象中那么简单</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">erick_zhu</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/75026a4ef3f2c2846f1d6f3e27f45802?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/658228" target="_blank"><p
+                            class="c-hot-comment-widget-item__main">实在看不出来这和公众号的作用有什么区别？</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">“扫一扫”与会员升级，微信并没有想象中那么简单</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">SNAIL.83</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/9ec33c4fb96e24cf82d083ba4cf608ff?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
+                <li class="c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item"><a
+                        class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/dasheng/658196"
+                        target="_blank"><p class="c-hot-comment-widget-item__main">把政府的工作强加给企业，是我们的特色。</p>
+
+                        <p class="c-hot-comment-widget-item__meta"><span
+                                class="c-hot-comment-widget-item__meta__item-hint">评论于</span> <span
+                                class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">加入国际反假联盟遇挫，阿里招谁了？</span>
+                        </p>
+
+                        <div class="c-hot-comment-widget-item__user-info"><span
+                                class="c-hot-comment-widget-item__user-info__username">SNAIL.83</span> <img
+                                class="c-hot-comment-widget-item__user-info__avatar"
+                                src="http://gravatar.ifanrx.com/avatar/9ec33c4fb96e24cf82d083ba4cf608ff?s=48&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg">
+                        </div>
+                    </a></li>
             </ul>
-        </div>
+        </section>
         <div id="mail-subscribe" class="widget-ifr ifr-subscribe widget-container clearfix">
             <div id="mc_embed_signup" class="clearfix">
                 <form action="http://ifanr.us2.list-manage.com/subscribe/post?u=f770959951cdcc1bba7ab56cb&amp;id=258559241a"
