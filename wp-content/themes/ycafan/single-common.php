@@ -50,8 +50,7 @@ $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-ty
                 <a class="c-social-bar__icon c-social-bar__icon--linkedin" data-linkedin target="_blank"></a>
                 <a class="c-social-bar__icon c-social-bar__icon--douban" data-douban target="_blank"></a>
                 <a class="c-social-bar__icon c-social-bar__icon--qzone" data-qzone target="_blank"></a>
-                <button class="c-social-bar__icon c-social-bar__icon--comments js-goto-comments"
-                        data-share-ignored></button>
+                <button class="c-social-bar__icon c-social-bar__icon--comments js-goto-comments" data-share-ignored></button>
             </aside>
             <div id="article-content" class="o-single-content__body__content c-article-meta">
                 <div class="c-article-tags">
@@ -61,12 +60,12 @@ $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-ty
                     <a href="http://www.ifanr.com/tags/%e5%90%89%e7%94%b0%e4%bf%ae%e5%b9%b3" class="c-article-tags__item">吉田修平</a>
                     <a href="http://www.ifanr.com/tags/%e8%99%9a%e6%8b%9f%e7%8e%b0%e5%ae%9e" class="c-article-tags__item">虚拟现实</a>
                 </div>
-                <div class="c-card-meta c-card-meta--darken c-article-sns" data-component="ArticleContentMeta"
-                     data-post-id="654732">
-                    <button
-                        class="c-article-sns__info c-card-meta__info c-card-meta__info--comments js-article-comment-count js-goto-comments">
-                        <?php echo _get_comments_num(get_the_ID()) ?>
-                    </button>
+                <div class="c-card-meta c-card-meta--darken c-article-sns" data-component="ArticleContentMeta" data-post-id="654732">
+                    <a href="#comments">
+                        <button class="c-article-sns__info c-card-meta__info c-card-meta__info--comments js-article-comment-count js-goto-comments">
+                            <?php echo _get_comments_num(get_the_ID()) ?>
+                        </button>
+                    </a>
                     <button class="c-article-sns__info c-card-meta__info c-card-meta__info--like js-article-like-count">--
                     </button>
                 </div>
