@@ -362,7 +362,7 @@ template("desktop-buzz-item",
                     cat: cat,
                 };
                 $.ajax({
-                    url: "../wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
+                    url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
                     data: $.extend({}, data, {action : 'get_buzz'}),
                     dataType: "json",
                     method: "post",
