@@ -39,9 +39,9 @@ $commenter = wp_get_current_commenter();
                         <textarea
                             class="c-article-comments-form__input c-article-comments-form__input--textarea" name="comment" placeholder="你有什么看法呢" required></textarea>
                     </div>
-                    <label class="c-article-comments-form__notifier" for="comment-email-notifier">
-                        <input type="checkbox" id="comment-email-notifier">回复邮件通知
-                    </label>
+<!--                    <label class="c-article-comments-form__notifier" for="comment-email-notifier">-->
+<!--                        <input type="checkbox" id="comment-email-notifier">回复邮件通知-->
+<!--                    </label>-->
                     <input type='hidden' name='comment_post_ID' value='<?php echo $post->ID ?>' id='comment_post_ID'/>
                     <input type='hidden' name='comment_parent' id='comment_parent' value='0'/>
                     <input type="hidden" name="post_id" value="<?php echo $post->ID ?>">
@@ -72,7 +72,9 @@ $commenter = wp_get_current_commenter();
                 <div class="c-article-comments-form__textarea ">
                     <textarea id="reply_modal_content" class="c-article-comments-form__input c-article-comments-form__input--textarea" name="comment" placeholder="你有什么看法呢"></textarea>
                 </div>
-                <label class="c-article-comments-form__notifier" for="comment-email-notifier"><input type="checkbox" id="comment-email-notifier">回复邮件通知</label>
+<!--                <label class="c-article-comments-form__notifier" for="comment-email-notifier">-->
+<!--                    <input type="checkbox" id="comment-email-notifier">回复邮件通知-->
+<!--                </label>-->
                 <button type="button" id="reply_modal_submit" class="c-article-comments-form__submit js-submit-comment">回复评论</button>
             </form>
 

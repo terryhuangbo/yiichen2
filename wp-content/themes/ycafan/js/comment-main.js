@@ -61,7 +61,7 @@
                     self.reply(_this);
                 });
                 $("#reply_modal_close").off('click').on('click', function(){
-                    self.modal_show();
+                    self.modal_hide();
                     $('.js-reply-comment').show();
                 });
 

@@ -354,108 +354,108 @@ template("desktop-buzz-item2",
 });
 
 !function(t, i) {
-        "use strict";
-        var n = function(i) {
-                this.$el = t(i);
-                this.ty = (i == '#ifanr_widget_buzz-2') ? 2 : 3;
-                this.init();
-                //this
-            };
-        n.prototype = {
-            _page: 1,
-            _lock: !1,
-            init: function() {
-                this.cacheDOM();
-                this.bindEvents();
-                this.loadData(this._page);
-            },
-            cacheDOM: function() {
-                this.$nano = this.$el.find(".js-nano"),
-                this.$listContainer = this.$el.find(".js-buzz-list"),
-                this.$loading = this.$el.find(".js-loading").detach(),
-                this.$sourceElems = this.$el.find("[data-source-url]")
-            },
-            sendGA: function(t) {
-                switch (t) {
-                    case "LOAD_MORE":
-                        ga("send", "event", "widget", "scroll", "ifanr-buzz-load-more", 1)
-                }
-                return this
-            },
-            loadData: function(t) {
-                var i = this;
-                i.$loading.appendTo(i.$listContainer);
-                var cat = i.$listContainer.attr("category");
-                var data = {
-                    page: t,
-                    cat: cat,
-                };
-
-                data.action = (i.ty == 2) ? 'get_buzz' : 'get_recent_comments';
-                $.ajax({
-                    url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
-                    data: data,
-                    dataType: "json",
-                    method: "post",
-                    success: function(t) {
-                        t.code > 0 && i.renderData(t.ret, i.ty),
-                            i.$loading.detach()
-                    }
-                });
-                //IFR.api("get_buzz_list", {
-                //    data: {
-                //        page: t
-                //    },
-                //    success: function(t) {
-                //        1 === t.status && i.renderData(t.data),
-                //            i.$loading.detach()
-                //    },
-                //    error: function() {
-                //        i._lock = !1,
-                //            i.$loading.detach()
-                //    }
-                //})
-            },
-            renderData: function(i, ty) {
-                var n;
-                if(ty == 2){
-                    return i.length <= 0 ? void this.$listContainer.off("scroll") : (n = t(template("desktop-buzz-item", {
-                        list: i
-                    })), this.$listContainer.append(n), void(this._lock = !1))
-                }else if(ty == 3){
-                    return i.length <= 0 ? void this.$listContainer.off("scroll") : (n = t(template("desktop-buzz-item2", {
-                        list: i
-                    })), this.$listContainer.append(n), void(this._lock = !1))
-                }
-
-            },
-            bindEvents: function() {
-                this.$nano.nanoScroller({
-                    preventPageScrolling: !0
-                }),
-                this.bindLoadMoreEvent(),
-                this.$el.on("mouseenter touchstart", "[data-source-url]", this.bindClickSourceLinkEvent)
-            },
-            bindLoadMoreEvent: function() {
-                var t = this,
-                    i = this.$listContainer,
-                    n = i.height(),
-                    e = !1;
-                i.on("scroll",
-                    function() {
-                        e || (e = !0, setTimeout(function() {
-                                var o = i.get(0).scrollHeight,
-                                    s = i.scrollTop();
-                                s - (o - n) >= 0 && !t._lock && (t._lock = !0, t.loadData(++t._page), t.sendGA("LOAD_MORE")),
-                                    e = !1
-                            },
-                            250))
-                    })
-            },
-            bindClickSourceLinkEvent: function(i) {
-                var n = t(this);
-                n.attr("href", t(this).data("sourceUrl"))
-            }
+    "use strict";
+    var n = function(i) {
+            this.$el = t(i);
+            this.ty = (i == '#ifanr_widget_buzz-2') ? 2 : 3;
+            this.init();
+            //this
+        };
+    n.prototype = {
+        _page: 1,
+        _lock: !1,
+        init: function() {
+            this.cacheDOM();
+            this.bindEvents();
+            this.loadData(this._page);
         },
-        i.WidgetBuzz = n
-    } (jQuery, window);
+        cacheDOM: function() {
+            this.$nano = this.$el.find(".js-nano"),
+            this.$listContainer = this.$el.find(".js-buzz-list"),
+            this.$loading = this.$el.find(".js-loading").detach(),
+            this.$sourceElems = this.$el.find("[data-source-url]")
+        },
+        sendGA: function(t) {
+            switch (t) {
+                case "LOAD_MORE":
+                    ga("send", "event", "widget", "scroll", "ifanr-buzz-load-more", 1)
+            }
+            return this
+        },
+        loadData: function(t) {
+            var i = this;
+            i.$loading.appendTo(i.$listContainer);
+            var cat = i.$listContainer.attr("category");
+            var data = {
+                page: t,
+                cat: cat,
+            };
+
+            data.action = (i.ty == 2) ? 'get_buzz' : 'get_recent_comments';
+            $.ajax({
+                url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
+                data: data,
+                dataType: "json",
+                method: "post",
+                success: function(t) {
+                    t.code > 0 && i.renderData(t.ret, i.ty),
+                        i.$loading.detach()
+                }
+            });
+            //IFR.api("get_buzz_list", {
+            //    data: {
+            //        page: t
+            //    },
+            //    success: function(t) {
+            //        1 === t.status && i.renderData(t.data),
+            //            i.$loading.detach()
+            //    },
+            //    error: function() {
+            //        i._lock = !1,
+            //            i.$loading.detach()
+            //    }
+            //})
+        },
+        renderData: function(i, ty) {
+            var n;
+            if(ty == 2){
+                return i.length <= 0 ? void this.$listContainer.off("scroll") : (n = t(template("desktop-buzz-item", {
+                    list: i
+                })), this.$listContainer.append(n), void(this._lock = !1))
+            }else if(ty == 3){
+                return i.length <= 0 ? void this.$listContainer.off("scroll") : (n = t(template("desktop-buzz-item2", {
+                    list: i
+                })), this.$listContainer.append(n), void(this._lock = !1))
+            }
+
+        },
+        bindEvents: function() {
+            this.$nano.nanoScroller({
+                preventPageScrolling: !0
+            }),
+            this.bindLoadMoreEvent(),
+            this.$el.on("mouseenter touchstart", "[data-source-url]", this.bindClickSourceLinkEvent)
+        },
+        bindLoadMoreEvent: function() {
+            var t = this,
+                i = this.$listContainer,
+                n = i.height(),
+                e = !1;
+            i.on("scroll",
+                function() {
+                    e || (e = !0, setTimeout(function() {
+                            var o = i.get(0).scrollHeight,
+                                s = i.scrollTop();
+                            s - (o - n) >= 0 && !t._lock && (t._lock = !0, t.loadData(++t._page), t.sendGA("LOAD_MORE")),
+                                e = !1
+                        },
+                        250))
+                })
+        },
+        bindClickSourceLinkEvent: function(i) {
+            var n = t(this);
+            n.attr("href", t(this).data("sourceUrl"))
+        }
+    },
+    i.WidgetBuzz = n
+} (jQuery, window);
