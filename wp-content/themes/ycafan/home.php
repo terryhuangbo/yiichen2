@@ -381,19 +381,19 @@ $_special_posts = $_special_posts ? $_special_posts
                         category="<?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special')  ?>">
                         <!-- buzz item -->
                         <?php foreach([1,2,3,4,5,6,7] as $val): ?>
-                        <li class=" c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item">
-                            <a class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657816" target="_blank">
-                                <p class="c-hot-comment-widget-item__main">接到要求，关闭网盘业务</p>
-                                <p class="c-hot-comment-widget-item__meta">
-                                    <span class="c-hot-comment-widget-item__meta__item-hint">评论于</span>
-                                    <span class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">未来后天就来，爱范儿告诉你为何今年 Google I/O 值得熬夜看</span>
-                                </p>
-                                <div class="c-hot-comment-widget-item__user-info">
-                                    <span class="c-hot-comment-widget-item__user-info__username">欧阳</span>
-                                    <img class="c-hot-comment-widget-item__user-info__avatar" src="<?php bloginfo('template_url') ?>/images/garvatar/garvatar.jpg">
-                                </div>
-                            </a>
-                        </li>
+<!--                        <li class=" c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item">-->
+<!--                            <a class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657816" target="_blank">-->
+<!--                                <p class="c-hot-comment-widget-item__main">接到要求，关闭网盘业务</p>-->
+<!--                                <p class="c-hot-comment-widget-item__meta">-->
+<!--                                    <span class="c-hot-comment-widget-item__meta__item-hint">评论于</span>-->
+<!--                                    <span class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">未来后天就来，爱范儿告诉你为何今年 Google I/O 值得熬夜看</span>-->
+<!--                                </p>-->
+<!--                                <div class="c-hot-comment-widget-item__user-info">-->
+<!--                                    <span class="c-hot-comment-widget-item__user-info__username">欧阳</span>-->
+<!--                                    <img class="c-hot-comment-widget-item__user-info__avatar" src="--><?php //bloginfo('template_url') ?><!--/images/garvatar/garvatar.jpg">-->
+<!--                                </div>-->
+<!--                            </a>-->
+<!--                        </li>-->
                         <?php endforeach ?>
 
 

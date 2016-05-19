@@ -195,7 +195,6 @@ _atrk_opts = { atrk_acct:"M/54m1aU8KL352", domain:"ifanr.com",dynamic: true};
         if (widgetId2) {
             return new window.WidgetBuzz('#' + widgetId2);
         }
-        var widgetId3 = 'ifanr_widget_buzz-3';
         return;
     });
     jQuery(document).ready(function () {
@@ -205,6 +204,7 @@ _atrk_opts = { atrk_acct:"M/54m1aU8KL352", domain:"ifanr.com",dynamic: true};
         }
         return;
     });
+
 
 </script>
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"eee3fec2bc","applicationID":"3953741","transactionName":"M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==","queueTime":0,"applicationTime":4,"atts":"HxZYEVlOTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>

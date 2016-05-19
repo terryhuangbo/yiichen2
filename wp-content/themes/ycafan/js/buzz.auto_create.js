@@ -331,6 +331,9 @@ template("desktop-buzz-item2",
         "use strict";
         var data = e.list || [];
         var html = '';
+        if(data.length == 0){
+            return new String(html);
+        }
         $.each(data, function(k, v){
             html +=
                 '<li class=" c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item">'+
@@ -362,8 +365,9 @@ template("desktop-buzz-item2",
             _page: 1,
             _lock: !1,
             init: function() {
-                this.cacheDOM(),
-                this.bindEvents()
+                this.cacheDOM();
+                this.bindEvents();
+                this.loadData(this._page);
             },
             cacheDOM: function() {
                 this.$nano = this.$el.find(".js-nano"),
