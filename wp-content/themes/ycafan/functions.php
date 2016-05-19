@@ -369,11 +369,14 @@ add_action('wp_ajax_nopriv_get_recent_comments', 'ajax_get_recent_comments');
 add_action('wp_ajax_get_recent_comments', 'ajax_get_recent_comments');
 function ajax_get_recent_comments(){
     $Tool = new Tools();
+    global $wpdb;
     $page = intval($Tool->_request('page', 1));
-    $posts_per_page = 10;
-    hb($Tool->_request());
-    $_data = [];
-    echo $Tool->_json($_data, 10000);
+    $pageSize = 2;
+    $offset = max($page-1, 0) * $pageSize;
+    $sql = "SELECT p.post_title, c.* FROM wp_posts AS p LEFT JOIN wp_comments_meta AS c ON c.post_id = p.ID
+            WHERE c.pid = 0 ORDER BY c.id DESC LIMIT {$offset}, {$pageSize}";
+    $_data = $Tool->_object_to_array($wpdb->get_results($sql));
+    echo $Tool->_json($_data, 10005);
     unset($Tool);
     die();
 }
@@ -614,8 +617,8 @@ function get_template_fields($template){
 }
 
 //测试-打印函数
-function hb($data) {
-    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-}
+//function hb($data) {
+//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+//}
 
 ?>

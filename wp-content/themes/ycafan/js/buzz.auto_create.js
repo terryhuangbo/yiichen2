@@ -1,10 +1,10 @@
-!
-    function(t) {
+!function(t) {
         return "function" == typeof define && define.amd ? define(["jquery"],
             function(e) {
                 return t(e, window, document)
             }) : "object" == typeof exports ? module.exports = t(require("jquery"), window, document) : t(jQuery, window, document)
-    } (function(t, e, i) {
+    }
+(function(t, e, i) {
         "use strict";
         var s, o, n, r, l, h, c, a, p, d, u, g, v, f, S, m, T, y, b, w, x, $, H, C, O, A, E, Y, D, M, N;
         H = {
@@ -325,12 +325,32 @@ template("desktop-buzz-item",
             l += "</div> </div> </li> ";
         return l += " ",
             new String(l)
-    }); !
-    function(t, i) {
+});
+template("desktop-buzz-item2",
+    function(e) {
+        "use strict";
+        for (var t = this,
+                 a = (t.$helpers, e.i), i = e.len, r = e.list, s = t.$escape, l = "", a = 0, i = r.length; i > a; a++) l += ' <li class="buzz-item"> <div class="buzz-item-container"> <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget" ga-event-label="ifanr-buzz"><a target="_blank" itemprop="url" href="',
+            l += s(r[a].permalink),
+            l += '" data-source-url="',
+            l += s(r[a].source.url),
+            l += '" class="buzz-item-link">',
+            l += s(r[a].title),
+            l += '</a></h2> <div class="buzz-item-footer"> <span class="buzz-item-date" itemprop="datePublished" datetime="',
+            l += s(r[a].relative_time),
+            l += '">',
+            l += s(r[a].relative_time),
+            l += '</span>',
+            l += "</div> </div> </li> ";
+        return l += " ",
+            new String(l)
+});
+
+!function(t, i) {
         "use strict";
         var n = function(i) {
                 this.$el = t(i);
-                this.ty = i == 'ifanr_widget_buzz-2' ? 2 : 3;
+                this.ty = (i == '#ifanr_widget_buzz-2') ? 2 : 3;
                 this.init();
                 //this
             };
@@ -362,6 +382,7 @@ template("desktop-buzz-item",
                     page: t,
                     cat: cat,
                 };
+
                 data.action = (i.ty == 2) ? 'get_buzz' : 'get_recent_comments';
                 $.ajax({
                     url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),

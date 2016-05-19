@@ -53,16 +53,16 @@ class Db
             if (!$_where) {
                 return false;
             }
-            $sql .= ' WHERE' . $_where;
-        }
-        //limit
-        $page = max(1, $page);
-        if (!empty($pageSize)) {
-            $sql .= ' LIMIT ' . ($page - 1) * $pageSize . ' ' . $pageSize;
+            $sql .= ' WHERE ' . $_where;
         }
         //orderby
         if (!empty($orderby)) {
             $sql .= ' ORDER BY ' . $orderby;
+        }
+        //limit
+        $page = max(1, $page);
+        if (!empty($pageSize)) {
+            $sql .= ' LIMIT ' . ($page - 1) * $pageSize . ', ' . $pageSize;
         }
         $result = $this->db->get_results($sql);
         return $result;
