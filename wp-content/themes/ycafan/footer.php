@@ -44,41 +44,24 @@
           <div class="title">关于我们</div>
           <ul>
             <li><a href="<?php echo _param('about_url') ?>" target="_blank">关于我们</a></li>
-            <li><a href="http://www.ifanr.com/joinus">加入我们</a></li>
-            <li><a href="http://www.ifanr.com/adinfo">商务合作</a></li>
-            <li><a href="http://www.ifanr.com/shequguize">社区规则</a></li>
-            <li><a href="http://www.ifanr.com/link">链接</a></li>
+            <li><a href="<?php echo _param('about_url') ?>#joinus"  target="_blank">加入我们</a></li>
           </ul>
         </div>
       </div>
     </div>
 
-    <div class="footer-right-zone">
-      <div class="title">合作伙伴</div>
-      <a rel="nofollow" href="https://www.upyun.com/index.html" target="_blank">
-        <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/yunlogo-new.png">
-      </a>
-      <a rel="nofollow" href="https://www.cdnzz.com/index.html" target="_blank">
-        <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/cdnzz.png">
-      </a>
-    </div>
-
-    <div class="sns row">
-      <a rel="nofollow" class="sns-item" target="_blank" href="mailto:info@ifanr.com"><i class="ifanr2015 ifanr2015-mail"></i></a>
+    <div class="sns row" style="margin: 20px auto;">
+      <a rel="nofollow" class="sns-item" target="_blank" href="mailto:contact@youngchina.org"><i class="ifanr2015 ifanr2015-mail"></i></a>
       <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/youngchina"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a>
       <a class="sns-item" target="_blank" href="<?php echo _get_page_url('wechat') ?>"><i class="ifanr2015 ifanr2015-weixin"></i></a>
       <a class="sns-item" target="_blank" href="http://www.ifanr.com/feed"><i class="ifanr2015 ifanr2015-rss"></i></a>
     </div>
   </div>
 
-  <p class="copyright-register">
-    版权所有 &copy; 广州沃享信息科技有限公司 2008 - 2016<br/>
-    以商业目的使用少年中国评论网站内容需获许可。非商业目的使用授权遵循
-    <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="nofollow" title="CC BY-NC 4.0 license">CC BY-NC 4.0</a>。<br/>
-    All content is made available under the
-    <a href="https://creativecommons.org/licenses/by-nc/4.0/" rel="nofollow" title="CC BY-NC 4.0 license">CC BY-NC 4.0</a>
-    for non-commercial use. Commercial use of this content is prohibited without explicit permission.<br/>
-    <a href="http://www.miibeian.gov.cn/">粤 ICP 备 10211557 号</a>
+  <p class="copyright-register" style="margin: 10px auto">
+    Copyright © 2008-2016 YCA All Rights Reserved. 本站由三体舰队之恋爱协会监制.
+    <br/>
+    <a href="http://www.miibeian.gov.cn/">陕 ICP 备 10211557 号</a>
   </p>
 
 </footer><!--end footer -->
