@@ -323,27 +323,31 @@ template("desktop-buzz-item",
             l += s(r[a].relative_time),
             l += '</span>',
             l += "</div> </div> </li> ";
-        return l += " ",
-            new String(l)
+         //l += " ",
+        return  new String(l)
 });
 template("desktop-buzz-item2",
     function(e) {
         "use strict";
-        for (var t = this,
-                 a = (t.$helpers, e.i), i = e.len, r = e.list, s = t.$escape, l = "", a = 0, i = r.length; i > a; a++) l += ' <li class="buzz-item"> <div class="buzz-item-container"> <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget" ga-event-label="ifanr-buzz"><a target="_blank" itemprop="url" href="',
-            l += s(r[a].permalink),
-            l += '" data-source-url="',
-            l += s(r[a].source.url),
-            l += '" class="buzz-item-link">',
-            l += s(r[a].title),
-            l += '</a></h2> <div class="buzz-item-footer"> <span class="buzz-item-date" itemprop="datePublished" datetime="',
-            l += s(r[a].relative_time),
-            l += '">',
-            l += s(r[a].relative_time),
-            l += '</span>',
-            l += "</div> </div> </li> ";
-        return l += " ",
-            new String(l)
+        var data = e.list || [];
+        var html = '';
+        $.each(data, function(k, v){
+            html +=
+                '<li class=" c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item">'+
+                '    <a class="c-hot-comment-widget-item__wrap" href="'+ v.link +'" target="_blank">'+
+                '        <p class="c-hot-comment-widget-item__main">'+ v.content +'</p>'+
+                '            <p class="c-hot-comment-widget-item__meta">'+
+                '            <span class="c-hot-comment-widget-item__meta__item-hint">评论于</span>'+
+                '            <span class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">'+ v.post_title +'</span>'+
+                '        </p>'+
+                '        <div class="c-hot-comment-widget-item__user-info">'+
+                '        <span class="c-hot-comment-widget-item__user-info__username">'+ v.from_author +'</span>'+
+                '        <img class="c-hot-comment-widget-item__user-info__avatar" src="'+ v.garvatar +'">'+
+                '        </div>'+
+                '    </a>'+
+                '</li>';
+        });
+        return new String(html);
 });
 
 !function(t, i) {

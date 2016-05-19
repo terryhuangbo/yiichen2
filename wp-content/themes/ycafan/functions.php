@@ -376,6 +376,10 @@ function ajax_get_recent_comments(){
     $sql = "SELECT p.post_title, c.* FROM wp_posts AS p LEFT JOIN wp_comments_meta AS c ON c.post_id = p.ID
             WHERE c.pid = 0 ORDER BY c.id DESC LIMIT {$offset}, {$pageSize}";
     $_data = $Tool->_object_to_array($wpdb->get_results($sql));
+    foreach($_data as $k => $v){
+        $_data[$k]['link'] = get_permalink($Tool->_value($v['post_id'], 0));
+        $_data[$k]['garvatar'] = '';
+    }
     echo $Tool->_json($_data, 10005);
     unset($Tool);
     die();
