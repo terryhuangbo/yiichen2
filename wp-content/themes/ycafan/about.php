@@ -121,7 +121,7 @@ the_post();
                 </div>
 
                 <div class="ifr-about-contact-location">
-                    <h3 class="ifr-about-contact-title">联系我们 / Contact us</h3>
+                    <h3 class="ifr-about-contact-title">联系我们</h3>
                     <table>
                         <tr>
                             <td>邮箱</td>
