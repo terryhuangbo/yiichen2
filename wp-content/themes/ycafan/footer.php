@@ -10,7 +10,7 @@
   <div class="fullwidth row">
     <div class="footer-left-zone">
       <div class="logo">
-        <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/new-footerlogo.png">
+        <img src="<?php bloginfo('template_url'); ?>/images/footerlogo.jpg">
         <!-- <p class="meta">
           <span>Beats of bits</span>
           <span>发现创新价值的科技媒体</span>
@@ -20,29 +20,30 @@
     <div class="footer-center-zone">
       <div class="clearfix">
         <div class="nav">
-          <div class="title">旗下品牌</div>
+          <div class="title">友情链接</div>
           <ul>
-            <li><a href="/app">AppSolution</a></li>
-            <li><a href="/coolbuy">玩物志</a></li>
-            <li><a href="/coolbuy">MindStore</a></li>
-            <li><a href="/data">数读</a></li>
-            <li><a href="https://socialbase.cn/">SocialBase</a></li>
+            <li><a href="http://groundbreaking.cn/" target="_blank">破土网</a></li>
+            <li><a href="http://www.wtoutiao.com/" target="_blank">新汉之声</a></li>
+            <li><a href="http://songshuhui.net/" target="_blank">科学松鼠会</a></li>
+            <li><a href="http://www.xinminnews.com/" target="_blank">新民在线</a></li>
+            <li><a href="http://shiyuedaolu.zhandada.com/" target="_blank">十月道路</a></li>
+            <li><a href="http://www.cul-studies.com/" target="_blank">当代文化研究网</a></li>
           </ul>
         </div>
 
         <div class="nav">
           <div class="title">联系我们</div>
           <ul>
-            <li><a href="mailto:info@ifanr.com" target="_blank">邮箱</a></li>
-            <li><a rel="nofollow" href="http://weibo.com/ifanr" target="_blank">新浪微博</a></li>
-            <li><a rel="nofollow" href="http://twitter.com/ifanr" target="_blank">Twitter</a></li>
+            <li><a href="mailto:contact@youngchina.org" target="_blank">邮箱</a></li>
+            <li><a rel="nofollow" href="http://weibo.com/youngchina" target="_blank">新浪微博</a></li>
+            <li><a rel="nofollow" href="http://review.youngchina.org/feed" target="_blank">订阅</a></li>
           </ul>
         </div>
 
         <div class="nav">
           <div class="title">关于我们</div>
           <ul>
-            <li><a href="http://www.ifanr.com/about/our-team">关于我们</a></li>
+            <li><a href="<?php echo _param('about_url') ?>" target="_blank">关于我们</a></li>
             <li><a href="http://www.ifanr.com/joinus">加入我们</a></li>
             <li><a href="http://www.ifanr.com/adinfo">商务合作</a></li>
             <li><a href="http://www.ifanr.com/shequguize">社区规则</a></li>

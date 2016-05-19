@@ -434,7 +434,7 @@ $_special_posts = $_special_posts ? $_special_posts
     </div>
 </div>
 </div>
-<div class="video-wrapper">
+<div class="video-wrapper" style="display:none">
     <div class="video-container">
         <div class="video-feature-container js-video-container" data-video-iframe="<iframe src='http://player.youku.com/embed/XMTQ4NTg0MzY4OA==' frameborder=0 allowfullscreen></iframe>"
              ga-track="event" ga-action="click" ga-event-category="video" ga-event-label="少年中国视频">

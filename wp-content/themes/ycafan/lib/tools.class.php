@@ -76,17 +76,15 @@ class Tools
     }
 
     /**
-     * 获取默认值
-     * @param $key int 正确/错误代码 正整数表示成功，负整数表示失败，$code绝对值相同的两个状态相对应
+     * 获取默认参数
+     * @param $key string 参数key值
      * @return mixed|bool
      **/
     public function _params($key)
     {
         $_params = require('params.php');
-        if(empty($key) || !isset($_params[$key])){
-            return false;
-        }
-        return $_params[$key];
+        var_dump($_params);
+        return $this->_value($_params[$key], '', true);
     }
 
     /**

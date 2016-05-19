@@ -620,6 +620,11 @@ function get_template_fields($template){
     return get_fields($page_id);
 }
 
+//获取默认参数
+function _param($key){
+    return (new Tools())->_params($key);
+}
+
 //测试-打印函数
 //function hb($data) {
 //    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
