@@ -32,7 +32,7 @@ the_post();
                 <li class="ifr-about-products-btn ifr-about-products-btn-ifanr ifr-about-products-btn-active" data-product-id="ifanr">
                     <div class=""<b></b>
                     <div class="ifr-about-qr-code-background">
-                        <img style="width: 200px;background: none;" src="<?php bloginfo('template_url'); ?>/images/wechat.jpg  ">
+                        <img style="width: 200px;background: none;" src="<?php bloginfo('template_url'); ?>/images/wechat.jpg">
                         <p><a class="ifr-about-contact-link ifr-about-link" target="_blank" href="<?php echo _get_page_url('wechat') ?>">关注我们</a>
                         </p>
                     </div>

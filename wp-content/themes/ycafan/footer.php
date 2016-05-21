@@ -88,50 +88,25 @@
   </ul>
 
   <div class="qrcode-panel js-qrcode-panel" id="qrcode-panel">
-    <div class="panel-container">
-      <div class="panel-header">
-        <ul class="nav-tabs">
+    <div class="panel-container" >
+      <div class="panel-header" >
+        <ul class="nav-tabs" >
           <li class="nav-tab-item-block">
             <a class="nav-tab-item" href="#tab-panel-ifanr">
               <span>少年中国评论</span>
             </a>
           </li>
-          <li class="nav-tab-item-block">
-            <a class="nav-tab-item" href="#tab-panel-appso">
-              <span>AppSolution</span>
-            </a>
-          </li>
-          <li class="nav-tab-item-block">
-            <a class="nav-tab-item" href="#tab-panel-coolbuy">
-              <span>玩物志</span>
-            </a>
-          </li>
         </ul>
-        <div class="black-line js-black-line"></div>
+<!--        <div class="black-line js-black-line"></div>-->
       </div>
       <div class="panel-body">
-        <div class="tab-panel" id="tab-panel-ifanr">
-          <img class="qrcode" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/ifanr-wechat-qr.jpg" height="105" width="105" alt="少年中国评论微信二维码">
+        <div class="tab-panel active" id="tab-panel-ifanr">
+          <img class="qrcode" src="<?php bloginfo('template_url'); ?>/images/wechat.jpg  " height="105" width="105" alt="少年中国评论微信二维码">
           <div class="content-block">
-            <!-- <h3 class="title">少年中国评论微信</h3> -->
-            <p class="description">关注少年中国评论微信号，连接热爱，关注这个时代最好的产品。</p>
+<!--             <h3 class="title">少年中国评论微信</h3>-->
+            <p class="description">关注少年中国评论微信号，让我们终于理想，让我们面对现实。</p>
           </div>
         </div>
-        <div class="tab-panel" id="tab-panel-appso">
-          <img class="qrcode" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/appsoqrcode.jpg" height="105" width="105" alt="AppSolution微信二维码">
-          <div class="content-block">
-            <!-- <h3 class="title">AppSolution 微信</h3> -->
-            <p class="description">想让你的手机好用到哭？关注这个号就够了。</p>
-          </div>
-        </div>
-        <div class="tab-panel" id="tab-panel-coolbuy">
-          <img class="qrcode" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/coolbuyqrcode.jpg" height="105" width="105" alt="玩物志微信二维码">
-          <div class="content-block">
-            <!-- <h3 class="title">玩物志微信</h3> -->
-            <p class="description">关注玩物志微信号，就是让你乱花钱。</p>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>
