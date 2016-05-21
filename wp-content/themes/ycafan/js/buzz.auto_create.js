@@ -471,13 +471,14 @@ template("desktop-buzz-item2",
     slider.prototype = {
         init: function(){
             self = this;
-            self.eles.hide();
+            self.eles.eq(0).show();
+            self.eles.eq(0).siblings().hide();
             self.slide();
         },
-        slide: function(ind){
+        slide: function(){
             self = this;
             var len = self.len;
-            var i = 0;
+            var i = 1;
             var eles = self.eles;
             setInterval(function(){
                 eles.eq(i).show();

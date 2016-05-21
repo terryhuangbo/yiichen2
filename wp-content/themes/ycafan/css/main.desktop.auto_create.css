@@ -13535,3 +13535,13 @@ body.single-post .content-header-archive {
         opacity: 0
     }
 }
+
+#ifanr_side_data_widget-4 {
+    height: 450px;
+}
+#ifanr_side_data_widget-4 .widget-body{
+    text-align: center;
+}
+#ifanr_side_data_widget-4 .widget-body img{
+    height: 300px;
+}

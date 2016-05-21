@@ -346,30 +346,24 @@ hb($fields);
                 </div>
             </div>
         </div>
-        <div id="ifanr_side_data_widget-4" class="widget-container widget-data clearfix">
+        <div id="ifanr_side_data_widget-4" class="widget-container widget-data clearfix" >
             <?php foreach($fields['books_area'] as $book): ?>
-                <div class="widget-data-content" >
+                <div class="widget-data-content">
                     <div class="widget-data-content-bg">
                     </div>
                     <h4>
-                        <a href="<?php bloginfo('url') ?>/?cat=1221" target="_blank">
+                        <a class="ifr-about-link" href="<?php bloginfo('url') ?>/?cat=1221" target="_blank">
                             好书推荐
                         </a>
                     </h4>
-                    <a class="widget-body" rel="external" href="<?php echo get_permalink($Tool->_value($book['books_area_post'][0], 0)) ?>">
+                    <a class="widget-body"  rel="external" href="<?php echo get_permalink($Tool->_value($book['books_area_post'][0], 0)) ?>">
                       <span class="widget-data-num num font-luzsans">
-                            <img src="<?php echo $Tool->_value($book['books_area_img']) ?>">
+                            <img  src="<?php echo $Tool->_value($book['books_area_img']) ?>">
                       </span>
-<!--                      <span class="widget-data-percent yahei">-->
-<!--                      </span>-->
                       <span class="widget-data-text">
                         <?php echo $Tool->_value($book['books_area_title']) ?>
                       </span>
                     </a>
-<!--                    <a id="widget-data-more" class="widget-data-more" href="http://www.ifanr.com/data/"-->
-<!--                       title="点击了解更多">-->
-<!--                        了解更多 &raquo;-->
-<!--                    </a>-->
                 </div>
             <?php endforeach ?>
         </div>
