@@ -25,7 +25,6 @@ $_special_num = $Tool->_value($fields['right_recommend'][0]['right_recommend_num
 $_special_posts = $Cache->_get('cache-index-special-posts', $_ex_field);
 $_special_posts = $_special_posts ? $_special_posts
     : $Cache->_set('cache-index-special-posts', _get_index_specials($_special_slug, $_special_num), $_ex_field);
-hb($fields);
 
 ?>
 
@@ -395,12 +394,12 @@ hb($fields);
                       class="validate" target="_blank">
                     <div class="widget-header">
                         <label for="mce-EMAIL">
-                            爱范消息 | Exploring Leading Tech
+                            少年中国评论消息 | Exploring Leading Tech
                         </label>
                     </div>
                     <div class="widget-contents clearfix">
                         <p>
-                            轻量、专注的消息，关注移动互联网、创投、智能设备的新鲜资讯。需各种邀请码，也请加入列表。
+                            和那些醒着的要进步的人们一道，向着光明的地方行进。
                         </p>
                         <div class="ifr-input-group">
                             <input type="email" value="" name="EMAIL" class="ifr-input email-input"
