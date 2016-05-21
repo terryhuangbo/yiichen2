@@ -245,11 +245,11 @@ $Cache = new Cache();
                   <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-items-list row">
                     <div class="single-row">
                       <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="首页" itemprop="url" href="<?php bloginfo('url') ?>"><span itemprop="name">首页</span></a>
-                      <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="ifanRank" itemprop="url" href="<?php bloginfo('url') ?>/?cat=1028"><span itemprop="name">推荐</span></a>
-                      <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="评测" itemprop="url" href="<?php bloginfo('url') ?>/?cat=1106"><span itemprop="name">青年之声</span></a>
+                      <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="ifanRank" itemprop="url" href="<?php bloginfo('url') ?>/?cat=3"><span itemprop="name">理论视野</span></a>
+                      <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="智能" itemprop="url" href="<?php bloginfo('url') ?>/?cat=3"><span itemprop="name">基本原理</span></a>
                     </div>
                     <div class="single-row">
-                      <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="智能" itemprop="url" href="<?php bloginfo('url') ?>/?cat=3"><span itemprop="name">基本原理</span></a>
+                      <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="评测" itemprop="url" href="<?php bloginfo('url') ?>/?cat=1106"><span itemprop="name">青年之声</span></a>
                       <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="汽车" itemprop="url" href="<?php bloginfo('url') ?>/?cat=9"><span itemprop="name">中流击水</span></a>
                       <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="商业" itemprop="url" href="<?php bloginfo('url') ?>/?cat=8"><span itemprop="name">国际观察</span></a>
                     </div>

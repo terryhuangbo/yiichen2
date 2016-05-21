@@ -299,7 +299,7 @@ $_special_posts = $_special_posts ? $_special_posts
         </div>
         <div id="ifanr_side_jiong_widget-81" class="widget-container widget_ifanr_jiong_new clearfix">
             <div class="ifanr-text-content">
-                <a id="video" rel="external" href="<?php echo _get_page_url('wechat') ?>">
+                <a id="video" rel="external" href="<?php bloginfo('url') ?>/?cat=1">
                     <img src="<?php bloginfo('template_url'); ?>/images/info.jpg"/>
                 </a>
             </div>
@@ -434,7 +434,7 @@ $_special_posts = $_special_posts ? $_special_posts
     </div>
 </div>
 </div>
-<div class="video-wrapper" style="display:none">
+<div class="video-wrapper" >
     <div class="video-container">
         <div class="video-feature-container js-video-container" data-video-iframe="<iframe src='http://player.youku.com/embed/XMTQ4NTg0MzY4OA==' frameborder=0 allowfullscreen></iframe>"
              ga-track="event" ga-action="click" ga-event-category="video" ga-event-label="少年中国视频">
