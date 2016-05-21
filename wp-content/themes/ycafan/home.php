@@ -25,6 +25,8 @@ $_special_num = $Tool->_value($fields['right_recommend'][0]['right_recommend_num
 $_special_posts = $Cache->_get('cache-index-special-posts', $_ex_field);
 $_special_posts = $_special_posts ? $_special_posts
     : $Cache->_set('cache-index-special-posts', _get_index_specials($_special_slug, $_special_num), $_ex_field);
+hb($fields);
+
 ?>
 
 <div id="content-outer" class="content-outer clearfix fix-header-height">
@@ -345,30 +347,31 @@ $_special_posts = $_special_posts ? $_special_posts
             </div>
         </div>
         <div id="ifanr_side_data_widget-4" class="widget-container widget-data clearfix">
-            <div class="widget-data-content">
-                <div class="widget-data-content-bg">
-                </div>
-                <h4>
-                    <a href="http://www.ifanr.com/data/">
-                        公告
+            <?php foreach($fields['books_area'] as $book): ?>
+                <div class="widget-data-content" >
+                    <div class="widget-data-content-bg">
+                    </div>
+                    <h4>
+                        <a href="<?php bloginfo('url') ?>/?cat=1221" target="_blank">
+                            好书推荐
+                        </a>
+                    </h4>
+                    <a class="widget-body" rel="external" href="<?php echo get_permalink($Tool->_value($book['books_area_post'][0], 0)) ?>">
+                      <span class="widget-data-num num font-luzsans">
+                            <img src="<?php echo $Tool->_value($book['books_area_img']) ?>">
+                      </span>
+<!--                      <span class="widget-data-percent yahei">-->
+<!--                      </span>-->
+                      <span class="widget-data-text">
+                        <?php echo $Tool->_value($book['books_area_title']) ?>
+                      </span>
                     </a>
-                </h4>
-                <a class="widget-body" rel="external" href="http://www.ifanr.com/data/628594">
-              <span class="widget-data-num num font-luzsans">
-                5.7
-              </span>
-              <span class="widget-data-percent yahei">
-                %
-              </span>
-              <span class="widget-data-text">
-                IDC：今年智能手机出货量将仅增长 5.7%
-              </span>
-                </a>
-                <a id="widget-data-more" class="widget-data-more" href="http://www.ifanr.com/data/"
-                   title="点击了解更多">
-                    了解更多 &raquo;
-                </a>
-            </div>
+<!--                    <a id="widget-data-more" class="widget-data-more" href="http://www.ifanr.com/data/"-->
+<!--                       title="点击了解更多">-->
+<!--                        了解更多 &raquo;-->
+<!--                    </a>-->
+                </div>
+            <?php endforeach ?>
         </div>
 
         <div id="ifanr_widget_buzz-3" class="widget-container widget_ifanr_widget_buzz clearfix" style="display: block">
@@ -380,22 +383,6 @@ $_special_posts = $_special_posts ? $_special_posts
                     <ul class="buzz-list nano-content js-buzz-list"
                         category="<?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special')  ?>">
                         <!-- buzz item -->
-                        <?php foreach([1,2,3,4,5,6,7] as $val): ?>
-<!--                        <li class=" c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item">-->
-<!--                            <a class="c-hot-comment-widget-item__wrap" href="http://www.ifanr.com/657816" target="_blank">-->
-<!--                                <p class="c-hot-comment-widget-item__main">接到要求，关闭网盘业务</p>-->
-<!--                                <p class="c-hot-comment-widget-item__meta">-->
-<!--                                    <span class="c-hot-comment-widget-item__meta__item-hint">评论于</span>-->
-<!--                                    <span class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">未来后天就来，爱范儿告诉你为何今年 Google I/O 值得熬夜看</span>-->
-<!--                                </p>-->
-<!--                                <div class="c-hot-comment-widget-item__user-info">-->
-<!--                                    <span class="c-hot-comment-widget-item__user-info__username">欧阳</span>-->
-<!--                                    <img class="c-hot-comment-widget-item__user-info__avatar" src="--><?php //bloginfo('template_url') ?><!--/images/garvatar/garvatar.jpg">-->
-<!--                                </div>-->
-<!--                            </a>-->
-<!--                        </li>-->
-                        <?php endforeach ?>
-
 
                         <!-- buzz item -->
                         <li class="loading js-loading">

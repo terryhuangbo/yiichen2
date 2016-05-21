@@ -459,3 +459,35 @@ template("desktop-buzz-item2",
     },
     i.WidgetBuzz = n
 } (jQuery, window);
+
+(function ($, w) {
+    var slider = function () {
+        self = this;
+        self.dom = $("#ifanr_side_data_widget-4");
+        self.eles = $("#ifanr_side_data_widget-4").find(".widget-data-content");
+        self.len = self.eles.length;
+        self.duration = rcGlobal.bookInterval;
+    };
+    slider.prototype = {
+        init: function(){
+            self = this;
+            self.eles.hide();
+            self.slide();
+        },
+        slide: function(ind){
+            self = this;
+            var len = self.len;
+            var i = 0;
+            var eles = self.eles;
+            setInterval(function(){
+                eles.eq(i).show();
+                eles.eq(i).siblings().hide();
+                i = (++i) % eles.length;
+            }, self.duration);
+        }
+    };
+    (new slider()).init();
+})(jQuery, rcGlobal);
+
+
+

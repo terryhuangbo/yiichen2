@@ -35,6 +35,7 @@ $Cache = new Cache();
             avatarPosition: "left",
             anonymous: "Anonymous",
             wpAjaxUrl: "<?php  bloginfo('url') ?>",
+            bookInterval: 4000,
         };
     </script>
     <script type="text/javascript">
