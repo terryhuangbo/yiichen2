@@ -152,6 +152,13 @@ $Cache = new Cache();
                     基本原理
                   </a>
                 </li>
+                <li class="nav-item" cate="principle" data-count="4" data-post-type="vision">
+                  <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="理论视野" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=3">
+                    <!-- <i class="ifanr2015 ifanr2015-wanwuzhi icon-font"></i> -->
+                    理论视野
+                  </a>
+                </li>
+
                 <li class="nav-item" cate="stream " data-count="4" data-post-type="stream">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="中流击水" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=9">
                     <!-- <i class="ifanr2015 ifanr2015-pingce icon-font"></i> -->
@@ -186,12 +193,6 @@ $Cache = new Cache();
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="革命文艺" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=10">
                     <!-- <i class="ifanr2015 ifanr2015-pingce icon-font"></i> -->
                     革命文艺
-                  </a>
-                </li>
-                <li class="nav-item" cate="notice" data-count="4" data-post-type="notice">
-                  <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="爱范视频" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=1">
-                    <!-- <i class="ifanr2015 ifanr2015-aifanshipin icon-font"></i> -->
-                    公告帮助
                   </a>
                 </li>
               </ul>

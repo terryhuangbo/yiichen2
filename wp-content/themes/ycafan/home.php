@@ -350,7 +350,7 @@ $_special_posts = $_special_posts ? $_special_posts
                 </div>
                 <h4>
                     <a href="http://www.ifanr.com/data/">
-                        数读
+                        公告
                     </a>
                 </h4>
                 <a class="widget-body" rel="external" href="http://www.ifanr.com/data/628594">
