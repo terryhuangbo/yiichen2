@@ -8,9 +8,9 @@ $_ex_field = 'cache-index-expire';
 $fields = $Cache->_get('cache-index-field', $_ex_field);
 $fields = $fields ? $fields : $Cache->_set('cache-index-field', get_fields($post->ID), $_ex_field);
 //最新文章$_push_1，$_push_2，$_push_3三个推荐位
-$_push_1 = 3;
-$_push_2 = 3;
-$_push_3 = 3;
+$_push_1 = 4;
+$_push_2 = 4;
+$_push_3 = 4;
 $_push_post_total = $_push_1 + $_push_2 + $_push_3;
 $_index_posts = $Cache->_get('cache-index-latest-posts', $_ex_field);
 $_index_posts = $_index_posts ? $_index_posts
@@ -434,7 +434,7 @@ $_special_posts = $_special_posts ? $_special_posts
     </div>
 </div>
 </div>
-<div class="video-wrapper" >
+<div class="video-wrapper" style="display: none">
     <div class="video-container">
         <div class="video-feature-container js-video-container" data-video-iframe="<iframe src='http://player.youku.com/embed/XMTQ4NTg0MzY4OA==' frameborder=0 allowfullscreen></iframe>"
              ga-track="event" ga-action="click" ga-event-category="video" ga-event-label="少年中国视频">
@@ -496,6 +496,16 @@ $_special_posts = $_special_posts ? $_special_posts
     <div class="mask video-list-mask mask-bg-right">
     </div>
 </div>
+
+<!--推荐广告位一-->
+<div id="mindstore-container" class="mindstore-container" style="background-image: url('<?php echo $Tool->_value($fields['ad_area_first'][0]['ad_area_first_img']['url']) ?>');">
+    <a href="<?php echo $Tool->_value($fields['ad_area_first'][0]['ad_area_first_link']) ?>" target="_blank">
+        <div class="mindstore-articles-container" >
+
+        </div>
+    </a>
+</div>
+
 <div id="index-part-two" data-cmpt-autofixed-container class="fullwidth row">
     <div class="main js-index-part-two">
         <div class="index-content-normal posts-list">
