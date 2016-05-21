@@ -83,7 +83,6 @@ class Tools
     public function _params($key)
     {
         $_params = require('params.php');
-        var_dump($_params);
         return $this->_value($_params[$key], '', true);
     }
 
