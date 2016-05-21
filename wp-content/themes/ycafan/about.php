@@ -22,47 +22,22 @@ the_post();
                 <p class="ifr-about-description-sub">和那些醒着的要进步的人们一道，向着光明的地方行进。</p>
                 <p class="ifr-about-description-sub">让我们面对现实，让我们忠于理想</p>
         </section>
-        <section class="ifr-about-products">
+
+        <section class="ifr-about-products" id="ourwechat" style="background: none;">
             <h2 class="ifr-about-title ifr-about-products-title">公众号 / Wechat</h2>
             <div class="ifr-about-decoration">
                 <i class="ifanr2015 ifanr2015-anonymous-iconfont ifr-about-decoration-icon"></i>
             </div>
-            <ul class="ifr-about-products-btn-group">
+            <ul class="" >
                 <li class="ifr-about-products-btn ifr-about-products-btn-ifanr ifr-about-products-btn-active" data-product-id="ifanr">
-                    <b>少年中国评论</b>
+                    <div class=""<b></b>
                     <div class="ifr-about-qr-code-background">
-                        <img width="150px" src="<?php bloginfo('template_url'); ?>/images/wechat.jpg">
-                        <p>面对现实，忠于理想</p>
-                    </div>
-                </li>
-                <li class="ifr-about-products-btn ifr-about-products-btn-appsolution" data-product-id="appso">
-                    <b>保马</b>
-                    <div class="ifr-about-qr-code-background">
-                        <img width="150px" src="<?php bloginfo('template_url'); ?>/images/baoma-wechat.jpg">
-                        <p>保卫马克思</p>
-                    </div>
-                </li>
-                <li class="ifr-about-products-btn ifr-about-products-btn-appsolution" data-product-id="appso">
-                    <b>破土</b>
-                    <div class="ifr-about-qr-code-background">
-                        <img width="150px" src="<?php bloginfo('template_url'); ?>/images/potu-wechat.png">
-                        <p>面对现实，忠于理想</p>
-                    </div>
-                </li>
-                <li class="ifr-about-products-btn ifr-about-products-btn-appsolution" data-product-id="appso">
-                    <b>新汉之声</b>
-                    <div class="ifr-about-qr-code-background">
-                        <img width="150px" src="<?php bloginfo('template_url'); ?>/images/xinhan-wechat.jpg">
-                        <p>面对现实，忠于理想</p>
+                        <img style="width: 200px;background: none;" src="<?php bloginfo('template_url'); ?>/images/wechat.jpg  ">
+                        <p><a class="ifr-about-contact-link ifr-about-link" target="_blank" href="<?php echo _get_page_url('wechat') ?>">关注我们</a>
+                        </p>
                     </div>
                 </li>
             </ul>
-    <!--        <div class="ifr-about-products-intro-container">-->
-    <!--            <div class="ifr-about-products-intro" id="intro-ifanr" style="background-image: url('http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/about/ifanr.png')">-->
-    <!--                <p class="ifr-about-products-intro-description">爱范儿连接全球创新者及消费者，跨界技术、文化、消费及创新，致力消费科技领域的产业评论、产品报道及社群连接，创造高品质的消费乐趣。</p>-->
-    <!--            </div>-->
-    <!---->
-    <!--        </div>-->
         </section>
 
         <section class="ifr-about-team" >
@@ -108,13 +83,13 @@ the_post();
                         <tr>
                             <td>微信号</td>
                             <td class="ifr-about-sign">:</td>
-                            <td>@少年中国学会</td>
+                            <td><a class="ifr-about-link" href="#ourwechat">review_youngchina</a></td>
                         </tr>
                         <tr>
                             <td>微博</td>
                             <td class="ifr-about-sign">:</td>
                             <td>
-                                <a class="ifr-about-link" href="http://weibo.com/youngchina" target="_blank">@少年中国学会</a>
+                                <a class="ifr-about-link" href="http://weibo.com/youngchina" target="_blank">少年中国学会</a>
                             </td>
                         </tr>
                     </table>
