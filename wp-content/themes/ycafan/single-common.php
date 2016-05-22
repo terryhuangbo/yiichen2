@@ -7,7 +7,7 @@ get_header();
 $cat = array_shift(get_the_category());
 the_post();
 $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-type'));
-$tags = get_the_tags();
+$tags = $Tool->_value(get_the_tags(), [], true);
 ?>
 
 <div class="o-single">
@@ -55,8 +55,7 @@ $tags = get_the_tags();
             <div id="article-content" class="o-single-content__body__content c-article-meta">
                 <div class="c-article-tags">
                     <?php foreach($tags as $tag): ?>
-<!--                    <a href="--><?php //echo get_tag_link($tag->term_id) ?><!--" class="c-article-tags__item">--><?php //echo $tag->name ?><!--</a>-->
-                    <a href="javaScript:void(0)" class="c-article-tags__item"><?php echo $tag->name ?></a>
+                        <a href="javaScript:void(0)" class="c-article-tags__item"><?php echo $tag->name ?></a>
                     <?php endforeach ?>
                 </div>
                 <div class="c-card-meta c-card-meta--darken c-article-sns" data-component="ArticleContentMeta" data-post-id="654732">
