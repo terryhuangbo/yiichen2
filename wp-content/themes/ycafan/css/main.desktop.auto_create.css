@@ -5457,7 +5457,7 @@ body.home {
 }
 
 .posts-list article .new-post-item-content .tag-label a.tag {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 0.8);
 }
 
 .posts-list article .new-post-item-content .tag-label span.seperator {
