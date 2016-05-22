@@ -3555,7 +3555,7 @@ article.dasheng .entry-blockquote .post-author {
     display: block;
     font-size: 18px;
     padding: 15px 0 32px 18px;
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 0.8)
 }
 
 .widget-body {
@@ -5396,7 +5396,7 @@ body.home {
 }
 
 .posts-list article .new-comment-count .comment-count-container {
-    color: inherit;
+    color: rgba(0, 132, 171, 0.6);
     font-size: 14px
 }
 
@@ -5457,7 +5457,7 @@ body.home {
 }
 
 .posts-list article .new-post-item-content .tag-label a.tag {
-    color: rgba(0, 132, 171, 0.8);
+    color: rgba(0, 132, 171, 1);
 }
 
 .posts-list article .new-post-item-content .tag-label span.seperator {
@@ -8675,11 +8675,13 @@ footer .sns a .ifanr2015 {
 
 .loading-posts .load-more-link {
     display: inline-block;
-    color: rgba(253, 23, 0, 0.8);
-    border: 1px solid rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 0.8);
+    border: 1px solid rgba(0, 132, 171, 0.8);
     font-size: 14px;
     line-height: 25px;
     padding: 3px 15px
+
+
 }
 
 .loading-posts .no-articles {
