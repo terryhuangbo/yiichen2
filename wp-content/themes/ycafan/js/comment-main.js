@@ -4,7 +4,7 @@
         self.params = {
             post_id: $('#publish_form').find('input[name=post_id]').val(),
             orderby: 'created_at asc',
-            expire: 300,//缓存评论者信息
+            expire: rcGlobal.commentExpire,//缓存评论者信息
             url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
         };
         self.dom = {
@@ -18,8 +18,8 @@
             var self = this;
             //this.bind();
             this.bindEvt();
-            this.load(self.para
-            ms.post_id, self.params.orderby);
+            this.loadCommenter('#publish_form');
+            this.load(self.params.post_id, self.params.orderby);
         },
         load: function(post_id, sort){
             var self = this;
@@ -59,6 +59,7 @@
 
                 $("#reply_modal").appendTo("#comment-cont-"+ $(_this).data().comment_id +"").show();
                 $("#reply_modal")._clear_form(true);
+                self.loadCommenter('#reply_modal');
                 $("#reply_modal_submit").off('click').on('click', function(){
                     self.reply(_this);
                 });
@@ -72,9 +73,7 @@
         bindEvt: function(){
             var self = this;
             $('.js-submit-comment').on('click', function(){
-                $._form_notice_tips(this);
                 self.publish(this);
-
             });
             $(".js-comments-sorting").on('click', function(){
                 var _this = $(this);
@@ -92,7 +91,19 @@
                 self.load(self.params.post_id, sort);
             });
         },
+        loadCommenter: function(dom){
+            var email = $._cache.get('email');
+            var author = $._cache.get('author');
+            if(email != undefined && author != undefined){
+                $(dom).find('input[name=from_email]').val(email);
+                $(dom).find('input[name=from_author]').val(author);
+            }else{
+                $(dom).find('input[name=from_email]').val('');
+                $(dom).find('input[name=from_author]').val('');
+            }
+        },
         validate: function(el){
+            var self = this;
             //验证邮箱
             var pat = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
             var email = $.trim($(el).find('input[name=from_email]').val());
@@ -114,6 +125,8 @@
                 alert('评论内容超过字数限制');
                 return false;
             }
+            $._cache.set('author', from_author, self.params.expire);
+            $._cache.set('email', email, self.params.expire);
             return true;
         },
         publish: function(dom){
@@ -122,7 +135,6 @@
                 return false;
             };
             var param = $._get_form_json(self.dom.pform);
-            self.validate(self.dom.pform);
             var extend = {
                 action : 'add_comment'
             };
@@ -130,7 +142,7 @@
                 $._ajax(self.params.url, $.extend({}, param, extend), 'POST', 'JSON', function(json){
                     if(json.code > 0){
                         $(self.dom.pform)._clear_form(false);
-
+                        self.loadCommenter('#publish_form');
                         //$("#comment-1014334").find('.js-vote-up').after(self.tpl.template_modal({}));
                         $(".js-comments-list").prepend(self.tpl.template_comment($.extend({}, param, json.ret)));
                         //$("#reply-content-1014329").append(self.tpl.template_reply({}));

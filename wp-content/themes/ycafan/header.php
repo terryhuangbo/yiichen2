@@ -36,6 +36,7 @@ $Cache = new Cache();
             anonymous: "Anonymous",
             wpAjaxUrl: "<?php  bloginfo('url') ?>",
             bookInterval: 4000,
+            commentExpire: 600,//缓存评论者信息保存时间
         };
     </script>
     <script type="text/javascript">
