@@ -77,22 +77,23 @@ $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-ty
                 <div class="c-article-likes" data-component="ArticleLikes" data-post-id="654732"></div>
             </div>
             <div class="o-single-content__body__content">
-                <div class="c-jiong c-jiong--block c-jiong-report">
-                    <p>有好的产品或者项目希望我们报道，猛戳这里 <a href="http://www.ifanr.com/about/contribute/">寻求报道</a></p>
-                </div>
-            </div>
-            <div class="o-single-content__body__content">
                 <a class="c-jiong c-jiong--block c-jiong--bottom"
                    href="http://a.app.qq.com/o/simple.jsp?pkgname=com.ifanr.activitys">
                     <img class="c-jiong__image" src="http://images.ifanr.cn/wp-content/uploads/2016/04/downbanner.jpg">
                 </a>
             </div>
+
             <!-- 评论模块-->
-            <?php
-            if ( comments_open() || get_comments_number() ) {
-                comments_template();
-            }
-            ?>
+            <?php if(intval(get_option('comment-open')) == 1):?>
+                <?php comments_template() ;?>
+            <?php else:?>
+                <div class="o-single-content__body__content" id="comments">
+                    <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
+                         data-post-id="654732">
+                        <h5 class="c-card-category c-article-comments__headline">评论已经关闭</h5>
+                    </div>
+                </div>
+            <?php endif?>
 
         </div>
     </div>

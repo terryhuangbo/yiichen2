@@ -16,7 +16,7 @@
 if ( post_password_required() ) {
     return;
 }
-$commenter = wp_get_current_commenter();
+
 ?>
 <div class="o-single-content__body__content" id="comments">
     <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"

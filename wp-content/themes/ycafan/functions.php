@@ -385,14 +385,16 @@ function ajax_get_recent_comments(){
     die();
 }
 
-
-
 //添加评论
 add_action('wp_ajax_nopriv_add_comment', 'ajax_add_comment');
 add_action('wp_ajax_add_comment', 'ajax_add_comment');
 function ajax_add_comment(){
     global $wpdb;
     $Tool = new Tools();
+    //评论关闭
+    if(intval(get_option('comment-open')) != 1){
+        $Tool->_json([], -10005);
+    }
     $db = new Db($wpdb, 'wp_comments_meta');
     $from_email = $Tool->_request('from_email', '');
     $from_author = $Tool->_request('from_author', '');
@@ -408,7 +410,7 @@ function ajax_add_comment(){
     if(strlen($from_author) > 90){
         $Tool->_json([], -10003);
     }
-    if(strlen($comment) > 300){
+    if(strlen($comment) > 1500){
         $Tool->_json([], -10004);
     }
     $res = $db->_insert([
@@ -445,6 +447,9 @@ add_action('wp_ajax_load_comment', 'ajax_load_comments');
 function ajax_load_comments(){
     global $wpdb;
     $Tool = new Tools();
+    if(intval(get_option('comment-open')) != 1){
+        $Tool->_json([], -10005);
+    }
     $post_id = $Tool->_request('post_id', 0);
     $sort = $Tool->_request('sort', 'created at desc');
     $Tool = new Tools();
@@ -626,8 +631,8 @@ function _param($key){
 }
 
 //测试-打印函数
-//function hb($data) {
-//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-//}
+function hb($data) {
+    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+}
 
 ?>

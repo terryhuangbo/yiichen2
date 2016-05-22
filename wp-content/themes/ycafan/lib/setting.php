@@ -44,8 +44,12 @@ function customSetting(){ ?>
                 'site-intro',
                 //网站公告图片
                 'site-info',
+                //评论是否开启
+                'comment-open',
                 //网站公告图片
                 'relpost-type',
+
+
 
 
             ];
@@ -78,6 +82,15 @@ function customSetting(){ ?>
                     <td><input type="text" name="site-info" id="site-info" value="<?php echo get_option('site-info'); ?>" /></td>
                 </tr>
                 <tr>
+                    <th scope="row">评论是否开启:</th>
+                    <td>
+                        <select name="comment-open">
+                                <option value="1" <?php echo get_option('comment-open') == '1' ? 'selected = "selected"' : '' ?>>开启</option>
+                                <option value="0" <?php echo get_option('comment-open') == '0' ? 'selected = "selected"' : '' ?>>关闭</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
                     <th scope="row">相关文章类型:</th>
                     <td>
                         <select name="relpost-type">
@@ -86,6 +99,7 @@ function customSetting(){ ?>
                         </select>
                     </td>
                 </tr>
+
 
 
 

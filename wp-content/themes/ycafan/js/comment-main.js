@@ -108,7 +108,7 @@
                 alert('请填写评论内容');
                 return false;
             }
-            if($._str_len(comment.length) > 300){
+            if($._str_len(comment) > 1000){
                 alert('评论内容超过字数限制');
                 return false;
             }
@@ -134,7 +134,7 @@
                         //$("#reply-content-1014329").append(self.tpl.template_reply({}));
                         self.bind();
                     }else{
-                        $._alert('提示', '添加失败');
+                        $._alert('提示', json.msg);
                     }
                 });
             }else{
@@ -165,7 +165,7 @@
                     ul.append(self.tpl.template_reply($.extend({}, param, json.ret)));
                     self.bind();
                 }else{
-                    $._alert('提示', '添加失败');
+                    $._alert('提示', json.msg);
                 }
             });
         },
