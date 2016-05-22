@@ -7,7 +7,7 @@ get_header();
 $cat = array_shift(get_the_category());
 the_post();
 $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-type'));
-
+$tags = get_the_tags();
 ?>
 
 <div class="o-single">
@@ -54,11 +54,10 @@ $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-ty
             </aside>
             <div id="article-content" class="o-single-content__body__content c-article-meta">
                 <div class="c-article-tags">
-                    <a href="http://www.ifanr.com/tags/playstation" class="c-article-tags__item">playstation</a>
-                    <a href="http://www.ifanr.com/tags/ps" class="c-article-tags__item">PS</a>
-                    <a href="http://www.ifanr.com/tags/vr" class="c-article-tags__item">VR</a>
-                    <a href="http://www.ifanr.com/tags/%e5%90%89%e7%94%b0%e4%bf%ae%e5%b9%b3" class="c-article-tags__item">吉田修平</a>
-                    <a href="http://www.ifanr.com/tags/%e8%99%9a%e6%8b%9f%e7%8e%b0%e5%ae%9e" class="c-article-tags__item">虚拟现实</a>
+                    <?php foreach($tags as $tag): ?>
+<!--                    <a href="--><?php //echo get_tag_link($tag->term_id) ?><!--" class="c-article-tags__item">--><?php //echo $tag->name ?><!--</a>-->
+                    <a href="javaScript:void(0)" class="c-article-tags__item"><?php echo $tag->name ?></a>
+                    <?php endforeach ?>
                 </div>
                 <div class="c-card-meta c-card-meta--darken c-article-sns" data-component="ArticleContentMeta" data-post-id="654732">
                     <a href="#comments">

@@ -28,10 +28,13 @@
                     var tree = json.ret.tree || [];
                     var list = json.ret.list || [];
                     var html = '';
+                   console.log(list.length);
+                    $("#comment_number").text(list.length);
                     $.each(tree, function(i, v){
                         html += self.tpl.template_comment(list[i]);
                         $(".js-comments-list").html('');
                         $(html).appendTo(".js-comments-list");
+                        self.updateCommentNum(1);
                         var rp_html = '';
                         if(v.length > 0){
                             $.each(v, function(j, n){
@@ -77,8 +80,8 @@
             });
             $(".js-comments-sorting").on('click', function(){
                 var _this = $(this);
-                var timeArr = ['created_at desc', 'created_at asc'];
-                var voteArr = ['vote_up desc', 'vote_up asc'];
+                var timeArr = ['created_at asc', 'created_at asc'];
+                var voteArr = ['vote_up desc', 'vote_up desc'];
                 var sort = '';
                 var num = parseInt(_this.attr('num'));
                 if(_this.data().commentSort == 'time'){
@@ -142,9 +145,10 @@
                 $._ajax(self.params.url, $.extend({}, param, extend), 'POST', 'JSON', function(json){
                     if(json.code > 0){
                         $(self.dom.pform)._clear_form(false);
+                        self.updateCommentNum(1);
                         self.loadCommenter('#publish_form');
                         //$("#comment-1014334").find('.js-vote-up').after(self.tpl.template_modal({}));
-                        $(".js-comments-list").prepend(self.tpl.template_comment($.extend({}, param, json.ret)));
+                        $(".js-comments-list").append(self.tpl.template_comment($.extend({}, param, json.ret)));
                         //$("#reply-content-1014329").append(self.tpl.template_reply({}));
                         self.bind();
                     }else{
@@ -182,6 +186,10 @@
                     $._alert('提示', json.msg);
                 }
             });
+        },
+        updateCommentNum: function(n){
+            var num = parseInt($('#comment_number').text());
+            $('#comment_number').text(num + n);
         },
         modal_hide: function(){
             $("#reply_modal")._clear_form(true);

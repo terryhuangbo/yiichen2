@@ -509,7 +509,7 @@ function _get_comments_num($post_id = 0){
     }
     global $wpdb;
     $db = new Db($wpdb, 'wp_comments_meta');
-    $count = $db->_count(['post_id' => $post_id]);
+    $count = $db->_count(['post_id' => $post_id, 'pid' => 0]);
     unset($db);
     return $count;
 }
@@ -635,8 +635,8 @@ function _param($key){
 }
 
 //测试-打印函数
-function hb($data) {
-    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-}
+//function hb($data) {
+//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+//}
 
 ?>

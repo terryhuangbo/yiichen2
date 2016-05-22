@@ -22,7 +22,7 @@ if ( post_password_required() ) {
     <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
          data-post-id="654732">
         <h5 class="c-card-category c-article-comments__headline">文章评论(<span
-                class="js-placeholder-comments-counter">12</span>)
+            id="comment_number"    class="js-placeholder-comments-counter">0</span>)
         </h5>
 
         <div class="c-article-comments-item is-unauthenticated js-article-comments-post-field">
