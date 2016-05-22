@@ -367,25 +367,27 @@ $_special_posts = $_special_posts ? $_special_posts
             <?php endforeach ?>
         </div>
 
-        <div id="ifanr_widget_buzz-3" class="widget-container widget_ifanr_widget_buzz clearfix" style="display: block">
-            <div class="widget-buzz-container">
-                <div class="o-widget__header c-hot-comment-widget-header">
-                    <h1 class="o-widget__header__title c-hot-comment-widget-header__title">最近评论</h1>
-                </div>
-                <div class="nano buzz-list-container js-nano">
-                    <ul class="buzz-list nano-content js-buzz-list"
-                        category="<?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special')  ?>">
-                        <!-- buzz item -->
+        <?php if(intval(get_option('comment-open')) == 1):?>
+            <div id="ifanr_widget_buzz-3" class="widget-container widget_ifanr_widget_buzz clearfix" style="display: block">
+                <div class="widget-buzz-container">
+                    <div class="o-widget__header c-hot-comment-widget-header">
+                        <h1 class="o-widget__header__title c-hot-comment-widget-header__title">最近评论</h1>
+                    </div>
+                    <div class="nano buzz-list-container js-nano">
+                        <ul class="buzz-list nano-content js-buzz-list"
+                            category="<?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special')  ?>">
+                            <!-- buzz item -->
 
-                        <!-- buzz item -->
-                        <li class="loading js-loading">
-                            <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"
-                                />
-                        </li>
-                    </ul>
+                            <!-- buzz item -->
+                            <li class="loading js-loading">
+                                <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"
+                                    />
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php endif ?>
 
         <div id="mail-subscribe" class="widget-ifr ifr-subscribe widget-container clearfix">
             <div id="mc_embed_signup" class="clearfix">

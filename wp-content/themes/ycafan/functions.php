@@ -369,6 +369,10 @@ add_action('wp_ajax_nopriv_get_recent_comments', 'ajax_get_recent_comments');
 add_action('wp_ajax_get_recent_comments', 'ajax_get_recent_comments');
 function ajax_get_recent_comments(){
     $Tool = new Tools();
+    //评论关闭
+    if(intval(get_option('comment-open')) != 1){
+        $Tool->_json([], -10005);
+    }
     global $wpdb;
     $page = intval($Tool->_request('page', 1));
     $pageSize = 10;

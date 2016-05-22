@@ -4,6 +4,7 @@
         self.params = {
             post_id: $('#publish_form').find('input[name=post_id]').val(),
             orderby: 'created_at asc',
+            expire: 300,//缓存评论者信息
             url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
         };
         self.dom = {
@@ -17,7 +18,8 @@
             var self = this;
             //this.bind();
             this.bindEvt();
-            this.load(self.params.post_id, self.params.orderby);
+            this.load(self.para
+            ms.post_id, self.params.orderby);
         },
         load: function(post_id, sort){
             var self = this;
