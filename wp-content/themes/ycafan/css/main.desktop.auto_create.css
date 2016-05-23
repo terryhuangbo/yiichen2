@@ -7343,7 +7343,7 @@ footer {
     display: block;
     min-width: 1120px;
     padding: 30px 0 35px;
-    background-color: #1f1f1f;
+    background-color: rgb(36, 37, 36);
     text-align: left;
     font-size: 12px;
     color: #FFF;
