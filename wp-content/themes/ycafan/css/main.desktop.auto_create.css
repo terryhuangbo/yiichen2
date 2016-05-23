@@ -1051,7 +1051,7 @@ a {
 }
 
 a:hover {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 h1 {
@@ -1969,7 +1969,7 @@ body.home .entry-archive {
     position: relative;
     width: auto;
     vertical-align: top;
-    border-bottom: 1px solid #dc2811
+    border-bottom: 1px solid rgba(0, 132, 171, 1)
 }
 
 .entry-content a:hover {
@@ -2873,7 +2873,7 @@ body.single .entry-comment-number {
     margin-bottom: 20px;
     display: block;
     font-size: 15px;
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-weight: bold
 }
 
@@ -3488,7 +3488,7 @@ article.dasheng .entry-blockquote .post-author {
 }
 
 .main-data .post-item-container .entry-content .data-source a {
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-weight: 700
 }
 
@@ -4358,7 +4358,7 @@ article.dasheng .entry-blockquote .post-author {
     font-size: 14px;
     display: inline-block;
     float: right;
-    color: #dc2811;
+    color: rgba(0, 132, 171, 1);
     margin: 18px 10px 0 0
 }
 
@@ -5419,7 +5419,7 @@ body.home {
 }
 
 .posts-list article .new-post-item-content h2:hover .new-comment-count {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .posts-list article .new-post-item-content h2 .new-comment-count {
@@ -5605,7 +5605,7 @@ body.home {
 
 .post-item-container .post-item-content .read-more {
     float: left;
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-size: 15px;
     line-height: 26px;
     display: inline-block;
@@ -5648,7 +5648,7 @@ body.home {
     width: 0;
     height: 0;
     border: 10px solid transparent;
-    border-left: 26px solid rgba(253, 23, 0, 0.8);
+    border-left: 26px solid rgba(0, 132, 171, 1);
     border-right: 0;
     z-index: 1;
     bottom: -10px;
@@ -5862,7 +5862,7 @@ body.home {
     padding: 0 20px;
     line-height: 1em;
     font-size: 12px;
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .header-notice a.close {
@@ -6006,7 +6006,7 @@ body.home {
 
 .header a:hover {
     text-decoration: none;
-    color: #df3120
+    color: rgba(0, 132, 171, 1)
 }
 
 .header .items-preview {
@@ -6193,7 +6193,7 @@ body.home {
 }
 
 .header .items-preview .items-flex .showbox.nav-video .item a:hover .content-container .title {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .header .items-preview .items-flex .showbox.nav-video .item .ifanr2015-shipin {
@@ -6240,7 +6240,7 @@ body.home {
 }
 
 .header .items-preview .items-flex .showbox.nav-data .item:hover .number-container, .header .items-preview .items-flex .showbox.nav-data .item:hover .date {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .header .items-preview .items-flex .showbox.nav-data .item:hover .excerpt {
@@ -6327,7 +6327,7 @@ body.home {
 }
 
 .header .items-preview .items-flex .showbox.nav-dasheng a:hover {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .header .items-preview .items-flex .showbox.nav-dasheng a:hover .content-container {
@@ -6407,7 +6407,7 @@ body.home {
     bottom: 14px;
     font-weight: bold;
     font-size: 14px;
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     z-index: 9999
 }
 
@@ -6441,7 +6441,7 @@ body.home {
 }
 
 .header .nav .nav-list .nav-item:hover a {
-    color: #df3120
+    color: rgba(0, 132, 171, 1)
 }
 
 .header .nav .nav-list .nav-item:nth-of-type(n+2):before {
@@ -6470,7 +6470,7 @@ body.home {
     -webkit-transform: translate(0, -5px);
     -ms-transform: translate(0, -5px);
     transform: translate(0, -5px);
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .header .nav .nav-list .nav-item.active:before {
@@ -6638,7 +6638,7 @@ body.home {
     margin-bottom: 6px;
     line-height: 1;
     font-size: 14px;
-    color: #C53530;
+    color: rgba(0, 132, 171, 1);
     overflow: hidden
 }
 
@@ -6677,11 +6677,11 @@ body.home {
 }
 
 .header .header-inner .site-nav a.chosen {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .header .header-inner .site-nav a:hover {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .header .nav-more-categories-content {
@@ -6943,7 +6943,7 @@ body.menu-prevent-scrolled {
 
 .ifr-nav-items-container .menu-preview h2 {
     font-size: 16px;
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     padding: 0 10px 19px 0
 }
 
@@ -7015,7 +7015,7 @@ body.menu-prevent-scrolled {
 
 .ifr-nav-items-container h2 {
     font-size: 16px;
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     padding: 0 10px 19px
 }
 
@@ -7042,11 +7042,11 @@ body.menu-prevent-scrolled {
 }
 
 .ifr-nav-items-container .items-wrapper .nav-items-list a.active {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .ifr-nav-items-container .items-wrapper .nav-items-list a.current {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .ifr-nav-items-container .items-wrapper .nav-products {
@@ -7136,7 +7136,7 @@ body.menu-prevent-scrolled {
 }
 
 .ifr-search-zone em {
-    color: #dc2811
+    color: rgba(0, 132, 171, 1)
 }
 
 .ifr-search-zone .loading {
@@ -7196,7 +7196,7 @@ body.menu-prevent-scrolled {
     height: 50px;
     line-height: 40px;
     font-size: 40px;
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .ifr-search-zone .query-zone input:focus {
@@ -7486,8 +7486,8 @@ footer .sns a {
 }
 
 footer .sns a:hover {
-    color: rgba(253, 23, 0, 0.8);
-    border-color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1);
+    border-color: rgba(0, 132, 171, 1)
 }
 
 footer .sns a .ifanr2015 {
@@ -8045,7 +8045,7 @@ footer .sns a .ifanr2015 {
 }
 
 .featured-area .featured-content .tag {
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-size: 12px;
     font-weight: 700;
     padding: 5px 0
@@ -8121,7 +8121,7 @@ footer .sns a .ifanr2015 {
 .appso-articles-list .appso-guide {
     display: block;
     text-align: center;
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-size: 14px;
     font-weight: 600;
     margin: 0 auto 80px auto
@@ -8333,7 +8333,7 @@ footer .sns a .ifanr2015 {
     text-align: right;
     margin: 10px 0 0 0;
     font-size: 12px;
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .index-dasheng-share {
@@ -8459,7 +8459,7 @@ footer .sns a .ifanr2015 {
 }
 
 .video-wrapper .video-play-mask {
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     text-align: center;
     line-height: 100px;
     font-size: 13px;
@@ -8497,7 +8497,7 @@ footer .sns a .ifanr2015 {
 
 .video-wrapper .feature-item-container .tag-label {
     display: inline-block;
-    background-color: rgba(253, 23, 0, 0.8);
+    background-color: rgba(0, 132, 171, 1);
     line-height: 24px;
     padding: 0 10px;
     font-size: 13px;
@@ -8664,7 +8664,7 @@ footer .sns a .ifanr2015 {
 }
 
 .index-content-normal article .entry-meta .tag {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .home .loading-posts {
@@ -8847,7 +8847,7 @@ footer .sns a .ifanr2015 {
 .subscribe-wrapper .subscribe-by-email input[type="submit"] {
     width: 80px;
     line-height: 40px;
-    background: #dc2811;
+    background: rgba(0, 132, 171, 1);
     border: 0;
     color: #FFFFFF;
     font-weight: 700
@@ -8858,7 +8858,7 @@ footer .sns a .ifanr2015 {
 }
 
 .subscribe-wrapper .subscribe-by-weixin .desc {
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-size: 16px;
     line-height: 28px;
     margin: 0 0 15px
@@ -9749,7 +9749,7 @@ ol.commentlist li.collapsed .children, ol.commentlist li.collapsed .comment-body
 }
 
 ol.commentlist .comment-meta .reply {
-    color: #dc2811;
+    color: rgba(0, 132, 171, 1);
     font-size: 12px;
     background: none;
     margin: 0 20px 0 0;
@@ -9835,7 +9835,7 @@ ol.commentlist .comment-rating-zone .comment-rating.rating-up.rated.checkmark .r
 
 ol.commentlist .comment-rating-zone .comment-rating.rating-up.rated.checkmark .ifanr2015-dagou, ol.commentlist .comment-rating-zone .comment-rating.rating-up.rated.checkmark span {
     display: inline-block;
-    color: #dc2811
+    color: rgba(0, 132, 171, 1)
 }
 
 ol.commentlist .comment-rating-zone .comment-rating.rating-down.rated.checkmark .rate-down {
@@ -9853,7 +9853,7 @@ ol.commentlist .comment-rating-zone .ifanr2015 {
 }
 
 ol.commentlist .comment-rating-zone .rate-up, ol.commentlist .comment-rating-zone .rating-up {
-    color: #dc2811
+    color: rgba(0, 132, 171, 1)
 }
 
 ol.commentlist .comment-rating-zone .rate-down, ol.commentlist .comment-rating-zone .rating-down {
@@ -9971,7 +9971,7 @@ form#commentform p.login-in-buttons {
 }
 
 form#commentform p.login-in-buttons a {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 form#commentform .submit-zone {
@@ -10294,7 +10294,7 @@ textarea#comment:focus {
 }
 
 .single .author-profile-wrapper .author-profile-text h2 a {
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-weight: 700
 }
 
@@ -10311,7 +10311,7 @@ textarea#comment:focus {
 }
 
 .single .author-profile-wrapper .author-profile-text .homepage a {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .single .author-profile-wrapper .author-profile-info-wrapper {
@@ -10732,7 +10732,7 @@ a.ifanr-share-buttons .ifanr2015 {
 }
 
 .ifr-article-component .like-avatars .avatars-counter .avatars-count {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .tooltip {
@@ -11112,7 +11112,7 @@ body.single-post .content-header-archive {
 }
 
 .content-header-archive.dasheng-header .blockquote-content p.content {
-    color: #df3120;
+    color: rgba(0, 132, 171, 1);
     font-size: 20px;
     line-height: 42px;
     font-weight: 700;
@@ -11121,7 +11121,7 @@ body.single-post .content-header-archive {
 
 .content-header-archive.dasheng-header h1 {
     padding: 0;
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-size: 20px;
     line-height: 30px;
     font-weight: 700
@@ -11145,7 +11145,7 @@ body.single-post .content-header-archive {
 }
 
 .likes-and-comments a.active i.item-icon, .likes-and-comments a.active span {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .likes-and-comments a.active:hover i.item-icon {
@@ -11165,7 +11165,7 @@ body.single-post .content-header-archive {
 }
 
 .likes-and-comments .footer-item:hover .item-icon {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .likes-and-comments .footer-item .item-icon {
@@ -11179,7 +11179,7 @@ body.single-post .content-header-archive {
 }
 
 .likes-and-comments .footer-item .ifanr2015-share {
-    color: #dc2811;
+    color: rgba(0, 132, 171, 1);
     font-size: 25px;
     line-height: 20px;
     font-weight: 700;
@@ -11209,7 +11209,7 @@ body.single-post .content-header-archive {
 }
 
 .article-footer a {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .article-footer .comments-wrapper {
@@ -11228,7 +11228,7 @@ body.single-post .content-header-archive {
 }
 
 .article-footer .comments-wrapper .comments-type a:hover, .article-footer .comments-wrapper .comments-type a.active {
-    color: rgba(253, 23, 0, 0.8)
+    color: rgba(0, 132, 171, 1)
 }
 
 .article-footer .comments-wrapper .comments-list-container {
@@ -11277,7 +11277,7 @@ body.single-post .content-header-archive {
 
 .article-footer .article-likes-persons .load-more {
     display: block;
-    color: #dc2811;
+    color: rgba(0, 132, 171, 1);
     text-align: center;
     font-size: 14px;
     margin: 0 0 22px 0
@@ -11448,7 +11448,7 @@ body.single-post .content-header-archive {
 .related-articles-list .related-item .tag {
     display: block;
     position: relative;
-    color: #dc2811;
+    color: rgba(0, 132, 171, 1);
     margin: 0;
     line-height: 25px;
     padding: 0;
@@ -11474,14 +11474,14 @@ body.single-post .content-header-archive {
 .related-articles-list .related-item .decoration.one {
     width: 12px;
     height: 0px;
-    border-bottom: 2px solid rgba(253, 23, 0, 0.8);
+    border-bottom: 2px solid rgba(0, 132, 171, 1);
     margin: 0
 }
 
 .related-articles-list .related-item .decoration.two {
     width: 6px;
     height: 6px;
-    border: 2px solid rgba(253, 23, 0, 0.8);
+    border: 2px solid rgba(0, 132, 171, 1);
     border-left: 0;
     border-top: 0;
     right: 0
@@ -11503,7 +11503,7 @@ body.single-post .content-header-archive {
     display: inline-block;
     margin-right: 5px;
     margin-left: 10px;
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     vertical-align: middle
 }
 
@@ -11680,7 +11680,7 @@ body.single-post .content-header-archive {
 }
 
 .rc-item .rc-info a.rc-post:hover {
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     text-decoration: underline
 }
 
@@ -12311,7 +12311,7 @@ body.single-post .content-header-archive {
 }
 
 .seo-common-title .iconfont {
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     margin-right: 5px;
     font-weight: normal
 }
@@ -12391,7 +12391,7 @@ body.single-post .content-header-archive {
 }
 
 .seo-post .tag-label .tag {
-    color: rgba(253, 23, 0, 0.8);
+    color: rgba(0, 132, 171, 1);
     font-weight: 700
 }
 
@@ -12584,7 +12584,7 @@ body.single-post .content-header-archive {
 }
 
 .chatroom-indicator-header .chatroom-icon {
-    color: #df3120;
+    color: rgba(0, 132, 171, 1);
     font-size: 17px
 }
 
@@ -12663,7 +12663,7 @@ body.single-post .content-header-archive {
 }
 
 .chatroom-panel-header .chatroom-icon {
-    color: #df3120;
+    color: rgba(0, 132, 171, 1);
     position: relative;
     top: -3px
 }
