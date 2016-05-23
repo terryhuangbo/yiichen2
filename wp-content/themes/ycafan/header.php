@@ -155,7 +155,7 @@ $Cache = new Cache();
                   </a>
                 </li>
                 <li class="nav-item" cate="principle" data-count="4" data-post-type="vision">
-                  <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="理论视野" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=3">
+                  <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="理论视野" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=4">
                     <!-- <i class="ifanr2015 ifanr2015-wanwuzhi icon-font"></i> -->
                     理论视野
                   </a>
@@ -244,7 +244,7 @@ $Cache = new Cache();
                 <div class="items-wrapper js-clickable-wrapper">
                   <h2>栏目</h2>
 
-                  <div itemscope itemtype="http://schema.org/SiteNavigationElement" class="nav-items-list row">
+                  <div itemscope itemtype="" class="nav-items-list row">
                     <div class="single-row">
                       <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="首页" itemprop="url" href="<?php bloginfo('url') ?>"><span itemprop="name">首页</span></a>
                       <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="ifanRank" itemprop="url" href="<?php bloginfo('url') ?>/?cat=3"><span itemprop="name">理论视野</span></a>
