@@ -108,7 +108,6 @@ class Db
             $i++;
         }
         $sql = 'UPDATE ' . $this->tb . ' SET' . $_update_val . ' WHERE ' . $_where;
-        hb($sql);
         return $this->db->query($sql);
     }
 
