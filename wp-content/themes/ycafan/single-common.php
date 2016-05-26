@@ -7,7 +7,11 @@ get_header();
 $cat = array_shift(get_the_category());
 the_post();
 $_rel_posts = _get_rel_posts($cat->term_id, get_the_ID(), get_option('relpost-type'));
+if(!empty($_rel_posts)){
+    $_first_post = array_shift($_rel_posts);
+}
 $tags = $Tool->_value(get_the_tags(), [], true);
+
 ?>
 
 <div class="o-single">
@@ -100,26 +104,26 @@ $tags = $Tool->_value(get_the_tags(), [], true);
              data-sibling="#single-content-wrapper" data-component="AwesomeScroll" data-bounds-top="105"
              data-bounds-bottom="320">
             <div class="o-widget c-card-author">
-                <h5 class="c-card-category">作者</h5>
+                <h5 class="c-card-category">作者&nbsp;&nbsp;&nbsp;&nbsp;<span><?php the_author() ?></span></h5>
 
-                <div class="c-card c-card-author__info">
-                    <a class="c-card-author__info__avatar" href="http://www.ifanr.com/author/jackie" target="_blank"><img
-                            src="http://images.ifanr.cn/wp-content/uploads/2015/08/jackie.jpg" alt="<?php the_author() ?>"></a>
-
-                    <div class="c-card-author__info__contacts">
-                        <a class="c-card-author__contact c-card-author__contact--email" href="mailto:jackie@ifanr.com"
-                           target="_blank"></a>
-                    </div>
-                    <a class="c-card-author__wrapper" href="http://www.ifanr.com/author/jackie" target="_blank">
-                        <p class="c-card-author__name"><?php the_author() ?></p>
-
-                        <p class="c-card-author__position">高级编辑</p>
-                    </a>
-                </div>
+<!--                <div class="c-card c-card-author__info">-->
+<!--                    <a class="c-card-author__info__avatar" href="http://www.ifanr.com/author/jackie" target="_blank"><img-->
+<!--                            src="http://images.ifanr.cn/wp-content/uploads/2015/08/jackie.jpg" alt="--><?php //the_author() ?><!--"></a>-->
+<!---->
+<!--                    <div class="c-card-author__info__contacts">-->
+<!--                        <a class="c-card-author__contact c-card-author__contact--email" href="mailto:jackie@ifanr.com"-->
+<!--                           target="_blank"></a>-->
+<!--                    </div>-->
+<!--                    <a class="c-card-author__wrapper" href="http://www.ifanr.com/author/jackie" target="_blank">-->
+<!--                        <p class="c-card-author__name">--><?php //the_author() ?><!--</p>-->
+<!---->
+<!--                        <p class="c-card-author__position">高级编辑</p>-->
+<!--                    </a>-->
+<!--                </div>-->
                 <div class="c-card c-card-author__recent">
-                    <div class="c-card-author__recent__counter"><b>380</b>文章总数</div>
-                    <a class="c-card-author__recent__article" href="http://www.ifanr.com/654824"
-                       target="_blank"><span>最近：</span>最大的小米手机和 MIUI 8 发布了，这个“扫题出答案”的功能你怎么看？</a>
+                    <div class="c-card-author__recent__counter"><b><?php echo get_the_author_posts() ?></b>文章总数</div>
+                    <a class="c-card-author__recent__article" href="<?php echo get_permalink($Tool->_value($_first_post['ID'], 0)) ?>"
+                       target="_blank"><span>最近：</span><?php echo $Tool->_value($_first_post['title']) ?></a>
                 </div>
             </div>
             <div class="o-widget c-related-articles">
