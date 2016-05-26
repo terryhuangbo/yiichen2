@@ -28,7 +28,6 @@
                     var tree = json.ret.tree || [];
                     var list = json.ret.list || [];
                     var html = '';
-                   console.log(list.length);
                     $("#comment_number").text(list.length);
                     $.each(tree, function(i, v){
                         html += self.tpl.template_comment(list[i]);
@@ -42,18 +41,19 @@
                             });
                             setTimeout(function(){
                                 $("#reply-content-" + list[i].comment_id).html(rp_html);
-                            }, 0);
+                            }, 10);
                         }
                     });
                     setTimeout(function(){
                         self.bind();
-                    }, 0);
+                    }, 10);
                 }else{
                 }
             });
         },
         bind: function(){
             var self = this;
+
             $('.js-reply-comment').off('click').on('click', function(){
                 var _this = this;
                 self.modal_show();
@@ -70,7 +70,10 @@
                     self.modal_hide();
                     $('.js-reply-comment').show();
                 });
+            });
 
+            $(".js-vote-up, .js-vote-down").on('click', function(){
+                self.vote(this);
             });
         },
         bindEvt: function(){
@@ -187,6 +190,28 @@
                 }
             });
         },
+        vote: function(dom){
+            self = this;
+            _this = $(dom);
+            var type = _this.hasClass('js-vote-up') ? 1 : 2;
+            var comment_id = _this.attr('comment_id');
+            var param = param || {};
+            param = {
+                action: 'vote',
+                comment_id: comment_id,
+                type: type
+            };
+            $._ajax(self.params.url, param, 'POST', 'JSON', function(json){
+                if(json.code > 0){
+                    var vote_num = parseInt(_this.text());
+                    _this.text(vote_num + 1);
+                }else{
+                    $._alert('提示', json.msg);
+                }
+            });
+
+
+        },
         updateCommentNum: function(n){
             var num = parseInt($('#comment_number').text());
             $('#comment_number').text(num + n);
@@ -248,8 +273,8 @@
                 '        <span class="c-article-comments-item__hint js-show-comment">*评分过低，点击显示隐藏评论*</span>'+
                 '        <div class="c-article-comments-item__content"><p>'+ content +'</p></div>'+
                 '        <button class="c-article-comments-item__reply js-reply-comment" data-post_id="'+ post_id +'" data-author="'+ author +'" data-email="'+ email +'" data-comment_id="'+ comment_id +'">回复</button>'+
-                '        <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down ">'+ vote_down +'</button>'+
-                '        <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">'+ vote_up +'</button>'+
+                '        <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down" comment_id="'+ comment_id +'">'+ vote_down +'</button>'+
+                '        <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up" comment_id="'+ comment_id +'">'+ vote_up +'</button>'+
                 '        </div>'+
                 '        <ul id="reply-content-'+ comment_id +'" class="c-article-comments-replies c-article-comments-item__info js-child-comments">'+
                 '        </ul>'+
@@ -281,8 +306,8 @@
                 '               <p>'+ content +'</p>'+
                 '           </div>'+
                 '           <button class="c-article-comments-item__reply c-article-comments-replies__reply js-reply-comment" data-post_id="'+ post_id +'" data-author="'+ from_author +'" data-email="'+ from_email +'" data-comment_id="'+ comment_id +'">回复</button>'+
-                '           <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down ">'+ vote_down +'</button>'+
-                '           <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">'+ vote_up +'</button>'+
+                '           <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down" comment_id="'+ comment_id +'">'+ vote_down +'</button>'+
+                '           <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up" comment_id="'+ comment_id +'">'+ vote_up +'</button>'+
                 '       </div>'+
                 '   </li>';
             return html;

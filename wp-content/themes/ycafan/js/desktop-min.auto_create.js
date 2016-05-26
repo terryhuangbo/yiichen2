@@ -3431,7 +3431,6 @@ function(a, b) {
         this.load().then(function(a) {
             c.render(a)
         }).fail(function(a) {
-            console.error(a)
         })
     };
     b.fn.

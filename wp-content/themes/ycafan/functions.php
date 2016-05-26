@@ -481,6 +481,40 @@ function ajax_load_comments(){
     die();
 }
 
+//投票
+add_action('wp_ajax_nopriv_vote', 'ajax_vote');
+add_action('wp_ajax_vote', 'ajax_vote');
+function ajax_vote(){
+    global $wpdb;
+    $Tool = new Tools();
+    $comment_id = intval($Tool->_request('comment_id', 0));
+    $type = intval($Tool->_request('type', 0));
+    $db = new Db($wpdb, 'wp_comments_meta');
+    if(!in_array($type, [1, 2])){
+        $Tool->_json([], -10005);
+    }
+    $comment = $Tool->_object_to_array($db->_select_one(['id' => $comment_id]));
+    if(!$comment){
+        $Tool->_json([], -10006);
+    }
+    if($type === 1){
+        $data = [
+            'vote_up' => $comment['vote_up'] + 1
+        ];
+    }else{
+        $data = [
+            'vote_down' => $comment['vote_down'] + 1
+        ];
+    }
+    $rst = $db->_update(['id' => $comment_id], $data);
+    if($rst === false){
+        $Tool->_json([], -10000);
+    }
+    $Tool->_json([], 10000);
+    unset($Tool);
+    unset($db);
+    die();
+}
 
 //获取所有子评论
 function _get_all_children_comments($_list){
