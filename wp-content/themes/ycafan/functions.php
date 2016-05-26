@@ -420,6 +420,7 @@ function ajax_add_comment(){
     $res = $db->_insert([
         'pid' => $pid,
         'post_id' => $post_id,
+        'avarta' => '/images/garvatar/garvatar.jpg',
         'from_email' => $from_email,
         'from_author' => $from_author,
         'to_author' => $to_author,
@@ -467,7 +468,7 @@ function ajax_load_comments(){
     $_blist = $Tool->_index_array($_list, 'id');
     foreach($_blist as $k => $v){
         $_blist[$k]['comment_id'] = $v['id'];
-        $_blist[$k]['avarta'] = '';
+        $_blist[$k]['avarta'] = get_stylesheet_directory_uri() . $v['avarta'];
         $_blist[$k]['publish_time'] = date('Y-m-d H:i:s', $v['created_at']);
     }
     $_data = [
