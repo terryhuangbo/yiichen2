@@ -191,10 +191,17 @@
             });
         },
         vote: function(dom){
-            self = this;
             _this = $(dom);
+
             var type = _this.hasClass('js-vote-up') ? 1 : 2;
             var comment_id = _this.attr('comment_id');
+            var vistor = $._cache.get('VISTOR') || Math.random().toString(36).substr(2);
+            var can_vote = $._cache.get(vistor + comment_id);
+            if(can_vote == 1){
+                alert('您已经投过票了，请勿重复投票！');
+                return false;
+            }
+
             var param = param || {};
             param = {
                 action: 'vote',
@@ -205,12 +212,11 @@
                 if(json.code > 0){
                     var vote_num = parseInt(_this.text());
                     _this.text(vote_num + 1);
+                    $._cache.set(vistor + comment_id, 1, 24*60*60);
                 }else{
                     $._alert('提示', json.msg);
                 }
             });
-
-
         },
         updateCommentNum: function(n){
             var num = parseInt($('#comment_number').text());

@@ -235,26 +235,6 @@ class Db
         return $page_id;
     }
 
-//    /**
-//     * 投票
-//     * @param $comment_id 评论id
-//     * @param $type int 1-赞同 2-反对
-//     * @param $num int 数量
-//     * @return int
-//     **/
-//    public function _vote($comment_id, $type = 1, $num = 1) {
-//        if(in_array($type, [1, 2])){
-//            return false;
-//        }
-//        $field = $type == 1 ? 'vote_up' : 'vote_down';
-//        $sql = "UPDATE {$this->db} .
-//        SET {$field} = {$field} + {$num} WHERE id = {$comment_id}";
-//        hb($sql);
-//        return $this->db->get_var($this->db->prepare("UPDATE {$this->db} .
-//        SET {$field} = {$field} + {$num} WHERE id = {$comment_id}"));
-//    }
-
-
 }
 
 ?>

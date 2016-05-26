@@ -147,8 +147,15 @@ window.onerror = Raven.process;
         }
         return;
     });
+</script>
 
-
+<script>
+    //设置浏览者缓存为随机数
+    var vistor = $._cache.get('VISTOR');
+    if(vistor === undefined){
+        var vistor = Math.random().toString(36).substr(2);
+        $._cache.set('VISTOR', vistor, 60*60);
+    }
 </script>
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"eee3fec2bc","applicationID":"3953741","transactionName":"M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==","queueTime":0,"applicationTime":4,"atts":"HxZYEVlOTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
