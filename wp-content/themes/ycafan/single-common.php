@@ -30,8 +30,10 @@ $tags = $Tool->_value(get_the_tags(), [], true);
                 <h1 class="c-single-normal__title"><?php the_title() ?></h1>
             </div>
         </div>
-        <div class="o-single-content__body o-single-content__body--main" >
-            <aside class="c-social-bar c-social-bar--vertical c-social-bar--colored c-social-bar--sqaured c-social-bar--left js-social-bar"
+
+        <div class="o-single-content__body o-single-content__body--main">
+            <aside style="display: none;"
+                class="c-social-bar c-social-bar--vertical c-social-bar--colored c-social-bar--sqaured c-social-bar--left js-social-bar"
                 data-component="SocialBar"
                 style="display: none;"
                 data-post-title="<?php the_title() ?><?php the_title() ?>"
