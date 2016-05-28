@@ -402,7 +402,7 @@ template("desktop-buzz-item2",
                         i.$loading.detach()
                 }
             });
-            //IFR.api("get_buzz_list", {
+            //YCA.api("get_buzz_list", {
             //    data: {
             //        page: t
             //    },

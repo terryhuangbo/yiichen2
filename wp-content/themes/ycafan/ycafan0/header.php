@@ -39,13 +39,13 @@ if ( window.top != window.self ) {
 var ga = ga || function() {(ga.q = ga.q || []).push(arguments)};
 
 var ns = ns || {};
-var IFR = IFR || {};
-IFR.isMobile = 0;
+var YCA = YCA || {};
+YCA.isMobile = 0;
 
-IFR.user = {};
-IFR.user.id = '';
-IFR.user.name = '';
-IFR.user.avatarUrl = '';
+YCA.user = {};
+YCA.user.id = '';
+YCA.user.name = '';
+YCA.user.avatarUrl = '';
 
 // sso 用户中心 url 统一配置, 见 config
 ns.SSO_URL_MYACCOUNT = "https://sso.ifanr.com/myaccount/";
@@ -56,10 +56,10 @@ ns.SSO_URL_LOGOUT = "https://sso.ifanr.com/logout/";
 ns.COMMENTER_EMAIL = 'commenter_email';
 ns.COMMENTER_NAME = 'commenter_name';
 
-IFR.api_url = "http://www.ifanr.com/api/v3.0/";
-IFR.theme_url = "http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0";
-IFR.blankImg_url = "http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static//images/grey.gif";
-IFR.apiNonce = { appkey: 'lI5287M8UyxBI98U2YKq',timestamp: '1457091133',sign: '9f8137583d662371139d8556e808f045' };
+YCA.api_url = "http://www.ifanr.com/api/v3.0/";
+YCA.theme_url = "http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0";
+YCA.blankImg_url = "http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static//images/grey.gif";
+YCA.apiNonce = { appkey: 'lI5287M8UyxBI98U2YKq',timestamp: '1457091133',sign: '9f8137583d662371139d8556e808f045' };
 </script>
     <!--[if lt IE 9]>
   <script src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/js/html5.js" type="text/javascript"></script>

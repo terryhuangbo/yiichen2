@@ -200,8 +200,8 @@
     }
 })(jQuery);
 var root = window;
-root.IFR || (root.IFR = {});
-IFR.env = function() {
+root.YCA || (root.YCA = {});
+YCA.env = function() {
     function a(a) {
         return a.replace(/(^\s*)|(\s*$)/g, "")
     }
@@ -253,11 +253,11 @@ IFR.env = function() {
     }
     return e
 } ();
-IFR.env.touchSupport = IFR.env.ios || IFR.env.android || IFR.env.touchSupport;
-IFR.env.android4_4 = IFR.env.android && IFR.env.version >= 4.4;
-IFR.env.mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(IFR.env.ua);
-IFR.env.mobileiPad = /iPad.*?Mobile/i.test(IFR.env.ua);
-IFR.env.mobileSafari = IFR.env.ios && IFR.env.ua.match(/AppleWebKit/);
+YCA.env.touchSupport = YCA.env.ios || YCA.env.android || YCA.env.touchSupport;
+YCA.env.android4_4 = YCA.env.android && YCA.env.version >= 4.4;
+YCA.env.mobile = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(YCA.env.ua);
+YCA.env.mobileiPad = /iPad.*?Mobile/i.test(YCA.env.ua);
+YCA.env.mobileSafari = YCA.env.ios && YCA.env.ua.match(/AppleWebKit/);
 function featureTest(a, b, c) {
     var d = a + ":",
     e = document.createElement("test"),
@@ -269,14 +269,14 @@ function featureTest(a, b, c) {
     }
     return f[a].indexOf(b) !== -1
 }
-IFR.env.positionStickySupport = featureTest("position", "sticky");
-IFR.env.positionFixedSupport = featureTest("position", "fixed", true);
+YCA.env.positionStickySupport = featureTest("position", "sticky");
+YCA.env.positionFixedSupport = featureTest("position", "fixed", true);
 window.requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame ||
 function a(b, c) {
     setTimeout(b, c || 1)
 };
-var IFR = IFR || {};
-IFR.Events = function() {
+var YCA = YCA || {};
+YCA.Events = function() {
     var a = [];
     var b = a.push;
     var c = a.slice;
@@ -401,8 +401,8 @@ IFR.Events = function() {
     };
     return h
 } ();
-var IFR = IFR || {};
-IFR.Store = function(a) {
+var YCA = YCA || {};
+YCA.Store = function(a) {
     var b = {},
     c = "localStorage",
     d;
@@ -2165,11 +2165,11 @@ function(a) {
     "undefined" === typeof console && (b.console = {
         log: function() {}
     });
-    IFR = b.IFR || {};
-    IFR.util = IFR.util || {};
-    IFR.url = b.location;
-    IFR.url.hashValue = IFR.url.hash.slice(1);
-    IFR.url.hrefWithoutHash = IFR.url.href.replace(IFR.url.hash, "");
+    YCA = b.YCA || {};
+    YCA.util = YCA.util || {};
+    YCA.url = b.location;
+    YCA.url.hashValue = YCA.url.hash.slice(1);
+    YCA.url.hrefWithoutHash = YCA.url.href.replace(YCA.url.hash, "");
     a.extend(a.easing, {
         easeInOutExpo: function(a, b, c, d, e) {
             if (b == 0) return c;
@@ -2178,7 +2178,7 @@ function(a) {
             return d / 2 * ( - Math.pow(2, -10 * --b) + 2) + c
         }
     });
-    a.extend(IFR, {
+    a.extend(YCA, {
         isie6: false,
         isie: false,
         hasLocalStorage: !!b.localStorage,
@@ -2192,7 +2192,7 @@ function(a) {
             }
         },
         setItem: function(a, b) {
-            if (!IFR.hasLocalStorage) return false;
+            if (!YCA.hasLocalStorage) return false;
             try {
                 b = JSON.stringify(b);
                 localStorage.setItem(a, b)
@@ -2203,7 +2203,7 @@ function(a) {
             }
         },
         getItem: function(c) {
-            if (!IFR.hasLocalStorage) return false;
+            if (!YCA.hasLocalStorage) return false;
             var d = b.localStorage.getItem(c);
             d = a.parseJSON(d);
             return d
@@ -2235,7 +2235,7 @@ function(a) {
             b.open(m, "分享", "width=" + k + ",height=" + l + ", top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no")
         }
     });
-    a.extend(IFR.util, {
+    a.extend(YCA.util, {
         isie6: false,
         isie: false,
         isFF: !(window.mozInnerScreenX == null),
@@ -2279,7 +2279,7 @@ function(a) {
             for (var d in a) {
                 var e = b ? b + "[" + d + "]": d,
                 f = a[d];
-                c.push(typeof f == "object" ? IFR.util.objToParam(f, e) : encodeURIComponent(e) + "=" + encodeURIComponent(f))
+                c.push(typeof f == "object" ? YCA.util.objToParam(f, e) : encodeURIComponent(e) + "=" + encodeURIComponent(f))
             }
             return c.join("&")
         },
@@ -2314,7 +2314,7 @@ function(a) {
                 b = new Date(c[0], c[1] - 1, c[2], c[3], c[4], c[5])
             } else {}
             a = b.getTime();
-            var d = IFR.util.milliseconds();
+            var d = YCA.util.milliseconds();
             var e = b.getFullYear();
             var f = new Date(d).getFullYear();
             var g = d - a;
@@ -2325,16 +2325,16 @@ function(a) {
             var l;
             if (h >= 86400) {
                 if (k == 1) {
-                    l = "昨天 " + IFR.util.formatTime(b, "short")
+                    l = "昨天 " + YCA.util.formatTime(b, "short")
                 } else if (k == 2) {
-                    l = "前天 " + IFR.util.formatTime(b, "short")
+                    l = "前天 " + YCA.util.formatTime(b, "short")
                 } else if (e === f) {
-                    l = IFR.util.formatTime(b, "withNoYear")
+                    l = YCA.util.formatTime(b, "withNoYear")
                 } else {
-                    l = IFR.util.formatTime(b, "full")
+                    l = YCA.util.formatTime(b, "full")
                 }
             } else if (h >= 3600) {
-                l = "今天 " + IFR.util.formatTime(b, "short")
+                l = "今天 " + YCA.util.formatTime(b, "short")
             } else if (h >= 60) {
                 l = i + " 分钟前"
             } else {
@@ -2347,7 +2347,7 @@ function(a) {
         },
         daysInYear: function(a) {
             var b = a.getFullYear();
-            return IFR.util.isLeapYear(b) ? 366 : 365
+            return YCA.util.isLeapYear(b) ? 366 : 365
         },
         formatTime: function(a, b) {
             var c = (new Date).getFullYear(),
@@ -2404,7 +2404,7 @@ function(a) {
         fixDownloadLinkInWeixin: function(a) {
             if (!a.length) return;
             var b = a.attr("href");
-            if (IFR.weixin) {
+            if (YCA.weixin) {
                 var c = "http://mp.weixin.qq.com/mp/redirect?url=" + encodeURIComponent(b) + "#wechat_redirect";
                 a.attr("href", c)
             }
@@ -2446,8 +2446,8 @@ function(a) {
             this.scrollTo(a, "smooth", b, c)
         },
         scrollToHash: function() {
-            if (IFR.url.hashValue) {
-                this.scrollTo(a("#" + IFR.url.hashValue))
+            if (YCA.url.hashValue) {
+                this.scrollTo(a("#" + YCA.url.hashValue))
             }
         }
     })
@@ -2463,7 +2463,7 @@ function(a) {
             },
             localCacheTime: 0
         }).success(function(b) {
-            IFR.api("get_user_avatar", {
+            YCA.api("get_user_avatar", {
                 data: {
                     sso_id: b.user_id
                 },
@@ -2476,7 +2476,7 @@ function(a) {
                     a(".J_UserIdentity").html(e);
                     a(".js-user-avatar").attr("src", d);
                     a("#login-btn").html(e).attr("href", ns.SSO_URL_MYACCOUNT);
-                    IFR.Events.trigger("ifr.ssouser.initialized", {
+                    YCA.Events.trigger("ifr.ssouser.initialized", {
                         id: b.user_id,
                         name: e,
                         avatarUrl: d
@@ -2489,12 +2489,12 @@ function(a) {
             a("#email").val(a.cookie(ns.COMMENTER_EMAIL));
             a(".J_LoginButtons a").each(function() {
                 var b = a(this);
-                b.attr("href", b.attr("href") + "?next=" + encodeURIComponent(IFR.url.href))
+                b.attr("href", b.attr("href") + "?next=" + encodeURIComponent(YCA.url.href))
             });
-            if (!IFR.isMobile) {
+            if (!YCA.isMobile) {
                 a(".JS_formInFieldLabels label").inFieldLabels()
             }
-            IFR.Events.trigger("ifr.ssouser.unauthorized")
+            YCA.Events.trigger("ifr.ssouser.unauthorized")
         })
     };
     ns.addLoadingConfig = function(a, b) {
@@ -2532,17 +2532,17 @@ function(a) {
         return this
     }
 })(jQuery); (function(a) {
-    window.IFR = window.IFR || {};
+    window.YCA = window.YCA || {};
     var b = {
         setCache: function(a, c, d) {
             var e = b.parseCacheKey(a, c.data);
-            d.timeStamp = IFR.util.unix();
-            IFR.setItem(e, d)
+            d.timeStamp = YCA.util.unix();
+            YCA.setItem(e, d)
         },
         getCache: function(a, c) {
             var d = b.parseCacheKey(a, c.data),
-            e = IFR.getItem(d);
-            if (e && IFR.util.unix() - c.localCacheTime < e.timeStamp) {
+            e = YCA.getItem(d);
+            if (e && YCA.util.unix() - c.localCacheTime < e.timeStamp) {
                 return e
             }
             return false
@@ -2551,7 +2551,7 @@ function(a) {
             var c = a;
             if (typeof b !== "undefined") {
                 if (typeof b === "object") {
-                    b = IFR.util.objToParam(b)
+                    b = YCA.util.objToParam(b)
                 }
                 c = c + "&" + b
             }
@@ -2578,17 +2578,17 @@ function(a) {
             }
         }
         if (typeof g.data === "string") {
-            g.data = IFR.util.paramToObj(g.data)
+            g.data = YCA.util.paramToObj(g.data)
         }
         if (typeof g.data != "undefined" && g.data.cross_domain && g.dataType == "jsonp") {
             return
         }
         a.ajax({
             type: g.type,
-            url: IFR.api_url + "?action=" + c,
+            url: YCA.api_url + "?action=" + c,
             cache: false,
             data: a.extend({},
-            g.data, IFR.apiNonce),
+            g.data, YCA.apiNonce),
             dataType: g.dataType,
             success: function(a) {
                 if (g.type == "get" && g.localCacheTime) b.setCache(c, g, a);
@@ -2610,7 +2610,7 @@ function(a) {
             }
         })
     };
-    window.IFR.api = function(a, b) {
+    window.YCA.api = function(a, b) {
         return new c(a, b)
     }
 })(jQuery); (function(a, b) {
@@ -2791,7 +2791,7 @@ function(a) {
             g.setSelectInputValueToOption();
             g.toggleBtn(e);
             c = this.getMailString(d);
-            IFR.api("submit_report", {
+            YCA.api("submit_report", {
                 data: c,
                 success: function(a) {
                     g.toggleBtn(e);
@@ -2861,7 +2861,7 @@ function(a) {
         c.$commentsList.appendTo(c.$commentsListContainer);
         c.$commentsList = c.$commentsListContainer.find(".js-comments-list");
         c.$commentsLoading.hide();
-        IFR.Events.trigger("loaded.comments-list.article", {
+        YCA.Events.trigger("loaded.comments-list.article", {
             post_id: c.postId
         });
         b(".comment-avatar img").on("error",
@@ -2877,7 +2877,7 @@ function(a) {
             post_id: c.postId
         };
         e = b.extend(d, c.commentAjaxConfig);
-        IFR.api(c.fetchAction, {
+        YCA.api(c.fetchAction, {
             data: e,
             success: function(b) {
                 if (!b.status) return;
@@ -2911,7 +2911,7 @@ function(a) {
             rating_type: d.data("action")
         };
         f = b.extend(e, c.voteAjaxConfig);
-        IFR.api("rating", {
+        YCA.api("rating", {
             type: "post",
             data: f,
             success: function(a) {
@@ -3019,7 +3019,7 @@ function(a) {
             duration: 800,
             easing: "easeInOutExpo"
         });
-        IFR.util.stopDefault()
+        YCA.util.stopDefault()
     }
     a.ArticleCommentsComponent = c
 })(window, jQuery); (function(a, b) {
@@ -3069,7 +3069,7 @@ function(a) {
     d.fn.init = function(a) {
         this.postId = a.id;
         this.postTag = a.tag;
-        this.template = IFR.env.mobile ? "mobile-entry-related": "desktop-entry-related";
+        this.template = YCA.env.mobile ? "mobile-entry-related": "desktop-entry-related";
         this.$relatedZone = b('[data-cmpt-related-articles][data-post-id="' + this.postId + '"]');
         this.$relatedList = this.$relatedZone.find(".js-related-list");
         return this
@@ -3098,7 +3098,7 @@ function(a) {
         c.$processingTip.clsShow().slideDown();
         c.setFormState("processing");
         c.$formContainer.find(".js-cmt-hidden").remove();
-        IFR.api("post_comment", {
+        YCA.api("post_comment", {
             type: "post",
             data: c.$form.serialize(),
             success: function(a) {
@@ -3189,7 +3189,7 @@ function(a) {
         c.$cancelReply.clsShow()
     };
     d.fn.authCheck = function() {
-        if (Boolean(IFR.user.id)) {
+        if (Boolean(YCA.user.id)) {
             return
         }
         this.$formContainer.find(".js-not-login").clsShow()
@@ -3235,9 +3235,9 @@ function(a) {
     var b = function(b) {
         a.ajax({
             type: "post",
-            url: IFR.api_url + "?action=share_count&post_id=" + b,
+            url: YCA.api_url + "?action=share_count&post_id=" + b,
             dataType: "json",
-            data: IFR.apiNonce,
+            data: YCA.apiNonce,
             success: function(a) {}
         })
     };
@@ -3255,9 +3255,9 @@ function(a) {
         }
         a.ajax({
             type: "post",
-            url: IFR.api_url + "?action=like&post_id=" + c,
+            url: YCA.api_url + "?action=like&post_id=" + c,
             dataType: "json",
-            data: IFR.apiNonce,
+            data: YCA.apiNonce,
             success: function(e) {
                 if (e && e.status) {
                     var f = JSON.parse(a.cookie("ifanr_dasheng_liked"));
@@ -3303,7 +3303,7 @@ function(a) {
         }
     }
     b();
-    IFR.Events.on("reload.weixin.share-items", b)
+    YCA.Events.on("reload.weixin.share-items", b)
 })(jQuery); (function(a, b) {
     var c;
     a("create", "UA-6130036-1", "auto");
@@ -3313,7 +3313,7 @@ function(a) {
         c = b(".js-post-author-name").text().replace("|", "").replace(/\s/g, "");
         a("set", "dimension1", Boolean(c) ? c: "投稿")
     }
-    if (IFR.env.weixin) {
+    if (YCA.env.weixin) {
         a("set", "campaignSource", "(wechat)")
     }
     a("send", "pageview")
@@ -10327,7 +10327,7 @@ function() {
         return this.instance
     };
     a.RealTime = q.getInstance()
-})(window, RongIMClient, RSVP, jQuery, IFR); (function(a) {
+})(window, RongIMClient, RSVP, jQuery, YCA); (function(a) {
     "use strict";
     var b = function(a) {
         var b = document.createElement("a");
@@ -10483,10 +10483,10 @@ function() {
             b.assignUserToThis(e);
             d.resolve(b)
         } else {
-            b.id = IFR.user.id;
-            b.name = IFR.user.name;
-            b.avatarUrl = IFR.user.avatarUrl;
-            IFR.api("get_realtime_token", {
+            b.id = YCA.user.id;
+            b.name = YCA.user.name;
+            b.avatarUrl = YCA.user.avatarUrl;
+            YCA.api("get_realtime_token", {
                 data: {
                     sso_id: b.id
                 },
@@ -10512,7 +10512,7 @@ function() {
             this.token = a.token;
             e.resolve(this)
         } else {
-            IFR.api("get_realtime_token", {
+            YCA.api("get_realtime_token", {
                 data: {
                     sso_id: this.id
                 },

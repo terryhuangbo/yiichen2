@@ -361,7 +361,7 @@ function(t, i) {
         loadData: function(t) {
             var i = this;
             i.$loading.appendTo(i.$listContainer),
-            IFR.api("get_buzz_list", {
+            YCA.api("get_buzz_list", {
                 data: {
                     page: t
                 },

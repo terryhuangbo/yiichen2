@@ -360,7 +360,7 @@
                     }
                 })
             } else {
-                IFR.api(c.options.action, {
+                YCA.api(c.options.action, {
                     data: a,
                     success: function(a) {
                         if (a.status === 1) {
@@ -567,7 +567,7 @@
         },
         getCache: function(a) {
             var b = null;
-            var c = IFR.getItem("navCache");
+            var c = YCA.getItem("navCache");
             if (!a) {
                 return null
             }
@@ -583,7 +583,7 @@
             return b
         },
         setCache: function(a, b, c) {
-            var d = IFR.getItem("navCache") || {};
+            var d = YCA.getItem("navCache") || {};
             if (!a) {
                 return null
             }
@@ -594,20 +594,20 @@
                 data: b,
                 time: (new Date).getTime()
             };
-            IFR.setItem("navCache", d);
+            YCA.setItem("navCache", d);
             return this
         },
         setPageToCache: function(a, b) {
-            var c = IFR.getItem("navCache") || {};
+            var c = YCA.getItem("navCache") || {};
             if (!a) {
                 return null
             }
             c[a].page = b;
-            IFR.setItem("navCache", c);
+            YCA.setItem("navCache", c);
             return this
         },
         getPageFromCache: function(a) {
-            var b = IFR.getItem("navCache");
+            var b = YCA.getItem("navCache");
             var c = null;
             if (!a) {
                 return null
@@ -755,7 +755,7 @@ function(a) {
     });
     b.helper("url",
     function(a, b) {
-        if (window.IFR.url[a]) return b ? window.IFR.url[a][b] : window.IFR.url[a]
+        if (window.YCA.url[a]) return b ? window.YCA.url[a][b] : window.YCA.url[a]
     });
     b.helper("iff",
     function(a, b) {
@@ -764,7 +764,7 @@ function(a) {
     b.helper("$relativetime",
     function() {
         return function(a) {
-            return window.IFR.util.relativetime(a)
+            return window.YCA.util.relativetime(a)
         }
     } ());
     b.helper("$strip_tags",
@@ -782,7 +782,7 @@ function(a) {
     b.helper("$adjust_image_size",
     function() {
         return function(a) {
-            return a + window.IFR.calcBestImageSize()
+            return a + window.YCA.calcBestImageSize()
         }
     } ());
     b("comment-item",
@@ -2271,7 +2271,7 @@ function(a) {
     b.prototype = {
         getData: function(a, b, c, d) {
             var e = this;
-            IFR.api(a, {
+            YCA.api(a, {
                 data: {
                     post_id: e.options.postId
                 },
@@ -3415,7 +3415,7 @@ default = {
     };
     b.fn.load = function() {
         var b = new a.Deferred;
-        IFR.api(this.options.action, {
+        YCA.api(this.options.action, {
             success: function(a) {
                 if (a.status === 1 && a.data) {
                     b.resolve(a.data)
@@ -3905,7 +3905,7 @@ default = {
             })
         }).fadeIn(150);
         c.$commentsLoading.hide();
-        IFR.Events.trigger("loaded.comments-list.article", {
+        YCA.Events.trigger("loaded.comments-list.article", {
             post_id: c.postId
         })
     };
@@ -3914,7 +3914,7 @@ default = {
         a = !(a === false);
         ArticleCommentsComponent.fn.bindEvents.call(this);
         if (!a) return;
-        IFR.Events.on("loaded.comments-list.article",
+        YCA.Events.on("loaded.comments-list.article",
         function(a) {
             if (a.post_id !== b.postId) return;
             b.$widget = Object.create(AutoFixedWidget.fn).init("#comments", {
@@ -3925,7 +3925,7 @@ default = {
     };
     c.fn.unbindEvents = function() {
         ArticleCommentsComponent.fn.unbindEvents.call(this);
-        IFR.Events.off("loaded.comments-list.article")
+        YCA.Events.off("loaded.comments-list.article")
     };
     c.fn.generateCommentTree = function(a) {
         var c = this,
@@ -4062,12 +4062,12 @@ default = {
                 if (!c.toggleSearchTag) {
                     c.toggleSearchTag = true;
                     c._showSearchZone();
-                    IFR.Events.trigger("hide.global-header");
-                    IFR.Events.trigger("remove.opacity.global-header")
+                    YCA.Events.trigger("hide.global-header");
+                    YCA.Events.trigger("remove.opacity.global-header")
                 } else {
                     c.toggleSearchTag = false;
                     c._hideSearchZone();
-                    IFR.Events.trigger("restore.opacity.global-header")
+                    YCA.Events.trigger("restore.opacity.global-header")
                 }
             });
             a("#ifr-query-search").on("input",
@@ -4083,7 +4083,7 @@ default = {
             function() {
                 c.loadNextPage()
             });
-            IFR.Events.on("hide.global-search",
+            YCA.Events.on("hide.global-search",
             function() {
                 var b = a("#search-button").find("i").first();
                 if (b.hasClass("ifanr2015-search")) return;
@@ -4248,7 +4248,7 @@ default = {
     f.prototype = {
         getCache: function(a) {
             var b = null;
-            var c = IFR.getItem("navCache");
+            var c = YCA.getItem("navCache");
             if (!a) {
                 return null
             }
@@ -4263,17 +4263,17 @@ default = {
             return b
         },
         setCache: function(a, b) {
-            var c = IFR.getItem("navCache") || {};
+            var c = YCA.getItem("navCache") || {};
             if (!a) {
-                IFR.setItem("mindstoreStorage", 1);
+                YCA.setItem("mindstoreStorage", 1);
                 return null
             }
             c["mindstore"] = {
                 data: b,
                 time: (new Date).getTime()
             };
-            IFR.setItem("navCache", c);
-            IFR.setItem("mindstoreStorage", 0);
+            YCA.setItem("navCache", c);
+            YCA.setItem("mindstoreStorage", 0);
             return b
         },
         group: function(a, b) {
@@ -4363,7 +4363,7 @@ default = {
             var c = a.data("commentType");
             b(".js-comments-type a").removeClass("active");
             a.addClass("active"); (new DesktopArticleFooter).init({
-                id: IFR.postId,
+                id: YCA.postId,
                 commentType: c
             }).rerender()
         })
@@ -4374,7 +4374,7 @@ default = {
         $wxShareTip: b("#weixin-share-tip"),
         $wxShareTipOverlay: b("#share-overlay"),
         init: function() {
-            if (IFR.env.weixin) {
+            if (YCA.env.weixin) {
                 c.$wxShareTip.addClass("weixin-browser");
                 c.$wxShareTipOverlay.on("click", c.hideWxShareTip.bind(c))
             }
@@ -4422,7 +4422,7 @@ default = {
         var a = this;
         a.loadPostSnsInfo();
         a.bindEvents();
-        if (!IFR.env.mobileiPad && IFR.env.mobile) {
+        if (!YCA.env.mobileiPad && YCA.env.mobile) {
             b(".js-main-singular p:has(img)").each(function(a, c) {
                 var d = b(c);
                 var e = d.find("img");
@@ -4559,7 +4559,7 @@ default = {
         c.init();
         a.$appsoDls.on("click",
         function(a) {
-            if (!IFR.env.weixin) {
+            if (!YCA.env.weixin) {
                 return true
             }
             a.preventDefault();
@@ -4598,7 +4598,7 @@ default = {
         }
         v()
     });
-    IFR.Events.on("hide.global-header",
+    YCA.Events.on("hide.global-header",
     function() {
         if (d.hasClass("state-open")) {
             d.removeClass("state-open");
@@ -4615,12 +4615,12 @@ default = {
             r = false
         }
     });
-    IFR.Events.on("restore.opacity.global-header",
+    YCA.Events.on("restore.opacity.global-header",
     function() {
         x();
         o = false
     });
-    IFR.Events.on("remove.opacity.global-header",
+    YCA.Events.on("remove.opacity.global-header",
     function() {
         y();
         o = true
@@ -4670,7 +4670,7 @@ default = {
                 b("body").addClass("menu-prevent-scrolled");
                 e.addClass("active");
                 y();
-                IFR.Events.trigger("hide.global-search")
+                YCA.Events.trigger("hide.global-search")
             },
             200);
             o = true;
@@ -4733,7 +4733,7 @@ default = {
         var c = b(a.target).parent();
         var d = c.attr("data-share");
         if (!d) return false;
-        IFR.share(d, {
+        YCA.share(d, {
             _topic: "爱范儿",
             _url: c.attr("href")
         })
@@ -5075,7 +5075,7 @@ default = {
         $('.entry-content a[rel^="attachment"]').each(function() {
             var a = $(this);
             a.attr("title", a.next(".wp-caption-text").text());
-            a.attr("rel", "lightbox[" + IFR.postId + "]");
+            a.attr("rel", "lightbox[" + YCA.postId + "]");
             a.attr("href", a.children("img").attr("src"))
         });
         $('.entry-content a[rel^="attachment"], a[rel^="lightbox"]').lightbox({
@@ -5088,7 +5088,7 @@ default = {
         var a = $(".J_Notice");
         if (!a.length) return false;
         var b = function() {
-            IFR.api("get_site_notice", {
+            YCA.api("get_site_notice", {
                 localCacheTime: 60,
                 success: function(b) {
                     var c = b.data;
@@ -5104,7 +5104,7 @@ default = {
                             });
                             return false
                         });
-                        if (c.link != IFR.url.href) {
+                        if (c.link != YCA.url.href) {
                             a.clsShow();
                             a.find(".J_NoticeTitle").text(c.title);
                             a.find(".J_NoticeLink").attr("href", c.link)
@@ -5141,14 +5141,14 @@ default = {
     $(document).ready(function() {
         $(".single .entry-comment-number a").click(function() {
             $.ifr.smoothScrollTo("#comments-box");
-            IFR.util.stopDefault()
+            YCA.util.stopDefault()
         });
         $("#JS_show_license").click(function() {
             $("#JS_License").slideToggle()
         });
         if (typeof $.fn.lazyload !== "undefined") {
             $("body.home, body.archive, body.search").find(".entry-common img, .entry-list img").lazyload({
-                placeholder: IFR.blankImg_url,
+                placeholder: YCA.blankImg_url,
                 effect: "fadeIn"
             })
         }
@@ -5160,10 +5160,10 @@ default = {
         }
         if (ns.wpPageNowIs("single")) {
             g(); (new DesktopArticleContents).init({
-                id: IFR.postId
+                id: YCA.postId
             }).render();
             if (!ns.wpPageNowIs("single-buzz")) { (new DesktopArticleFooter).init({
-                    id: IFR.postId
+                    id: YCA.postId
                 }).render().tabs()
             }
             $(".JS_show_tip").poshytip({
@@ -5511,7 +5511,7 @@ default = {
                     p.nextPageNum = m;
                     return
                 }
-                IFR.Events.trigger("reload.weixin.share-items")
+                YCA.Events.trigger("reload.weixin.share-items")
             }
         };
         var u = function() {
@@ -5531,7 +5531,7 @@ default = {
                 k = "dasheng"
             }
             u();
-            IFR.api(k, {
+            YCA.api(k, {
                 data: j,
                 success: function(a) {
                     s = parseInt(s) + 1;
@@ -5896,7 +5896,7 @@ default = {
     };
     a(document).ready(function() { (new d).init()
     })
-})(jQuery, window, IFR); (function(a, b) {
+})(jQuery, window, YCA); (function(a, b) {
     var c = a(".JS_append_weibo_comment");
     if (c.length) {
         c.append('<h2 class="weibo-comment-tab JS_weibo_comment_tab"> <a class="nav-tab-active" href="javascript:void(0);" data-id="1">新浪微博评论</a>  </h2>');
@@ -5926,12 +5926,12 @@ default = {
             })
         })
     }
-})(jQuery, IFR); (function(a) {
+})(jQuery, YCA); (function(a) {
     ns.initTopPosts = function() {
         var b = a("#J_TopPosts");
         if (!b.length) return false;
         var c = function() {
-            IFR.api("top", {
+            YCA.api("top", {
                 data: {
                     posts_per_page: 9
                 },
@@ -5956,7 +5956,7 @@ default = {
         var b = a("#author-latest-posts");
         if (!b.length) return false;
         var c = function() {
-            IFR.api("latest", {
+            YCA.api("latest", {
                 data: {
                     posts_per_page: 4,
                     author_id: b.attr("data-author-id")
@@ -5983,7 +5983,7 @@ default = {
         var b = a("#author-hotest-posts");
         if (!b.length) return false;
         var c = function() {
-            IFR.api("top", {
+            YCA.api("top", {
                 data: {
                     posts_per_page: 5,
                     author_id: b.attr("data-author-id")
@@ -7525,7 +7525,7 @@ function a(b, c, d) {
     if (ns.chatroomId) {
         d = new b;
         d.awake();
-        IFR.Events.on("ifr.ssouser.initialized",
+        YCA.Events.on("ifr.ssouser.initialized",
         function(a) {
             var b = new c;
             b.loadUserToken(a).then(function(a) {
@@ -7536,7 +7536,7 @@ function a(b, c, d) {
                 d.showErrorMessage()
             })
         });
-        IFR.Events.on("ifr.ssouser.unauthorized",
+        YCA.Events.on("ifr.ssouser.unauthorized",
         function() {
             d.clear();
             d.initForLogin()
