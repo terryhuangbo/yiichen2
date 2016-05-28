@@ -10,7 +10,7 @@ $user = uniqid('user');
     <meta charset="utf-8">
     <script type="text/javascript"></script>
     <meta property="og:site_name" content="少年中国评论"/>
-    <meta property="og:url" content="http://www.ifanr.com"/>
+    <meta property="og:url" content="http://www.iycar.com"/>
     <title>少年中国评论 · 面对现实，忠于理想</title>
     <meta name="keywords" content="少年中国学会,少年中国,马克思主义,阿尔都塞,葛兰西,YCA,邵钟萍,杨钗娜"/>
     <meta name="description" content="少年中国学会,少年中国,马克思主义,阿尔都塞,葛兰西,YCA,邵钟萍,杨钗娜"/>
@@ -20,7 +20,7 @@ $user = uniqid('user');
     <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/css/buzz.auto_create.css' type='text/css'/>
     <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/css/create.css' type='text/css'/>
     <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/css/desktop.css' type='text/css' />
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.ifanr.com/xmlrpc.php?rsd"/>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.iycar.com/xmlrpc.php?rsd"/>
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="xml/wlwmanifest.xml"/>
     <script type="text/javascript">
         var rcGlobal = {
@@ -68,9 +68,9 @@ $user = uniqid('user');
         ns.COMMENTER_EMAIL = 'commenter_email';
         ns.COMMENTER_NAME = 'commenter_name';
 
-        YCA.api_url = "http://www.ifanr.com/api/v3.0/";
-        YCA.theme_url = "http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0";
-        YCA.blankImg_url = "http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static//images/grey.gif";
+        YCA.api_url = "http://www.iycar.com/api/v3.0/";
+        YCA.theme_url = "http://cdnzz.iycar.com/wp-content/themes/iycar-2.0";
+        YCA.blankImg_url = "http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static//images/grey.gif";
         YCA.apiNonce = {
             appkey: 'lI5287M8UyxBI98U2YKq',
             timestamp: '1457091133',
@@ -106,10 +106,10 @@ $user = uniqid('user');
           </a>
 
           <div class="sns row js-sns">
-            <a class="sns-item" target="_blank" href="<?php echo _param('wechat_url') ?>"><i class="ifanr2015 ifanr2015-weixin"></i></a>
-            <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/youngchina"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a>
-            <a rel="nofollow" class="sns-item" target="_blank" href="http://twitter.com/ifanr"><i class="ifanr2015 ifanr2015-twitter"></i></a>
-            <a class="sns-item" target="_blank" href="http://www.ifanr.com/feed"><i class="ifanr2015 ifanr2015-rss"></i></a>
+            <a class="sns-item" target="_blank" href="<?php echo _param('wechat_url') ?>"><i class="iycar2015 iycar2015-weixin"></i></a>
+            <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/youngchina"><i class="iycar2015 iycar2015-xinlangweibo"></i></a>
+            <a rel="nofollow" class="sns-item" target="_blank" href="http://twitter.com/iycar"><i class="iycar2015 iycar2015-twitter"></i></a>
+            <a class="sns-item" target="_blank" href="http://www.iycar.com/feed"><i class="iycar2015 iycar2015-rss"></i></a>
           </div>
 
           <div class="js-navbar-top-jiong-container navbar-top-jiong-container"></div>
@@ -126,75 +126,75 @@ $user = uniqid('user');
               <ul class="nav-list">
                 <li class="nav-item">
                   <a href="/">
-                    <i class="ifanr2015 ifanr2015-home01 icon-home"></i>
+                    <i class="iycar2015 iycar2015-home01 icon-home"></i>
                   </a>
                 </li>
                 <li class="nav-item js-nav-menu">
                   <a href="#menu">
-                    <!-- <i class="ifanr2015 ifanr2015-menutou icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-menutou icon-font"></i> -->
                     MENU
-                    <i class="ifanr2015 ifanr2015-jiantou icon-arrow-down"></i>
+                    <i class="iycar2015 iycar2015-jiantou icon-arrow-down"></i>
                   </a>
                 </li>
 
                 <li class="nav-item" cate="feature" data-count="4" data-action="featured">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="推荐" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=1028">
-                    <!-- <i class="ifanr2015 ifanr2015-toutiao01 icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-toutiao01 icon-font"></i> -->
                     推荐
                   </a>
                 </li>
                 <li class="nav-item" cate="younth" data-count="4" data-post-type="younth">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="青年之声" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=1106">
-                    <!-- <i class="ifanr2015 ifanr2015-menuappso icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-menuappso icon-font"></i> -->
                     青年之声
                   </a>
                 </li>
                 <li class="nav-item" cate="principle" data-count="4" data-post-type="principle">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="基本原理" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=3">
-                    <!-- <i class="ifanr2015 ifanr2015-wanwuzhi icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-wanwuzhi icon-font"></i> -->
                     基本原理
                   </a>
                 </li>
                 <li class="nav-item" cate="principle" data-count="4" data-post-type="vision">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="理论视野" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=4">
-                    <!-- <i class="ifanr2015 ifanr2015-wanwuzhi icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-wanwuzhi icon-font"></i> -->
                     理论视野
                   </a>
                 </li>
 
                 <li class="nav-item" cate="stream " data-count="4" data-post-type="stream">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="中流击水" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=9">
-                    <!-- <i class="ifanr2015 ifanr2015-pingce icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-pingce icon-font"></i> -->
                     中流击水
                   </a>
                 </li>
                 <li class="nav-item" cate="international" data-count="4" data-post-type="international">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="国际观察" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=8">
-                    <!-- <i class="ifanr2015 ifanr2015-pingce icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-pingce icon-font"></i> -->
                     国际观察
                   </a>
                 </li>
                 <li class="nav-item" cate="nowchina" data-count="4" data-post-type="nowchina">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="当代中国" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=5">
-                    <!-- <i class="ifanr2015 ifanr2015-pingce icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-pingce icon-font"></i> -->
                     当代中国
                 </a>
                 </li>
                 <li class="nav-item" cate="communist" data-count="4" data-post-type="communist">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="共运信息" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=6">
-                    <!-- <i class="ifanr2015 ifanr2015-pingce icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-pingce icon-font"></i> -->
                     共运信息
                   </a>
                 </li>
                 <li class="nav-item" cate="history" data-count="4" data-post-type="history">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="史海钩沉" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=7">
-                    <!-- <i class="ifanr2015 ifanr2015-pingce icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-pingce icon-font"></i> -->
                     史海钩沉
                   </a>
                 </li>
                 <li class="nav-item" cate="literature" data-count="4" data-post-type="literature">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="革命文艺" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=10">
-                    <!-- <i class="ifanr2015 ifanr2015-pingce icon-font"></i> -->
+                    <!-- <i class="iycar2015 iycar2015-pingce icon-font"></i> -->
                     革命文艺
                   </a>
                 </li>
@@ -204,41 +204,41 @@ $user = uniqid('user');
             <div class="nav-user">
               <div class="nav-search js-nav-search" ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="SearchButton" id="nav-search">
                 <span id="search-button">
-                  <i class="ifanr2015 ifanr2015-search icon-search"></i>
+                  <i class="iycar2015 iycar2015-search icon-search"></i>
                 </span>
               </div>
 
-              <div class="js-login ifr-user-nav-menu hide">
+              <div class="js-login yth-user-nav-menu hide">
                 <div id="nav-user-button">
-                  <div class="ifr-user-nav-menu">
-                    <ul class="nav-user-subs ifr-user-dropdown-menu hide m-t-10" id="nav-user-subs">
+                  <div class="yth-user-nav-menu">
+                    <ul class="nav-user-subs yth-user-dropdown-menu hide m-t-10" id="nav-user-subs">
                       <li class="sub-item"><a href="">个人中心</a></li>
                       <li class="sub-item"><a href="javascript:void(0);" class="js-logout">退出登录</a></li>
                     </ul>
                   </div>
                   <span class="user-name J_UserIdentity"></span>
-                  <span class="ifanr2015 ifanr2015-xiala-small"></span>
+                  <span class="iycar2015 iycar2015-xiala-small"></span>
                 </div>
               </div>
 
               <!-- 未登录 -->
 <!--              <div class="js-not-login not-login hide">-->
-<!--                <a rel="nofollow" class="user-login" href="https://sso.ifanr.com/login/?next=http://www.ifanr.com">登录</a>-->
-<!--                <a rel="nofollow" class="user-reg" href="https://sso.ifanr.com/register/?next=http://www.ifanr.com">注册</a>-->
+<!--                <a rel="nofollow" class="user-login" href="https://sso.iycar.com/login/?next=http://www.iycar.com">登录</a>-->
+<!--                <a rel="nofollow" class="user-reg" href="https://sso.iycar.com/register/?next=http://www.iycar.com">注册</a>-->
 <!--              </div>-->
             </div>
           </div>
 
           <!-- 栏目预览 -->
           <div class="items-preview js-items-preview js-slider">
-            <span class="slider-arrow prev"><i class="ifanr2015 ifanr2015-shangyihua"></i></span>
-            <span class="slider-arrow next"><i class="ifanr2015 ifanr2015-xiayihua"></i></span>
+            <span class="slider-arrow prev"><i class="iycar2015 iycar2015-shangyihua"></i></span>
+            <span class="slider-arrow next"><i class="iycar2015 iycar2015-xiayihua"></i></span>
             <div class="header-inner items-flex" ></div>
           </div>
           <!-- 栏目预览 -->
 
           <!-- 导航 -->
-          <div class="hide state-close ifr-nav-items-container js-nav-items">
+          <div class="hide state-close yth-nav-items-container js-nav-items">
             <div class="fullwidth">
               <div class="main">
                 <!-- 分类与产品 -->
@@ -272,7 +272,7 @@ $user = uniqid('user');
 
                 <div class="menu-preview js-menu-preview">
                   <h2>快速预览</h2>
-                  <div class="search-ifr preview-list">
+                  <div class="search-yth preview-list">
                     <ul class="search-list"></ul>
                   </div>
                 </div>

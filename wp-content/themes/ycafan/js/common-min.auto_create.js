@@ -2416,8 +2416,8 @@ function(a) {
     })
 })(jQuery, window);
 (function(a) {
-    a.ifr = a.ifr || {};
-    return a.extend(a.ifr, {
+    a.yth = a.yth || {};
+    return a.extend(a.yth, {
         scrollTo: function(b, c, d, e) {
             var f;
             d = d ? d: {};
@@ -2458,11 +2458,11 @@ function(a) {
 })($);
 (function(a) {
     ns = ns || {};
-    ns.defaultUserAvatar = "http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/gravatar.jpg";
+    ns.defaultUserAvatar = "http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/gravatar.jpg";
     ns.prepareCommenterInfo = function() {
         return //huangbo
         a.ajax({
-            url: "https://sso.ifanr.com/api/v1/user_profile/",
+            url: "https://sso.iycar.com/api/v1/user_profile/",
             type: "get",
             xhrFields: {
                 withCredentials: true
@@ -2482,7 +2482,7 @@ function(a) {
                     a(".J_UserIdentity").html(e);
                     a(".js-user-avatar").attr("src", d);
                     a("#login-btn").html(e).attr("href", ns.SSO_URL_MYACCOUNT);
-                    YCA.Events.trigger("ifr.ssouser.initialized", {
+                    YCA.Events.trigger("yth.ssouser.initialized", {
                         id: b.user_id,
                         name: e,
                         avatarUrl: d
@@ -2500,7 +2500,7 @@ function(a) {
             if (!YCA.isMobile) {
                 a(".JS_formInFieldLabels label").inFieldLabels()
             }
-            YCA.Events.trigger("ifr.ssouser.unauthorized")
+            YCA.Events.trigger("yth.ssouser.unauthorized")
         })
     };
     ns.addLoadingConfig = function(a, b) {
@@ -2851,7 +2851,7 @@ function(a) {
             return a
         }
     };
-    b.IfanrReport = c
+    b.YcaReport = c
 })(jQuery, window); (function(a, b) {
     var c = function() {};
     c.fn = c.prototype;
@@ -3039,7 +3039,7 @@ function(a) {
         algolia: null,
         applicationID: "7TN0U2FL3Q",
         apiKey: "97d5967e87b92827fa8b040bcc4c8581",
-        indexName: "prod_ifanrcom"
+        indexName: "prod_iycarcom"
     };
     c.init = function() {
         //this.algolia = this.algolia || algoliasearch(this.applicationID, this.apiKey);
@@ -3258,11 +3258,11 @@ function(a) {
         var b = a(this);
         var c = b.attr("data-id");
         var d = b.find(".js-like-count");
-        var e = JSON.parse(a.cookie("ifanr_dasheng_liked"));
+        var e = JSON.parse(a.cookie("iycar_dasheng_liked"));
         if (a.isArray(e)) {
             if (a.inArray(c, e) != -1) {
                 console.error("already liked");
-                b.off("click.ifanrLike");
+                b.off("click.iycarLike");
                 return false
             }
         }
@@ -3273,13 +3273,13 @@ function(a) {
             data: YCA.apiNonce,
             success: function(e) {
                 if (e && e.status) {
-                    var f = JSON.parse(a.cookie("ifanr_dasheng_liked"));
+                    var f = JSON.parse(a.cookie("iycar_dasheng_liked"));
                     if (!a.isArray(f)) {
                         f = []
                     }
                     f.push(c);
                     a.unique(f);
-                    a.cookie("ifanr_dasheng_liked", JSON.stringify(f), {
+                    a.cookie("iycar_dasheng_liked", JSON.stringify(f), {
                         expires: 7,
                         path: "/"
                     });
@@ -3289,7 +3289,7 @@ function(a) {
             }
         })
     };
-    a("body").on("click.ifanrLike", ".JS_ifanr-plus", c)
+    a("body").on("click.iycarLike", ".JS_iycar-plus", c)
 })(jQuery);
 (function(a) {
     "use strict";
@@ -10018,8 +10018,8 @@ function() {
     var f = {
         token: "AgWGc80go+7f7ueE/K8KpJRqp4WRpZLUJswZ6kkfgWNUcQ1KKroNYCb2M+tqvxLXqaFCIQ254cS8SXYitswpCQ==",
         id: "1",
-        name: "ifanrx",
-        avatarUrl: "http://cdn.ifanr.cn/ifanr/default_avatar.png"
+        name: "iycarx",
+        avatarUrl: "http://cdn.iycar.cn/iycar/default_avatar.png"
     };
     var g = a.RealTimeUtitlies;
     var h = /chatroom:\d+/i;
@@ -10106,31 +10106,31 @@ function() {
             onChanged: function c(a) {
                 switch (a) {
                 case b.ConnectionStatus.CONNECTED:
-                    console.log("ifr.realtime.connected");
+                    console.log("yth.realtime.connected");
                     j.publish(q.Event.OPEN);
                     break;
                 case b.ConnectionStatus.CONNECTING:
-                    console.log("ifr.realtime.connecting");
+                    console.log("yth.realtime.connecting");
                     break;
                 case b.ConnectionStatus.RECONNECT:
-                    console.log("ifr.realtime.reconnect");
+                    console.log("yth.realtime.reconnect");
                     j.publish(q.Event.ERROR, q.Error.TIMEOUT);
                     break;
                 case b.ConnectionStatus.CLOSUER:
                 case b.ConnectionStatus.TOKEN_INCORRECT:
-                    console.log("ifr.realtime.closed");
+                    console.log("yth.realtime.closed");
                     j.publish(q.Event.ERROR, q.Error.CLOSED);
                     break;
                 case b.ConnectionStatus.LOGOUT:
-                    console.log("ifr.realtime.logout");
+                    console.log("yth.realtime.logout");
                     j.publish(q.Event.ERROR, q.Error.UNAUTHENTICATED);
                     break;
                 case b.ConnectionStatus.BLOCK:
-                    console.log("ifr.realtime.block");
+                    console.log("yth.realtime.block");
                     j.publish(q.Event.Error, q.Error.PROHIBITED);
                     break;
                 case b.ConnectionStatus.OTHER_DEVICE_LOGIN:
-                    console.log("ifr.realtime.otherdevice", a);
+                    console.log("yth.realtime.otherdevice", a);
                     j.publish(q.Event.Error, q.Error.OTHER_DEVICE_LOGIN);
                     break;
                 case b.ConnectionStatus.UNKNOWN_ERROR:
@@ -10234,11 +10234,11 @@ function() {
         CHATROOM: 11
     };
     q.Event = {
-        OPEN: "ifr.realtime.open",
-        ERROR: "ifr.realtime.error",
-        MESSAGE: "ifr.realtime.message",
+        OPEN: "yth.realtime.open",
+        ERROR: "yth.realtime.error",
+        MESSAGE: "yth.realtime.message",
         CHATROOM: function(a) {
-            return "ifr.realtime.chatroom:" + a
+            return "yth.realtime.chatroom:" + a
         }
     };
     q.prototype.initialize = function(a) {
@@ -10311,12 +10311,12 @@ function() {
                 id: a.roomId
             });
             console.log("invoke #getGroupInformation");
-            console.log("ifr.realtime getGroupInformation ", b);
+            console.log("yth.realtime getGroupInformation ", b);
             b.getHistoryMessages({
                 limit: e
             }).then(function(a) {
                 b.historyMessages = a;
-                console.log("ifr.realtime.getHistoryMesssages", b.historyMessages);
+                console.log("yth.realtime.getHistoryMesssages", b.historyMessages);
                 d.resolve(b)
             }).
             catch(function(a) {
@@ -10470,20 +10470,20 @@ function() {
     var d = {
         token: "AgWGc80go+7f7ueE/K8KpJRqp4WRpZLUJswZ6kkfgWNUcQ1KKroNYCb2M+tqvxLXqaFCIQ254cS8SXYitswpCQ==",
         id: "1",
-        name: "ifanrx",
-        avatarUrl: "http://cdn.ifanr.cn/ifanr/default_avatar.png"
+        name: "iycarx",
+        avatarUrl: "http://cdn.iycar.cn/iycar/default_avatar.png"
     };
     var e = {
         token: "NoL5TEKjTrGj+FqISPQfVpRqp4WRpZLUJswZ6kkfgWNUcQ1KKroNYLTP7s8dYP8nQzWpiIsX5l9fd2K2YdAuWbxJdiK2zCkJ",
         id: "1091431",
-        name: "ifanrx2",
-        avatarUrl: "http://cdn.ifanr.cn/ifanr/default_avatar.png"
+        name: "iycarx2",
+        avatarUrl: "http://cdn.iycar.cn/iycar/default_avatar.png"
     };
     var f = {
         token: "1WK1ruMITEs0ywZokjr3uYQ9BGZsNaXrqSamvA/xRS2cOs+UM84Qwgx5RdJGumG+6Cl8rZLbyCU=",
         id: "3",
-        name: "ifanrx3",
-        avatarUrl: "http://cdn.ifanr.cn/ifanr/default_avatar.png"
+        name: "iycarx3",
+        avatarUrl: "http://cdn.iycar.cn/iycar/default_avatar.png"
     };
     var g = function(a) {
         var b = this;
@@ -11068,7 +11068,7 @@ function() {
             sender: {
                 id: "u0",
                 name: "user1",
-                avatarUrl: "http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/gravatar.jpg"
+                avatarUrl: "http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/gravatar.jpg"
             }
         },
         {
@@ -11078,7 +11078,7 @@ function() {
             sender: {
                 id: "u1",
                 name: "user2",
-                avatarUrl: "http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/gravatar.jpg"
+                avatarUrl: "http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/gravatar.jpg"
             }
         },
         {
@@ -11088,7 +11088,7 @@ function() {
             sender: {
                 id: "u1",
                 name: "user2",
-                avatarUrl: "http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/gravatar.jpg"
+                avatarUrl: "http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/gravatar.jpg"
             }
         },
         {
@@ -11098,7 +11098,7 @@ function() {
             sender: {
                 id: "u2",
                 name: "user3",
-                avatarUrl: "http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/gravatar.jpg"
+                avatarUrl: "http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/gravatar.jpg"
             }
         }]
     };
@@ -11111,7 +11111,7 @@ function() {
             sender: {
                 id: "u1",
                 name: "Wahaha",
-                avatarUri: "http://cdn.ifanr.cn/ifanr/default_avatar.png"
+                avatarUri: "http://cdn.iycar.cn/iycar/default_avatar.png"
             }
         });
         a.displayArea.receiveMessage({
@@ -11121,7 +11121,7 @@ function() {
             sender: {
                 id: "u1",
                 name: "Wahaha",
-                avatarUri: "http://cdn.ifanr.cn/ifanr/default_avatar.png"
+                avatarUri: "http://cdn.iycar.cn/iycar/default_avatar.png"
             }
         });
         a.chatroom = {
@@ -11135,11 +11135,11 @@ function() {
 })(window, jQuery, window.ChatRoomUtils, RealTime, RealTimeUtitlies); (function(a, b) {
     "use strict";
     var c = "#intro-";
-    var d = "ifr-about-no-display";
-    var e = "ifr-about-products-btn-active";
-    var f = "ifr-about-team-members-container-expand";
-    var g = "ifanr2015-fanhuidingbu";
-    var h = "ifanr2015-down1";
+    var d = "yth-about-no-display";
+    var e = "yth-about-products-btn-active";
+    var f = "yth-about-team-members-container-expand";
+    var g = "iycar2015-fanhuidingbu";
+    var h = "iycar2015-down1";
     var i = "展开查看全部";
     var j = "收起";
     var k = function(a) {
@@ -11150,13 +11150,13 @@ function() {
     };
     k.fn = k.prototype;
     k.fn.cacheDOMs = function() {
-        this.$productBtns = b(".ifr-about-products-btn");
-        this.$teamContainer = b(".ifr-about-team-members-container");
-        this.$teamMembers = b(".ifr-about-team-member");
-        this.$teamMemberAvatars = b(".ifr-about-team-member-avatar");
-        this.$teamMoreBtn = b(".ifr-about-team-more");
-        this.$teamMoreDescription = b(".ifr-about-team-more-description");
-        this.$teamMoreTriangle = b(".ifr-about-team-more-triangle")
+        this.$productBtns = b(".yth-about-products-btn");
+        this.$teamContainer = b(".yth-about-team-members-container");
+        this.$teamMembers = b(".yth-about-team-member");
+        this.$teamMemberAvatars = b(".yth-about-team-member-avatar");
+        this.$teamMoreBtn = b(".yth-about-team-more");
+        this.$teamMoreDescription = b(".yth-about-team-more-description");
+        this.$teamMoreTriangle = b(".yth-about-team-more-triangle")
     };
     k.fn.initProductIntro = function() {
         this.$productBtns.on("click", this.onProductButtonClick.bind(this))

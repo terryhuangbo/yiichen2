@@ -308,7 +308,7 @@
             return c
         }
     };
-    a.fn.ifanrAccordion = function(a) {
+    a.fn.iycarAccordion = function(a) {
         var c = new b(this, a);
         if (!this) return;
         c.run(this);
@@ -641,7 +641,7 @@
             return c
         }
     };
-    $.fn.ifanrNavPreview = function(a) {
+    $.fn.iycarNavPreview = function(a) {
         var c;
         if (!this) {
             return
@@ -840,7 +840,7 @@ function(a) {
         p += d(e);
         p += '" data-action="add" data-post-id="';
         p += d(i);
-        p += '" href="javascript:void(0);"> <i class="ifanr2015 ifanr2015-up"></i> <i class="ifanr2015 ifanr2015-dagou"></i> <span id="karma-';
+        p += '" href="javascript:void(0);"> <i class="iycar2015 iycar2015-up"></i> <i class="iycar2015 iycar2015-dagou"></i> <span id="karma-';
         p += d(e);
         p += '-up">';
         p += d(j);
@@ -854,7 +854,7 @@ function(a) {
         p += d(e);
         p += '" data-action="subtract" data-post-id="';
         p += d(i);
-        p += '" href="javascript:void(0);"> <i class="ifanr2015 ifanr2015-down"></i> <i class="ifanr2015 ifanr2015-dagou"></i> <span id="karma-';
+        p += '" href="javascript:void(0);"> <i class="iycar2015 iycar2015-down"></i> <i class="iycar2015 iycar2015-dagou"></i> <span id="karma-';
         p += d(e);
         p += '-down">';
         p += d(k);
@@ -905,17 +905,17 @@ function(a) {
         e = a.list,
         f = c.$escape,
         g = "";
-        g += '<div class="title"> <i class="ifanr2015 ifanr2015-remen"></i> <h2>TA 最热的文章</h2> </div> <ul> ';
+        g += '<div class="title"> <i class="iycar2015 iycar2015-remen"></i> <h2>TA 最热的文章</h2> </div> <ul> ';
         for (d = 0; d < e.length; d++) {
             g += ' <li class="list"> <a title="';
             g += f(e[d]["title"]);
             g += '" href="';
             g += f(e[d]["link"]);
-            g += '" class="ifanr-top-posts-';
+            g += '" class="iycar-top-posts-';
             g += f(d);
-            g += '" rel="external" target="_blank"> <div class="ifanr-top-posts-container"> <div class="ifanr-top-posts-cell number-cell"> <span class="ifanr-top-posts-comment">';
+            g += '" rel="external" target="_blank"> <div class="iycar-top-posts-container"> <div class="iycar-top-posts-cell number-cell"> <span class="iycar-top-posts-comment">';
             g += f(d + 1);
-            g += '</span> </div> <div class="ifanr-top-posts-cell"> <span class="ifanr-top-posts-title">';
+            g += '</span> </div> <div class="iycar-top-posts-cell"> <span class="iycar-top-posts-title">';
             g += f(e[d]["title"]);
             g += "</span> </div> </div> </a> </li> "
         }
@@ -930,17 +930,17 @@ function(a) {
         f = c.$escape,
         g = a.authorLink,
         h = "";
-        h += '<div class="title"> <i class="ifanr2015 ifanr2015-remen"></i> <h2>作者最近的文章</h2> </div> <ul> ';
+        h += '<div class="title"> <i class="iycar2015 iycar2015-remen"></i> <h2>作者最近的文章</h2> </div> <ul> ';
         for (d = 0; d < e.length; d++) {
             h += ' <li class="list"> <a title="';
             h += f(e[d]["title"]);
             h += '" href="';
             h += f(e[d]["link"]);
-            h += '" class="ifanr-top-posts-';
+            h += '" class="iycar-top-posts-';
             h += f(d);
-            h += '" rel="external" target="_blank"> <div class="ifanr-top-posts-container"> <div class="ifanr-top-posts-cell number-cell"> <span class="ifanr-top-posts-comment">';
+            h += '" rel="external" target="_blank"> <div class="iycar-top-posts-container"> <div class="iycar-top-posts-cell number-cell"> <span class="iycar-top-posts-comment">';
             h += f(d + 1);
-            h += '</span> </div> <div class="ifanr-top-posts-cell"> <span class="ifanr-top-posts-title">';
+            h += '</span> </div> <div class="iycar-top-posts-cell"> <span class="iycar-top-posts-title">';
             h += f(e[d]["title"]);
             h += "</span> </div> </div> </a> </li> "
         }
@@ -970,7 +970,7 @@ function(a) {
         } else {
             o += " chatroom-indicator-partially-hide "
         }
-        o += '"> <div class="chatroom-indicator-header"> <i class="ifanr2015 ifanr2015-comment2 chatroom-icon"></i> <div class="chatroom-indicator-title">即时讨论</div> ';
+        o += '"> <div class="chatroom-indicator-header"> <i class="iycar2015 iycar2015-comment2 chatroom-icon"></i> <div class="chatroom-indicator-title">即时讨论</div> ';
         if (e) {
             o += ' <div class="chatroom-indicator-hint">';
             o += f(g);
@@ -1096,7 +1096,7 @@ function(a) {
         d = c.$escape,
         e = a.title,
         f = "";
-        f += '<section class="chatroom-panel"> <header class="chatroom-panel-header"> <i class="ifanr2015 ifanr2015-comment2 chatroom-icon"></i> <h1 class=\'chatroom-title\'>';
+        f += '<section class="chatroom-panel"> <header class="chatroom-panel-header"> <i class="iycar2015 iycar2015-comment2 chatroom-icon"></i> <h1 class=\'chatroom-title\'>';
         f += d(e);
         f += '</h1> </header> <section class="chatroom-toolbar"> <div class="chatroom-close-panel-btn js-chatroom-close-panel-btn"></div> </section> <section class="js-chatroom-notification chatroom-notification chatroom-hide"> 失手了! </section> <section class="chatroom-display-area"> <section class="chatroom-load-more"> <div class="chatroom-load-more-spacer"></div> <a class=\'chatroom-load-more-link js-chatroom-load-more\' href=\'#\' onclick="return false;"><i>加载更多讨论</i></a> <div class=\'chatroom-load-more-hint js-chatroom-load-more-hint load-more-hidden\'>正在加载更多讨论...</div> </section> </section> <section class="chatroom-inputbox"> <form action="#" onsubmit="return false;"> <textarea class="auto-expand-textarea js-auto-expand-textarea" placeholder="说说你的看法"></textarea> <input class="chatroom-inputbox-return-btn" type="button" value="Send" /> </form> <div class="chatroom-inputbox-footer"> <div class="chatroom-inputbox-instruction">Enter发送</div> </div> </section> </section> ';
         return new String(f)
@@ -1139,7 +1139,7 @@ function(a) {
         p += d(e);
         p += '" data-action="add" data-post-id="';
         p += d(i);
-        p += '" href="javascript:void(0);" title="认同"> <i class="ifanr2015 ifanr2015-unfold rate-up"></i> <i class="ifanr2015 ifanr2015-dagou"></i> <span id="karma-';
+        p += '" href="javascript:void(0);" title="认同"> <i class="iycar2015 iycar2015-unfold rate-up"></i> <i class="iycar2015 iycar2015-dagou"></i> <span id="karma-';
         p += d(e);
         p += '-up">';
         p += d(j);
@@ -1153,7 +1153,7 @@ function(a) {
         p += d(e);
         p += '" data-action="subtract" data-post-id="';
         p += d(i);
-        p += '" href="javascript:void(0);" title="反对"> <i class="ifanr2015 ifanr2015-xiala-small rate-down"></i> <i class="ifanr2015 ifanr2015-dagou"></i> <span id="karma-';
+        p += '" href="javascript:void(0);" title="反对"> <i class="iycar2015 iycar2015-xiala-small rate-down"></i> <i class="iycar2015 iycar2015-dagou"></i> <span id="karma-';
         p += d(e);
         p += '-down">';
         p += d(k);
@@ -1221,7 +1221,7 @@ function(a) {
         q += d(e);
         q += '" data-action="add" data-post-id="';
         q += d(j);
-        q += '" href="javascript:void(0);" title="认同"> <i class="ifanr2015 ifanr2015-unfold rate-up"></i> <i class="ifanr2015 ifanr2015-dagou"></i> <span id="karma-';
+        q += '" href="javascript:void(0);" title="认同"> <i class="iycar2015 iycar2015-unfold rate-up"></i> <i class="iycar2015 iycar2015-dagou"></i> <span id="karma-';
         q += d(e);
         q += '-up">';
         q += d(k);
@@ -1235,7 +1235,7 @@ function(a) {
         q += d(e);
         q += '" data-action="subtract" data-post-id="';
         q += d(j);
-        q += '" href="javascript:void(0);" title="反对"> <i class="ifanr2015 ifanr2015-xiala-small rate-down"></i> <i class="ifanr2015 ifanr2015-dagou"></i> <span id="karma-';
+        q += '" href="javascript:void(0);" title="反对"> <i class="iycar2015 iycar2015-xiala-small rate-down"></i> <i class="iycar2015 iycar2015-dagou"></i> <span id="karma-';
         q += d(e);
         q += '-down">';
         q += d(l);
@@ -1297,21 +1297,21 @@ function(a) {
         }
         m += ' </div> </a> <div class="post-content-bottom row"> <a class="read-more" href="';
         m += d(h);
-        m += '">阅读全文</a> <div class="sns-tools js-sns-tools"> <div class="sns-items-wrapper"> <span>分享：</span> <a class="sns-item weibo" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a> <a class="sns-item weixin" data-post-url="';
+        m += '">阅读全文</a> <div class="sns-tools js-sns-tools"> <div class="sns-items-wrapper"> <span>分享：</span> <a class="sns-item weibo" href="javascript:void(0);"><i class="iycar2015 iycar2015-xinlangweibo"></i></a> <a class="sns-item weixin" data-post-url="';
         m += d(h);
-        m += '" data-el="share-to-wechat" data-placement="top" data-toggle="popover" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-weixin"></i></a> <a class="sns-item twitter" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-twitter"></i></a> <div class="sns-item more js-share-items-more" href="javascript:void(0);"> <i class="ifanr2015 ifanr2015-more"></i> <a class="sns-item evernote" target="_blank" href="http://www.evernote.com/clip.action?url=';
+        m += '" data-el="share-to-wechat" data-placement="top" data-toggle="popover" href="javascript:void(0);"><i class="iycar2015 iycar2015-weixin"></i></a> <a class="sns-item twitter" href="javascript:void(0);"><i class="iycar2015 iycar2015-twitter"></i></a> <div class="sns-item more js-share-items-more" href="javascript:void(0);"> <i class="iycar2015 iycar2015-more"></i> <a class="sns-item evernote" target="_blank" href="http://www.evernote.com/clip.action?url=';
         m += d(h);
         m += "&title=";
         m += d(j);
-        m += '"><i class="ifanr2015 ifanr2015-evernote"></i></a> <a class="sns-item douban" target="_blank" href="http://www.douban.com/share/service?href=';
+        m += '"><i class="iycar2015 iycar2015-evernote"></i></a> <a class="sns-item douban" target="_blank" href="http://www.douban.com/share/service?href=';
         m += d(h);
         m += "&name=";
         m += d(j);
-        m += '"><i class="ifanr2015 ifanr2015-douban"></i></a> <a class="sns-item qqzone" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=';
+        m += '"><i class="iycar2015 iycar2015-douban"></i></a> <a class="sns-item qqzone" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=';
         m += d(h);
         m += "&title=";
         m += d(j);
-        m += '"><i class="ifanr2015 ifanr2015-qqkongjian"></i></a> </div> </div> </div> </div> </div> </article>';
+        m += '"><i class="iycar2015 iycar2015-qqkongjian"></i></a> </div> </div> </div> </div> </div> </article>';
         return new String(m)
     });
     b("desktop-entry-item-data",
@@ -1352,24 +1352,24 @@ function(a) {
         p += d(m);
         p += '</p></div> </div> </a> <div class="post-content-bottom row"> <a class="read-more" href="';
         p += d(i);
-        p += '">阅读全文</a> <div class="sns-tools js-sns-tools"> <div class="sns-items-wrapper"> <span>分享：</span> <a class="sns-item weibo" target="_blank" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a> <a class="sns-item weixin" data-post-url="';
+        p += '">阅读全文</a> <div class="sns-tools js-sns-tools"> <div class="sns-items-wrapper"> <span>分享：</span> <a class="sns-item weibo" target="_blank" href="javascript:void(0);"><i class="iycar2015 iycar2015-xinlangweibo"></i></a> <a class="sns-item weixin" data-post-url="';
         p += d(i);
-        p += '" data-el="share-to-wechat" data-placement="top" data-toggle="popover" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-weixin"></i></a> <a class="sns-item twitter" target="_blank" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-twitter"></i></a> <div class="sns-item more js-share-items-more" href="javascript:void(0);"> <i class="ifanr2015 ifanr2015-more"></i> <a class="sns-item evernote" target="_blank" href="http://www.evernote.com/clip.action?url=';
+        p += '" data-el="share-to-wechat" data-placement="top" data-toggle="popover" href="javascript:void(0);"><i class="iycar2015 iycar2015-weixin"></i></a> <a class="sns-item twitter" target="_blank" href="javascript:void(0);"><i class="iycar2015 iycar2015-twitter"></i></a> <div class="sns-item more js-share-items-more" href="javascript:void(0);"> <i class="iycar2015 iycar2015-more"></i> <a class="sns-item evernote" target="_blank" href="http://www.evernote.com/clip.action?url=';
         p += d(i);
         p += "&title=";
         p += d(j);
         p += d(n);
-        p += '"><i class="ifanr2015 ifanr2015-evernote"></i></a> <a class="sns-item douban" target="_blank" href="http://www.douban.com/share/service?href=';
+        p += '"><i class="iycar2015 iycar2015-evernote"></i></a> <a class="sns-item douban" target="_blank" href="http://www.douban.com/share/service?href=';
         p += d(i);
         p += "&name=";
         p += d(j);
         p += d(n);
-        p += '"><i class="ifanr2015 ifanr2015-douban"></i></a> <a class="sns-item qqzone" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=';
+        p += '"><i class="iycar2015 iycar2015-douban"></i></a> <a class="sns-item qqzone" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=';
         p += d(i);
         p += "&title=";
         p += d(o);
         p += d(n);
-        p += '"><i class="ifanr2015 ifanr2015-qqkongjian"></i></a> </div> </div> </div> </div> </div> </article> ';
+        p += '"><i class="iycar2015 iycar2015-qqkongjian"></i></a> </div> </div> </div> </div> </div> </article> ';
         return new String(p)
     });
     b("desktop-entry-item",
@@ -1402,7 +1402,7 @@ function(a) {
         p += d(h);
         p += '</a> <div class="comment-count new-comment-count"> <a class="comment-count-container" href="';
         p += d(f);
-        p += '#comments"> <i class="ifanr2015 ifanr2015-pinglun"></i> ';
+        p += '#comments"> <i class="iycar2015 iycar2015-pinglun"></i> ';
         p += d(i);
         p += ' </a> </div> </h2> <p class="js-excerpt" data-clamp="2">';
         p += d(j);
@@ -1414,27 +1414,27 @@ function(a) {
         p += d(m);
         p += '</span> <span class="date">';
         p += n(o);
-        p += '</span> </div> <div class="post-content-bottom row"> <div class="sns-tools js-sns-tools"> <div class="sns-items-wrapper"> <span>分享：</span> <a class="sns-item weibo" target="_blank" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a> <a class="sns-item weixin" data-post-url="';
+        p += '</span> </div> <div class="post-content-bottom row"> <div class="sns-tools js-sns-tools"> <div class="sns-items-wrapper"> <span>分享：</span> <a class="sns-item weibo" target="_blank" href="javascript:void(0);"><i class="iycar2015 iycar2015-xinlangweibo"></i></a> <a class="sns-item weixin" data-post-url="';
         p += d(f);
-        p += '" data-el="share-to-wechat" data-placement="top" data-toggle="popover" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-weixin"></i></a> <a class="sns-item twitter" target="_blank" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-twitter"></i></a> <div class="sns-item more js-share-items-more" href="javascript:void(0);"> <i class="ifanr2015 ifanr2015-more"></i> <a ga-track="event" ga-action="click" ga-event-label="linkedin_share" ga-event-category="button" class="js-share-buttons sns-item linkedin" target="_blank" data-share="linkedin" href="https://www.linkedin.com/shareArticle?title=';
+        p += '" data-el="share-to-wechat" data-placement="top" data-toggle="popover" href="javascript:void(0);"><i class="iycar2015 iycar2015-weixin"></i></a> <a class="sns-item twitter" target="_blank" href="javascript:void(0);"><i class="iycar2015 iycar2015-twitter"></i></a> <div class="sns-item more js-share-items-more" href="javascript:void(0);"> <i class="iycar2015 iycar2015-more"></i> <a ga-track="event" ga-action="click" ga-event-label="linkedin_share" ga-event-category="button" class="js-share-buttons sns-item linkedin" target="_blank" data-share="linkedin" href="https://www.linkedin.com/shareArticle?title=';
         p += d(h);
         p += "&url=";
         p += d(f);
         p += "&summary=";
         p += d(j);
-        p += '&source=ifanr" target="_blank"><i class="ifanr2015 ifanr2015-linkedin"></i></a> <a class="sns-item evernote" target="_blank" href="http://www.evernote.com/clip.action?url=';
+        p += '&source=iycar" target="_blank"><i class="iycar2015 iycar2015-linkedin"></i></a> <a class="sns-item evernote" target="_blank" href="http://www.evernote.com/clip.action?url=';
         p += d(f);
         p += "&title=";
         p += d(h);
-        p += '"><i class="ifanr2015 ifanr2015-evernote"></i></a> <a class="sns-item douban" target="_blank" href="http://www.douban.com/share/service?href=';
+        p += '"><i class="iycar2015 iycar2015-evernote"></i></a> <a class="sns-item douban" target="_blank" href="http://www.douban.com/share/service?href=';
         p += d(f);
         p += "&name=";
         p += d(h);
-        p += '"><i class="ifanr2015 ifanr2015-douban"></i></a> <a class="sns-item qqzone" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=';
+        p += '"><i class="iycar2015 iycar2015-douban"></i></a> <a class="sns-item qqzone" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=';
         p += d(f);
         p += "&title=";
         p += d(h);
-        p += '"><i class="ifanr2015 ifanr2015-qqkongjian"></i></a> </div> </div> </div> </div> </div> </article>';
+        p += '"><i class="iycar2015 iycar2015-qqkongjian"></i></a> </div> </div> </div> </div> </div> </article>';
         return new String(p)
     });
     b("desktop-entry-related",
@@ -1449,7 +1449,7 @@ function(a) {
         e = f.length; d < e; d++) {
             h += ' <div class="col"> ';
             if (f[d].post_type === "data") {
-                h += ' <a href="http://www.ifanr.com/data/';
+                h += ' <a href="http://www.iycar.com/data/';
                 h += g(f[d].objectID);
                 h += '" class="related-item"> '
             } else {
@@ -1459,13 +1459,13 @@ function(a) {
             }
             h += " ";
             if (f[d].number) {
-                h += ' <div class="picture" style="background-image:url(\'http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
+                h += ' <div class="picture" style="background-image:url(\'http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
             } else if (f[d].image !== "") {
                 h += ' <div class="picture" style="background-image:url(\'';
                 h += g(f[d].image);
                 h += "')\"></div> "
             } else {
-                h += ' <div class="picture" style="background-image:url(\'http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/default-search-bg.jpg\')"></div> '
+                h += ' <div class="picture" style="background-image:url(\'http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/default-search-bg.jpg\')"></div> '
             }
             h += ' <div class="title"> <span class="tag"> ';
             if (f[d].category) {
@@ -1482,7 +1482,7 @@ function(a) {
         h += " ";
         return new String(h)
     });
-    b("desktop-index-appso", '<article class="post-item-container"> <div class="post-item-addon comment-count"> <span class="cmt-number"></span> <span class="cmt-arrow"></span> </div> <div class="post-item-content"> <div class="tag-label"> <span class="tag"></span> <span class="author"></span> <span class="date"></span> </div> <h2> <a href=""></a> </h2> <a class="read-more" href=""></a> <div class="sns-tools"> <span>分享：</span> <a class="sns-item weibo" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a> <a class="sns-item weixin" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-weixin"></i></a> <a class="sns-item twitter" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-twitter"></i></a> <a class="sns-item more" href="javascript:void(0);"><i class="ifanr2015 ifanr2015-more"></i></a> </div> </div> </article>');
+    b("desktop-index-appso", '<article class="post-item-container"> <div class="post-item-addon comment-count"> <span class="cmt-number"></span> <span class="cmt-arrow"></span> </div> <div class="post-item-content"> <div class="tag-label"> <span class="tag"></span> <span class="author"></span> <span class="date"></span> </div> <h2> <a href=""></a> </h2> <a class="read-more" href=""></a> <div class="sns-tools"> <span>分享：</span> <a class="sns-item weibo" href="javascript:void(0);"><i class="iycar2015 iycar2015-xinlangweibo"></i></a> <a class="sns-item weixin" href="javascript:void(0);"><i class="iycar2015 iycar2015-weixin"></i></a> <a class="sns-item twitter" href="javascript:void(0);"><i class="iycar2015 iycar2015-twitter"></i></a> <a class="sns-item more" href="javascript:void(0);"><i class="iycar2015 iycar2015-more"></i></a> </div> </div> </article>');
     b("desktop-index-mindstore",
     function(a, b) {
         var c = this,
@@ -1507,9 +1507,9 @@ function(a) {
                 k += j(f[d][g]["created_at"]);
                 k += "</span> <h2>";
                 k += i(f[d][g]["title"]);
-                k += '</h2> <div class="ms-meta"> <div class="ms-voteup"> <i class="ifanr2015 ifanr2015-up"></i> ';
+                k += '</h2> <div class="ms-meta"> <div class="ms-voteup"> <i class="iycar2015 iycar2015-up"></i> ';
                 k += i(f[d][g]["vote_count"]);
-                k += ' </div> <div class="ms-comments"> <i class="ifanr2015 ifanr2015-pinglun"></i> ';
+                k += ' </div> <div class="ms-comments"> <i class="iycar2015 iycar2015-pinglun"></i> ';
                 k += i(f[d][g]["comment_count"]);
                 k += ' </div> </div> <p class="ms-intro js-ms-intro"> ';
                 k += i(f[d][g]["tagline"]);
@@ -1537,7 +1537,7 @@ function(a) {
         e = f.length; d < e; d++) {
             j += ' <li class="search-item row"> ';
             if (f[d].post_type === "data") {
-                j += ' <a href="http://www.ifanr.com/data/';
+                j += ' <a href="http://www.iycar.com/data/';
                 j += g(f[d].objectID);
                 j += '"> '
             } else {
@@ -1555,7 +1555,7 @@ function(a) {
                 j += g(f[d].image);
                 j += "')\"></div> "
             } else if (f[d].post_type === "data") {
-                j += ' <div class="result-cover" style="background-image:url(\'http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
+                j += ' <div class="result-cover" style="background-image:url(\'http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
             }
             j += ' <div class="result-content"> <h2 class="title">';
             j += h(f[d].title);
@@ -1664,7 +1664,7 @@ function(a) {
             h = f[d].length; g < h; g++) {
                 j += ' <div class="item"> <a rel="canonical" href="';
                 j += i(f[d][g].link);
-                j += '"> <i class="ifanr2015 ifanr2015-dasheng item-hide item-background"></i> <div class="content-container"> <div class="content"> <p class="excerpt js-excerpt" data-clamp="4">';
+                j += '"> <i class="iycar2015 iycar2015-dasheng item-hide item-background"></i> <div class="content-container"> <div class="content"> <p class="excerpt js-excerpt" data-clamp="4">';
                 j += i(f[d][g].excerpt);
                 j += '</p> </div> </div> <span class="meta"> <span class="more item-hide">更多解读</span> <span class="author">';
                 j += i(f[d][g].author);
@@ -1734,9 +1734,9 @@ function(a) {
                 j += i(f[d][g].title);
                 j += '</h3> <div class="content-container"> <div class="content"> <p class="excerpt js-excerpt" data-clamp="2">';
                 j += i(f[d][g].tagline);
-                j += '</p> </div> </div> <span class="meta"> <span class="ms-voteup"> <i class="ifanr2015 ifanr2015-up"></i> ';
+                j += '</p> </div> </div> <span class="meta"> <span class="ms-voteup"> <i class="iycar2015 iycar2015-up"></i> ';
                 j += i(f[d][g]["vote_count"]);
-                j += ' </span> <span class="ms-comments"> <i class="ifanr2015 ifanr2015-pinglun"></i> ';
+                j += ' </span> <span class="ms-comments"> <i class="iycar2015 iycar2015-pinglun"></i> ';
                 j += i(f[d][g]["comment_count"]);
                 j += " </span> </span> </a> </div> "
             }
@@ -1809,15 +1809,15 @@ function(a) {
             for (var g = 0,
             h = f[d].length; g < h; g++) {
                 j += ' <div class="item"> <a rel="canonical" href="';
-                j += i(f[d][g].ifr_video_url);
-                j += '" target="_blank"> <div class="content-container"> <i class="ifanr2015 ifanr2015-shipin"></i> <img class="img" src="';
-                j += i(f[d][g].ifr_video_snapshot);
+                j += i(f[d][g].yth_video_url);
+                j += '" target="_blank"> <div class="content-container"> <i class="iycar2015 iycar2015-shipin"></i> <img class="img" src="';
+                j += i(f[d][g].yth_video_snapshot);
                 j += '" alt="';
                 j += i(f[d][g].title);
                 j += '"/> <h3 class="title js-excerpt" data-clamp="2">';
                 j += i(f[d][g].title);
                 j += '</h3> </div> <span class="meta"> <span class="duration">时长:';
-                j += i(f[d][g].ifr_video_duration);
+                j += i(f[d][g].yth_video_duration);
                 j += '</span> <span class="date js-date">';
                 j += i(f[d][g].pubDate);
                 j += "</span> </span> </a> </div> "
@@ -1839,7 +1839,7 @@ function(a) {
         f += d(e.next.link);
         f += '" title="';
         f += d(e.prev.title);
-        f += '"> <i class="ifanr2015 ifanr2015-shangyige"></i> <div class="title">';
+        f += '"> <i class="iycar2015 iycar2015-shangyige"></i> <div class="title">';
         f += d(e.next.title);
         f += '</div> </a> </div> <div class="pn prev-post"> <div class="bg-img" style="background-image:url(\'';
         f += d(e.prev.image);
@@ -1849,7 +1849,7 @@ function(a) {
         f += d(e.prev.title);
         f += '"> <div class="title">';
         f += d(e.prev.title);
-        f += '</div> <i class="ifanr2015 ifanr2015-xiayige"></i> </a> </div> </div>';
+        f += '</div> <i class="iycar2015 iycar2015-xiayige"></i> </a> </div> </div>';
         return new String(f)
     });
     b("desktop-top-post",
@@ -1859,17 +1859,17 @@ function(a) {
         e = a.list,
         f = c.$escape,
         g = "";
-        g += '<div class="title"> <i class="ifanr2015 ifanr2015-remen"></i> <h2>热门文章</h2> </div> <ul> ';
+        g += '<div class="title"> <i class="iycar2015 iycar2015-remen"></i> <h2>热门文章</h2> </div> <ul> ';
         for (d = 0; d < e.length; d++) {
             g += ' <li class="list"> <a ga-track="event" ga-action="click" ga-event-category="anchor" ga-event-label="TopNews" title="';
             g += f(e[d]["title"]);
             g += '" href="';
             g += f(e[d]["link"]);
-            g += '" class="ifanr-top-posts-';
+            g += '" class="iycar-top-posts-';
             g += f(d);
-            g += '"> <div class="ifanr-top-posts-container"> <div class="ifanr-top-posts-cell number-cell"> <span class="ifanr-top-posts-comment">';
+            g += '"> <div class="iycar-top-posts-container"> <div class="iycar-top-posts-cell number-cell"> <span class="iycar-top-posts-comment">';
             g += f(d + 1);
-            g += '</span> </div> <div class="ifanr-top-posts-cell"> <span class="ifanr-top-posts-title">';
+            g += '</span> </div> <div class="iycar-top-posts-cell"> <span class="iycar-top-posts-title">';
             g += f(e[d]["title"]);
             g += "</span> </div> </div> </a> </li> "
         }
@@ -1906,7 +1906,7 @@ function(a) {
         j += d(e);
         j += '" class="post dasheng entry-list clearfix" href="';
         j += d(f);
-        j += '"> <i class="ifanr2015 ifanr2015-dasheng dasheng-bg"></i> <div class="entry-header"> ';
+        j += '"> <i class="iycar2015 iycar2015-dasheng dasheng-bg"></i> <div class="entry-header"> ';
         if (g) {
             j += ' <span class="tag">大声</span> '
         }
@@ -1976,7 +1976,7 @@ function(a) {
         }
         q += ' <div class="post-author">';
         q += i(j);
-        q += '</div> <div class="entry-comment-number"> <i class="ifanr2015 ifanr2015-pinglun"></i> <span class="number">';
+        q += '</div> <div class="entry-comment-number"> <i class="iycar2015 iycar2015-pinglun"></i> <span class="number">';
         q += d(k);
         q += '</span> </div> </div> <div class="entry-header"> <h1 class="entry-name yahei"> <span>';
         q += d(l);
@@ -2078,7 +2078,7 @@ function(a) {
         e = f.length; d < e; d++) {
             h += " ";
             if (f[d].post_type === "data") {
-                h += ' <a href="http://www.ifanr.com/data/';
+                h += ' <a href="http://www.iycar.com/data/';
                 h += g(f[d].objectID);
                 h += '" class="related-item"> '
             } else {
@@ -2088,13 +2088,13 @@ function(a) {
             }
             h += " ";
             if (f[d].number) {
-                h += ' <div class="picture js-head-picture" style="background-image:url(\'http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
+                h += ' <div class="picture js-head-picture" style="background-image:url(\'http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
             } else if (f[d].image !== "") {
                 h += ' <div class="picture js-head-picture" style="background-image:url(\'';
                 h += g(f[d].image);
                 h += "')\"></div> "
             } else {
-                h += ' <div class="picture js-head-picture" style="background-image:url(\'http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/default-search-bg.jpg\')"></div> '
+                h += ' <div class="picture js-head-picture" style="background-image:url(\'http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/default-search-bg.jpg\')"></div> '
             }
             h += ' <div class="title"> <span class="tag"> ';
             if (f[d].category) {
@@ -2154,9 +2154,9 @@ function(a) {
             h += f(e[d]["post_url"]);
             h += '"> <h2>';
             h += f(e[d]["title"]);
-            h += '</h2> <div class="ms-meta"> <div class="ms-voteup"> <i class="ifanr2015 ifanr2015-up"></i> ';
+            h += '</h2> <div class="ms-meta"> <div class="ms-voteup"> <i class="iycar2015 iycar2015-up"></i> ';
             h += f(e[d]["vote_count"]);
-            h += ' </div> <div class="ms-comments"> <i class="ifanr2015 ifanr2015-pinglun"></i> ';
+            h += ' </div> <div class="ms-comments"> <i class="iycar2015 iycar2015-pinglun"></i> ';
             h += f(e[d]["comment_count"]);
             h += ' </div> </div> <p class="ms-intro"> ';
             h += f(e[d]["tagline"]);
@@ -2205,7 +2205,7 @@ function(a) {
         e = f.length; d < e; d++) {
             k += ' <li class="search-item row"> ';
             if (f[d].post_type === "data") {
-                k += ' <a href="http://www.ifanr.com/data/';
+                k += ' <a href="http://www.iycar.com/data/';
                 k += g(f[d].objectID);
                 k += '"> '
             } else {
@@ -2223,7 +2223,7 @@ function(a) {
                 k += g(f[d].image);
                 k += "')\"></div> "
             } else if (f[d].post_type === "data") {
-                k += ' <div class="result-cover" style="background-image:url(\'http://cdn.ifanr.cn/site-static/ifanr-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
+                k += ' <div class="result-cover" style="background-image:url(\'http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
             }
             k += ' <div class="result-content"> <h2 class="title">';
             k += h(f[d]._highlightResult.title.value);
@@ -2269,8 +2269,8 @@ function(a) {
         }
         return new String(i)
     });
-    b("search/search-desk-zone", '<div class="ifr-search-zone" id="ifr-search-zone" style="display:none"> <div class="ifr-search-zone-inner"> <div class="ifr-search-zone-container"> <div class="query-zone"> <input type="text" id="ifr-query-search" placeholder="搜索文章"> </div> <div class="loading" id="search-loading"> </div> <div class="search-title js-search-title hide">共搜索到 <span class="js-results-count"></span> 篇文章</div> <div class="search-ifr"> <ul class="search-list" id="search-list"></ul> <div class="load-more hide" id="search-load-more"> <button id="next-page">加载更多</button> </div> </div> </div> </div> </div>');
-    b("search/search-zone", '<div class="ifr-search-zone" id="ifr-search-zone"> <div class="ifr-search-zone-container"> <div class="close-zone"> <span id="ifr-cancel-search"> <i class="ifanr2015 ifanr2015-guanbi"></i> </span> </div> <div class="query-zone"> <i class="ifanr2015 ifanr2015-search"></i> <input type="text" id="ifr-query-search"> </div> <div class="loading" id="loading"> </div> <div class="search-ifr"> <ul class="search-list" id="search-list"></ul> <div class="load-more hide" id="search-load-more"> <button id="next-page">加载更多</button> </div> </div> </div> </div>');
+    b("search/search-desk-zone", '<div class="yth-search-zone" id="yth-search-zone" style="display:none"> <div class="yth-search-zone-inner"> <div class="yth-search-zone-container"> <div class="query-zone"> <input type="text" id="yth-query-search" placeholder="搜索文章"> </div> <div class="loading" id="search-loading"> </div> <div class="search-title js-search-title hide">共搜索到 <span class="js-results-count"></span> 篇文章</div> <div class="search-yth"> <ul class="search-list" id="search-list"></ul> <div class="load-more hide" id="search-load-more"> <button id="next-page">加载更多</button> </div> </div> </div> </div> </div>');
+    b("search/search-zone", '<div class="yth-search-zone" id="yth-search-zone"> <div class="yth-search-zone-container"> <div class="close-zone"> <span id="yth-cancel-search"> <i class="iycar2015 iycar2015-guanbi"></i> </span> </div> <div class="query-zone"> <i class="iycar2015 iycar2015-search"></i> <input type="text" id="yth-query-search"> </div> <div class="loading" id="loading"> </div> <div class="search-yth"> <ul class="search-list" id="search-list"></ul> <div class="load-more hide" id="search-load-more"> <button id="next-page">加载更多</button> </div> </div> </div> </div>');
     if (typeof define === "function") {
         define(function() {
             return b
@@ -2332,8 +2332,8 @@ function(a) {
             var b = {};
             if (a && !(a instanceof Array)) {
                 b.title = a["post_title"];
-                b.image = a["ifr_post_image"];
-                b.link = a["ifr_post_permalink"]
+                b.image = a["yth_post_image"];
+                b.link = a["yth_post_permalink"]
             } else {
                 b.title = "已经是第一篇了";
                 b.image = "";
@@ -2746,7 +2746,7 @@ function(a, b) {
             }
             var d = '<div id="outerImageContainer">';
             d += '<div id="imageContainer">';
-            d += '<iframe id="lightboxIframe" />';
+            d += '<ythame id="lightboxIframe" />';
             d += '<img id="lightboxImage">';
             d += '<div id="hoverNav"><a href="javascript://" title="' + c.strings.prevLinkTitle + '" id="prevLink"></a><a href="javascript://" id="nextLink" title="' + c.strings.nextLinkTitle + '"></a></div>';
             d += '<div id="loading"><a href="javascript://" id="loadingLink"><div id="jqlb_loading"></div></a></div>';
@@ -3290,7 +3290,7 @@ function(a, b) {
         this.$el.on("click",
         function(a) {
             a.preventDefault();
-            b.ifr.smoothScrollTo(0)
+            b.yth.smoothScrollTo(0)
         });
         this.$window.on("scroll",
         function() {
@@ -3881,9 +3881,9 @@ default = {
     });
     function c(a) {
         if (a.is(".js-nav-menu")) {
-            return a.find("i.ifanr2015-guanbi").length !== 0
+            return a.find("i.iycar2015-guanbi").length !== 0
         } else if (a.is(".js-nav-search")) {
-            return a.find("i.ifanr2015-guanbi").length === 0
+            return a.find("i.iycar2015-guanbi").length === 0
         }
         return false
     }
@@ -4013,7 +4013,7 @@ default = {
         a.forEach(function(a) {
             b = a.title.match(/(#.*)/g);
             a.platforms = b ? b[0] : null;
-            a.post_url = "http://www.ifanr.com/app/" + a.id
+            a.post_url = "http://www.iycar.com/app/" + a.id
         });
         return a
     };
@@ -4045,13 +4045,13 @@ default = {
         pageTotalNumber: null,
         applicationID: "7TN0U2FL3Q",
         apiKey: "97d5967e87b92827fa8b040bcc4c8581",
-        indexName: "prod_ifanrcom",
+        indexName: "prod_iycarcom",
         searchQueryStr: null,
         $loading: null,
         appendSeachZone: function() {
             var b = template("search/search-desk-zone", {});
             c.$containerInner.append(b);
-            c.$searchBoxZone = a("#ifr-search-zone");
+            c.$searchBoxZone = a("#yth-search-zone");
             c.$loading = a("#search-loading")
         },
         fixStyle: function() {
@@ -4066,19 +4066,19 @@ default = {
         _showSearchZone: function() {
             var b = this;
             a(".js-search-title").addClass("hide");
-            a("#ifr-search-zone").fadeIn("slow",
+            a("#yth-search-zone").fadeIn("slow",
             function() {
-                a("#ifr-query-search").focus();
+                a("#yth-query-search").focus();
                 b.$domFixed.addClass("prevent-scrolled")
             })
         },
         _hideSearchZone: function() {
             var b = this;
             b.$domFixed.removeClass("prevent-scrolled");
-            a("#ifr-search-zone").fadeOut("slow",
+            a("#yth-search-zone").fadeOut("slow",
             function() {
                 a("#search-list").html("");
-                a("#ifr-query-search").val("");
+                a("#yth-query-search").val("");
                 b._hideLoadNextPageBtn()
             })
         },
@@ -4087,7 +4087,7 @@ default = {
             d = null;
             a("#search-button").on("click",
             function() {
-                a(this).find("i").first().toggleClass("ifanr2015-search ifanr2015-guanbi");
+                a(this).find("i").first().toggleClass("iycar2015-search iycar2015-guanbi");
                 if (!c.toggleSearchTag) {
                     c.toggleSearchTag = true;
                     c._showSearchZone();
@@ -4099,11 +4099,11 @@ default = {
                     YCA.Events.trigger("restore.opacity.global-header")
                 }
             });
-            a("#ifr-query-search").on("input",
+            a("#yth-query-search").on("input",
             function() {
                 clearTimeout(d);
                 d = setTimeout(function() {
-                    c.searchQueryStr = a("#ifr-query-search").val();
+                    c.searchQueryStr = a("#yth-query-search").val();
                     c.searchResult(true)
                 },
                 500)
@@ -4115,8 +4115,8 @@ default = {
             YCA.Events.on("hide.global-search",
             function() {
                 var b = a("#search-button").find("i").first();
-                if (b.hasClass("ifanr2015-search")) return;
-                b.toggleClass("ifanr2015-search ifanr2015-guanbi");
+                if (b.hasClass("iycar2015-search")) return;
+                b.toggleClass("iycar2015-search iycar2015-guanbi");
                 c.toggleSearchTag = false;
                 c._hideSearchZone()
             })
@@ -4328,7 +4328,7 @@ default = {
     var e = $(".js-video-container").find(".description")[0];
     var f;
     var g = function(b) {
-        var c = b.attr("data-video-iframe");
+        var c = b.attr("data-video-ythame");
         a.html(c)
     };
     c.on("click",
@@ -4383,7 +4383,7 @@ default = {
         var a = this;
         a.$scrollToHeader.on("click",
         function() {
-            b.ifr.smoothScrollTo(a.$scrollToStop, {
+            b.yth.smoothScrollTo(a.$scrollToStop, {
                 offset: ns.globalHeaderHeight + 20
             })
         })
@@ -4433,16 +4433,16 @@ default = {
     d.fn.init = function(a) {
         this.postId = a.id;
         this.$articleContentsContainer = b('[cmpt-article-contents][data-post-id="' + this.postId + '"]');
-        this.$sharesWrapper = this.$articleContentsContainer.find(".js-ifanr-shares-wrapper");
+        this.$sharesWrapper = this.$articleContentsContainer.find(".js-iycar-shares-wrapper");
         this.$sharesCount = this.$sharesWrapper.find(".js-shares-count");
         this.$shareBtns = this.$sharesWrapper.find(".js-share-buttons");
-        this.$likeBtn = this.$articleContentsContainer.find(".js-ifanr-like");
+        this.$likeBtn = this.$articleContentsContainer.find(".js-iycar-like");
         this.$likeAvatars = this.$articleContentsContainer.find(".js-like-avatars");
         this.likeAvatarsTmpl = "desktop-article-like-avatars";
         this.likeAvatarItemTmpl = '<img class="avatar-item" src="{{avatar}}" />';
         this.$jumpTos = this.$articleContentsContainer.find("[data-jump-to]");
         this.$appsoDls = this.$articleContentsContainer.find(".js-appso-dl");
-        this.$appsoCards = this.$articleContentsContainer.find('[ifr-box="appso-card"]');
+        this.$appsoCards = this.$articleContentsContainer.find('[yth-box="appso-card"]');
         if (window.AutoFixedWidget) {
             Object.create(AutoFixedWidget.fn).init("#article-wrapper", {
                 fixedTopOffset: ns.globalHeaderHeight - 10,
@@ -4463,12 +4463,12 @@ default = {
                     d.addClass("picture-full-width")
                 }
             });
-            b(".js-main-singular p:has(iframe)").addClass("picture-full-width");
+            b(".js-main-singular p:has(ythame)").addClass("picture-full-width");
             b(".js-main-singular p:has(embed)").addClass("picture-full-width");
             var c = 0;
             var d = window.innerWidth > 0 ? window.innerWidth: screen.width;
             var e = d - c;
-            a.$articleContentsContainer.find("iframe").each(f);
+            a.$articleContentsContainer.find("ythame").each(f);
             a.$articleContentsContainer.find("embed").each(f);
             function f(a, c) {
                 var d = b(c);
@@ -4493,7 +4493,7 @@ default = {
     d.fn.loadPostSnsInfo = function() {
         var a = this;
         b.ajax({
-            url: "https://sso.ifanr.com/api/wp/article/stats/" + a.postId + "/",
+            url: "https://sso.iycar.com/api/wp/article/stats/" + a.postId + "/",
             method: "GET",
             contentType: "application/json",
             dataType: "json"
@@ -4507,7 +4507,7 @@ default = {
         }
         d.addClass("js-shared");
         b.ajax({
-            url: "https://sso.ifanr.com/api/wp/article/share/" + c.postId + "/",
+            url: "https://sso.iycar.com/api/wp/article/share/" + c.postId + "/",
             method: "put",
             contentType: "application/json",
             dataType: "json",
@@ -4527,7 +4527,7 @@ default = {
             return
         }
         b.ajax({
-            url: "https://sso.ifanr.com/api/wp/article/like/" + a.postId + "/",
+            url: "https://sso.iycar.com/api/wp/article/like/" + a.postId + "/",
             method: "put",
             contentType: "application/json",
             dataType: "json",
@@ -4538,7 +4538,7 @@ default = {
         }).complete(function() {
             a.$likeBtn.addClass("active");
             a.$likeBtn.find(".js-like-hint").html("已点赞");
-            a.$likeBtn.find(".ifanr2015").removeClass("ifanr2015-heart").addClass("ifanr2015-like");
+            a.$likeBtn.find(".iycar2015").removeClass("iycar2015-heart").addClass("iycar2015-like");
             var c = a.$likeAvatarsCount.text();
             a.$likeAvatarsCount.text(parseInt(c, 10) + 1 + " 个人");
             if (!ns.currentUserAvatar) {
@@ -4584,7 +4584,7 @@ default = {
         a.$likeBtn.on("click", a.updateLikesCount.bind(a));
         a.$jumpTos.on("touchstart click",
         function() {
-            b.ifr.smoothScrollTo(b(this).attr("href"), {
+            b.yth.smoothScrollTo(b(this).attr("href"), {
                 offset: ns.globalHeaderHeight
             });
             return false
@@ -4659,7 +4659,7 @@ default = {
         y();
         o = true
     });
-    var t = b(".ifr-nav-items-container");
+    var t = b(".yth-nav-items-container");
     t.mouseenter(function() {
         b(this).addClass("mouseenter")
     }).mouseleave(function() {
@@ -4781,7 +4781,7 @@ default = {
     d.fn.render = function() {
         var a = this;
         var d = null;
-        b(document).on("click", "[data-share]", c.bind(a)).on("mouseenter", ".js-sns-tools .ifanr2015-more",
+        b(document).on("click", "[data-share]", c.bind(a)).on("mouseenter", ".js-sns-tools .iycar2015-more",
         function() {
             clearTimeout(d);
             setTimeout(function() {
@@ -5006,7 +5006,7 @@ default = {
             a(b + "-page").addClass("active")
         }
     };
-    b.IfanrOurService = c
+    b.YcaOurService = c
 })(jQuery, window); 
 (function() {
     $("[widget-go2top]").widgetGoToTop();
@@ -5024,7 +5024,7 @@ default = {
         Object.create(AutoFixedWidget.fn).init("#index-part-two", a).render();
         Object.create(AutoFixedWidget.fn).init("#index-part-forth", a).render()
     }
-    if ($("#ifr-page-our-team").length > 0) {
+    if ($("#yth-page-our-team").length > 0) {
         new window.AboutTeam({
             isMobile: false
         })
@@ -5090,7 +5090,7 @@ default = {
             });
             $(".JS_commentOrg").click(function() {
                 $("#JS_orderCmtByTime").click();
-                $.ifr.scrollTo($(this).attr("href"));
+                $.yth.scrollTo($(this).attr("href"));
                 return false
             })
         } else {
@@ -5179,7 +5179,7 @@ default = {
     };
     $(document).ready(function() {
         $(".single .entry-comment-number a").click(function() {
-            $.ifr.smoothScrollTo("#comments-box");
+            $.yth.smoothScrollTo("#comments-box");
             YCA.util.stopDefault()
         });
         $("#JS_show_license").click(function() {
@@ -5191,11 +5191,11 @@ default = {
                 effect: "fadeIn"
             })
         }
-        if ($(".ifanr-our-service").length) {
-            new window.IfanrOurService(".ifanr-our-service")
+        if ($(".iycar-our-service").length) {
+            new window.YcaOurService(".iycar-our-service")
         }
-        if ($(".ifanr-report").length) {
-            new window.IfanrReport(".ifanr-report")
+        if ($(".iycar-report").length) {
+            new window.YcaReport(".iycar-report")
         }
         if (ns.wpPageNowIs("single")) {
             g(); (new DesktopArticleContents).init({
@@ -5256,11 +5256,11 @@ default = {
             return e - c
         };
         $(".js-nav-search").click(function() {
-            var a = $(".ifr-search-zone");
+            var a = $(".yth-search-zone");
             a.height(j())
         });
         $(".js-nav-menu").mouseenter(function() {
-            var a = $(".ifr-nav-items-container");
+            var a = $(".yth-nav-items-container");
             a.height(j())
         })
     });
@@ -5274,13 +5274,13 @@ default = {
     });
     var k = j.find(".dots");
     k.wrap('<div class="fullwidth"></div>');
-    $(".accordion-border").ifanrAccordion({
+    $(".accordion-border").iycarAccordion({
         target: ".accordion-item",
         itemHeight: 50,
         height: 200,
         transitionProperty: "height, background"
     });
-    var l = $(".js-clickable-wrapper a:first-child").ifanrNavPreview({
+    var l = $(".js-clickable-wrapper a:first-child").iycarNavPreview({
         action: "latest",
         params: {
             posts_per_page: 20,
@@ -5307,7 +5307,7 @@ default = {
     });
     var m = $(".js-items-preview");
     var n = $(".nav-list .nav-item:nth-child(n+3)");
-    n.ifanrNavPreview({
+    n.iycarNavPreview({
         action: "get_posts_by_category",
         params: {
             excerpt_length: 100,
@@ -5319,7 +5319,7 @@ default = {
         event: "mouseenter",
         renderTarget: ".js-items-preview .items-flex",
         expandFun: function() {
-            if ($(".ifr-search-zone").css("display") !== "none") {
+            if ($(".yth-search-zone").css("display") !== "none") {
                 return false
             } else {
                 $(".js-nav-menu").removeClass("active");
@@ -5364,7 +5364,7 @@ default = {
         m.fadeOut()
     });
     $(".js-nav-search").on("click", s);
-    $('.widget_ifanr_jiong_new [rel="external"]').click(function() {
+    $('.widget_iycar_jiong_new [rel="external"]').click(function() {
         window.open($(this).prop("href"));
         return false
     });
@@ -5403,7 +5403,7 @@ default = {
     a.extend(ns.topBarUserMenu, {
         menuIsShow: false,
         navIdStr: "#nav-user-subs",
-        eventNamespace: "click.ifrTopUserBar"
+        eventNamespace: "click.ythTopUserBar"
     });
     a.extend(ns.topBarUserMenu, {
         $menuSubs: a(ns.topBarUserMenu.navIdStr),
@@ -5498,7 +5498,7 @@ default = {
             offset_featured: 1
         },
         i) : i;
-        var k = "ifr_latest";
+        var k = "yth_latest";
         var l;
         var m = 0;
         var n = location.pathname.toString();
@@ -5804,7 +5804,7 @@ default = {
             }
         },
         _scrollTop: function() {
-            a.ifr.smoothScrollTo("#recentcomments");
+            a.yth.smoothScrollTo("#recentcomments");
             return false;
             var b = a("#recentcomments").offset().top;
             if (b) {
@@ -5983,7 +5983,7 @@ default = {
         for (var j in h) {
             i.push(j + "=" + encodeURIComponent(h[j] || ""))
         }
-        d.append('<div id="weibo-comment-tab-div-1" class="weibo-comment-tab clearfix"><iframe id="WBCommentFrame" allowTransparency="true" frameborder="0" scrolling="no" src="http://widget.weibo.com/distribution/comments.php?' + i.join("&") + '" width="' + f + '" height="' + g + '"></iframe></div>');
+        d.append('<div id="weibo-comment-tab-div-1" class="weibo-comment-tab clearfix"><ythame id="WBCommentFrame" allowTransparency="true" frameborder="0" scrolling="no" src="http://widget.weibo.com/distribution/comments.php?' + i.join("&") + '" width="' + f + '" height="' + g + '"></ythame></div>');
         a.getScript("http://tjs.sjs.sinajs.cn/open/widget/js/widget/comment.js",
         function() {
             window.WBComment.init({
@@ -7602,7 +7602,7 @@ function a(b, c, d) {
     if (ns.chatroomId) {
         d = new b;
         d.awake();
-        YCA.Events.on("ifr.ssouser.initialized",
+        YCA.Events.on("yth.ssouser.initialized",
         function(a) {
             var b = new c;
             b.loadUserToken(a).then(function(a) {
@@ -7613,7 +7613,7 @@ function a(b, c, d) {
                 d.showErrorMessage()
             })
         });
-        YCA.Events.on("ifr.ssouser.unauthorized",
+        YCA.Events.on("yth.ssouser.unauthorized",
         function() {
             d.clear();
             d.initForLogin()

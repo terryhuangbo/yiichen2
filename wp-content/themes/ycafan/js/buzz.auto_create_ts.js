@@ -311,7 +311,7 @@ template("desktop-buzz-item",
 function(e) {
     "use strict";
     for (var t = this,
-    a = (t.$helpers, e.i), i = e.len, r = e.list, s = t.$escape, l = "", a = 0, i = r.length; i > a; a++) l += ' <li class="buzz-item"> <div class="buzz-item-container"> <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget" ga-event-label="ifanr-buzz"><a target="_blank" itemprop="url" href="',
+    a = (t.$helpers, e.i), i = e.len, r = e.list, s = t.$escape, l = "", a = 0, i = r.length; i > a; a++) l += ' <li class="buzz-item"> <div class="buzz-item-container"> <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget" ga-event-label="iycar-buzz"><a target="_blank" itemprop="url" href="',
     l += s(r[a].permalink),
     l += '" data-source-url="',
     l += s(r[a].source.url),
@@ -354,7 +354,7 @@ function(t, i) {
         sendGA: function(t) {
             switch (t) {
             case "LOAD_MORE":
-                ga("send", "event", "widget", "scroll", "ifanr-buzz-load-more", 1)
+                ga("send", "event", "widget", "scroll", "iycar-buzz-load-more", 1)
             }
             return this
         },

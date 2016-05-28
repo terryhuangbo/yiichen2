@@ -13,7 +13,7 @@ the_post();
       <div id="content" class="content clearfix">
     <div class="content-header-archive dasheng-header">
       <div class="fullwidth row">
-        <i class="ifanr2015 ifanr2015-dasheng"></i>
+        <i class="iycar2015 iycar2015-dasheng"></i>
         <div class="main row">
           <!-- POST-ITEM -->
           <div class="post-item-container">
@@ -68,17 +68,17 @@ the_post();
                 </div>
 
               </article><!--end each post-->
-              <div class="ifr-article-component row"><div class="likes-and-comments"><a href="javascript:void(0)" id="article-likes" class="footer-item js-ifanr-like" data-id="628269"><i class="ifanr2015 ifanr2015-heart item-icon"></i><span class="js-like-hint like-hint">赞一下</span><span class="js-like-count like-count">1</span></a></div><div class="like-avatars js-like-avatars"></div><div id="sns-buttons" class="row sns-share sns-tools js-sns-tools"><span class="sns-items-wrapper js-ifanr-shares-wrapper"><span class="ifanr-share-tip"><span class="shares-count js-shares-count">0</span>个分享：</span>
-        <a href="http://v.t.sina.com.cn/share/share.php?url=http://www.ifanr.com/dasheng/628269&title=进对学校选对专业，年薪千万不是梦" data-share="sina" rel="nofollow" class="js-share-buttons ifanr-share-buttons weibo" id="sina-share" title="分享到新浪微博" target="_blank"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a>
-        <a href="javascript:void(0)" data-post-url="http://www.ifanr.com/dasheng/628269" data-el="share-to-wechat" data-placement="top" data-toggle="popover" rel="nofollow" class="js-share-buttons ifanr-share-buttons weixin" id="wechat-share" title="分享到微信朋友圈"><i class="ifanr2015 ifanr2015-weixin"></i></a>
-        <a class="sns-item ifanr-share-buttons twitter" rel="nofollow" data-share="twitter" target="_blank" href="https://twitter.com/intent/tweet?button_hashtag=ifanr&text=进对学校选对专业，年薪千万不是梦&url=http://www.ifanr.com/dasheng/628269"><i class="ifanr2015 ifanr2015-twitter"></i></a>
-        <a class="sns-item ifanr-share-buttons linkedin" rel="nofollow" data-share="linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?title=进对学校选对专业，年薪千万不是梦&url=http%3A%2F%2Fwww.ifanr.com%2Fdasheng%2F628269&summary=做深度学习的人工智能博士生，现在一毕业就能拿到 200 到 300 万美金的年收入的 offer，这是有史以来没有发生过的。...&source=ifanr" ga-track="event" ga-event-category="button" ga-event-label="linkedin_share"><i class="ifanr2015 ifanr2015-linkedin"></i></a>
-        <a id="J_SendCWB" href="http://www.ifanr.com/api/special/changweibo/index.php?ifr_post_id=628269" rel="nofollow" class="ifanr-share-buttons js-share-buttons btn-long-weibo">发送长微博</a>
+              <div class="yth-article-component row"><div class="likes-and-comments"><a href="javascript:void(0)" id="article-likes" class="footer-item js-iycar-like" data-id="628269"><i class="iycar2015 iycar2015-heart item-icon"></i><span class="js-like-hint like-hint">赞一下</span><span class="js-like-count like-count">1</span></a></div><div class="like-avatars js-like-avatars"></div><div id="sns-buttons" class="row sns-share sns-tools js-sns-tools"><span class="sns-items-wrapper js-iycar-shares-wrapper"><span class="iycar-share-tip"><span class="shares-count js-shares-count">0</span>个分享：</span>
+        <a href="http://v.t.sina.com.cn/share/share.php?url=http://www.iycar.com/dasheng/628269&title=进对学校选对专业，年薪千万不是梦" data-share="sina" rel="nofollow" class="js-share-buttons iycar-share-buttons weibo" id="sina-share" title="分享到新浪微博" target="_blank"><i class="iycar2015 iycar2015-xinlangweibo"></i></a>
+        <a href="javascript:void(0)" data-post-url="http://www.iycar.com/dasheng/628269" data-el="share-to-wechat" data-placement="top" data-toggle="popover" rel="nofollow" class="js-share-buttons iycar-share-buttons weixin" id="wechat-share" title="分享到微信朋友圈"><i class="iycar2015 iycar2015-weixin"></i></a>
+        <a class="sns-item iycar-share-buttons twitter" rel="nofollow" data-share="twitter" target="_blank" href="https://twitter.com/intent/tweet?button_hashtag=iycar&text=进对学校选对专业，年薪千万不是梦&url=http://www.iycar.com/dasheng/628269"><i class="iycar2015 iycar2015-twitter"></i></a>
+        <a class="sns-item iycar-share-buttons linkedin" rel="nofollow" data-share="linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?title=进对学校选对专业，年薪千万不是梦&url=http%3A%2F%2Fwww.iycar.com%2Fdasheng%2F628269&summary=做深度学习的人工智能博士生，现在一毕业就能拿到 200 到 300 万美金的年收入的 offer，这是有史以来没有发生过的。...&source=iycar" ga-track="event" ga-event-category="button" ga-event-label="linkedin_share"><i class="iycar2015 iycar2015-linkedin"></i></a>
+        <a id="J_SendCWB" href="http://www.iycar.com/api/special/changweibo/index.php?yth_post_id=628269" rel="nofollow" class="iycar-share-buttons js-share-buttons btn-long-weibo">发送长微博</a>
         <div class="sns-item more js-share-items-more" href="javascript:void(0);">
-          <i class="ifanr2015 ifanr2015-more"></i>
-          <a rel="nofollow" class="sns-item ifanr-share-buttons evernote" data-share="evernote" target="_blank" href="http://www.evernote.com/clip.action?url=http://www.ifanr.com/dasheng/628269&title=进对学校选对专业，年薪千万不是梦"><i class="ifanr2015 ifanr2015-evernote"></i></a>
-          <a rel="nofollow" class="sns-item ifanr-share-buttons douban" data-share="douban" target="_blank" href="http://www.douban.com/share/service?href=http://www.ifanr.com/dasheng/628269&name=进对学校选对专业，年薪千万不是梦"><i class="ifanr2015 ifanr2015-douban"></i></a>
-          <a rel="nofollow" class="sns-item ifanr-share-buttons qqzone" data-share="qqzone" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.ifanr.com/dasheng/628269&title=进对学校选对专业，年薪千万不是梦"><i class="ifanr2015 ifanr2015-qqkongjian"></i></a>
+          <i class="iycar2015 iycar2015-more"></i>
+          <a rel="nofollow" class="sns-item iycar-share-buttons evernote" data-share="evernote" target="_blank" href="http://www.evernote.com/clip.action?url=http://www.iycar.com/dasheng/628269&title=进对学校选对专业，年薪千万不是梦"><i class="iycar2015 iycar2015-evernote"></i></a>
+          <a rel="nofollow" class="sns-item iycar-share-buttons douban" data-share="douban" target="_blank" href="http://www.douban.com/share/service?href=http://www.iycar.com/dasheng/628269&name=进对学校选对专业，年薪千万不是梦"><i class="iycar2015 iycar2015-douban"></i></a>
+          <a rel="nofollow" class="sns-item iycar-share-buttons qqzone" data-share="qqzone" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.iycar.com/dasheng/628269&title=进对学校选对专业，年薪千万不是梦"><i class="iycar2015 iycar2015-qqkongjian"></i></a>
         </div></span></div></div>            </div>
           </div><!-- end post-item-container -->
             </div><!-- END MAIN -->
@@ -118,7 +118,7 @@ the_post();
         <h2 class="js-reply-title reply-title yahei">回复</h2>
 
         <div class="js-cancel-comment-reply cancel-comment-reply hide">
-          <a rel="nofollow" id="cancel-comment-reply-link" href="javascript:void(0);" class="js-cancel-button reverse-icon"><i class="ifanr2015 ifanr2015-guanbi"></i></a>
+          <a rel="nofollow" id="cancel-comment-reply-link" href="javascript:void(0);" class="js-cancel-button reverse-icon"><i class="iycar2015 iycar2015-guanbi"></i></a>
         </div>
 
         <form id="commentform" class="JS_formInFieldLabels js-respond-form">
@@ -145,7 +145,7 @@ the_post();
           </p>
 
           <div id="ajax-cmt-loading" class="js-comment-processing hide">
-            <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/loader/ajax-loader-light.gif" style="vertical-align:middle; margin: 5px 0;">
+            <img src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/loader/ajax-loader-light.gif" style="vertical-align:middle; margin: 5px 0;">
             正在提交, 请稍候...
           </div>
           <div id="error" class="js-error-msg hide">#</div>
@@ -163,8 +163,8 @@ the_post();
           <div class="submit-zone clearfix">
           <p class="login-in-buttons js-not-login hide">
             <span class="J_LoginButtons login-in-button">
-              或 <a href="https://sso.ifanr.com/login/" class="link" title="登录" rel="internal">登录</a>&nbsp;|&nbsp;<a
-                href="https://sso.ifanr.com/register/" class="link" title="注册" rel="internal">注册</a> 参与评论
+              或 <a href="https://sso.iycar.com/login/" class="link" title="登录" rel="internal">登录</a>&nbsp;|&nbsp;<a
+                href="https://sso.iycar.com/register/" class="link" title="注册" rel="internal">注册</a> 参与评论
             </span>
           </p>
 
@@ -192,7 +192,7 @@ the_post();
     </div>
     <div id="J_commentlist" class="js-comments-list-container comments-list-container">
       <div id="JS_loading" class="js-comments-loading"  style="background: none; display: none;" class="no-ajax load-more-link loading">
-        <img height="8" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/loader/loadingb.gif"/>
+        <img height="8" src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif"/>
       </div>
     </div>
 

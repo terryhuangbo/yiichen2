@@ -1,16 +1,16 @@
 <div class="hide">
   <span class='page-numbers current'>1</span>
-<a class='page-numbers' href='http://www.ifanr.com/page/2'>2</a>
-<a class='page-numbers' href='http://www.ifanr.com/page/3'>3</a>
+<a class='page-numbers' href='http://www.iycar.com/page/2'>2</a>
+<a class='page-numbers' href='http://www.iycar.com/page/3'>3</a>
 <span class="page-numbers dots">&hellip;</span>
-<a class='page-numbers' href='http://www.ifanr.com/page/1024'>1,024</a>
-<a class="next page-numbers" href="http://www.ifanr.com/page/2">Next &raquo;</a></div>
+<a class='page-numbers' href='http://www.iycar.com/page/1024'>1,024</a>
+<a class="next page-numbers" href="http://www.iycar.com/page/2">Next &raquo;</a></div>
 
 <footer class="clearfix" id="footer-zone">
   <div class="fullwidth row">
     <div class="footer-left-zone">
       <div class="logo">
-        <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/new-footerlogo.png">
+        <img src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/desktop/new-footerlogo.png">
         <!-- <p class="meta">
           <span>Beats of bits</span>
           <span>发现创新价值的科技媒体</span>
@@ -33,20 +33,20 @@
         <div class="nav">
           <div class="title">联系我们</div>
           <ul>
-            <li><a href="mailto:info@ifanr.com" target="_blank">邮箱</a></li>
-            <li><a rel="nofollow" href="http://weibo.com/ifanr" target="_blank">新浪微博</a></li>
-            <li><a rel="nofollow" href="http://twitter.com/ifanr" target="_blank">Twitter</a></li>
+            <li><a href="mailto:info@iycar.com" target="_blank">邮箱</a></li>
+            <li><a rel="nofollow" href="http://weibo.com/iycar" target="_blank">新浪微博</a></li>
+            <li><a rel="nofollow" href="http://twitter.com/iycar" target="_blank">Twitter</a></li>
           </ul>
         </div>
 
         <div class="nav">
           <div class="title">关于我们</div>
           <ul>
-            <li><a href="http://www.ifanr.com/about/our-team">关于我们</a></li>
-            <li><a href="http://www.ifanr.com/joinus">加入我们</a></li>
-            <li><a href="http://www.ifanr.com/adinfo">商务合作</a></li>
-            <li><a href="http://www.ifanr.com/shequguize">社区规则</a></li>
-            <li><a href="http://www.ifanr.com/link">链接</a></li>
+            <li><a href="http://www.iycar.com/about/our-team">关于我们</a></li>
+            <li><a href="http://www.iycar.com/joinus">加入我们</a></li>
+            <li><a href="http://www.iycar.com/adinfo">商务合作</a></li>
+            <li><a href="http://www.iycar.com/shequguize">社区规则</a></li>
+            <li><a href="http://www.iycar.com/link">链接</a></li>
           </ul>
         </div>
       </div>
@@ -55,19 +55,19 @@
     <div class="footer-right-zone">
       <div class="title">合作伙伴</div>
       <a rel="nofollow" href="https://www.upyun.com/index.html" target="_blank">
-        <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/yunlogo-new.png">
+        <img src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/desktop/yunlogo-new.png">
       </a>
       <a rel="nofollow" href="https://www.cdnzz.com/index.html" target="_blank">
-        <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/cdnzz.png">
+        <img src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/desktop/cdnzz.png">
       </a>
     </div>
 
     <div class="sns row">
-      <a rel="nofollow" class="sns-item" target="_blank" href="mailto:info@ifanr.com"><i class="ifanr2015 ifanr2015-mail"></i></a>
-      <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/ifanr"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a>
-      <a class="sns-item" target="_blank" href="http://www.ifanr.com/weixin"><i class="ifanr2015 ifanr2015-weixin"></i></a>
-      <a rel="nofollow" class="sns-item" target="_blank" href="http://twitter.com/ifanr"><i class="ifanr2015 ifanr2015-twitter"></i></a>
-      <a class="sns-item" target="_blank" href="http://www.ifanr.com/feed"><i class="ifanr2015 ifanr2015-rss"></i></a>
+      <a rel="nofollow" class="sns-item" target="_blank" href="mailto:info@iycar.com"><i class="iycar2015 iycar2015-mail"></i></a>
+      <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/iycar"><i class="iycar2015 iycar2015-xinlangweibo"></i></a>
+      <a class="sns-item" target="_blank" href="http://www.iycar.com/weixin"><i class="iycar2015 iycar2015-weixin"></i></a>
+      <a rel="nofollow" class="sns-item" target="_blank" href="http://twitter.com/iycar"><i class="iycar2015 iycar2015-twitter"></i></a>
+      <a class="sns-item" target="_blank" href="http://www.iycar.com/feed"><i class="iycar2015 iycar2015-rss"></i></a>
     </div>
   </div>
 
@@ -87,19 +87,19 @@
 <div class="widget-go2top-container js-widget-go2top-container">
   <ul class="nav-list">
     <li class="nav-list-item-block">
-      <a class="nav-list-item" href="http://www.ifanr.com/about/contribute" ga-action="click" ga-track="event" ga-event-label="寻求报道" ga-event-category="go2top-item" itemprop="url">
-        <i class="ifanr2015 ifanr2015-xunqiubaodaojia iconfont-visible"></i>
-        <i class="ifanr2015 ifanr2015-xunqiu iconfont-visible-hover"></i>
+      <a class="nav-list-item" href="http://www.iycar.com/about/contribute" ga-action="click" ga-track="event" ga-event-label="寻求报道" ga-event-category="go2top-item" itemprop="url">
+        <i class="iycar2015 iycar2015-xunqiubaodaojia iconfont-visible"></i>
+        <i class="iycar2015 iycar2015-xunqiu iconfont-visible-hover"></i>
       </a>
     </li>
     <li class="nav-list-item-block" widget-tabspanel data-target-panel=".js-qrcode-panel">
       <a class="nav-list-item" href="#qrcode-panel" ga-action="click" ga-track="event" ga-event-category="go2top-item" ga-event-label="二维码" itemprop="url">
-        <i class="ifanr2015 ifanr2015-saomiaoerweima"></i>
+        <i class="iycar2015 iycar2015-saomiaoerweima"></i>
       </a>
     </li>
     <li class="nav-list-item-block" widget-go2top>
       <a class="nav-list-item" href="#">
-        <i class="ifanr2015 ifanr2015-fanhuidingbu"></i>
+        <i class="iycar2015 iycar2015-fanhuidingbu"></i>
       </a>
     </li>
   </ul>
@@ -109,7 +109,7 @@
       <div class="panel-header">
         <ul class="nav-tabs">
           <li class="nav-tab-item-block">
-            <a class="nav-tab-item" href="#tab-panel-ifanr">
+            <a class="nav-tab-item" href="#tab-panel-iycar">
               <span>爱范儿</span>
             </a>
           </li>
@@ -127,22 +127,22 @@
         <div class="black-line js-black-line"></div>
       </div>
       <div class="panel-body">
-        <div class="tab-panel" id="tab-panel-ifanr">
-          <img class="qrcode" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/ifanr-wechat-qr.jpg" height="105" width="105" alt="爱范儿微信二维码">
+        <div class="tab-panel" id="tab-panel-iycar">
+          <img class="qrcode" src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/desktop/iycar-wechat-qr.jpg" height="105" width="105" alt="爱范儿微信二维码">
           <div class="content-block">
             <!-- <h3 class="title">爱范儿微信</h3> -->
             <p class="description">关注爱范儿微信号，连接热爱，关注这个时代最好的产品。</p>
           </div>
         </div>
         <div class="tab-panel" id="tab-panel-appso">
-          <img class="qrcode" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/appsoqrcode.jpg" height="105" width="105" alt="AppSolution微信二维码">
+          <img class="qrcode" src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/desktop/appsoqrcode.jpg" height="105" width="105" alt="AppSolution微信二维码">
           <div class="content-block">
             <!-- <h3 class="title">AppSolution 微信</h3> -->
             <p class="description">想让你的手机好用到哭？关注这个号就够了。</p>
           </div>
         </div>
         <div class="tab-panel" id="tab-panel-coolbuy">
-          <img class="qrcode" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/coolbuyqrcode.jpg" height="105" width="105" alt="玩物志微信二维码">
+          <img class="qrcode" src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/desktop/coolbuyqrcode.jpg" height="105" width="105" alt="玩物志微信二维码">
           <div class="content-block">
             <!-- <h3 class="title">玩物志微信</h3> -->
             <p class="description">关注玩物志微信号，就是让你乱花钱。</p>
@@ -163,7 +163,7 @@
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/desktop-min.auto_create_ts_1456211871.js?ver=1.1'></script>
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/buzz.auto_create_ts_1446046962.js?ver=4.2.4'></script>
   <!--[if gte IE 9]>
-  <script src="http://cdn.ifanr.cn/vendor/raven.min.js"></script>
+  <script src="http://cdn.iycar.cn/vendor/raven.min.js"></script>
   <script type="text/javascript">
     Raven.config(
       'https://d19b2d48c27542a2af4f6ff35063ebaf@app.getsentry.com/41363', {}
@@ -172,7 +172,7 @@
   </script>
   <![endif]-->
   <script type="text/javascript">
-  _atrk_opts = { atrk_acct:"M/54m1aU8KL352", domain:"ifanr.com",dynamic: true};
+  _atrk_opts = { atrk_acct:"M/54m1aU8KL352", domain:"iycar.com",dynamic: true};
   (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
   </script>
   <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=M/54m1aU8KL352" style="display:none" height="1" width="1" alt="" /></noscript>
@@ -184,7 +184,7 @@
   </script>
     <script type="text/javascript">
       jQuery(document).ready(function () {
-        var widgetId = 'ifanr_widget_buzz-2';
+        var widgetId = 'iycar_widget_buzz-2';
         if (widgetId) {
           return new window.WidgetBuzz('#' + widgetId);
         }

@@ -34,7 +34,7 @@ $_special_posts = $_special_posts ? $_special_posts
     <div class="fullwidth">
         <div class="header-notice hide J_Notice">
             <a class="notice J_NoticeLink" href="#">
-                <i class="ifanr2015 ifanr2015-live">
+                <i class="iycar2015 iycar2015-live">
                 </i>
           <span class="J_NoticeTitle">
           </span>
@@ -52,12 +52,12 @@ $_special_posts = $_special_posts ? $_special_posts
             <div class="slider">
                 <ul>
                     <?php foreach($Tool->_value($fields['banner_area'], []) as $key => $val): ?>
-                        <li class="ifanr-recommend-item">
+                        <li class="iycar-recommend-item">
                             <div class="post-mask post-mask-top">
                             </div>
                             <div class="post-mask post-mask-bottom">
                             </div>
-                            <div itemprop="url" href="<?php echo $val['banner_post'] ?>" class="ifanr-recommend-items">
+                            <div itemprop="url" href="<?php echo $val['banner_post'] ?>" class="iycar-recommend-items">
                                 <div class="item-content">
                                     <div class="bg-img" data-cmpt-parallax-bg id="recommend"
                                          style="background-image:url('<?php echo $val['banner_img']['url'] ?>')">
@@ -73,7 +73,7 @@ $_special_posts = $_special_posts ? $_special_posts
                                                             </div>
                                                             <div class="post-item-content" itemscope
                                                                  itemtype="http://schema.org/Article">
-                                                                <meta itemscope="thumbnailUrl" content="http://images.ifanr.cn/wp-content/uploads/2016/03/DIY-3.jpg" />
+                                                                <meta itemscope="thumbnailUrl" content="http://images.iycar.cn/wp-content/uploads/2016/03/DIY-3.jpg" />
                                                                 <div class="tag-label">
                                                                     <a class="tag" itemprop="keywords"
                                                                        href="<?php echo $val['banner_post'] ?>">
@@ -137,7 +137,7 @@ $_special_posts = $_special_posts ? $_special_posts
         <!-- 广告 -->
         <!-- 广告 -->
         <!-- 文章合集 -->
-        <div id="ifanr-post-collections" class="clearfix">
+        <div id="iycar-post-collections" class="clearfix">
             <div class="accordion-border">
                 <!-- 只能有三个-->
                 <?php foreach($Tool->_value($fields['banner_right_area'], []) as $key => $val): ?>
@@ -173,7 +173,7 @@ $_special_posts = $_special_posts ? $_special_posts
                         <div class="comment-count new-comment-count">
                             <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
                                ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
+                                <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
                             </a>
                             <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
                         </div>
@@ -205,7 +205,7 @@ $_special_posts = $_special_posts ? $_special_posts
         <div class="dasheng-wrapper">
             <div class="fullwidth row">
             <span class="dasheng-icon">
-              <i class="ifanr2015 ifanr2015-dasheng">
+              <i class="iycar2015 iycar2015-dasheng">
               </i>
             </span>
                 <div class="main">
@@ -261,7 +261,7 @@ $_special_posts = $_special_posts ? $_special_posts
                         <div class="comment-count new-comment-count">
                             <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
                                ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
+                                <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
                             </a>
                             <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
                         </div>
@@ -296,16 +296,16 @@ $_special_posts = $_special_posts ? $_special_posts
 <div class="sbl row">
     <div data-cmpt-autofixed data-autofixed-follow-to=".js-index-part-one"></div>
     <div>
-        <div class="ifanr-sudu-border">
+        <div class="iycar-sudu-border">
         </div>
-        <div id="ifanr_side_jiong_widget-81" class="widget-container widget_ifanr_jiong_new clearfix">
-            <div class="ifanr-text-content">
+        <div id="iycar_side_jiong_widget-81" class="widget-container widget_iycar_jiong_new clearfix">
+            <div class="iycar-text-content">
                 <a id="video" rel="external" href="<?php bloginfo('url') ?>/?cat=1">
                     <img src="<?php bloginfo('template_url'); ?>/images/info.jpg"/>
                 </a>
             </div>
         </div>
-        <div id="ifanr_widget_buzz-2" class="widget-container widget_ifanr_widget_buzz clearfix">
+        <div id="iycar_widget_buzz-2" class="widget-container widget_iycar_widget_buzz clearfix">
             <div class="widget-buzz-container">
                 <div class="title-container">
                     <i class="iconfont iconfont-buzz">
@@ -322,7 +322,7 @@ $_special_posts = $_special_posts ? $_special_posts
                             <li class="buzz-item">
                                 <div class="buzz-item-container">
                                     <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget"
-                                        ga-event-label="ifanr-buzz">
+                                        ga-event-label="iycar-buzz">
                                         <a target="_blank" href="<?php echo $p['link'] ?>" data-source-url="<?php echo $p['link'] ?>"
                                            itemprop="url" class="buzz-item-link">
                                             <?php echo $p['title'] ?>
@@ -345,13 +345,13 @@ $_special_posts = $_special_posts ? $_special_posts
                 </div>
             </div>
         </div>
-        <div id="ifanr_side_data_widget-4" class="widget-container widget-data clearfix" >
+        <div id="iycar_side_data_widget-4" class="widget-container widget-data clearfix" >
             <?php foreach($fields['books_area'] as $book): ?>
                 <div class="widget-data-content">
                     <div class="widget-data-content-bg">
                     </div>
                     <h4>
-                        <a class="ifr-about-link" href="<?php bloginfo('url') ?>/?cat=1221" target="_blank">
+                        <a class="yth-about-link" href="<?php bloginfo('url') ?>/?cat=1221" target="_blank">
                             好书推荐
                         </a>
                     </h4>
@@ -368,7 +368,7 @@ $_special_posts = $_special_posts ? $_special_posts
         </div>
 
         <?php if(intval(get_option('comment-open')) == 1):?>
-            <div id="ifanr_widget_buzz-3" class="widget-container widget_ifanr_widget_buzz clearfix" style="display: block">
+            <div id="iycar_widget_buzz-3" class="widget-container widget_iycar_widget_buzz clearfix" style="display: block">
                 <div class="widget-buzz-container">
                     <div class="o-widget__header c-hot-comment-widget-header">
                         <h1 class="o-widget__header__title c-hot-comment-widget-header__title">最近评论</h1>
@@ -389,9 +389,9 @@ $_special_posts = $_special_posts ? $_special_posts
             </div>
         <?php endif ?>
 
-        <div id="mail-subscribe" class="widget-ifr ifr-subscribe widget-container clearfix">
+        <div id="mail-subscribe" class="widget-yth yth-subscribe widget-container clearfix">
             <div id="mc_embed_signup" class="clearfix">
-                <form action="http://ifanr.us2.list-manage.com/subscribe/post?u=f770959951cdcc1bba7ab56cb&amp;id=258559241a"
+                <form action="http://iycar.us2.list-manage.com/subscribe/post?u=f770959951cdcc1bba7ab56cb&amp;id=258559241a"
                       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                       class="validate" target="_blank">
                     <div class="widget-header">
@@ -403,11 +403,11 @@ $_special_posts = $_special_posts ? $_special_posts
                         <p>
                             和那些醒着的要进步的人们一道，向着光明的地方行进。
                         </p>
-                        <div class="ifr-input-group">
-                            <input type="email" value="" name="EMAIL" class="ifr-input email-input"
+                        <div class="yth-input-group">
+                            <input type="email" value="" name="EMAIL" class="yth-input email-input"
                                    id="mce-EMAIL" placeholder="填写邮箱，订阅我们">
                             <input ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="Subscribe"
-                                   type="submit" value="订阅" name="subscribe" id="mc-embedded-subscribe" class="ifr-input email-submit">
+                                   type="submit" value="订阅" name="subscribe" id="mc-embedded-subscribe" class="yth-input email-submit">
                         </div>
                     </div>
                 </form>
@@ -418,19 +418,19 @@ $_special_posts = $_special_posts ? $_special_posts
 </div>
 <div class="video-wrapper" style="display: none">
     <div class="video-container">
-        <div class="video-feature-container js-video-container" data-video-iframe="<iframe src='http://player.youku.com/embed/XMTQ4NTg0MzY4OA==' frameborder=0 allowfullscreen></iframe>"
+        <div class="video-feature-container js-video-container" data-video-ythame="<ythame src='http://player.youku.com/embed/XMTQ4NTg0MzY4OA==' frameborder=0 allowfullscreen></ythame>"
              ga-track="event" ga-action="click" ga-event-category="video" ga-event-label="少年中国视频">
             <div class="mask video-mask">
             </div>
             <div class="bg-img" style="background-image:url('<?php echo $Tool->_value($fields['video_area'][0]['video_cover']['url']) ?>')">
             </div>
             <div class="video-play-button js-play-btn">
-                <i class="ifanr2015 ifanr2015-shipin">
+                <i class="iycar2015 iycar2015-shipin">
                 </i>
             </div>
             <div class="feature-item-container">
                 <div class="tag-label">
-                    <a class="tag" itemprop="keywords" href="http://www.ifanr.com/video">
+                    <a class="tag" itemprop="keywords" href="http://www.iycar.com/video">
                         少年中国视频
                     </a>
                 </div>
@@ -444,13 +444,13 @@ $_special_posts = $_special_posts ? $_special_posts
         </div>
         <div class="video-list-container">
             <?php foreach($videos as $video): ?>
-                <a class="list-item-container js-list-video" href="http://www.ifanr.com/video/626463"
-                   data-video-iframe="<iframe src='<?php echo $video['video_link'] ?>' frameborder=0 allowfullscreen></iframe>"
+                <a class="list-item-container js-list-video" href="http://www.iycar.com/video/626463"
+                   data-video-ythame="<ythame src='<?php echo $video['video_link'] ?>' frameborder=0 allowfullscreen></ythame>"
                    ga-track="event" ga-action="click" ga-event-category="video" ga-event-label="少年中国视频">
                     <div class="mask video-mask-black">
                     </div>
                     <div class="mask video-play-mask">
-                        <i class="ifanr2015 ifanr2015-bofang">
+                        <i class="iycar2015 iycar2015-bofang">
                         </i>
                         <span class="play-text">
                           播放中...
@@ -508,7 +508,7 @@ $_special_posts = $_special_posts ? $_special_posts
                             <div class="comment-count new-comment-count">
                                 <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
                                    ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                    <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
+                                    <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
                                 </a>
                                 <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
                             </div>
@@ -570,7 +570,7 @@ $_special_posts = $_special_posts ? $_special_posts
                 没有更多了
             </a>
             <div id="JS_loading" class="no-ajax loading loading-gif">
-                <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/loader/loadingb.gif"
+                <img src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif"
                     />
             </div>
         </div>
