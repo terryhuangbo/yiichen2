@@ -99,6 +99,7 @@ function _get_index_specials($slug, $num){
         ]
     ];
     $query = new WP_Query($args);
+    $_posts = [];
     while($query->have_posts()) {
         $query->the_post();
         $cat = array_shift(get_the_category());

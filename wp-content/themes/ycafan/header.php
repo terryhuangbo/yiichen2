@@ -230,8 +230,8 @@ $Cache = new Cache();
                   <div itemscope itemtype="" class="nav-items-list row">
                     <div class="single-row">
                       <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="首页" itemprop="url" href="<?php bloginfo('url') ?>"><span itemprop="name">首页</span></a>
-                      <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="ifanRank" itemprop="url" href="<?php bloginfo('url') ?>/?cat=3"><span itemprop="name">理论视野</span></a>
                       <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="智能" itemprop="url" href="<?php bloginfo('url') ?>/?cat=3"><span itemprop="name">基本原理</span></a>
+                      <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="ifanRank" itemprop="url" href="<?php bloginfo('url') ?>/?cat=4"><span itemprop="name">理论视野</span></a>
                     </div>
                     <div class="single-row">
                       <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="评测" itemprop="url" href="<?php bloginfo('url') ?>/?cat=1106"><span itemprop="name">青年之声</span></a>
