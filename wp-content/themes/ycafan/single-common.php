@@ -31,7 +31,7 @@ $tags = $Tool->_value(get_the_tags(), [], true);
             </div>
         </div>
         <div class="o-single-content__body o-single-content__body--main">
-            <aside
+            <aside style="display: none;"
                 class="c-social-bar c-social-bar--vertical c-social-bar--colored c-social-bar--sqaured c-social-bar--left js-social-bar"
                 data-component="SocialBar"
                 data-post-title="<?php the_title() ?><?php the_title() ?>"
