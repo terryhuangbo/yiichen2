@@ -2469,6 +2469,7 @@ function(a) {
             },
             localCacheTime: 0
         }).success(function(b) {
+            return;
             YCA.api("get_user_avatar", {
                 data: {
                     sso_id: b.user_id

@@ -583,7 +583,7 @@
             return c
         },
         getCache: function(a) {
-            // return null//huangbo先去掉头部缓存
+            return null//huangbo先去掉头部缓存
             var b = null;
             var c = YCA.getItem("navCache");
             if (!a) {
@@ -5128,6 +5128,7 @@ default = {
         var a = $(".J_Notice");
         if (!a.length) return false;
         var b = function() {
+            return
             YCA.api("get_site_notice", {
                 localCacheTime: 60,
                 success: function(b) {
@@ -5460,7 +5461,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        // return undefined;//huangbo remove cache
+        return undefined;//huangbo remove cache
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {

@@ -2,7 +2,6 @@
 date_default_timezone_set('Asia/Shanghai');
 $Tool = new Tools();
 $Cache = new Cache();
-$user = uniqid('user');
 ?>
 <!DOCTYPE html>
 <html xmlns:wb="http://open.weibo.com/wb">
