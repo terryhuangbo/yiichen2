@@ -5,6 +5,9 @@ return [
     'memcache_port' => 11211,
     //关于我们
     'about_url' => 'http://www.yca.com/?page_id=2',
+    //微信页面
+    'wechat_url' => 'http://www.yca.com/?page_id=12904',
+
 ];
 
 ?>

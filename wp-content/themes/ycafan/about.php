@@ -14,13 +14,13 @@ the_post();
     <div id="content-outer" class="content-outer clearfix fix-header-height">
     <div id="content" class="content clearfix">
     <section class="ifr-about-container" id="ifr-page-our-team">
-        <section class="ifr-about-jumbotron" style="background-image: url('http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/about_bg_1.jpg')">
+        <section class="ifr-about-jumbotron" style="background-image: url('<?php echo $Tool->_value($fields['about_backimg']) ?>')">
             <h1 class="ifr-about-no-display">关于少年中国学会</h1>
-            <img class="ifr-about-logo" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/desktop/about_title.png" alt="ifanr">
-            <img class="ifr-about-description-main" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/about/about_title_2.png">
-            <div class="ifr-about-description-sub-container">
-                <p class="ifr-about-description-sub">和那些醒着的要进步的人们一道，向着光明的地方行进。</p>
-                <p class="ifr-about-description-sub">让我们面对现实，让我们忠于理想</p>
+<!--            <img class="ifr-about-description-main" src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/about/about_title_2.png">-->
+<!--            <div class="ifr-about-description-sub-container">-->
+<!--                <p class="ifr-about-description-sub">和那些醒着的要进步的人们一道，向着光明的地方行进。</p>-->
+<!--                <p class="ifr-about-description-sub">让我们面对现实，让我们忠于理想</p>-->
+<!--            </div>-->
         </section>
 
         <section class="ifr-about-products" id="ourwechat" style="background: none;">
@@ -33,7 +33,7 @@ the_post();
                     <div class=""<b></b>
                     <div class="ifr-about-qr-code-background">
                         <img style="width: 200px;background: none;" src="<?php bloginfo('template_url'); ?>/images/wechat.jpg">
-                        <p><a class="ifr-about-contact-link ifr-about-link" target="_blank" href="<?php echo _get_page_url('wechat') ?>">关注我们</a>
+                        <p><a class="ifr-about-contact-link ifr-about-link" target="_blank" href="<?php echo _param('wechat_url') ?>">关注我们</a>
                         </p>
                     </div>
                 </li>

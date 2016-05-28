@@ -10,11 +10,11 @@
   <div class="fullwidth row">
     <div class="footer-left-zone">
       <div class="logo">
-        <img src="<?php bloginfo('template_url'); ?>/images/footerlogo.jpg">
-        <!-- <p class="meta">
-          <span>Beats of bits</span>
-          <span>发现创新价值的科技媒体</span>
-        </p> -->
+        <img src="<?php echo (new Tools())->_value(get_option('footer-logo'), get_bloginfo('template_url') . '/images/footerlogo.jpg', true) ?>">
+        <p class="meta">
+          <span>review.youngchina.org</span>
+          <span>少年中国评论，一个简单的文摘系统。</span>
+        </p>
       </div>
     </div>
     <div class="footer-center-zone">
@@ -53,7 +53,7 @@
     <div class="sns row" style="margin: 20px auto;">
       <a rel="nofollow" class="sns-item" target="_blank" href="mailto:contact@youngchina.org"><i class="ifanr2015 ifanr2015-mail"></i></a>
       <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/youngchina"><i class="ifanr2015 ifanr2015-xinlangweibo"></i></a>
-      <a class="sns-item" target="_blank" href="<?php echo _get_page_url('wechat') ?>"><i class="ifanr2015 ifanr2015-weixin"></i></a>
+      <a class="sns-item" target="_blank" href="<?php echo _param('wechat_url') ?>"><i class="ifanr2015 ifanr2015-weixin"></i></a>
       <a class="sns-item" target="_blank" href="http://www.ifanr.com/feed"><i class="ifanr2015 ifanr2015-rss"></i></a>
     </div>
   </div>

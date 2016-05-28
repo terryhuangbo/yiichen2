@@ -38,19 +38,18 @@ function customSetting(){ ?>
         if (count($_POST) > 0 && isset($_POST['update_options'])) {
 
             $options = [
-                //网站Logo
-                'site-logo',
                 //网站基本介绍
                 'site-intro',
+                //网站头部logo
+                'header-logo',
+                //网站尾部logo
+                'footer-logo',
                 //网站公告图片
                 'site-info',
                 //评论是否开启
                 'comment-open',
                 //网站公告图片
                 'relpost-type',
-
-
-
 
             ];
 
@@ -70,21 +69,25 @@ function customSetting(){ ?>
             <input type="hidden" name="update_options" value="true" />
             <table class="form-table">
                 <tr>
-                    <th scope="row">网站LOGO:</th>
-                    <td><input type="text" name="site-logo" id="site-intro" value="<?php echo get_option('site-logo'); ?>" /></td>
-                </tr>
-                <tr>
                     <th scope="row">网站介绍</th>
-                    <td><input type="text" name="site-intro" id="site-info" value="<?php echo get_option('site-intro'); ?>" /></td>
+                    <td><input class="text_large" type="text" name="site-intro"  value="<?php echo get_option('site-intro'); ?>" placeholder="请填写网站介绍"/></td>
                 </tr>
                 <tr>
-                    <th scope="row">网站公告（请填写图片链接）:</th>
-                    <td><input type="text" name="site-info" id="site-info" value="<?php echo get_option('site-info'); ?>" /></td>
+                    <th scope="row">网站头部LOGO</th>
+                    <td><input class="text_large" type="text" name="header-logo"  value="<?php echo get_option('header-logo'); ?>" placeholder="请输入图片链接"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">网站尾部LOGO</th>
+                    <td><input class="text_large" type="text" name="footer-logo"  value="<?php echo get_option('footer-logo'); ?>"  placeholder="请输入图片链接"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">网站公告图</th>
+                    <td><input class="text_large" type="text" name="site-info"  value="<?php echo get_option('site-info'); ?>"  placeholder="请输入图片链接"/></td>
                 </tr>
                 <tr>
                     <th scope="row">评论是否开启:</th>
                     <td>
-                        <select name="comment-open">
+                        <select class="text_small" name="comment-open">
                                 <option value="1" <?php echo get_option('comment-open') == '1' ? 'selected = "selected"' : '' ?>>开启</option>
                                 <option value="0" <?php echo get_option('comment-open') == '0' ? 'selected = "selected"' : '' ?>>关闭</option>
                         </select>
@@ -93,7 +96,7 @@ function customSetting(){ ?>
                 <tr>
                     <th scope="row">相关文章类型:</th>
                     <td>
-                        <select name="relpost-type">
+                        <select class="text_small" name="relpost-type">
                                 <option value="1" <?php echo get_option('relpost-type') == '1' ? 'selected = "selected"' : '' ?>>分类相关文章</option>
                                 <option value="2" <?php echo get_option('relpost-type') == '2' ? 'selected = "selected"' : '' ?>>标签相关文章</option>
                         </select>
@@ -107,6 +110,18 @@ function customSetting(){ ?>
             <p><input type="submit" class="button-primary" name="admin_options" value="保存"/></p>
         </form>
     </div>
+    <style>
+        .text_small{
+            width: 100px;
+        }
+        .text_mediumm{
+            width: 250px;
+        }
+        .text_large{
+            width: 400px;
+        }
+
+    </style>
     <?php
     add_action('admin_menu', 'customSetting');
 }
@@ -161,7 +176,7 @@ function customCacheSetting(){ ?>
                 <tr>
                     <th scope="row">缓存是否开启:</th>
                     <td>
-                        <select name="cache-switch">
+                        <select class="text_small" name="cache-switch">
                             <option value="off" <?php echo get_option('cache-switch') == 'off' ? 'selected = "selected"' : '' ?>>关闭</option>
                             <option value="on" <?php echo get_option('cache-switch') == 'on' ? 'selected = "selected"' : '' ?>>开启</option>
                         </select>
@@ -170,7 +185,7 @@ function customCacheSetting(){ ?>
                 <tr>
                     <th scope="row">首页缓存:</th>
                     <td>
-                        <select name="cache-index-expire">
+                        <select class="text_small" name="cache-index-expire">
                             <?php foreach($_expire_array as $k => $v ): ?>
                                 <option value="<?php echo $k ?>" <?php echo get_option('cache-index-expire ') == $k ? 'selected = "selected"' : '' ?>><?php echo $v ?></option>
                             <?php endforeach ?>
@@ -180,7 +195,7 @@ function customCacheSetting(){ ?>
                 <tr>
                     <th scope="row">分类页缓存:</th>
                     <td>
-                        <select name="cache-category-expire">
+                        <select class="text_small" name="cache-category-expire">
                             <?php foreach($_expire_array as $k => $v ): ?>
                                 <option value="<?php echo $k ?>" <?php echo get_option('cache-category-expire') == $k ? 'selected = "selected"' : '' ?>><?php echo $v ?></option>
                             <?php endforeach ?>
@@ -194,6 +209,18 @@ function customCacheSetting(){ ?>
             <p><input type="submit" class="button-primary" name="admin_options" value="保存"/></p>
         </form>
     </div>
+    <style>
+        .text_small{
+            width: 100px;
+        }
+        .text_mediumm{
+            width: 250px;
+        }
+        .text_large{
+            width: 400px;
+        }
+
+    </style>
     <?php
     add_action('admin_menu', 'customSetting');
 }
