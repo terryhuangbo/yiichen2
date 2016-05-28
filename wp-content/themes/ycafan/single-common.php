@@ -80,8 +80,8 @@ $tags = $Tool->_value(get_the_tags(), [], true);
             </div>
             <div class="o-single-content__body__content">
                 <a class="c-jiong c-jiong--block c-jiong--bottom"
-                   href="http://a.app.qq.com/o/simple.jsp?pkgname=com.iycar.activitys">
-                    <img class="c-jiong__image" src="http://images.iycar.cn/wp-content/uploads/2016/04/downbanner.jpg">
+                   href="javaScript:void(0)">
+                    <img class="c-jiong__image" src="<?php bloginfo('template_url')  ?>/images/page-banner.jpg">
                 </a>
             </div>
 

@@ -351,39 +351,18 @@
             }
             a = $.extend({},
             c.options.params, a);
-            if (a.action === "mindstore") {
-                //$.ajax({
-                //    url: "http://mindstore.io/api/v1.2/mind/",
-                //    data: $.extend(a),
-                //    dataType: "json",
-                //    method: "get",
-                //    success: function(a) {
-                //        b(a.objects)
-                //    }
-                //})
-            } else if ( 1 ) {
-                //huangbo
-                $.ajax({
-                    url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
-                    data: $.extend({}, a, {action : 'get_cate'}),
-                    dataType: "json",
-                    method: "post",
-                    success: function(a) {
-                        if(a.code > 0){
-                            b(a.ret);
-                        }
+            //huangbo
+            $.ajax({
+                url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
+                data: $.extend({}, a, {action : 'get_cate'}),
+                dataType: "json",
+                method: "post",
+                success: function(a) {
+                    if(a.code > 0){
+                        b(a.ret);
                     }
-                })
-            } else {
-                YCA.api(c.options.action, {
-                    data: a,
-                    success: function(a) {
-                        if (a.status === 1) {
-                            b(a.data)
-                        }
-                    }
-                })
-            }
+                }
+            })
 
         },
         autoload_finish: false,
@@ -583,7 +562,7 @@
             return c
         },
         getCache: function(a) {
-            // return null//huangbo先去掉头部缓存
+            // return null//huangbo头部缓存分类文章缓存
             var b = null;
             var c = YCA.getItem("navCache");
             if (!a) {
@@ -5461,7 +5440,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        // return undefined;//huangbo remove cache
+        return undefined;//huangbo remove cache 首页加载列表缓存
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {

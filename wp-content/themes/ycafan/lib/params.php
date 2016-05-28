@@ -1,6 +1,6 @@
 <?php
 return [
-    '_menu_defautl_url' => 'http://images.ifanr.cn/wp-content/uploads/2016/03/IMG_2093.jpg',
+    '_menu_defautl_url' => get_bloginfo('template_url') . '/images/default-page-pic.png',
     'memcache_host' => '127.0.0.1',
     'memcache_port' => 11211,
     //关于我们
