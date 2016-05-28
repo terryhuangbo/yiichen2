@@ -516,7 +516,8 @@
                     g.addClass("active");
                     f = b.getCache(h);
                     k = $(b.options.renderTarget);
-                    l = $('<div class="loading"></div>');
+                    var mg = rcGlobal.tmpUrl + "/images/loadingb.gif";
+                    l = $('<div class="loading"><img src="'+ mg +'"/></div>');
                     if (!f || f.length <= 0) {
                         if (b.options.page) {
                             b.options.params.page = b.options.page
@@ -582,7 +583,7 @@
             return c
         },
         getCache: function(a) {
-            //return null//先去掉缓存
+            // return null//huangbo先去掉头部缓存
             var b = null;
             var c = YCA.getItem("navCache");
             if (!a) {
@@ -5459,7 +5460,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        return undefined;//huangbo remove cache
+        // return undefined;//huangbo remove cache
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {

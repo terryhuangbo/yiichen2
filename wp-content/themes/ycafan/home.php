@@ -338,8 +338,7 @@ $_special_posts = $_special_posts ? $_special_posts
                         <?php endforeach ?>
                         <!-- buzz item -->
                         <li class="loading js-loading">
-                            <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"
-                                />
+                            <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"/>
                         </li>
                     </ul>
                 </div>
@@ -380,8 +379,7 @@ $_special_posts = $_special_posts ? $_special_posts
 
                             <!-- buzz item -->
                             <li class="loading js-loading">
-                                <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"
-                                    />
+                                <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"/>
                             </li>
                         </ul>
                     </div>
@@ -570,8 +568,7 @@ $_special_posts = $_special_posts ? $_special_posts
                 没有更多了
             </a>
             <div id="JS_loading" class="no-ajax loading loading-gif">
-                <img src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif"
-                    />
+                <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"/>
             </div>
         </div>
     </div>

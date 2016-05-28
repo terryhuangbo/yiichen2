@@ -5953,7 +5953,7 @@ body.home {
     right: 0;
     bottom: 0;
     margin: auto;
-    background-image: url('http://images.iycar.cn/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif?1437708959');
+    background-image: url('http://images.ifanr.cn/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif?1437708959');
     width: 72px;
     height: 12px
 }
@@ -6934,7 +6934,7 @@ body.menu-prevent-scrolled {
 
 .yth-nav-items-container .menu-preview .loading.loading-more {
     position: static;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 .yth-nav-items-container .menu-preview .autoload_finish {
@@ -7147,7 +7147,7 @@ body.menu-prevent-scrolled {
     right: 0;
     bottom: 0;
     margin: auto;
-    background-image: url('http://images.iycar.cn/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif?1436353370');
+    background-image: url('http://images.ifanr.cn/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif?1436353370');
     width: 72px;
     height: 12px
 }

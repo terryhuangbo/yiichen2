@@ -36,6 +36,7 @@ $user = uniqid('user');
             avatarPosition: "left",
             anonymous: "Anonymous",
             wpAjaxUrl: "<?php  bloginfo('url') ?>",
+            tmpUrl: "<?php  bloginfo('template_url') ?>",
             bookInterval: 4000,
             commentExpire: 600,//缓存评论者信息保存时间
         };
