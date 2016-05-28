@@ -30,10 +30,10 @@ $tags = $Tool->_value(get_the_tags(), [], true);
                 <h1 class="c-single-normal__title"><?php the_title() ?></h1>
             </div>
         </div>
-        <div class="o-single-content__body o-single-content__body--main">
-            <aside
-                class="c-social-bar c-social-bar--vertical c-social-bar--colored c-social-bar--sqaured c-social-bar--left js-social-bar"
+        <div class="o-single-content__body o-single-content__body--main" >
+            <aside class="c-social-bar c-social-bar--vertical c-social-bar--colored c-social-bar--sqaured c-social-bar--left js-social-bar"
                 data-component="SocialBar"
+                style="display: none;"
                 data-post-title="<?php the_title() ?><?php the_title() ?>"
                 data-post-link="<?php get_page_link() ?>"
                 data-post-summary="没人能"
@@ -80,8 +80,8 @@ $tags = $Tool->_value(get_the_tags(), [], true);
             </div>
             <div class="o-single-content__body__content">
                 <a class="c-jiong c-jiong--block c-jiong--bottom"
-                   href="http://a.app.qq.com/o/simple.jsp?pkgname=com.ifanr.activitys">
-                    <img class="c-jiong__image" src="http://images.ifanr.cn/wp-content/uploads/2016/04/downbanner.jpg">
+                   href="javaScript:void(0)">
+                    <img class="c-jiong__image" src="<?php bloginfo('template_url')  ?>/images/page-banner.jpg">
                 </a>
             </div>
 
@@ -107,14 +107,14 @@ $tags = $Tool->_value(get_the_tags(), [], true);
                 <h5 class="c-card-category">作者&nbsp;&nbsp;&nbsp;&nbsp;<span><?php the_author() ?></span></h5>
 
 <!--                <div class="c-card c-card-author__info">-->
-<!--                    <a class="c-card-author__info__avatar" href="http://www.ifanr.com/author/jackie" target="_blank"><img-->
-<!--                            src="http://images.ifanr.cn/wp-content/uploads/2015/08/jackie.jpg" alt="--><?php //the_author() ?><!--"></a>-->
+<!--                    <a class="c-card-author__info__avatar" href="http://www.iycar.com/author/jackie" target="_blank"><img-->
+<!--                            src="http://images.iycar.cn/wp-content/uploads/2015/08/jackie.jpg" alt="--><?php //the_author() ?><!--"></a>-->
 <!---->
 <!--                    <div class="c-card-author__info__contacts">-->
-<!--                        <a class="c-card-author__contact c-card-author__contact--email" href="mailto:jackie@ifanr.com"-->
+<!--                        <a class="c-card-author__contact c-card-author__contact--email" href="mailto:jackie@iycar.com"-->
 <!--                           target="_blank"></a>-->
 <!--                    </div>-->
-<!--                    <a class="c-card-author__wrapper" href="http://www.ifanr.com/author/jackie" target="_blank">-->
+<!--                    <a class="c-card-author__wrapper" href="http://www.iycar.com/author/jackie" target="_blank">-->
 <!--                        <p class="c-card-author__name">--><?php //the_author() ?><!--</p>-->
 <!---->
 <!--                        <p class="c-card-author__position">高级编辑</p>-->

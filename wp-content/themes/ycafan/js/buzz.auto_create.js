@@ -311,7 +311,7 @@ template("desktop-buzz-item",
     function(e) {
         "use strict";
         for (var t = this,
-                 a = (t.$helpers, e.i), i = e.len, r = e.list, s = t.$escape, l = "", a = 0, i = r.length; i > a; a++) l += ' <li class="buzz-item"> <div class="buzz-item-container"> <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget" ga-event-label="ifanr-buzz"><a target="_blank" itemprop="url" href="',
+                 a = (t.$helpers, e.i), i = e.len, r = e.list, s = t.$escape, l = "", a = 0, i = r.length; i > a; a++) l += ' <li class="buzz-item"> <div class="buzz-item-container"> <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget" ga-event-label="iycar-buzz"><a target="_blank" itemprop="url" href="',
             l += s(r[a].permalink),
             l += '" data-source-url="',
             l += s(r[a].source.url),
@@ -357,7 +357,7 @@ template("desktop-buzz-item2",
     "use strict";
     var n = function(i) {
             this.$el = t(i);
-            this.ty = (i == '#ifanr_widget_buzz-2') ? 2 : 3;
+            this.ty = (i == '#iycar_widget_buzz-2') ? 2 : 3;
             this.init();
             //this
         };
@@ -378,7 +378,7 @@ template("desktop-buzz-item2",
         sendGA: function(t) {
             switch (t) {
                 case "LOAD_MORE":
-                    ga("send", "event", "widget", "scroll", "ifanr-buzz-load-more", 1)
+                    ga("send", "event", "widget", "scroll", "iycar-buzz-load-more", 1)
             }
             return this
         },
@@ -402,7 +402,7 @@ template("desktop-buzz-item2",
                         i.$loading.detach()
                 }
             });
-            //IFR.api("get_buzz_list", {
+            //YCA.api("get_buzz_list", {
             //    data: {
             //        page: t
             //    },
@@ -463,8 +463,8 @@ template("desktop-buzz-item2",
 (function ($, w) {
     var slider = function () {
         self = this;
-        self.dom = $("#ifanr_side_data_widget-4");
-        self.eles = $("#ifanr_side_data_widget-4").find(".widget-data-content");
+        self.dom = $("#iycar_side_data_widget-4");
+        self.eles = $("#iycar_side_data_widget-4").find(".widget-data-content");
         self.len = self.eles.length;
         self.duration = rcGlobal.bookInterval;
     };

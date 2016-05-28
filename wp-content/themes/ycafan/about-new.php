@@ -13,7 +13,7 @@ the_post();
     <div class="c-article-content c-article-content--medium">
         <article class="c-article-content__body s-single-article">
 <!--            <h1>加入我们</h1>-->
-            <img class="alignnone size-full wp-image-596126" src="http://images.ifanr.cn/wp-content/uploads/2014/04/hiring1.jpg" alt="hiring" width="720" height="400" />
+            <img class="alignnone size-full wp-image-596126" src="http://images.iycar.cn/wp-content/uploads/2014/04/hiring1.jpg" alt="hiring" width="720" height="400" />
             <h3>
                 <span style="color: #000000;">关于我们</span>
             </h3>

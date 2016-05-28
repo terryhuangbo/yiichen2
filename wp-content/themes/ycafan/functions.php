@@ -147,22 +147,34 @@ add_action('wp_ajax_get_cate', 'ajax_get_cate');
 function ajax_get_cate(){
     $Tool = new Tools();
     $limit = intval($Tool->_request('limit', 10));
-    $slug = trim($Tool->_request('post_type', 'principle'));
+    $page = intval($Tool->_request('page', 1));
+    $slug = trim($Tool->_request('post_type'));
     $excerpt_length = intval($Tool->_request('excerpt_length', 100));
     $_posts = [];
-    $args = [
-        'post_type' => 'post',
-        'posts_per_page' => $limit,
-        'post_status' => 'publish',
-        'orderby'=>'post_date',
-        'tax_query' => [
-            [
-                'taxonomy' => 'category',
-                'field'    => 'slug',
-                'terms'    => $slug,
-            ],
-        ]
-    ];
+    if(!empty($slug)){//导航栏分类文章
+        $args = [
+                'post_type' => 'post',
+                'posts_per_page' => $limit,
+                'post_status' => 'publish',
+                'orderby'=>'post_date',
+                'tax_query' => [
+                    [
+                        'taxonomy' => 'category',
+                        'field'    => 'slug',
+                        'terms'    => $slug,
+                    ],
+                ]
+            ];
+    }else{//快速预览文章
+        $args = [
+            'post_type' => 'post',
+            'offset' => $limit * max(($page-1), 0),
+            'posts_per_page' => $limit,
+            'post_status' => 'publish',
+            'orderby'=>'post_date',
+        ];
+    }
+    
     $query = new WP_Query($args);
     if($query->have_posts()){
         while($query->have_posts()){
@@ -670,8 +682,8 @@ function _param($key){
 }
 
 //测试-打印函数
-//function hb($data) {
-//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-//}
+function hb($data) {
+   file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+}
 
 ?>

@@ -151,9 +151,13 @@ class Tools
     {
         $patern = '/<\s*img\s+[^>]*?src\s*=\s*(\'|\")(.*?)\\1[^>]*?\/?\s*>/i';
         preg_match_all($patern, $html, $match);
-        $_default_img = empty($default) ? $this->_params('_menu_defautl_url') : $default;
-        $_img = $this->_value($match[2][0], $_default_img, true);
-        $_img_new = str_replace('www.yca.com', 'review.youngchina.org', $_img);
+        $_default_img = empty($default) ? $this->_params('defautl_post_img') : $default;
+        if(!empty($match[2][0])){
+            $_img = $match[2][0];
+            $_img_new = str_replace('www.yca.com', 'review.youngchina.org', $_img);
+        }else{
+            $_img_new = $_default_img;
+        }
         return $_img_new;
     }
 

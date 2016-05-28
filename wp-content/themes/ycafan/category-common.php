@@ -47,7 +47,7 @@ $_cat_banner = $Tool->_value($fields['category_banners'][0]['category_banner_' .
                             <div class="comment-count new-comment-count">
                                 <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
                                    ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                    <i class="ifanr2015 ifanr2015-pinglun"></i><?php echo $p['comments'] ?>
+                                    <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
                                 </a>
                                 <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
                             </div>
@@ -94,7 +94,7 @@ $_cat_banner = $Tool->_value($fields['category_banners'][0]['category_banner_' .
                     </a>
 
                     <div id="JS_loading" class="no-ajax loading loading-gif">
-                        <img src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/loader/loadingb.gif"/>
+                        <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"/>
                     </div>
                 </div>  </div>
         </div>

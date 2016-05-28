@@ -70,7 +70,7 @@ if ( post_password_required() ) {
                 <?php foreach ([1, 2] as $key => $val): ?>
                     <li id="comment-1014329" class="c-article-comments-item"><img
                             class="c-article-comments-item__avatar"
-                            src="http://gravatar.ifanrx.com/avatar/41a0b1eac4c771512e23df01308d6925?s=80&amp;d=%2F%2Fifanr.b0.upaiyun.com%2Fsite-static%2Fifanr-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg"
+                            src="http://gravatar.iycarx.com/avatar/41a0b1eac4c771512e23df01308d6925?s=80&amp;d=%2F%2Fiycar.b0.upaiyun.com%2Fsite-static%2Fiycar-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg"
                             alt="luow">
 
                         <div class="c-article-comments-item__info  js-single-comment"

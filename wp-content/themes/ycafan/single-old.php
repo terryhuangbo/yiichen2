@@ -41,18 +41,18 @@ the_post();
                          class="clearfix js-article-wrapper">
                     <div class="entry-header">
                         <a class="tag-label-cate" href="<?php echo get_category_link($cat->term_id) ?>"><i
-                                class="ifanr2015 ifanr2015-chanpin01 icon-book"></i><?php echo $cat->name ?></a>
+                                class="iycar2015 iycar2015-chanpin01 icon-book"></i><?php echo $cat->name ?></a>
 
                         <h1 itemprop="headline" class="entry-name"><?php the_title() ?></h1>
 
                         <div class="tag-label">
-                            <a href="http://www.ifanr.com/author/huangmeijing" title="Posts by <?php the_author() ?>"
+                            <a href="http://www.iycar.com/author/huangmeijing" title="Posts by <?php the_author() ?>"
                                rel="author"><?php the_author() ?></a><span class="seperator">|</span>
                             <span itemprop="datePublished"
                                   datetime="2016-03-04T09:57:36+0000"><?php echo $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))) ?></span>
                             <meta itemprop="author" content="<?php the_author() ?>"/>
                             <meta itemprop="thumbnailUrl"
-                                  content="http://images.ifanr.cn/wp-content/uploads/2016/03/writing.jpg"/>
+                                  content="http://images.iycar.cn/wp-content/uploads/2016/03/writing.jpg"/>
                         </div>
                     </div>
 
@@ -64,56 +64,56 @@ the_post();
                         </div>
                 </article>
                 <!-- end of article -->
-                <div class="ifr-article-component row">
+                <div class="yth-article-component row">
                     <div class="likes-and-comments">
-                        <a href="javascript:void(0)" id="article-likes" class="footer-item js-ifanr-like"
+                        <a href="javascript:void(0)" id="article-likes" class="footer-item js-iycar-like"
                            data-id="628698">
-                            <i class="ifanr2015 ifanr2015-heart item-icon"></i>
+                            <i class="iycar2015 iycar2015-heart item-icon"></i>
                             <span class="js-like-hint like-hint">赞一下</span>
                             <span class="js-like-count like-count">3</span>
                         </a>
                     </div>
                     <div class="like-avatars js-like-avatars"></div>
                     <div id="sns-buttons" class="row sns-share sns-tools js-sns-tools">
-                        <span class="sns-items-wrapper js-ifanr-shares-wrapper">
-                            <span class="ifanr-share-tip">
+                        <span class="sns-items-wrapper js-iycar-shares-wrapper">
+                            <span class="iycar-share-tip">
                                 <span class="shares-count js-shares-count">0</span>个分享：
                             </span>
-                            <a href="http://v.t.sina.com.cn/share/share.php?url=http://www.ifanr.com/628698&title=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？"
-                               data-share="sina" rel="nofollow" class="js-share-buttons ifanr-share-buttons weibo"
+                            <a href="http://v.t.sina.com.cn/share/share.php?url=http://www.iycar.com/628698&title=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？"
+                               data-share="sina" rel="nofollow" class="js-share-buttons iycar-share-buttons weibo"
                                id="sina-share" title="分享到新浪微博" target="_blank"><i
-                                    class="ifanr2015 ifanr2015-xinlangweibo"></i></a>
-                            <a href="javascript:void(0)" data-post-url="http://www.ifanr.com/628698"
+                                    class="iycar2015 iycar2015-xinlangweibo"></i></a>
+                            <a href="javascript:void(0)" data-post-url="http://www.iycar.com/628698"
                                data-el="share-to-wechat" data-placement="top" data-toggle="popover" rel="nofollow"
-                               class="js-share-buttons ifanr-share-buttons weixin" id="wechat-share" title="分享到微信朋友圈"><i
-                                    class="ifanr2015 ifanr2015-weixin"></i></a>
-                            <a class="sns-item ifanr-share-buttons twitter" rel="nofollow" data-share="twitter"
+                               class="js-share-buttons iycar-share-buttons weixin" id="wechat-share" title="分享到微信朋友圈"><i
+                                    class="iycar2015 iycar2015-weixin"></i></a>
+                            <a class="sns-item iycar-share-buttons twitter" rel="nofollow" data-share="twitter"
                                target="_blank"
-                               href="https://twitter.com/intent/tweet?button_hashtag=ifanr&text=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？&url=http://www.ifanr.com/628698"><i
-                                    class="ifanr2015 ifanr2015-twitter"></i></a>
-                            <a class="sns-item ifanr-share-buttons linkedin" rel="nofollow" data-share="linkedin"
-                               target="_blank" href="https://www.linkedin.com/shareArticle?title=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？&url=http%3A%2F%2Fwww.ifanr.com%2F628698&summary=
+                               href="https://twitter.com/intent/tweet?button_hashtag=iycar&text=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？&url=http://www.iycar.com/628698"><i
+                                    class="iycar2015 iycar2015-twitter"></i></a>
+                            <a class="sns-item iycar-share-buttons linkedin" rel="nofollow" data-share="linkedin"
+                               target="_blank" href="https://www.linkedin.com/shareArticle?title=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？&url=http%3A%2F%2Fwww.iycar.com%2F628698&summary=
                                 早在很久以前，有人告诉我：鱼的记忆只有 7 秒，7 秒之后它就不会记得曾经的事情了，所有的一切又都会变成崭新的开始。
-                                而在这个打开微信就有几十个公众号更新、各种新闻客户端轮番推送轰炸、人人都是自...&source=ifanr" ga-track="event"
+                                而在这个打开微信就有几十个公众号更新、各种新闻客户端轮番推送轰炸、人人都是自...&source=iycar" ga-track="event"
                                ga-event-category="button" ga-event-label="linkedin_share"><i
-                                    class="ifanr2015 ifanr2015-linkedin"></i></a>
+                                    class="iycar2015 iycar2015-linkedin"></i></a>
                             <a id="J_SendCWB"
-                               href="http://www.ifanr.com/api/special/changweibo/index.php?ifr_post_id=628698"
-                               rel="nofollow" class="ifanr-share-buttons js-share-buttons btn-long-weibo">发送长微博</a>
+                               href="http://www.iycar.com/api/special/changweibo/index.php?yth_post_id=628698"
+                               rel="nofollow" class="iycar-share-buttons js-share-buttons btn-long-weibo">发送长微博</a>
                             <div class="sns-item more js-share-items-more" href="javascript:void(0);">
-                                <i class="ifanr2015 ifanr2015-more"></i>
-                                <a rel="nofollow" class="sns-item ifanr-share-buttons evernote" data-share="evernote"
+                                <i class="iycar2015 iycar2015-more"></i>
+                                <a rel="nofollow" class="sns-item iycar-share-buttons evernote" data-share="evernote"
                                    target="_blank"
-                                   href="http://www.evernote.com/clip.action?url=http://www.ifanr.com/628698&title=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？"><i
-                                        class="ifanr2015 ifanr2015-evernote"></i></a>
-                                <a rel="nofollow" class="sns-item ifanr-share-buttons douban" data-share="douban"
+                                   href="http://www.evernote.com/clip.action?url=http://www.iycar.com/628698&title=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？"><i
+                                        class="iycar2015 iycar2015-evernote"></i></a>
+                                <a rel="nofollow" class="sns-item iycar-share-buttons douban" data-share="douban"
                                    target="_blank"
-                                   href="http://www.douban.com/share/service?href=http://www.ifanr.com/628698&name=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？"><i
-                                        class="ifanr2015 ifanr2015-douban"></i></a>
-                                <a rel="nofollow" class="sns-item ifanr-share-buttons qqzone" data-share="qqzone"
+                                   href="http://www.douban.com/share/service?href=http://www.iycar.com/628698&name=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？"><i
+                                        class="iycar2015 iycar2015-douban"></i></a>
+                                <a rel="nofollow" class="sns-item iycar-share-buttons qqzone" data-share="qqzone"
                                    target="_blank"
-                                   href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.ifanr.com/628698&title=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？"><i
-                                        class="ifanr2015 ifanr2015-qqkongjian"></i></a>
+                                   href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.iycar.com/628698&title=深度的文章、优雅的讨论、赚钱的作者，这些是 Medium 的妄想还是未来？"><i
+                                        class="iycar2015 iycar2015-qqkongjian"></i></a>
                             </div>
                         </span>
                     </div>
@@ -123,30 +123,30 @@ the_post();
                         <div class="author-profile row">
                             <div class="author-profile-face">
                                 <img class="gravatar"
-                                     src="http://images.ifanr.cn/wp-content/uploads/2015/11/huangmeijing_meitu_1.jpg"
+                                     src="http://images.iycar.cn/wp-content/uploads/2015/11/huangmeijing_meitu_1.jpg"
                                      width="50" height="50"/>
                             </div>
                             <div class="author-profile-info-wrapper">
                                 <div class="author-profile-text">
                                     <h2 class="js-post-author-name"><a
-                                            href="http://www.ifanr.com/author/huangmeijing"><?php the_author() ?></a>
+                                            href="http://www.iycar.com/author/huangmeijing"><?php the_author() ?></a>
                                     </h2>
                                     <span class="seperator">|</span>
 
                                     <p class="job">编辑</p>
                                     <span class="homepage"><a
-                                            href="http://www.ifanr.com/author/huangmeijing">作者主页</a></span>
+                                            href="http://www.iycar.com/author/huangmeijing">作者主页</a></span>
                                 </div>
                                 <p class="description">Work hard, play hard.</p>
                                 <ul class="author-profile-list">
-                                    <li><a rel="external" href="mailto:huangmeijing@ifanr.com">邮箱</a></li>
+                                    <li><a rel="external" href="mailto:huangmeijing@iycar.com">邮箱</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="banner_post_bottom clearfix">
-                        <a href="http://go.ifanr.cn/1T">
-                            <img src="http://images.ifanr.cn/wp-content/uploads/2016/02/zhuzhanzhengwen.jpg"/>
+                        <a href="http://go.iycar.cn/1T">
+                            <img src="http://images.iycar.cn/wp-content/uploads/2016/02/zhuzhanzhengwen.jpg"/>
                         </a>
                     </div>
                 </div>
@@ -161,28 +161,28 @@ the_post();
     <!--begin sidebar left-->
     <div id="sbl" data-cmpt-autofixed-container class="sbl js-single-post-sidebar">
 
-        <div id="ifanr_side_jiong_widget-81" class="widget-container widget_ifanr_jiong_new clearfix">
-            <div class="ifanr-text-content">
-                <a id="video" rel="external" href="http://go.ifanr.cn/1S"><img
-                        src="http://images.ifanr.cn/wp-content/uploads/2016/02/cebianlan.jpg"/></a>
+        <div id="iycar_side_jiong_widget-81" class="widget-container widget_iycar_jiong_new clearfix">
+            <div class="iycar-text-content">
+                <a id="video" rel="external" href="http://go.iycar.cn/1S"><img
+                        src="http://images.iycar.cn/wp-content/uploads/2016/02/cebianlan.jpg"/></a>
             </div>
         </div>
-        <div id="ifanr_side_jiong_widget-80" class="widget-container widget_ifanr_jiong_new clearfix">
-            <div class="ifanr-text-content">
-                <a id="video" rel="external" href="http://www.ifanr.com/about/contribute"><img
-                        src="http://images.ifanr.cn/wp-content/uploads/2015/10/seeking-reports.jpg"/></a>
+        <div id="iycar_side_jiong_widget-80" class="widget-container widget_iycar_jiong_new clearfix">
+            <div class="iycar-text-content">
+                <a id="video" rel="external" href="http://www.iycar.com/about/contribute"><img
+                        src="http://images.iycar.cn/wp-content/uploads/2015/10/seeking-reports.jpg"/></a>
             </div>
         </div>
         <div data-cmpt-autofixed data-autofixed-follow-to=".js-article-wrapper">
             <div id="author-latest-posts" data-author-id="2875"
-                 data-author-link="http://www.ifanr.com/author/huangmeijing"
-                 class="widget-ifr ifr-post-list-widget author-latest-posts widget-container clearfix"></div>
+                 data-author-link="http://www.iycar.com/author/huangmeijing"
+                 class="widget-yth yth-post-list-widget author-latest-posts widget-container clearfix"></div>
 
 
-            <div id="mail-subscribe" class="widget-ifr ifr-subscribe widget-container clearfix" style="display: none">
+            <div id="mail-subscribe" class="widget-yth yth-subscribe widget-container clearfix" style="display: none">
                 <div id="mc_embed_signup" class="clearfix">
                     <form
-                        action="http://ifanr.us2.list-manage.com/subscribe/post?u=f770959951cdcc1bba7ab56cb&amp;id=258559241a"
+                        action="http://iycar.us2.list-manage.com/subscribe/post?u=f770959951cdcc1bba7ab56cb&amp;id=258559241a"
                         method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
                         target="_blank">
                         <div class="widget-header">
@@ -191,11 +191,11 @@ the_post();
                         <div class="widget-contents clearfix">
                             <p>轻量、专注的消息，关注移动互联网、创投、智能设备的新鲜资讯。需各种邀请码，也请加入列表。</p>
 
-                            <div class="ifr-input-group">
-                                <input type="email" value="" name="EMAIL" class="ifr-input email-input" id="mce-EMAIL"
+                            <div class="yth-input-group">
+                                <input type="email" value="" name="EMAIL" class="yth-input email-input" id="mce-EMAIL"
                                        placeholder="填写邮箱，订阅我们">
                                 <input type="submit" value="订阅" name="subscribe" id="mc-embedded-subscribe"
-                                       class="ifr-input email-submit">
+                                       class="yth-input email-submit">
                             </div>
                         </div>
                     </form>
@@ -231,7 +231,7 @@ the_post();
                     <h2 class="js-reply-title reply-title yahei">回复</h2>
                     <div class="js-cancel-comment-reply cancel-comment-reply hide">
                         <a rel="nofollow" id="cancel-comment-reply-link" href="javascript:void(0);"
-                           class="js-cancel-button reverse-icon"><i class="ifanr2015 ifanr2015-guanbi"></i></a>
+                           class="js-cancel-button reverse-icon"><i class="iycar2015 iycar2015-guanbi"></i></a>
                     </div>
                     <form id="commentform" class="JS_formInFieldLabels js-respond-form">
                         <div class="comment-form-slide">
@@ -253,7 +253,7 @@ the_post();
                         </p>
                         <div id="ajax-cmt-loading" class="js-comment-processing hide">
                             <img
-                                src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/loader/ajax-loader-light.gif"
+                                src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/loader/ajax-loader-light.gif"
                                 style="vertical-align:middle; margin: 5px 0;">
                             正在提交, 请稍候...
                         </div>
@@ -271,8 +271,8 @@ the_post();
                         <div class="submit-zone clearfix">
                             <p class="login-in-buttons js-not-login hide">
                                 <span class="J_LoginButtons login-in-button">
-                                  或 <a href="https://sso.ifanr.com/login/" class="link" title="登录" rel="internal">登录</a>&nbsp;|&nbsp;<a
-                                        href="https://sso.ifanr.com/register/" class="link" title="注册" rel="internal">注册</a> 参与评论
+                                  或 <a href="https://sso.iycar.com/login/" class="link" title="登录" rel="internal">登录</a>&nbsp;|&nbsp;<a
+                                        href="https://sso.iycar.com/register/" class="link" title="注册" rel="internal">注册</a> 参与评论
                                 </span>
                             </p>
 
@@ -306,7 +306,7 @@ the_post();
                     <div id="JS_loading" class="js-comments-loading" style="background: none; display: block;"
                          class="no-ajax load-more-link loading">
                         <img height="8"
-                             src="http://cdnzz.ifanr.com/wp-content/themes/ifanr-2.0/static/images/common/loader/loadingb.gif"/>
+                             src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif"/>
                     </div>
                 </div>
 
