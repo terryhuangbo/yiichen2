@@ -94,7 +94,7 @@ $_cat_banner = $Tool->_value($fields['category_banners'][0]['category_banner_' .
                     </a>
 
                     <div id="JS_loading" class="no-ajax loading loading-gif">
-                        <img src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/loader/loadingb.gif"/>
+                        <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"/>
                     </div>
                 </div>  </div>
         </div>

@@ -208,24 +208,6 @@ $Cache = new Cache();
                 </span>
               </div>
 
-              <div class="js-login yth-user-nav-menu hide">
-                <div id="nav-user-button">
-                  <div class="yth-user-nav-menu">
-                    <ul class="nav-user-subs yth-user-dropdown-menu hide m-t-10" id="nav-user-subs">
-                      <li class="sub-item"><a href="">个人中心</a></li>
-                      <li class="sub-item"><a href="javascript:void(0);" class="js-logout">退出登录</a></li>
-                    </ul>
-                  </div>
-                  <span class="user-name J_UserIdentity"></span>
-                  <span class="iycar2015 iycar2015-xiala-small"></span>
-                </div>
-              </div>
-
-              <!-- 未登录 -->
-<!--              <div class="js-not-login not-login hide">-->
-<!--                <a rel="nofollow" class="user-login" href="https://sso.iycar.com/login/?next=http://www.iycar.com">登录</a>-->
-<!--                <a rel="nofollow" class="user-reg" href="https://sso.iycar.com/register/?next=http://www.iycar.com">注册</a>-->
-<!--              </div>-->
             </div>
           </div>
 
