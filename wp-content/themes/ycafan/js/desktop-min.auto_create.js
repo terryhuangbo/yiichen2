@@ -583,7 +583,7 @@
             return c
         },
         getCache: function(a) {
-            return null//huangbo先去掉头部缓存
+            // return null//huangbo先去掉头部缓存
             var b = null;
             var c = YCA.getItem("navCache");
             if (!a) {
@@ -5461,7 +5461,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        return undefined;//huangbo remove cache
+        // return undefined;//huangbo remove cache
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {
