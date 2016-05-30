@@ -6,7 +6,7 @@ get_header();
 //扩展字段
 $_ex_field = 'cache-index-expire';
 $fields = $Cache->_get('cache-index-field', $_ex_field);
-$fields = $fields ? $fields : $Cache->_set('cache-index-field', get_fields($post->ID), $_ex_field);
+$fields = $fields ? $fields : $Cache->_set('cache-index-field', get_fields(_param('indexid')), $_ex_field);
 //最新文章$_push_1，$_push_2，$_push_3三个推荐位
 $_push_1 = 4;
 $_push_2 = 4;
@@ -389,7 +389,7 @@ $_special_posts = $_special_posts ? $_special_posts
 
         <div id="mail-subscribe" class="widget-yth yth-subscribe widget-container clearfix">
             <div id="mc_embed_signup" class="clearfix">
-                <form action="http://iycar.us2.list-manage.com/subscribe/post?u=f770959951cdcc1bba7ab56cb&amp;id=258559241a"
+                <form action=""
                       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                       class="validate" target="_blank">
                     <div class="widget-header">

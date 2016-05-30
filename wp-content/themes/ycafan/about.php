@@ -15,7 +15,7 @@ the_post();
     <div id="content" class="content clearfix">
     <section class="yth-about-container" id="yth-page-our-team">
         <section class="yth-about-jumbotron" style="background-image: url('<?php echo $Tool->_value($fields['about_backimg']) ?>')">
-            <h1 class="yth-about-no-display">关于少年中国学会</h1>
+            <h1 class="yth-about-no-display">关于少年中国评论</h1>
 <!--            <img class="yth-about-description-main" src="http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static/images/common/about/about_title_2.png">-->
 <!--            <div class="yth-about-description-sub-container">-->
 <!--                <p class="yth-about-description-sub">和那些醒着的要进步的人们一道，向着光明的地方行进。</p>-->
@@ -89,7 +89,7 @@ the_post();
                             <td>微博</td>
                             <td class="yth-about-sign">:</td>
                             <td>
-                                <a class="yth-about-link" href="http://weibo.com/youngchina" target="_blank">少年中国学会</a>
+                                <a class="yth-about-link" href="http://weibo.com/youngchina" target="_blank">少年中国评论</a>
                             </td>
                         </tr>
                     </table>

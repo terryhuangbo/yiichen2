@@ -13,7 +13,7 @@
         <img src="<?php echo (new Tools())->_value(get_option('footer-logo'), get_bloginfo('template_url') . '/images/footerlogo.jpg', true) ?>">
         <p class="meta">
           <span>review.youngchina.org</span>
-          <span>少年中国评论，一个简单的文摘系统。</span>
+          <span>少年中国评论，世界上只有一个YCA。</span>
         </p>
       </div>
     </div>
@@ -54,15 +54,24 @@
       <a rel="nofollow" class="sns-item" target="_blank" href="mailto:contact@youngchina.org"><i class="iycar2015 iycar2015-mail"></i></a>
       <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/youngchina"><i class="iycar2015 iycar2015-xinlangweibo"></i></a>
       <a class="sns-item" target="_blank" href="<?php echo _param('wechat_url') ?>"><i class="iycar2015 iycar2015-weixin"></i></a>
-      <a class="sns-item" target="_blank" href="http://www.iycar.com/feed"><i class="iycar2015 iycar2015-rss"></i></a>
+      <a class="sns-item" target="_blank" href="http://review.youngchina.org/feed"><i class="iycar2015 iycar2015-rss"></i></a>
     </div>
   </div>
 
   <p class="copyright-register" style="margin: 10px auto">
     Copyright © 2008-2016 YCA All Rights Reserved. 本站由三体舰队之恋爱协会监制.
-    <br/>
-    <a href="http://www.miibeian.gov.cn/">陕 ICP 备 10211557 号</a>
   </p>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-6082362-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 
 </footer><!--end footer -->
 
@@ -157,7 +166,9 @@ window.onerror = Raven.process;
         $._cache.set('VISTOR', vistor, 60*60);
     }
 </script>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"eee3fec2bc","applicationID":"3953741","transactionName":"M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==","queueTime":0,"applicationTime":4,"atts":"HxZYEVlOTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"eee3fec2bc","applicationID":"3953741","transactionName":"M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==","queueTime":0,"applicationTime":4,"atts":"HxZYEVlOTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+</body>
 </html>
 <?php
 unset($Tool);

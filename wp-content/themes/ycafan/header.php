@@ -10,7 +10,7 @@ $Cache = new Cache();
     <script type="text/javascript"></script>
     <meta property="og:site_name" content="少年中国评论"/>
     <meta property="og:url" content="http://www.iycar.com"/>
-    <title>少年中国评论 · 面对现实，忠于理想</title>
+    <title>少年中国评论</title>
     <meta name="keywords" content="少年中国学会,少年中国,马克思主义,阿尔都塞,葛兰西,YCA,邵钟萍,杨钗娜"/>
     <meta name="description" content="少年中国学会,少年中国,马克思主义,阿尔都塞,葛兰西,YCA,邵钟萍,杨钗娜"/>
 
@@ -68,13 +68,13 @@ $Cache = new Cache();
         ns.COMMENTER_EMAIL = 'commenter_email';
         ns.COMMENTER_NAME = 'commenter_name';
 
-        YCA.api_url = "http://www.iycar.com/api/v3.0/";
-        YCA.theme_url = "http://cdnzz.iycar.com/wp-content/themes/iycar-2.0";
-        YCA.blankImg_url = "http://cdnzz.iycar.com/wp-content/themes/iycar-2.0/static//images/grey.gif";
+        YCA.api_url = "";
+        YCA.theme_url = "";
+        YCA.blankImg_url = "";
         YCA.apiNonce = {
-            appkey: 'lI5287M8UyxBI98U2YKq',
-            timestamp: '1457091133',
-            sign: '9f8137583d662371139d8556e808f045'
+            appkey: '',
+            timestamp: '',
+            sign: ''
         };
     </script>
     <!--[if lt IE 9]>
@@ -108,8 +108,8 @@ $Cache = new Cache();
           <div class="sns row js-sns">
             <a class="sns-item" target="_blank" href="<?php echo _param('wechat_url') ?>"><i class="iycar2015 iycar2015-weixin"></i></a>
             <a rel="nofollow" class="sns-item" target="_blank" href="http://weibo.com/youngchina"><i class="iycar2015 iycar2015-xinlangweibo"></i></a>
-            <a rel="nofollow" class="sns-item" target="_blank" href="http://twitter.com/iycar"><i class="iycar2015 iycar2015-twitter"></i></a>
-            <a class="sns-item" target="_blank" href="http://www.iycar.com/feed"><i class="iycar2015 iycar2015-rss"></i></a>
+            <a rel="nofollow" class="sns-item" target="_blank" href="http://twitter.com/youngchina"><i class="iycar2015 iycar2015-twitter"></i></a>
+            <a class="sns-item" target="_blank" href="http://review.youngchina.org/feed"><i class="iycar2015 iycar2015-rss"></i></a>
           </div>
 
           <div class="js-navbar-top-jiong-container navbar-top-jiong-container"></div>

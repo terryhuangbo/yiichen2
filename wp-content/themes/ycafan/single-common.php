@@ -30,12 +30,10 @@ $tags = $Tool->_value(get_the_tags(), [], true);
                 <h1 class="c-single-normal__title"><?php the_title() ?></h1>
             </div>
         </div>
-
         <div class="o-single-content__body o-single-content__body--main">
             <aside style="display: none;"
                 class="c-social-bar c-social-bar--vertical c-social-bar--colored c-social-bar--sqaured c-social-bar--left js-social-bar"
                 data-component="SocialBar"
-                style="display: none;"
                 data-post-title="<?php the_title() ?><?php the_title() ?>"
                 data-post-link="<?php get_page_link() ?>"
                 data-post-summary="没人能"
@@ -106,7 +104,7 @@ $tags = $Tool->_value(get_the_tags(), [], true);
              data-sibling="#single-content-wrapper" data-component="AwesomeScroll" data-bounds-top="105"
              data-bounds-bottom="320">
             <div class="o-widget c-card-author">
-                <h5 class="c-card-category">作者&nbsp;&nbsp;&nbsp;&nbsp;<span><?php the_author() ?></span></h5>
+                <h5 class="c-card-category">编辑&nbsp;&nbsp;&nbsp;&nbsp;<span><?php the_author() ?></span></h5>
 
 <!--                <div class="c-card c-card-author__info">-->
 <!--                    <a class="c-card-author__info__avatar" href="http://www.iycar.com/author/jackie" target="_blank"><img-->

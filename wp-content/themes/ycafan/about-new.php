@@ -44,8 +44,8 @@ the_post();
             <h3>
                 <span style="color: #000000;">版权声明</span>
             </h3>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们采用<a href="http://creativecommons.org/licenses/by/3.0/deed.zh" target="_blank">知识共享Attribution 3.0 Unported License 版权协议</a> 。这意味着您可以自由：复制、发行、展览、表演、放映、广播或通过信息网络传播，创作演绎本站作品，惟需注明本站链接。<br>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本网站属非谋利性质，旨在传播马克思主义，和诸位青年一道成长。凡刊登的著作文献文章侵犯了作者、译者或版权持有人权益的，可来信联系我站删除。阅读我站文章时，如发现文字错漏或疑点，敬请读者告知我站，以便我们更正。深表感谢！
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本站原创文章采用<a href="http://creativecommons.org/licenses/by/3.0/deed.zh" target="_blank">知识共享Attribution 3.0 Unported License 版权协议</a> 。这意味着您可以自由：复制、发行、展览、表演、放映、广播或通过信息网络传播，创作演绎本站原创作品，惟需注明本站链接。<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本网站属非谋利性质，旨在传播马克思主义，与诸位青年一道成长。凡刊登的著作文献文章侵犯了作者、译者或版权持有人权益的，可来信联系本站删除。阅读本站文章时，如发现文字错漏或疑点，敬请读者告知本站，以便我们更正。深表感谢！
             <p style="text-align: center;">----</p>
 
 
