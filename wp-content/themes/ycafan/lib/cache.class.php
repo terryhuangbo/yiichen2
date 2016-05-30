@@ -10,14 +10,11 @@ class Cache
     public $message;
     public function __construct()
     {
-        try {
-            $this->cache = memcache_connect('127.0.0.1', 11211);
-            $this->on = get_option('cache-switch') == 'on' ? true : false;
-        } catch (Exception $e) {
-            $this->cache = false;
-            $this->on = get_option('cache-switch') == 'on' ? true : false;
-            $this->message = $e->getMessage();
-        }
+//        $this->cache = parent::connect('127.0.0.1', 11211);
+//        $this->cache = memcache_connect('127.0.0.1', 11211);
+        $this->cache = false;
+        $this->on = $this->cache ? true : false;
+        $this->on = get_option('cache-switch') == 'on' ? true : false;
     }
     /**
      * 设置缓存
@@ -34,7 +31,7 @@ class Cache
         }
         //缓存关闭
         if(!$this->on){
-            $this->cache->flush();
+            $this->flush();
             $this->message = 'Memcache set failed: Gerneral Cache Switch is off';
             return $val;
         }
@@ -45,7 +42,7 @@ class Cache
         }
         //如果$expire为数值
         if(is_numeric($expire)){
-            $this->cache->set($key, $val, 0, $expire);
+            $this->set($key, $val, 0, $expire);
             $this->message = 'Memcache set Successfully';
             return $val;
         //如果$expire为字符串
@@ -60,7 +57,7 @@ class Cache
                 $this->message = 'Memcache '. $key .' has been deleted';
                 return $val;
             }else{
-                $this->cache->set($key, $val, 0, $expire_time);
+                $this->set($key, $val, 0, $expire_time);
                 $this->message = 'Memcache set Successfully: The expired time is '. $expire_time .' second';
                 return $val;
             }
@@ -103,7 +100,7 @@ class Cache
                 return false;
             }
         }
-        $_cache_val = $this->cache->get($key);
+        $_cache_val = $this->get($key);
         if(!$_cache_val){
             $this->message = 'Memcache get Successfully: but the key is not found';
             return false;
