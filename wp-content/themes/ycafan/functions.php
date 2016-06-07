@@ -31,13 +31,13 @@ function _get_seo(){
     }else if(is_category()){
         $cat = array_shift(get_the_category());
         $seo = [
-            'title' => $Tool->_value($cat->name, '') . '|少年中国评论',
+            'title' => $Tool->_value($cat->name, '') . '-少年中国评论',
             'keywords' => get_option('home-keywords'),
             'description' => get_option('home-description'),
         ];
     }else if(is_single()){
         $seo = [
-            'title' => get_the_title(),
+            'title' => get_the_title() . '-少年中国评论',
             'keywords' => get_option('home-keywords'),
             'description' => $Tool->_str_cut(get_the_content(), 0, 100, false),
         ];
