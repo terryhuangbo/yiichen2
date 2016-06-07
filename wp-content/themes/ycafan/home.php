@@ -387,7 +387,7 @@ $_special_posts = $_special_posts ? $_special_posts
             </div>
         <?php endif ?>
 
-        <div id="mail-subscribe" class="widget-yth yth-subscribe widget-container clearfix">
+        <div id="mail-subscribe" class="widget-yth yth-subscribe widget-container clearfix hide">
             <div id="mc_embed_signup" class="clearfix">
                 <form action=""
                       method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
