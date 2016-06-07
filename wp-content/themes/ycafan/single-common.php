@@ -11,7 +11,6 @@ if(!empty($_rel_posts)){
     $_first_post = array_shift($_rel_posts);
 }
 $tags = $Tool->_value(get_the_tags(), [], true);
-
 ?>
 
 <div class="o-single">
@@ -23,7 +22,9 @@ $tags = $Tool->_value(get_the_tags(), [], true);
              style="background-image: url('<?php echo $_head_img ?>')">
             <div class="o-single-content__body c-single-normal__header">
                 <div class="c-article-header-meta">
-                    <span class="c-article-header-meta__category"><?php echo $cat->name ?></span>
+                    <a style="color: #fff" href="<?php echo get_category_link($cat->term_id) ?>">
+                        <span class="c-article-header-meta__category"><?php echo $cat->name ?></span>
+                    </a>
                 <span
                     class="c-article-header-meta__time"><?php echo $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))) ?></span>
                 </div>
