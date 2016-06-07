@@ -44,6 +44,12 @@ function customSetting(){ ?>
                 'header-logo',
                 //网站尾部logo
                 'footer-logo',
+                //首页标题
+                'home-titile',
+                //首页关键字
+                'home-keywords',
+                //首页描述
+                'home-description',
                 //网站公告图片
                 'site-info',
                 //评论是否开启
@@ -79,6 +85,18 @@ function customSetting(){ ?>
                 <tr>
                     <th scope="row">网站尾部LOGO</th>
                     <td><input class="text_large" type="text" name="footer-logo"  value="<?php echo get_option('footer-logo'); ?>"  placeholder="请输入图片链接"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">首页标题</th>
+                    <td><input class="text_large" type="text" name="home-titile"  value="<?php echo get_option('home-titile'); ?>"  placeholder="请输入网站首页SEO标题"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">首页关键字</th>
+                    <td><input class="text_large" type="text" name="home-keywords"  value="<?php echo get_option('home-keywords'); ?>"  placeholder="请输入网站首页SEO关键字"/></td>
+                </tr>
+                <tr>
+                    <th scope="row">首页描述</th>
+                    <td><input class="text_large" type="text" name="home-description"  value="<?php echo get_option('home-description'); ?>"  placeholder="请输入网站首页SEO描述"/></td>
                 </tr>
                 <tr>
                     <th scope="row">网站公告图</th>
