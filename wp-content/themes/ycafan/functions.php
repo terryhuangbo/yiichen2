@@ -683,8 +683,13 @@ function _param($key){
 }
 
 //测试-打印函数
-// function hb($data) {
-//    file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-// }
+ function hb($data, $type = true) {
+     if($type){
+         file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+     }else{
+         file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
+     }
+
+ }
 
 ?>

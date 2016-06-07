@@ -2,6 +2,17 @@
 date_default_timezone_set('Asia/Shanghai');
 $Tool = new Tools();
 $Cache = new Cache();
+if(is_home()){
+    $page_type = 'home';
+}elseif(is_category()){
+    $page_type = 'category';
+}elseif(is_single()){
+    $page_type = 'single';
+}else{
+    $page_type = 'single';
+}
+
+hb($page_type, false);
 ?>
 <!DOCTYPE html>
 <html xmlns:wb="http://open.weibo.com/wb">
