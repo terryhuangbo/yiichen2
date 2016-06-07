@@ -18,6 +18,39 @@ $Cache = new Cache();
 ?>
 <?php
 
+//获取文章SEO信息
+function _get_seo(){
+    the_post();
+    $Tool = new Tools();
+    if(is_home()){
+        $seo = [
+            'title' => get_option('home-titile'),
+            'keywords' => get_option('home-keywords'),
+            'description' => get_option('home-description'),
+        ];
+    }else if(is_category()){
+        $cat = array_shift(get_the_category());
+        $seo = [
+            'title' => $Tool->_value($cat->name, '') . '|少年中国评论',
+            'keywords' => get_option('home-keywords'),
+            'description' => get_option('home-description'),
+        ];
+    }else if(is_single()){
+        $seo = [
+            'title' => get_the_title(),
+            'keywords' => get_option('home-keywords'),
+            'description' => $Tool->_str_cut(get_the_content(), 0, 100, false),
+        ];
+    }else{
+        $seo = [
+            'title' => get_option('home-titile'),
+            'keywords' => get_option('home-keywords'),
+            'description' => get_option('home-description'),
+        ];
+    }
+    return $seo;
+}
+
 //获取首页文章
 function _get_index_posts($num){
     $Tool = new Tools();
@@ -683,13 +716,12 @@ function _param($key){
 }
 
 //测试-打印函数
- function hb($data, $type = true) {
-     if($type){
-         file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-     }else{
-         file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
-     }
-
- }
+// function hb($data, $type = true) {
+//     if($type){
+//         file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+//     }else{
+//         file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
+//     }
+// }
 
 ?>

@@ -2592,6 +2592,7 @@ function(a) {
         if (typeof g.data != "undefined" && g.data.cross_domain && g.dataType == "jsonp") {
             return
         }
+        return
         a.ajax({
             type: g.type,
             url: YCA.api_url + "?action=" + c,

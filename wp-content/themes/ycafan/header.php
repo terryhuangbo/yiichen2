@@ -2,17 +2,7 @@
 date_default_timezone_set('Asia/Shanghai');
 $Tool = new Tools();
 $Cache = new Cache();
-if(is_home()){
-    $page_type = 'home';
-}elseif(is_category()){
-    $page_type = 'category';
-}elseif(is_single()){
-    $page_type = 'single';
-}else{
-    $page_type = 'single';
-}
-
-hb($page_type, false);
+$seo = _get_seo();
 ?>
 <!DOCTYPE html>
 <html xmlns:wb="http://open.weibo.com/wb">
@@ -20,10 +10,10 @@ hb($page_type, false);
     <meta charset="utf-8">
     <script type="text/javascript"></script>
     <meta property="og:site_name" content="少年中国评论"/>
-    <meta property="og:url" content="http://www.iycar.com"/>
-    <title>少年中国评论</title>
-    <meta name="keywords" content="少年中国学会,少年中国,马克思主义,阿尔都塞,葛兰西,YCA,邵钟萍,杨钗娜"/>
-    <meta name="description" content="少年中国学会,少年中国,马克思主义,阿尔都塞,葛兰西,YCA,邵钟萍,杨钗娜"/>
+    <meta property="og:url" content="<?php  bloginfo('url') ?>"/>
+    <title><?php echo $seo['title'] ?></title>
+    <meta name="keywords" content="<?php echo $seo['keywords'] ?>"/>
+    <meta name="description" content="<?php echo $seo['description'] ?>"/>
 
     <!-- BEGIN Metadata added by Add-Meta-Tags WordPress plugin -->
     <link rel='stylesheet' href='<?php bloginfo('template_url'); ?>/css/main.desktop.auto_create.css' type='text/css' />
