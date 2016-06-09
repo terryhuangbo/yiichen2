@@ -106,7 +106,7 @@ function customSetting(){ ?>
                     <td><input class="text_large" type="text" name="site-info"  value="<?php echo get_option('site-info'); ?>"  placeholder="请输入图片链接"/></td>
                 </tr>
                 <tr>
-                    <th scope="row">评论是否开启:</th>
+                    <th scope="row">评论是否开启</th>
                     <td>
                         <select class="text_small" name="comment-open">
                                 <option value="1" <?php echo get_option('comment-open') == '1' ? 'selected = "selected"' : '' ?>>开启</option>
@@ -115,7 +115,7 @@ function customSetting(){ ?>
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row">相关文章类型:</th>
+                    <th scope="row">相关文章类型</th>
                     <td>
                         <select class="text_small" name="relpost-type">
                                 <option value="1" <?php echo get_option('relpost-type') == '1' ? 'selected = "selected"' : '' ?>>分类相关文章</option>
