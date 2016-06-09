@@ -20,7 +20,6 @@ $Cache = new Cache();
 
 //获取文章SEO信息
 function _get_seo(){
-    the_post();
     $Tool = new Tools();
     if(is_home()){
         $seo = [
