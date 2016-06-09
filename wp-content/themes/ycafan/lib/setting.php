@@ -56,6 +56,9 @@ function customSetting(){ ?>
                 'comment-open',
                 //网站公告图片
                 'relpost-type',
+                //文章页摘要字数
+                'excerpt-len',
+
 
             ];
 
@@ -120,8 +123,10 @@ function customSetting(){ ?>
                         </select>
                     </td>
                 </tr>
-
-
+                <tr>
+                    <th scope="row">文章页摘要字数</th>
+                    <td><input class="text_small" type="text" name="excerpt-len"  value="<?php echo get_option('excerpt-len'); ?>"  placeholder="请填写整数"/></td>
+                </tr>
 
 
             </table>

@@ -19,8 +19,9 @@ $Cache = new Cache();
 <?php
 
 //获取文章SEO信息
-function _get_seo(){
+function _get_seo($post){
     $Tool = new Tools();
+    $str_len = $Tool->_value(intval(get_option('excerpt-len')), 100, true);
     if(is_home()){
         $seo = [
             'title' => get_option('home-titile'),
@@ -38,7 +39,7 @@ function _get_seo(){
         $seo = [
             'title' => get_the_title() . '-少年中国评论',
             'keywords' => get_option('home-keywords'),
-            'description' => $Tool->_str_cut(get_the_content(), 0, 100, false),
+            'description' => $Tool->_str_cut($post->post_content, 0, $str_len, false),
         ];
     }else{
         $seo = [

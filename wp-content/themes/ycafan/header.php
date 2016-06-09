@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Shanghai');
 $Tool = new Tools();
 $Cache = new Cache();
-$seo = _get_seo();
+$seo = _get_seo($post);
 ?>
 <!DOCTYPE html>
 <html xmlns:wb="http://open.weibo.com/wb">
@@ -10,9 +10,9 @@ $seo = _get_seo();
     <meta charset="utf-8">
     <script type="text/javascript"></script>
     <meta property="og:site_name" content="少年中国评论"/>
-    <meta property="og:url" content="<?php  bloginfo('url') ?>"/>
+    <meta property="og:url" content="<?php  echo get_permalink($post->ID); ?>"/>
     <title><?php echo $seo['title'] ?></title>
-    <meta name="keywords" content="<?php echo $seo['keywords'] ?>"/>
+<!--    <meta name="keywords" content="--><?php //echo $seo['keywords'] ?><!--"/>-->
     <meta name="description" content="<?php echo $seo['description'] ?>"/>
 
     <!-- BEGIN Metadata added by Add-Meta-Tags WordPress plugin -->
