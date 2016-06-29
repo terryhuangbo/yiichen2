@@ -54,7 +54,7 @@ function customSetting(){ ?>
                 'site-info',
                 //评论是否开启
                 'comment-open',
-                //网站公告图片
+                //相关文章类型
                 'relpost-type',
                 //文章页摘要字数
                 'excerpt-len',

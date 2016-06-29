@@ -301,7 +301,7 @@ $_special_posts = $_special_posts ? $_special_posts
         <div id="iycar_side_jiong_widget-81" class="widget-container widget_iycar_jiong_new clearfix">
             <div class="iycar-text-content">
                 <a id="video" rel="external" href="<?php bloginfo('url') ?>/?cat=1">
-                    <img src="<?php bloginfo('template_url'); ?>/images/info.jpg"/>
+                    <img src="<?php echo get_option('site-info') ?>"/>
                 </a>
             </div>
         </div>
