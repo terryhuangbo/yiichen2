@@ -318,7 +318,7 @@ $_special_posts = $_special_posts ? $_special_posts
                     <ul class="buzz-list nano-content js-buzz-list"
                         category="<?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special')  ?>">
                         <!-- buzz item -->
-                        
+
                         <!-- buzz item -->
                         <li class="loading js-loading">
                             <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"/>

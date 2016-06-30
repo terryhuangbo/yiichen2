@@ -156,7 +156,7 @@ $seo = _get_seo($post);
                     基本原理
                   </a>
                 </li>
-                <li class="nav-item" cate="principle" data-count="4" data-post-type="vision">
+                <li class="nav-item" cate="vision" data-count="4" data-post-type="vision">
                   <a ga-track="event" ga-action="click" ga-event-category="nav-item" ga-event-label="理论视野" itemprop="url" class="product-item" href="<?php bloginfo('url') ?>/?cat=4">
                     <!-- <i class="iycar2015 iycar2015-wanwuzhi icon-font"></i> -->
                     理论视野

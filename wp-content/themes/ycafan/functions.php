@@ -395,7 +395,7 @@ function ajax_get_buzz(){
                 'title' => get_the_title(),
                 'permalink' => get_page_link(),
                 'creator_name' => get_the_author(),
-                'relative_time' => get_the_time('m月d日 H:i'),
+                'relative_time' => get_the_time('Y年m月d日 H:i'),
                 'url' => get_page_link(),
                 'source' => [
                     'name' => 'chinese.engadget.com',
