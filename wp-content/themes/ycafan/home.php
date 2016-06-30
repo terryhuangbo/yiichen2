@@ -318,24 +318,7 @@ $_special_posts = $_special_posts ? $_special_posts
                     <ul class="buzz-list nano-content js-buzz-list"
                         category="<?php echo $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special')  ?>">
                         <!-- buzz item -->
-                        <?php foreach($_special_posts as $p): ?>
-                            <li class="buzz-item">
-                                <div class="buzz-item-container">
-                                    <h2 class="buzz-item-title" ga-track="event" ga-action="click" ga-event-category="widget"
-                                        ga-event-label="iycar-buzz">
-                                        <a target="_blank" href="<?php echo $p['link'] ?>" data-source-url="<?php echo $p['link'] ?>"
-                                           itemprop="url" class="buzz-item-link">
-                                            <?php echo $p['title'] ?>
-                                        </a>
-                                    </h2>
-                                    <div class="buzz-item-footer">
-                                          <span class="buzz-item-date" itemprop="datePublished" datetime="<?php echo $p['post_modified'] ?>">
-                                            <?php echo $p['difDate'] ?>
-                                          </span>
-                                    </div>
-                                </div>
-                            </li>
-                        <?php endforeach ?>
+                        
                         <!-- buzz item -->
                         <li class="loading js-loading">
                             <img src="<?php bloginfo('template_url') ?>/images/loadingb.gif"/>
