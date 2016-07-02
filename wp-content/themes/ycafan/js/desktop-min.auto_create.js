@@ -562,7 +562,7 @@
             return c
         },
         getCache: function(a) {
-            // return null//huangbo头部缓存分类文章缓存
+            return null//huangbo头部缓存分类文章缓存
             var b = null;
             var c = YCA.getItem("navCache");
             if (!a) {
@@ -1552,8 +1552,8 @@ function(a) {
             j += " ";
             if (f[d].post_type !== "data") {
                 j += " ";
-                j += g(f[d].author);
-                j += " | "
+                //j += g(f[d].author);
+                //j += " | "
             }
             j += " ";
             j += g(f[d].pubDate);
@@ -2220,8 +2220,8 @@ function(a) {
             k += " ";
             if (f[d].post_type !== "data") {
                 k += " ";
-                k += g(f[d].author);
-                k += " | "
+                //k += g(f[d].author);
+                //k += " | "
             }
             k += " ";
             k += g(f[d].pubDate);
