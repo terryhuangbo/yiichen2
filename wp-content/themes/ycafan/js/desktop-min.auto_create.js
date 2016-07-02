@@ -1390,10 +1390,10 @@ function(a) {
         p += d(k);
         p += '">';
         p += d(l);
-        p += '</a> <span class="seperator">|</span> <span class="author">';
+        p += '</a> <span class="seperator">|</span> <span class="author hide">';
         p += d(m);
         p += '</span> <span class="date">';
-        p += n(o);
+        p += o;
         p += '</span> </div> <div class="post-content-bottom row"> <div class="sns-tools js-sns-tools"> <div class="sns-items-wrapper"> <span>分享：</span> <a class="sns-item weibo" target="_blank" href="javascript:void(0);"><i class="iycar2015 iycar2015-xinlangweibo"></i></a> <a class="sns-item weixin" data-post-url="';
         p += d(f);
         p += '" data-el="share-to-wechat" data-placement="top" data-toggle="popover" href="javascript:void(0);"><i class="iycar2015 iycar2015-weixin"></i></a> <a class="sns-item twitter" target="_blank" href="javascript:void(0);"><i class="iycar2015 iycar2015-twitter"></i></a> <div class="sns-item more js-share-items-more" href="javascript:void(0);"> <i class="iycar2015 iycar2015-more"></i> <a ga-track="event" ga-action="click" ga-event-label="linkedin_share" ga-event-category="button" class="js-share-buttons sns-item linkedin" target="_blank" data-share="linkedin" href="https://www.linkedin.com/shareArticle?title=';
@@ -1462,7 +1462,7 @@ function(a) {
         h += " ";
         return new String(h)
     });
-    b("desktop-index-appso", '<article class="post-item-container"> <div class="post-item-addon comment-count"> <span class="cmt-number"></span> <span class="cmt-arrow"></span> </div> <div class="post-item-content"> <div class="tag-label"> <span class="tag"></span> <span class="author"></span> <span class="date"></span> </div> <h2> <a href=""></a> </h2> <a class="read-more" href=""></a> <div class="sns-tools"> <span>分享：</span> <a class="sns-item weibo" href="javascript:void(0);"><i class="iycar2015 iycar2015-xinlangweibo"></i></a> <a class="sns-item weixin" href="javascript:void(0);"><i class="iycar2015 iycar2015-weixin"></i></a> <a class="sns-item twitter" href="javascript:void(0);"><i class="iycar2015 iycar2015-twitter"></i></a> <a class="sns-item more" href="javascript:void(0);"><i class="iycar2015 iycar2015-more"></i></a> </div> </div> </article>');
+    b("desktop-index-appso", '<article class="post-item-container"> <div class="post-item-addon comment-count"> <span class="cmt-number"></span> <span class="cmt-arrow"></span> </div> <div class="post-item-content"> <div class="tag-label"> <span class="tag"></span> <span class="author hide"></span> <span class="date"></span> </div> <h2> <a href=""></a> </h2> <a class="read-more" href=""></a> <div class="sns-tools"> <span>分享：</span> <a class="sns-item weibo" href="javascript:void(0);"><i class="iycar2015 iycar2015-xinlangweibo"></i></a> <a class="sns-item weixin" href="javascript:void(0);"><i class="iycar2015 iycar2015-weixin"></i></a> <a class="sns-item twitter" href="javascript:void(0);"><i class="iycar2015 iycar2015-twitter"></i></a> <a class="sns-item more" href="javascript:void(0);"><i class="iycar2015 iycar2015-more"></i></a> </div> </div> </article>');
     b("desktop-index-mindstore",
     function(a, b) {
         var c = this,
@@ -1646,7 +1646,7 @@ function(a) {
                 j += i(f[d][g].link);
                 j += '"> <i class="iycar2015 iycar2015-dasheng item-hide item-background"></i> <div class="content-container"> <div class="content"> <p class="excerpt js-excerpt" data-clamp="4">';
                 j += i(f[d][g].excerpt);
-                j += '</p> </div> </div> <span class="meta"> <span class="more item-hide">更多解读</span> <span class="author">';
+                j += '</p> </div> </div> <span class="meta"> <span class="more item-hide">更多解读</span> <span class="author hide">';
                 j += i(f[d][g].author);
                 j += "</span> </span> </a> </div> "
             }
@@ -1759,7 +1759,7 @@ function(a) {
                     j += i(f[d][g].image);
                     j += '" alt="';
                     j += i(f[d][g].title);
-                    j += '"/> </div> <span class="meta"> <span class="author">';
+                    j += '"/> </div> <span class="meta"> <span class="author hide">';
                     j += i(f[d][g].author);
                     j += '</span> <span class="time">';
                     j += i(f[d][g].pubDate);
@@ -5440,7 +5440,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        // return undefined;//huangbo remove cache 首页加载列表缓存
+        return undefined;//huangbo remove cache 首页加载列表缓存
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {

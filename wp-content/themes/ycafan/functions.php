@@ -283,7 +283,8 @@ function ajax_get_latest(){
                 'ID' => get_the_ID(),
                 'title' => get_the_title(),
                 'author' => get_the_author(),
-                'pubDate' => get_the_time('Y-m-d H:i:s'),
+//                'pubDate' => get_the_time('Y-m-d H:i:s'),
+                'pubDate' => $Tool->_get_diff_date(strtotime(get_the_time('Y-m-d H:i:s'))),
                 'post_modified' => get_the_modified_time('Y-m-d H:i:s'),
                 'image' => $Tool->_get_img_from_html(get_the_content()),
                 'cwb_image_url' => $Tool->_get_img_from_html(get_the_content()),
@@ -716,12 +717,12 @@ function _param($key){
 }
 
 //测试-打印函数
-// function hb($data, $type = true) {
-//     if($type){
-//         file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-//     }else{
-//         file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
-//     }
-// }
+function hb($data, $type = true) {
+     if($type){
+         file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+     }else{
+         file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
+     }
+ }
 
 ?>

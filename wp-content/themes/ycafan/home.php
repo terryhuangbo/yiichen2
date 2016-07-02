@@ -188,7 +188,7 @@ $_special_posts = $_special_posts ? $_special_posts
                         <span class="seperator">
                             |
                         </span>
-                        <span class="author">
+                        <span class="author hide">
                             <a href="javaScript:viod(0);" title="Posts by <?php echo $p['author']; ?>"
                                rel="author">
                                 <?php echo $p['author']; ?>
@@ -276,7 +276,7 @@ $_special_posts = $_special_posts ? $_special_posts
                         <span class="seperator">
                             |
                         </span>
-                        <span class="author">
+                        <span class="author hide">
                             <a href="javaScript:viod(0);" title="Posts by <?php echo $p['author']; ?>"
                                rel="author">
                                 <?php echo $p['author']; ?>
@@ -504,7 +504,7 @@ $_special_posts = $_special_posts ? $_special_posts
                         <span class="seperator">
                             |
                         </span>
-                        <span class="author">
+                        <span class="author hide">
                             <a href="javaScript:viod(0);" title="Posts by <?php echo $p['author']; ?>"
                                rel="author">
                                 <?php echo $p['author']; ?>
