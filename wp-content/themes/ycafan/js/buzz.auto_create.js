@@ -338,15 +338,15 @@ template("desktop-buzz-item2",
             html +=
                 '<li class=" c-hot-comment-widget__items__item c-hot-comment-widget-item js-hot-comment-widget-item">'+
                 '    <a class="c-hot-comment-widget-item__wrap" href="'+ v.link +'" target="_blank">'+
-                '        <p class="c-hot-comment-widget-item__main">'+ v.content +'</p>'+
-                '            <p class="c-hot-comment-widget-item__meta">'+
+                '        <p class="c-hot-comment-widget-item__meta">'+
+                '            <img class="c-hot-comment-widget-item__meta__item-hint" src="'+ v.garvatar +'">'+
+                '            <span class="c-hot-comment-widget-item__meta__item-hint">'+ v.author +'</span>'+
                 '            <span class="c-hot-comment-widget-item__meta__item-hint">评论于</span>'+
-                '            <span class="u-clamp-line--1 u-inline c-hot-comment-widget-item__meta__item-link">'+ v.post_title +'</span>'+
-                '        </p>'+
-                '        <div class="c-hot-comment-widget-item__user-info">'+
-                '        <span class="c-hot-comment-widget-item__user-info__username">'+ v.from_author +'</span>'+
-                '        <img class="c-hot-comment-widget-item__user-info__avatar" src="'+ v.garvatar +'">'+
-                '        </div>'+
+                '            <span class="c-hot-comment-widget-item__meta__item-hint">'+ v.post_title +'</span>'+
+                '         </p>'+
+                '    </a>'+
+                '    <a class="c-hot-comment-widget-item__wrap" href="'+ v.link + '#comments' +'" target="_blank">'+
+                '        <p class="c-hot-comment-widget-item__main">'+ v.content +'</p>'+
                 '    </a>'+
                 '</li>';
         });

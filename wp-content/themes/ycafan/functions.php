@@ -423,14 +423,29 @@ function ajax_get_recent_comments(){
     $page = intval($Tool->_request('page', 1));
     $pageSize = 10;
     $offset = max($page-1, 0) * $pageSize;
-    $sql = "SELECT p.post_title, c.* FROM wp_posts AS p LEFT JOIN wp_comments_meta AS c ON c.post_id = p.ID
-            WHERE c.pid = 0 ORDER BY c.id DESC LIMIT {$offset}, {$pageSize}";
-    $_data = $Tool->_object_to_array($wpdb->get_results($sql));
-    foreach($_data as $k => $v){
-        $_data[$k]['link'] = get_permalink($Tool->_value($v['post_id'], 0));
-        $_data[$k]['garvatar'] = get_stylesheet_directory_uri() . '/images/garvatar/garvatar.jpg';
+    $db = new Db($wpdb, $wpdb->comments);
+    $result = $db->_select('1 = 1', $page, $pageSize, 'comment_date desc');
+    $result = $Tool->_object_to_array($result);
+    if(empty($result)){
+        $Tool->_json([], -10000);
     }
-    echo $Tool->_json($_data, 10005);
+    $sql = "SELECT p.post_title, c.* FROM wp_posts AS p LEFT JOIN wp_comments AS c ON c.comment_post_ID = p.ID
+            WHERE c.comment_parent = 0 ORDER BY c.comment_date DESC LIMIT {$offset}, {$pageSize}";
+    $result = $Tool->_object_to_array($wpdb->get_results($sql));
+    foreach($result as $cm){
+        $_data[] = [
+            'id' => $cm['comment_ID'],
+            'pid' => $cm['comment_parent'],
+            'post_id' => $cm['comment_post_ID'],
+            'post_title' => $Tool->_str_cut($cm['post_title'], 0, 15, false),
+            'content' => $Tool->_str_cut($cm['comment_content'], 0, 30, false),
+            'garvatar' => $Tool->_get_img_from_html(get_avatar($cm['comment_author_email'],'20')),
+            'link' => get_permalink($cm['comment_post_ID']),
+            'author' => $cm['comment_author'],
+            'author_email' => $cm['comment_author_email'],
+        ];
+    }
+    $Tool->_json($_data, 10005);
     unset($Tool);
     die();
 }
