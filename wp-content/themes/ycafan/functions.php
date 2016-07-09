@@ -438,7 +438,7 @@ function ajax_get_recent_comments(){
             'pid' => $cm['comment_parent'],
             'post_id' => $cm['comment_post_ID'],
             'post_title' => $Tool->_str_cut($cm['post_title'], 0, 15, false),
-            'content' => $Tool->_str_cut($cm['comment_content'], 0, 30, false),
+            'content' => $Tool->_str_cut($cm['comment_content'], 0, 45, false) . '...',
             'garvatar' => $Tool->_get_img_from_html(get_avatar($cm['comment_author_email'],'20')),
             'link' => get_permalink($cm['comment_post_ID']),
             'author' => $cm['comment_author'],

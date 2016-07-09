@@ -345,7 +345,7 @@ template("desktop-buzz-item2",
                 '            <span class="c-hot-comment-widget-item__meta__item-hint">'+ v.post_title +'</span>'+
                 '         </p>'+
                 '    </a>'+
-                '    <a class="c-hot-comment-widget-item__wrap" href="'+ v.link + '#comments' +'" target="_blank">'+
+                '    <a class="c-hot-comment-widget-item__wrap" href="'+ v.link + '#ds-thread' +'" target="_blank">'+
                 '        <p class="c-hot-comment-widget-item__main">'+ v.content +'</p>'+
                 '    </a>'+
                 '</li>';
