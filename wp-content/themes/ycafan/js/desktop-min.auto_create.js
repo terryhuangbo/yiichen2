@@ -2181,8 +2181,7 @@ function(a) {
         j = c.$strip_tags,
         k = "";
         k += " ";
-        for (var d = 0,
-        e = f.length; d < e; d++) {
+        for (var d = 0; d < f.length; d++) {
             k += ' <li class="search-item row"> ';
             if (f[d].post_type === "data") {
                 k += ' <a href="http://www.iycar.com/data/';
@@ -2206,7 +2205,7 @@ function(a) {
                 k += ' <div class="result-cover" style="background-image:url(\'http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
             }
             k += ' <div class="result-content"> <h2 class="title">';
-            k += h(f[d]._highlightResult.title.value);
+            //k += h(f[d]._highlightResult.title.value);
             k += '</h2> <p class="excerpt js-excerpt">';
             k += g(i(j(f[d].content), 120));
             k += '</p> <span class="meta"> ';
@@ -4103,13 +4102,14 @@ default = {
         },
         _getIndex: function() {
             var a = this;
-            a.algolia = a.algolia || algoliasearch(a.applicationID, a.apiKey);
-            a.searchIndex = a.searchIndex || a.algolia.initIndex(a.indexName);
+            //a.algolia = a.algolia || algoliasearch(a.applicationID, a.apiKey);
+            //a.searchIndex = a.searchIndex || a.algolia.initIndex(a.indexName);
             return a.searchIndex
         },
         searchResult: function(c) {
-            var d = this,
-            e = d._getIndex(),
+            var d = this;
+            e = d._getIndex();
+
             f = {
                 hitsPerPage: d.limitSearch,
                 page: d.pageNumber,
@@ -4118,6 +4118,42 @@ default = {
                 facetFilters: ["category:-weizhizao", "category:-video", "category:-buzz"]
             };
             d.$loading.show();
+            //d._search(d.searchQueryStr, f, c);
+
+            var param = {
+                action : 'search',
+                keywords : d.searchQueryStr,
+                page : d.pageNumber,
+            };
+            $.ajax({
+                url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
+                data: param,
+                dataType: "json",
+                method: "post",
+                success: function(json) {
+                    var list = json.ret.list;
+                    var num = json.ret.num;
+                    d._countPageTotal(num);
+                    d.$loading.hide();
+                    a(".js-search-title").removeClass("hide");
+                    var g = template("search/desk-list", {
+                        searchList: list
+                    });
+                    //d.$searchBoxZone.find(".js-results-count").html(f.nbHits);
+                    if (c) {
+                        a("#search-list").html(g)
+                    } else {
+                        a("#search-list").append(g)
+                    }
+                    d.$searchBoxZone.find(".js-excerpt").each(function(a, c) {
+                        b(c, {
+                            clamp: 3
+                        })
+                    })
+
+                }
+            })
+            return;
             e.search(d.searchQueryStr, f,
             function(e, f) {
                 d._countPageTotal(f.nbPages);
@@ -4171,7 +4207,7 @@ default = {
     });
     c.appendSeachZone();
     c.bindEvent()
-})(jQuery, $clamp); 
+})(jQuery, $clamp);
 (function(a, b, c) {
     var d = function() {};
     d.prototype = new IndexAppSoArticlesList;

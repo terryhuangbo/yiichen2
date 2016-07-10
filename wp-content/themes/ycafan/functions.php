@@ -238,7 +238,7 @@ function ajax_get_cate(){
         }
     }
     wp_reset_postdata();
-    echo $Tool->_json($_posts);
+    $Tool->_json($_posts);
     unset($Tool);
     unset($query);
     die();
@@ -302,7 +302,7 @@ function ajax_get_latest(){
         }
     }
     wp_reset_postdata();
-    echo $Tool->_json($_posts);
+    $Tool->_json($_posts);
     unset($Tool);
     unset($query);
     die();
@@ -356,10 +356,65 @@ function ajax_get_author_latest(){
         }
     }
     wp_reset_postdata();
-    echo $Tool->_json($_posts);
+    $Tool->_json($_posts);
     unset($Tool);
     unset($query);
     die();
+}
+
+//搜索
+add_action('wp_ajax_nopriv_search', 'ajax_search');
+add_action('wp_ajax_add_search', 'ajax_search');
+function ajax_search(){
+    global $wpdb;
+    $Tool = new Tools();
+    $db = new Db($wpdb, $wpdb->posts);
+    $keywords = $Tool->_filter_title($Tool->_request('keywords'));
+    $page = intval($Tool->_request('page'));
+    $pageSize = 2;
+
+    $where = " post_title LIKE '%{$keywords}%' OR post_content LIKE '%{$keywords}%'";
+//    $posts_list = $Tool->_object_to_array($db->_select($where, $page, $pageSize, 'ID DESC'));
+    $posts_num = $db->_count($where);
+
+    $args = "s={$keywords}&showposts=$pageSize&paged=$page";
+    $query = new WP_Query($args);
+    if($query->have_posts()){
+        while($query->have_posts()){
+            $query->the_post();
+
+            $cat = array_shift(get_the_category());
+            $_posts[] = [
+                'objectID' => get_the_ID(),
+                'title' => get_the_title(),
+                'author' => get_the_author(),
+                'pubDate' => get_the_time('Y-m-d H:i:s'),
+                'image' => $Tool->_get_img_from_html(get_the_content()),
+                'link' => get_page_link(),
+                'category' => get_cat_name($cat->term_id),
+                'post_type' => $cat->slug,
+                'content' => $Tool->_str_cut(get_the_content(), 0, 40, false),
+            ];
+        }
+    }
+    wp_reset_postdata();
+    $_data = [
+        'list' => $_posts,
+        'num' => $posts_num,
+    ];
+    $Tool->_json($_data);
+    unset($Tool);
+    unset($db);
+    die();
+}
+
+//关键词高亮
+function highlight($buffer){
+    if(empty($buffer)){
+        return '';
+    }
+    $buffer = preg_replace("/(".$v.")/i", "<span style=\"background-color:#ff0;\"><strong>$1</strong></span>", $buffer);
+    return $buffer;
 }
 
 //获取右侧栏推荐位
@@ -405,7 +460,7 @@ function ajax_get_buzz(){
         }
     }
     wp_reset_postdata();
-    echo $Tool->_json($_posts);
+    $Tool->_json($_posts);
     unset($Tool);
     die();
 }

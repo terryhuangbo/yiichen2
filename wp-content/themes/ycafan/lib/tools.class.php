@@ -118,6 +118,21 @@ class Tools
     }
 
     /**
+     * 标题过滤
+     * @param $string String
+     * @return type
+     */
+    public function _filter_title($string)
+    {
+        $string = trim($string);
+        $string = str_replace("'", "", $string);
+        $string = strip_tags($string);
+        $string = stripslashes($string);
+
+        return $string;
+    }
+
+    /**
      * 重新索引某个数组
      * @param $array array
      * @param $index string 索引值，必须为数组里面的一个关联key值

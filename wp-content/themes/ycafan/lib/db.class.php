@@ -64,6 +64,7 @@ class Db
         if (!empty($pageSize)) {
             $sql .= ' LIMIT ' . ($page - 1) * $pageSize . ', ' . $pageSize;
         }
+
         $result = $this->db->get_results($sql);
         return $result;
     }

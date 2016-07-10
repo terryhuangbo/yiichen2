@@ -3049,6 +3049,7 @@ function(a) {
     };
     c.init();
     var d = function() {};
+
     d.fn = d.prototype;
     d.fn.search = function() {
         var a = this,
