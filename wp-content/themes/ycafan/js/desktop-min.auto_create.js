@@ -2183,45 +2183,29 @@ function(a) {
         k += " ";
         for (var d = 0; d < f.length; d++) {
             k += ' <li class="search-item row"> ';
-            if (f[d].post_type === "data") {
-                k += ' <a href="http://www.iycar.com/data/';
-                k += g(f[d].objectID);
-                k += '"> '
-            } else {
-                k += ' <a href="';
-                k += g(f[d].link);
-                k += '" target="_blank" class="';
-                if (f[d].image === "" || !f[d].image) {
-                    k += "non-cover"
-                }
-                k += '"> '
+            k += ' <a href="';
+            k += g(f[d].link);
+            k += '" target="_blank" class="';
+            if (f[d].image === "" || !f[d].image) {
+                k += "non-cover"
             }
+            k += '"> ';
             k += " ";
-            if ( !! f[d].image && f[d].image !== "") {
-                k += ' <div class="result-cover" style="background-image:url(\'';
-                k += g(f[d].image);
-                k += "')\"></div> "
-            } else if (f[d].post_type === "data") {
-                k += ' <div class="result-cover" style="background-image:url(\'http://cdn.iycar.cn/site-static/iycar-2.0/dist/images/common/related-search-shudu.jpg\')"></div> '
-            }
+            k += ' <div class="result-cover" style="background-image:url(\'';
+            k += g(f[d].image);
+            k += "')\"></div> ";
             k += ' <div class="result-content"> <h2 class="title">';
-            //k += h(f[d]._highlightResult.title.value);
+            k += f[d].title;
             k += '</h2> <p class="excerpt js-excerpt">';
-            k += g(i(j(f[d].content), 120));
+            k += f[d].content;
             k += '</p> <span class="meta"> ';
-            if (f[d].category && f[d].category !== "") {
-                k += " ";
-                k += g(f[d].category);
-                k += " | "
-            } else if (f[d].post_type === "data") {
-                k += " 数读 | "
-            }
             k += " ";
-            if (f[d].post_type !== "data") {
-                k += " ";
-                //k += g(f[d].author);
-                //k += " | "
-            }
+            k += g(f[d].category);
+            k += " | ";
+            k += " ";
+            k += " ";
+            //k += g(f[d].author);
+            //k += " | ";
             k += " ";
             k += g(f[d].pubDate);
             k += "</span> </div> </a> </li> "
@@ -4139,7 +4123,7 @@ default = {
                     var g = template("search/desk-list", {
                         searchList: list
                     });
-                    //d.$searchBoxZone.find(".js-results-count").html(f.nbHits);
+                    d.$searchBoxZone.find(".js-results-count").html(num);
                     if (c) {
                         a("#search-list").html(g)
                     } else {
