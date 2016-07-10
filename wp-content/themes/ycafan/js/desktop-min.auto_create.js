@@ -562,7 +562,7 @@
             return c
         },
         getCache: function(a) {
-            return null//huangbo头部缓存分类文章缓存
+            //return null//huangbo头部缓存分类文章缓存
             var b = null;
             var c = YCA.getItem("navCache");
             if (!a) {
@@ -4107,7 +4107,7 @@ default = {
             var param = {
                 action : 'search',
                 keywords : d.searchQueryStr,
-                page : d.pageNumber,
+                page : d.pageNumber + 1
             };
             $.ajax({
                 url: rcGlobal.wpAjaxUrl + "/wp-admin/admin-ajax.php?timestamp=" + new Date().getTime(),
@@ -4136,27 +4136,6 @@ default = {
                     })
 
                 }
-            })
-            return;
-            e.search(d.searchQueryStr, f,
-            function(e, f) {
-                d._countPageTotal(f.nbPages);
-                d.$loading.hide();
-                a(".js-search-title").removeClass("hide");
-                var g = template("search/desk-list", {
-                    searchList: f.hits
-                });
-                d.$searchBoxZone.find(".js-results-count").html(f.nbHits);
-                if (c) {
-                    a("#search-list").html(g)
-                } else {
-                    a("#search-list").append(g)
-                }
-                d.$searchBoxZone.find(".js-excerpt").each(function(a, c) {
-                    b(c, {
-                        clamp: 3
-                    })
-                })
             })
         },
         _countPageTotal: function(a) {
@@ -5460,7 +5439,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        return undefined;//huangbo remove cache 首页加载列表缓存
+        //return undefined;//huangbo remove cache 首页加载列表缓存
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {

@@ -371,7 +371,8 @@ function ajax_search(){
     $db = new Db($wpdb, $wpdb->posts);
     $keywords = $Tool->_filter_title($Tool->_request('keywords'));
     $page = intval($Tool->_request('page'));
-    $pageSize = 2;
+    $pageSize = 20;
+    hb($Tool->_request());
 
     $where = " post_title LIKE '%{$keywords}%' OR post_content LIKE '%{$keywords}%'";
 //    $posts_list = $Tool->_object_to_array($db->_select($where, $page, $pageSize, 'ID DESC'));
@@ -386,14 +387,14 @@ function ajax_search(){
             $cat = array_shift(get_the_category());
             $_posts[] = [
                 'objectID' => get_the_ID(),
-                'title' => get_the_title(),
+                'title' => highlight(get_the_title(), $keywords, true),
                 'author' => get_the_author(),
                 'pubDate' => get_the_time('Y-m-d H:i:s'),
                 'image' => $Tool->_get_img_from_html(get_the_content()),
                 'link' => get_page_link(),
                 'category' => get_cat_name($cat->term_id),
                 'post_type' => $cat->slug,
-                'content' => $Tool->_str_cut(get_the_content(), 0, 40, false),
+                'content' => highlight(get_the_content(), $keywords),
             ];
         }
     }
@@ -409,12 +410,18 @@ function ajax_search(){
 }
 
 //关键词高亮
-function highlight($buffer){
+function highlight($content, $buffer, $type = false){
     if(empty($buffer)){
         return '';
     }
-    $buffer = preg_replace("/(".$v.")/i", "<span style=\"background-color:#ff0;\"><strong>$1</strong></span>", $buffer);
-    return $buffer;
+    if($type){
+        $sub_content = $content;
+    }else{
+        $subcontent = preg_split("/{$buffer}/i", $content, 2);
+        $sub_content = $buffer . mb_substr($subcontent[1], 0, 100) . '...';
+    }
+    $new_content = preg_replace("/(" . $buffer . ")/i", "<span style=\"background-color:#ff0;\"><strong>$1</strong></span>", $sub_content);
+    return $new_content;
 }
 
 //获取右侧栏推荐位
