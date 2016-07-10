@@ -374,7 +374,7 @@ function ajax_search(){
     $pageSize = 20;
     hb($Tool->_request());
 
-    $where = " post_title LIKE '%{$keywords}%' OR post_content LIKE '%{$keywords}%'";
+    $where = " post_title LIKE '%{$keywords}%' OR post_content LIKE '%{$keywords}%' AND post_status = 'publish' ";
 //    $posts_list = $Tool->_object_to_array($db->_select($where, $page, $pageSize, 'ID DESC'));
     $posts_num = $db->_count($where);
 

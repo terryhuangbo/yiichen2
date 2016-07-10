@@ -4120,6 +4120,9 @@ default = {
                     d._countPageTotal(num);
                     d.$loading.hide();
                     a(".js-search-title").removeClass("hide");
+                    if(list.length == 0){
+                        return ;
+                    }
                     var g = template("search/desk-list", {
                         searchList: list
                     });
