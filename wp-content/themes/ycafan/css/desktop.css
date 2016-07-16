@@ -22,7 +22,7 @@
 
 @font-face {
     font-family: font-data;
-    src: url(/wp-content/themes/doge/static/fonts/font-data.ttf?1461576870) format("truetype")
+    /*src: url(/wp-content/themes/doge/static/fonts/font-data.ttf?1461576870) format("truetype")*/
 }
 
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, ythame, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
@@ -4064,7 +4064,7 @@ body, html {
 }
 
 .c-buzz-widget-header {
-    background-image: url(/wp-content/themes/doge/static/images/widget-buzz.png?1461576869);
+    /*background-image: url(/wp-content/themes/doge/static/images/widget-buzz.png?1461576869);*/
     height: 80px
 }
 
@@ -4212,7 +4212,7 @@ body, html {
 }
 
 .c-mindstore-widget-header {
-    background-image: url(/wp-content/themes/doge/static/images/widget-mindstore.png?1461576869);
+    /*background-image: url(/wp-content/themes/doge/static/images/widget-mindstore.png?1461576869);*/
     height: 80px;
     width: 100%
 }
@@ -6153,7 +6153,7 @@ button.swiper-pagination-bullet {
     padding-top: 30px;
     text-align: left;
     color: #fff;
-    background-image: url(/wp-content/themes/doge/static/images/iycar-report/banner.jpg?1461576870);
+    /*background-image: url(/wp-content/themes/doge/static/images/iycar-report/banner.jpg?1461576870);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #242424
@@ -7050,7 +7050,7 @@ button.swiper-pagination-bullet {
     left: 50%;
     width: 1200px;
     height: 100%;
-    background: url(/wp-content/themes/doge/static/images/decorations/line.png?1461576870) no-repeat;
+    /*background: url(/wp-content/themes/doge/static/images/decorations/line.png?1461576870) no-repeat;*/
     background-size: 700px 100%
 }
 
@@ -7235,7 +7235,7 @@ button.swiper-pagination-bullet {
 }
 
 body:after {
-    content: url(/wp-content/themes/doge/static/images/lightbox/close.png?1461576870) url(/wp-content/themes/doge/static/images/lightbox/loading.gif?1461576870) url(/wp-content/themes/doge/static/images/lightbox/prev.png?1461576870) url(/wp-content/themes/doge/static/images/lightbox/next.png?1461576870);
+    /*content: url(/wp-content/themes/doge/static/images/lightbox/close.png?1461576870) url(/wp-content/themes/doge/static/images/lightbox/loading.gif?1461576870) url(/wp-content/themes/doge/static/images/lightbox/prev.png?1461576870) url(/wp-content/themes/doge/static/images/lightbox/next.png?1461576870);*/
     display: none
 }
 
@@ -7303,7 +7303,7 @@ body:after {
     width: 32px;
     height: 32px;
     margin: 0 auto;
-    background: url(/wp-content/themes/doge/static/images/lightbox/loading.gif?1461576870) no-repeat
+    /*background: url(/wp-content/themes/doge/static/images/lightbox/loading.gif?1461576870) no-repeat*/
 }
 
 .lb-nav {
@@ -7334,7 +7334,7 @@ body:after {
     width: 34%;
     left: 0;
     float: left;
-    background: url(/wp-content/themes/doge/static/images/lightbox/prev.png?1461576870) left 48% no-repeat;
+    /*background: url(/wp-content/themes/doge/static/images/lightbox/prev.png?1461576870) left 48% no-repeat;*/
     filter: alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity .6s;
@@ -7350,7 +7350,7 @@ body:after {
     width: 64%;
     right: 0;
     float: right;
-    background: url(/wp-content/themes/doge/static/images/lightbox/next.png?1461576870) right 48% no-repeat;
+    /*background: url(/wp-content/themes/doge/static/images/lightbox/next.png?1461576870) right 48% no-repeat;*/
     filter: alpha(Opacity=0);
     opacity: 0;
     -webkit-transition: opacity .6s;
@@ -7405,7 +7405,7 @@ body:after {
     float: right;
     width: 30px;
     height: 30px;
-    background: url(/wp-content/themes/doge/static/images/lightbox/close.png?1461576870) top right no-repeat;
+    /*background: url(/wp-content/themes/doge/static/images/lightbox/close.png?1461576870) top right no-repeat;*/
     text-align: right;
     outline: 0;
     filter: alpha(Opacity=70);
@@ -7487,7 +7487,7 @@ body:after {
 }
 
 .c-appso-download-button--android, .c-appso-download-button--googleplay, .c-appso-download-button--iphone, .c-appso-download-button--mac, .c-appso-download-button--webapp, .c-appso-download-button--wp, .c-appso-download-hint {
-    background-image: url(/wp-content/themes/doge/static/images/appso-sprite.png?1461576870);
+    /*background-image: url(/wp-content/themes/doge/static/images/appso-sprite.png?1461576870);*/
     background-size: 292px 147px
 }
 

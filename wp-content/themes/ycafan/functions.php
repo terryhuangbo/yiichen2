@@ -372,7 +372,6 @@ function ajax_search(){
     $keywords = $Tool->_filter_title($Tool->_request('keywords'));
     $page = intval($Tool->_request('page'));
     $pageSize = 20;
-    hb($Tool->_request());
 
     $where = " post_title LIKE '%{$keywords}%' OR post_content LIKE '%{$keywords}%' AND post_status = 'publish' ";
 //    $posts_list = $Tool->_object_to_array($db->_select($where, $page, $pageSize, 'ID DESC'));
@@ -492,7 +491,7 @@ function ajax_get_recent_comments(){
         $Tool->_json([], -10000);
     }
     $sql = "SELECT p.post_title, c.* FROM wp_posts AS p LEFT JOIN wp_comments AS c ON c.comment_post_ID = p.ID
-            WHERE c.comment_parent = 0 ORDER BY c.comment_date DESC LIMIT {$offset}, {$pageSize}";
+            WHERE c.comment_parent = 0 AND c.comment_approved = '1' ORDER BY c.comment_date DESC LIMIT {$offset}, {$pageSize}";
     $result = $Tool->_object_to_array($wpdb->get_results($sql));
     foreach($result as $cm){
         $_data[] = [
@@ -501,7 +500,7 @@ function ajax_get_recent_comments(){
             'post_id' => $cm['comment_post_ID'],
             'post_title' => $Tool->_str_cut($cm['post_title'], 0, 15, false),
             'content' => $Tool->_str_cut($cm['comment_content'], 0, 45, false) . '...',
-            'garvatar' => $Tool->_get_img_from_html(get_avatar($cm['comment_author_email'],'20')),
+            'garvatar' => get_bloginfo('template_url') . '/images/garvatar/useravatar.jpg',
             'link' => get_permalink($cm['comment_post_ID']),
             'author' => $cm['comment_author'],
             'author_email' => $cm['comment_author_email'],

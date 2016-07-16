@@ -3520,7 +3520,7 @@ article.dasheng .entry-blockquote .post-author {
     position: absolute;
     top: -30px;
     right: 0;
-    background: url('http://images.iycar.cn/wp-content/themes/iycar-2.0/static/images/desktop/data-widget-bg-v1.png?1447041364') no-repeat;
+    /*background: url('http://images.iycar.cn/wp-content/themes/iycar-2.0/static/images/desktop/data-widget-bg-v1.png?1447041364') no-repeat;*/
     background-size: cover;
     z-index: -1
 }
