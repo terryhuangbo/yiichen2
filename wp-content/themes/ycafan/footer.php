@@ -129,7 +129,7 @@
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/desktop-min.auto_create.js?ver=1.1'></script>
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/buzz.auto_create.js?ver=4.2.4'></script>
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/tools.js'></script>
-<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/comment-main.js'></script>
+<!--<script type='text/javascript' src='--><?php //bloginfo('template_url'); ?><!--/js/comment-main.js'></script>-->
   <!--[if gte IE 9]>
 <script src="http://cdn.iycar.cn/vendor/raven.min.js"></script>
 <script type="text/javascript">
