@@ -791,13 +791,40 @@ function _param($key){
     return (new Tools())->_params($key);
 }
 
+//增强编辑器
+function add_editor_buttons($buttons) {
+
+    $buttons[] = 'backcolor';
+    $buttons[] = 'fontselect';
+    $buttons[] = 'fontsizeselect';
+    $buttons[] = 'cleanup';
+    $buttons[] = 'styleselect';
+    $buttons[] = 'anchor';
+    $buttons[] = 'image';
+    $buttons[] = 'newdocument';
+    $buttons[] = 'hr';
+    $buttons[] = 'del';
+    $buttons[] = 'sub';
+    $buttons[] = 'sup';
+    $buttons[] = 'copy';
+    $buttons[] = 'paste';
+    $buttons[] = 'cut';
+    $buttons[] = 'image';
+    $buttons[] = 'anchor';
+    $buttons[] = 'wp_page';
+    $buttons[] = 'charmap';
+    
+    return $buttons;
+}
+add_filter("mce_buttons_3", "add_editor_buttons");
+
 //测试-打印函数
-function hb($data, $type = true) {
-     if($type){
-         file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-     }else{
-         file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
-     }
- }
+// function hb($data, $type = true) {
+//      if($type){
+//          file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+//      }else{
+//          file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
+//      }
+//  }
 
 ?>
