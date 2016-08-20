@@ -7354,7 +7354,12 @@ footer {
     font-size: 12px;
     color: #FFF;
     position: relative;
+    top: 20px;
     overflow: hidden
+
+
+
+
 }
 
 footer .footer-bg {

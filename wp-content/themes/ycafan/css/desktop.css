@@ -2668,11 +2668,13 @@ body, html {
 }
 
 .o-single-content__body--main {
-    padding-top: 23px
+    padding-top: 23px;
+    width: 710px;
 }
 
 .o-single-content__body__content {
-    width: 625px;
+    width: 650px;
+    margin-bottom: 20px;
     float: right
 }
 
