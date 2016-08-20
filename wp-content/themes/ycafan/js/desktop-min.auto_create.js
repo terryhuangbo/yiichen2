@@ -5442,7 +5442,7 @@ default = {
         }
     };
     f.prototype.getCache = function(a) {
-        //return undefined;//huangbo remove cache 首页加载列表缓存
+        return undefined;//huangbo remove cache 首页加载列表缓存
         var b = localStorage.getItem(a);
         var c = (new Date).getTime();
         if (b) {

@@ -6,9 +6,9 @@ get_header();
 //扩展字段
 $fields = get_fields(_param('indexid'));
 //最新文章$_push_1，$_push_2，$_push_3三个推荐位
-$_push_1 = 4;
+$_push_1 = 3;
 $_push_2 = 4;
-$_push_3 = 4;
+$_push_3 = 6;
 $_push_post_total = $_push_1 + $_push_2 + $_push_3;
 $_index_posts     = _get_index_posts($_push_post_total);
 //首页视频
@@ -151,7 +151,7 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
 <div class="main">
     <div class="index-content-normal posts-list">
         <!-- 第一个推荐位，只能有三个-->
-        <?php foreach(array_splice($_index_posts, 0, $_push_1) as $p):   ?>
+        <?php foreach(array_slice($_index_posts, 0, $_push_1) as $p):   ?>
             <article itemscope itemtype="http://schema.org/Article" id="post-<?php echo $p['ID'] ?>"
                      class="row post-item-container">
                 <div class="new-post-item-content">
@@ -239,7 +239,7 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
         </div>
 
         <!-- 第二个推荐位，只能有三个-->
-        <?php foreach(array_splice($_index_posts, $_push_1, $_push_2) as $p):   ?>
+        <?php foreach(array_slice($_index_posts, $_push_1, $_push_2) as $p):   ?>
             <article itemscope itemtype="http://schema.org/Article" id="post-<?php echo $p['ID'] ?>"
                      class="row post-item-container">
                 <div class="new-post-item-content">
@@ -468,7 +468,7 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
     <div class="main js-index-part-two">
         <div class="index-content-normal posts-list">
             <!-- 第三个推荐位，只能有六个-->
-            <?php foreach(array_splice($_index_posts, $_push_1 + $_push_2, $_push_3) as $p):   ?>
+            <?php foreach(array_slice($_index_posts, $_push_1 + $_push_2, $_push_3) as $p):   ?>
                 <article itemscope itemtype="http://schema.org/Article" id="post-<?php echo $p['ID'] ?>"
                          class="row post-item-container">
                     <div class="new-post-item-content">
