@@ -4,27 +4,21 @@
  **/
 get_header();
 //扩展字段
-$_ex_field = 'cache-index-expire';
-$fields = $Cache->_get('cache-index-field', $_ex_field);
-$fields = $fields ? $fields : $Cache->_set('cache-index-field', get_fields(_param('indexid')), $_ex_field);
+$fields = get_fields(_param('indexid'));
 //最新文章$_push_1，$_push_2，$_push_3三个推荐位
 $_push_1 = 4;
 $_push_2 = 4;
 $_push_3 = 4;
 $_push_post_total = $_push_1 + $_push_2 + $_push_3;
-$_index_posts = $Cache->_get('cache-index-latest-posts', $_ex_field);
-$_index_posts = $_index_posts ? $_index_posts
-    : $Cache->_set('cache-index-latest-posts', _get_index_posts($_push_post_total), $_ex_field);
+$_index_posts     = _get_index_posts($_push_post_total);
 //首页视频
-$videos = $Cache->_get('cache-index-videos', $_ex_field);
-$videos = $videos ? $videos : $Cache->_set('cache-index-videos', _get_index_videos(10), $_ex_field);
+//$videos = _get_index_videos(10);
+$videos = [];
 //专题文章区
-$_special_slug = $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special');
+$_special_slug  = $Tool->_value($fields['right_recommend'][0]['right_recommend_cat'], 'special');
 $_special_title = $Tool->_value($fields['right_recommend'][0]['right_recommend_title'], '专题');
-$_special_num = $Tool->_value($fields['right_recommend'][0]['right_recommend_num'], 10);
-$_special_posts = $Cache->_get('cache-index-special-posts', $_ex_field);
-$_special_posts = $_special_posts ? $_special_posts
-    : $Cache->_set('cache-index-special-posts', _get_index_specials($_special_slug, $_special_num), $_ex_field);
+$_special_num   = $Tool->_value($fields['right_recommend'][0]['right_recommend_num'], 10);
+$_special_posts = _get_index_specials($_special_slug, $_special_num);
 
 ?>
 
