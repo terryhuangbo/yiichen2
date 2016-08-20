@@ -22,9 +22,7 @@
         <div class="nav">
           <div class="title">友情链接</div>
           <ul>
-            <li><a href="http://groundbreaking.cn/" target="_blank">破土网</a></li>
-            <li><a href="http://www.wtoutiao.com/" target="_blank">新汉之声</a></li>
-            <li><a href="http://songshuhui.net/" target="_blank">科学松鼠会</a></li>
+            <li><a href="http://www.jianjiaobuluo.com/" target="_blank">尖椒部落</a></li>
             <li><a href="http://www.xinminnews.com/" target="_blank">新民在线</a></li>
             <li><a href="http://shiyuedaolu.zhandada.com/" target="_blank">十月道路</a></li>
             <li><a href="http://www.cul-studies.com/" target="_blank">当代文化研究网</a></li>
@@ -106,13 +104,11 @@
             </a>
           </li>
         </ul>
-<!--        <div class="black-line js-black-line"></div>-->
       </div>
       <div class="panel-body">
         <div class="tab-panel active" id="tab-panel-iycar">
           <img class="qrcode" src="<?php bloginfo('template_url'); ?>/images/wechat.jpg  " height="105" width="105" alt="少年中国评论微信二维码">
           <div class="content-block">
-<!--             <h3 class="title">少年中国评论微信</h3>-->
             <p class="description">关注少年中国评论微信号，让我们终于理想，让我们面对现实。</p>
           </div>
         </div>
