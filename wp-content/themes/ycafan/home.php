@@ -167,9 +167,9 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
                         <div class="comment-count new-comment-count">
                             <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#ds-reset"
                                ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
+                                <i class="iycar2015 iycar2015-pinglun"></i>
                             </a>
-                            <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
+                            <meta itemprop="commentCount" content="" />
                         </div>
                     </h2>
                     <p itemprop="description" class="js-excerpt" data-clamp="2">
@@ -255,9 +255,9 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
                         <div class="comment-count new-comment-count">
                             <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#ds-reset"
                                ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
+                                <i class="iycar2015 iycar2015-pinglun"></i>
                             </a>
-                            <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
+                            <meta itemprop="commentCount" content="" />
                         </div>
                     </h2>
                     <p itemprop="description" class="js-excerpt" data-clamp="2">
@@ -484,9 +484,9 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
                             <div class="comment-count new-comment-count">
                                 <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#ds-reset"
                                    ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
-                                    <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
+                                    <i class="iycar2015 iycar2015-pinglun"></i>
                                 </a>
-                                <meta itemprop="commentCount" content="<?php echo $p['comments'] ?>" />
+                                <meta itemprop="commentCount" content="" />
                             </div>
                         </h2>
                         <p itemprop="description" class="js-excerpt" data-clamp="2">
