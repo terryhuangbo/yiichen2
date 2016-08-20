@@ -9,12 +9,9 @@
 
 require_once dirname(__FILE__) .'/lib/tools.class.php';
 require_once dirname(__FILE__) .'/lib/db.class.php';
-require_once dirname(__FILE__) .'/lib/cache.class.php';
 require_once dirname(__FILE__) .'/lib/category.class.php';
 require_once dirname(__FILE__) .'/lib/setting.php';
 $Tool = new Tools();
-$Cache = new Cache();
-
 ?>
 <?php
 

@@ -1,7 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Shanghai');
 $Tool = new Tools();
-$Cache = new Cache();
 $seo = _get_seo($post);
 ?>
 <!DOCTYPE html>
