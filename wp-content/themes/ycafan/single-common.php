@@ -64,12 +64,11 @@ $tags = $Tool->_value(get_the_tags(), [], true);
                     <?php endforeach ?>
                 </div>
                 <div class="c-card-meta c-card-meta--darken c-article-sns" data-component="ArticleContentMeta" data-post-id="654732">
-                    <a href="#comments">
-                        <button class="c-article-sns__info c-card-meta__info c-card-meta__info--comments js-article-comment-count js-goto-comments">
-                            <?php echo _get_comments_num(get_the_ID()) ?>
+                    <a href="#ds-reset">
+                        <button class="ds-thread-count c-article-sns__info c-card-meta__info c-card-meta__info--comments " data-thread-key="<?php the_ID() ?>">
                         </button>
                     </a>
-                    <button class="c-article-sns__info c-card-meta__info c-card-meta__info--like js-article-like-count">--
+                    <button class="c-article-sns__info c-card-meta__info c-card-meta__info--like js-article-like-count">
                     </button>
                 </div>
             </div>
@@ -77,7 +76,7 @@ $tags = $Tool->_value(get_the_tags(), [], true);
                 <?php the_content(); ?>
             </article>
             <div class="o-single-content__body__content">
-                <div class="c-article-likes" data-component="ArticleLikes" data-post-id="654732"></div>
+                <div class="c-article-likes" data-component="ArticleLikes" data-post-id=""></div>
             </div>
             <div class="o-single-content__body__content">
                 <a class="c-jiong c-jiong--block c-jiong--bottom"
@@ -87,11 +86,11 @@ $tags = $Tool->_value(get_the_tags(), [], true);
             </div>
 
             <!-- 评论模块-->
-            <div id="comment-zone">
+            <div id="comments">
                 <?php if(intval(get_option('comment-open')) == 1):?>
                     <?php comments_template() ;?>
                 <?php else:?>
-                    <div class="o-single-content__body__content" id="comments">
+                    <div class="o-single-content__body__content" >
                         <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
                              data-post-id="654732">
                             <h5 class="c-card-category c-article-comments__headline">评论已经关闭</h5>

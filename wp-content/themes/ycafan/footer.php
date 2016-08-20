@@ -23,9 +23,9 @@
           <div class="title">友情链接</div>
           <ul>
             <li><a href="http://www.jianjiaobuluo.com/" target="_blank">尖椒部落</a></li>
-            <li><a href="http://www.xinminnews.com/" target="_blank">新民在线</a></li>
-            <li><a href="http://shiyuedaolu.zhandada.com/" target="_blank">十月道路</a></li>
-            <li><a href="http://www.cul-studies.com/" target="_blank">当代文化研究网</a></li>
+            <li><a href="http://inter.kke.gr/en/firstpage/" target="_blank">希腊共产党网站</a></li>
+            <li><a href="http://www.pcp.pt/en/home" target="_blank">葡萄牙共产党网站</a></li>
+            <li><a href="https://www.jacobinmag.com/" target="_blank">雅各宾</a></li>
           </ul>
         </div>
 
@@ -136,6 +136,7 @@ window.onerror = Raven.process;
 <![endif]-->
 
 <?php if(is_home()): ?>
+    <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/home-main.js'></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
             var widgetId2 = 'iycar_widget_buzz-2';

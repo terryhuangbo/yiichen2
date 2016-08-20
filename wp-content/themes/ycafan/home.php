@@ -165,7 +165,7 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
                             </span>
                         </a>
                         <div class="comment-count new-comment-count">
-                            <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
+                            <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#ds-reset"
                                ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
                                 <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
                             </a>
@@ -253,7 +253,7 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
                             </span>
                         </a>
                         <div class="comment-count new-comment-count">
-                            <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
+                            <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#ds-reset"
                                ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
                                 <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
                             </a>
@@ -482,7 +482,7 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
                             </span>
                             </a>
                             <div class="comment-count new-comment-count">
-                                <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#comments"
+                                <a rel="canonical" class="comment-count-container" href="<?php echo $p['link'] ?>#ds-reset"
                                    ga-track="event" ga-action="click" ga-event-category="button" ga-event-label="CommentCount">
                                     <i class="iycar2015 iycar2015-pinglun"></i><?php echo $p['comments'] ?>
                                 </a>
