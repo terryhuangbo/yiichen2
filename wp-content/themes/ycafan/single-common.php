@@ -87,16 +87,18 @@ $tags = $Tool->_value(get_the_tags(), [], true);
             </div>
 
             <!-- 评论模块-->
-            <?php if(intval(get_option('comment-open')) == 1):?>
-                <?php comments_template() ;?>
-            <?php else:?>
-                <div class="o-single-content__body__content" id="comments">
-                    <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
-                         data-post-id="654732">
-                        <h5 class="c-card-category c-article-comments__headline">评论已经关闭</h5>
+            <div id="comment-zone">
+                <?php if(intval(get_option('comment-open')) == 1):?>
+                    <?php comments_template() ;?>
+                <?php else:?>
+                    <div class="o-single-content__body__content" id="comments">
+                        <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
+                             data-post-id="654732">
+                            <h5 class="c-card-category c-article-comments__headline">评论已经关闭</h5>
+                        </div>
                     </div>
-                </div>
-            <?php endif?>
+                <?php endif?>
+            </div>
 
         </div>
     </div>
