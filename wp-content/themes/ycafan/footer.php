@@ -124,7 +124,6 @@
 </div><!--end container -->
 
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/jquery.min.js'></script>
-<script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/algoliasearch_v3.8.min.js?ver=4.2.4'></script>
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/common-min.auto_create.js?ver=1.1'></script>
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/desktop-min.auto_create.js?ver=1.1'></script>
 <script type='text/javascript' src='<?php bloginfo('template_url'); ?>/js/buzz.auto_create.js?ver=4.2.4'></script>
@@ -140,31 +139,33 @@ window.onerror = Raven.process;
 </script>
 <![endif]-->
 
+<?php if(is_home()): ?>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var widgetId2 = 'iycar_widget_buzz-2';
+            if (widgetId2) {
+                return new window.WidgetBuzz('#' + widgetId2);
+            }
+            return;
+        });
+        jQuery(document).ready(function () {
+            var widgetId3 = 'iycar_widget_buzz-3';
+            if (widgetId3) {
+                return new window.WidgetBuzz('#' + widgetId3);
+            }
+            return;
+        });
+    </script>
+<?php endif ?>
 
-<script type="text/javascript">
-    jQuery(document).ready(function () {
-        var widgetId2 = 'iycar_widget_buzz-2';
-        if (widgetId2) {
-            return new window.WidgetBuzz('#' + widgetId2);
-        }
-        return;
-    });
-    jQuery(document).ready(function () {
-        var widgetId3 = 'iycar_widget_buzz-3';
-        if (widgetId3) {
-            return new window.WidgetBuzz('#' + widgetId3);
-        }
-        return;
-    });
-</script>
 
 <script>
     //设置浏览者缓存为随机数
-    var vistor = $._cache.get('VISTOR');
-    if(vistor === undefined){
-        var vistor = Math.random().toString(36).substr(2);
-        $._cache.set('VISTOR', vistor, 60*60);
-    }
+//    var vistor = $._cache.get('VISTOR');
+//    if(vistor === undefined){
+//        var vistor = Math.random().toString(36).substr(2);
+//        $._cache.set('VISTOR', vistor, 60*60);
+//    }
 </script>
 <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"eee3fec2bc","applicationID":"3953741","transactionName":"M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==","queueTime":0,"applicationTime":4,"atts":"HxZYEVlOTxk=","errorBeacon":"bam.nr-data.net","agent":""}</script>
 
