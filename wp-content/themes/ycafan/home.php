@@ -343,7 +343,7 @@ $_special_posts = _get_index_specials($_special_slug, $_special_num);
             <?php endforeach ?>
         </div>
 
-        <?php if(intval(get_option('comment-open')) == 1):?>
+        <?php if(0 && intval(get_option('comment-open')) == 1):?>
             <div id="iycar_widget_buzz-3" class="widget-container widget_iycar_widget_buzz clearfix" style="display: block">
                 <div class="widget-buzz-container">
                     <div class="o-widget__header c-hot-comment-widget-header">
