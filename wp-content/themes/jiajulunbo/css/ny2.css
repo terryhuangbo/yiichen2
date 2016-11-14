@@ -1,0 +1,198 @@
+
+
+
+.ny2_1 { width:616px; height:90px; background:url(../images/new_3.jpg); overflow:hidden; margin-left:5px;}
+.ny2_1 .m1 { width:522px; height:80px; margin:10px 0 0 89px;}
+.ny2_1 .m2 { width:437px; height:23px; float:left;}
+.ny2_1 .m2 a {font-size: 12px; line-height: 23px; font-weight: bold; color: #333333; text-decoration: none;}
+.ny2_1 .m2 a:hover { color:#fe5153;}
+.ny2_1 .m3 { width:85px; height:23px; float:left; font-size: 12px; line-height: 23px; color: #999999; text-decoration: none; text-align:right;}
+.ny2_1 .m4 { width:522px; height:42px; float:left;}
+.ny2_1 .m4 a {font-size: 12px;line-height: 21px;color: #666666;text-decoration: none;}
+.ny2_1 .m4 a:hover {color:#fe5153;}
+
+
+ /*分页样式 */
+.pager {width:100%;overflow:hidden;white-space:nowrap;padding:4px; text-align:center; margin-top:10px; float:left;}
+.pager a {border:1px solid #ccc;color: #666;font-size:12px;margin:2px;padding:3px 6px;}
+.pager a.current {border:1px solid #cccccc;font-size:12px;margin:2px;padding:3px 6px; color:#fe5153; background:#ededed;}
+.pager a:hover {border:solid 1px #fe5153;font-size:12px;color: #ffffff;text-decoration:none; background:#ff7674;}
+a:hover {color: #C67700;}
+  /*分页样式 */
+
+
+.ny2_2 { width:616px; margin-left:5px;}
+.ny2_2 .m5 {
+	width:616px;
+	height:45px;
+	text-align:center;
+	font-size: 18px;
+	line-height: 45px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+}
+.ny2_2 .m6 {width:616px;height:28px;}
+.ny2_2 .m6 .m7{ float:left; width:210px; height:28px;font-size: 12px;line-height: 28px;color: #666666;text-decoration: none; text-align:center;}
+.ny2_2 .m6 .m8{float:left; width:40px; height:28px;font-size: 12px;line-height: 28px;color: #666666;text-decoration: none;}
+.ny2_2 .m6 .m9 { width:150px; height:28px; float:left; padding-top:2px;}
+.ny2_2 .entry{ width:616px; margin-top:10px;border-top:1px solid #ccc; border-bottom:1px solid #ccc;}
+.ny2_2 .entry p{
+    padding:10px 0 10px 0;
+	font-size: 12px;
+	line-height: 24px;
+	color: #666666;
+	text-decoration: none;
+}
+.ny2_2 .m10 {
+    margin-left:10px;
+	width:600px;
+	height:24px;
+	font-size: 12px;
+	line-height: 24px;
+	color: #666666;
+	text-decoration: none;
+}
+.ny2_2 .m10 a:hover{color: #C67700;}
+.ny1_5 .i8 .k3 li:hover,.k3 .current-cat {background:url(../images/about_9.jpg)!important;}
+.k3 .current-cat a { color:#FFFFFF!important;}
+
+
+.ny3_1 { width:626px; height:120px; overflow:hidden; margin-top:10px;}
+.ny3_1 .n1 {
+	width:500px;
+	height:42px;
+	margin:40px 0 0 20px;
+	font-family: "微软雅黑";
+	font-size: 22px;
+	line-height: 42px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: bold;
+}
+.ny3_2 {width:616px; margin-left:5px;}
+.ny3_2 h1{
+    margin-top:5px;
+	height:20px;
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #333333;
+	text-decoration: none;
+}
+.ny3_2 p {
+	font-size: 12px;
+	line-height: 20px;
+	color: #333333;
+	text-decoration: none;
+}
+.ny3_3 {width:624px; margin-left:2px;}
+.ny3_3 .n2 { width:177px; height:165px; margin:10px 15px 0 15px; float:left; overflow:hidden; display:inline;}
+.ny3_3 .n2 .n3 { width:175px; height:130px; border:1px solid #cccbc9; overflow:hidden;}
+.ny3_3 .n2 .n4 {
+	width:177px;
+	height:32px;
+	overflow:hidden;
+	font-size: 12px;
+	line-height: 32px;
+	font-weight: bolder;
+	color: #333333;
+	text-decoration: none;
+	text-align:center;
+}
+.ny3_3 .n2 .n4 a:hover { color:#FF3300!important;}
+
+
+
+.ny4_1 {width:986px; background: url(../images/sy1_6.jpg); margin:auto;}
+.ny4_1 .o1{ width:900px; padding:10px 0 0 43px;}
+.ny4_1 .o2 { width:900px; height:78px; overflow:hidden;}
+.ny4_1 .p {
+    margin:10px 0 0 10px;
+	width:880px;
+	font-size: 12px;
+	line-height: 24px;
+	color: #333333;
+	text-decoration: none;
+}
+.ny4_1 .o3 { width:880px; background:#000000; margin-top:10px; padding:10px;}
+.ny4_1 .o3 .o4{ width:878px; height:655px; border:1px solid #666666;}
+.ny4_1 .o3 .o6 { width:880px; margin-top:10px; background:url(../images/cp_5.jpg) no-repeat;}
+.ny4_1 .o3 .o7 {
+	width:248px;
+	height:24px;
+	float:left;
+	display:inline;
+	margin-left:3px;
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: bold;
+	color: #7e7e7e;
+	text-decoration: none;
+	background:#000;
+}
+.ny4_1 .o3 .o8 { width:137px; height:98px; margin-left:20px; float:left; display:inline; background:#999999; overflow:hidden;}
+.ny4_1 .o5 { width:900px; height:67px; background:url(../images/cp_4.jpg) no-repeat;}
+
+.ny4_1 .q1 { width:920px; height:11px; background: url(../images/al1_2.jpg); margin-left:33px;}
+.ny4_1 .q2 { width:930px; margin-left:28px;}
+.ny4_1 .q3 { width:274px; height:205px; background:#CCCCCC; border:3px solid #000000; float:left; margin:15px; display:inline; overflow:hidden; position:relative;}
+.ny4_1 .q4 { width:274px; height:30px; background:#000000; position:absolute; top:175px; z-index:99;
+             filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+             opacity:0.5;/*Mozilla*/ }
+.ny4_1 .q4 h1 {
+	font-size: 12px;
+	line-height: 30px;
+	color: #FFFFFF;
+	text-decoration: none;
+	font-weight: normal;
+	margin-left:10px;
+}
+
+
+
+.ny4_1 .s1{ width:920px;margin-left:33px;}
+.ny4_1 .s1 .s2 {width:817px; height:88px; overflow:hidden;}
+.ny4_1 .s1 .s3 { width:920px; height:171px; padding:15px 0 10px 0;}
+.ny4_1 .s1 .s4 { width:217px; height:171px; overflow:hidden; background:url(../images/ss_2.jpg); float:left;}
+.ny4_1 .s1 .s4 img { margin:20px 0 0 20px;}
+.ny4_1 .s1 .s3 h2{
+	width:685px;
+	height:30px;
+	margin-top:10px;
+	font-size: 13px;
+	line-height: 30px;
+	color: #333333;
+	text-decoration: none;
+} 
+.ny4_1 .s1 .s3 a:hover{ color:#FF3300;}
+.ny4_1 .s1 .s5 { width:685px; height:171px; overflow:hidden;}
+.ny4_1 .s1 .s6 { width:685px; height:26px;}
+.ny4_1 .s1 .s7  { width:350px; height:22px; float:left;}
+.ny4_1 .s1 .s8  { width:150px; height:22px; float:right; text-align:center;}
+.ny4_1 .s1 .s8 a {
+	font-family: '472-CAI978472-CAI978', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 22px;
+	color: #666666;
+	text-decoration: none;
+	font-weight: bold;
+}
+.ny4_1 .s1 .entry {
+	width:685px;
+	font-size: 12px;
+	line-height: 22px;
+}
+.ny4_1 .s1 .s9 { width:920px; height:1px; background:url(../images/ss_3.jpg);}
+.ny4_1 .s1 .s10 {
+	width:420px;
+	height:280px;
+	background: url(../images/ss_4.jpg);
+	margin-left:265px;
+	font-size: 30px;
+	line-height: 280px;
+	font-weight: 900;
+	color: #666666;
+	text-decoration: none;
+	text-align:center;
+}

@@ -1,0 +1,33 @@
+﻿/*\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ luara
+ version 0.1  2014-8-21
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*/
+/*reset*/
+body{font-family: "microsoft yahei","微软雅黑";}
+body,ul,li,ol,img{margin: 0;padding: 0;}
+li{list-style: none;}
+
+
+
+/*lubo*/
+.lubo{}
+.lubo ol{position:relative;height: 20px;top:-30px;left:30%;}
+.lubo ol li{float:left;width: 15px;height: 15px;margin: 5px;border: 1px #fff solid}
+.lubo ol li.seleted{background: #fff;}
+
+
+/*渐隐*/
+.luara-{position:relative;padding:0;overflow: hidden;}
+.luara- ul{padding: inherit;margin: 0;}
+.luara- ul li{display: none;padding: inherit;margin: inherit;list-style: none;}
+.luara- ul li:first-child{display:block;}
+.luara- ul li img{width: inherit;height: inherit;}
+
+
+
+
+
+
+
+
+
