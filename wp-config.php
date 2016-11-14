@@ -20,16 +20,16 @@
 
 // ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
 /** WordPress 数据库的名称 */
-define('DB_NAME', 'yca');
+define('DB_NAME', 'qdm114473640_db');
  
 /** MySQL 数据库用户名 */
-define('DB_USER', 'root');
+define('DB_USER', 'qdm114473640');
  
 /** MySQL 数据库密码 */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'love243661753');
  
 /** MySQL 主机 */
-define('DB_HOST', localhost);
+define('DB_HOST', 'qdm114473640.my3w.com');
 
 /** 创建数据表时默认的文字编码 */
 define('DB_CHARSET', 'utf8');
