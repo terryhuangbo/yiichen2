@@ -188,7 +188,7 @@
 
 								}
 							}).error(function(){
-								alert('here')
+								// alert('here')
 							}).attr('src',$img.attr('src'));
 						});
 							
