@@ -816,12 +816,12 @@ function add_editor_buttons($buttons) {
 add_filter("mce_buttons_3", "add_editor_buttons");
 
 //测试-打印函数
-function hb($data, $type = true) {
-  if($type){
-      file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
-  }else{
-      file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
-  }
-}
+// function hb($data, $type = true) {
+//      if($type){
+//          file_put_contents('E:\wamp\www\1.txt', print_r($data , true));
+//      }else{
+//          file_put_contents('E:\wamp\www\1.txt', print_r($data , true), FILE_APPEND);
+//      }
+//  }
 
 ?>

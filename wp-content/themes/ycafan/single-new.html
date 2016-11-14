@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+    function r(n) {
+        if (!t[n]) {
+            var o = t[n] = {exports: {}};
+            e[n][0].call(o.exports, function (t) {
+                var o = e[n][1][t];
+                return r(o || t)
+            }, o, o.exports)
+        }
+        return t[n].exports
+    }
+
+    if ("function" == typeof __nr_require)return __nr_require;
+    for (var o = 0; o < n.length; o++)r(n[o]);
+    return r
+}({
+    1: [function (e, t, n) {
+        function r(e, t) {
+            return function () {
+                o(e, [(new Date).getTime()].concat(a(arguments)), null, t)
+            }
+        }
+
+        var o = e("handle"), i = e(2), a = e(3);
+        "undefined" == typeof window.newrelic && (newrelic = NREUM);
+        var u = ["setPageViewName", "addPageAction", "setCustomAttribute", "finished", "addToTrace", "inlineHit"], c = ["addPageAction"], f = "api-";
+        i(u, function (e, t) {
+            newrelic[t] = r(f + t, "api")
+        }), i(c, function (e, t) {
+            newrelic[t] = r(f + t)
+        }), t.exports = newrelic, newrelic.noticeError = function (e) {
+            "string" == typeof e && (e = new Error(e)), o("err", [e, (new Date).getTime()])
+        }
+    }, {}], 2: [function (e, t, n) {
+        function r(e, t) {
+            var n = [], r = "", i = 0;
+            for (r in e)o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+            return n
+        }
+
+        var o = Object.prototype.hasOwnProperty;
+        t.exports = r
+    }, {}], 3: [function (e, t, n) {
+        function r(e, t, n) {
+            t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+            for (var r = -1, o = n - t || 0, i = Array(0 > o ? 0 : o); ++r < o;)i[r] = e[t + r];
+            return i
+        }
+
+        t.exports = r
+    }, {}], ee: [function (e, t, n) {
+        function r() {
+        }
+
+        function o(e) {
+            function t(e) {
+                return e && e instanceof r ? e : e ? u(e, a, i) : i()
+            }
+
+            function n(n, r, o) {
+                e && e(n, r, o);
+                for (var i = t(o), a = l(n), u = a.length, c = 0; u > c; c++)a[c].apply(i, r);
+                var s = f[g[n]];
+                return s && s.push([m, n, r, i]), i
+            }
+
+            function p(e, t) {
+                w[e] = l(e).concat(t)
+            }
+
+            function l(e) {
+                return w[e] || []
+            }
+
+            function d(e) {
+                return s[e] = s[e] || o(n)
+            }
+
+            function v(e, t) {
+                c(e, function (e, n) {
+                    t = t || "feature", g[n] = t, t in f || (f[t] = [])
+                })
+            }
+
+            var w = {}, g = {}, m = {on: p, emit: n, get: d, listeners: l, context: t, buffer: v};
+            return m
+        }
+
+        function i() {
+            return new r
+        }
+
+        var a = "nr@context", u = e("gos"), c = e(2), f = {}, s = {}, p = t.exports = o();
+        p.backlog = f
+    }, {}], gos: [function (e, t, n) {
+        function r(e, t, n) {
+            if (o.call(e, t))return e[t];
+            var r = n();
+            if (Object.defineProperty && Object.keys)try {
+                return Object.defineProperty(e, t, {value: r, writable: !0, enumerable: !1}), r
+            } catch (i) {
+            }
+            return e[t] = r, r
+        }
+
+        var o = Object.prototype.hasOwnProperty;
+        t.exports = r
+    }, {}], handle: [function (e, t, n) {
+        function r(e, t, n, r) {
+            o.buffer([e], r), o.emit(e, t, n)
+        }
+
+        var o = e("ee").get("handle");
+        t.exports = r, r.ee = o
+    }, {}], id: [function (e, t, n) {
+        function r(e) {
+            var t = typeof e;
+            return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
+                return o++
+            })
+        }
+
+        var o = 1, i = "nr@id", a = e("gos");
+        t.exports = r
+    }, {}], loader: [function (e, t, n) {
+        function r() {
+            if (!w++) {
+                var e = v.info = NREUM.info, t = s.getElementsByTagName("script")[0];
+                if (e && e.licenseKey && e.applicationID && t) {
+                    c(l, function (t, n) {
+                        e[t] || (e[t] = n)
+                    });
+                    var n = "https" === p.split(":")[0] || e.sslForHttp;
+                    v.proto = n ? "https://" : "http://", u("mark", ["onload", a()], null, "api");
+                    var r = s.createElement("script");
+                    r.src = v.proto + e.agent, t.parentNode.insertBefore(r, t)
+                }
+            }
+        }
+
+        function o() {
+            "complete" === s.readyState && i()
+        }
+
+        function i() {
+            u("mark", ["domContent", a()], null, "api")
+        }
+
+        function a() {
+            return (new Date).getTime()
+        }
+
+        var u = e("handle"), c = e(2), f = window, s = f.document;
+        NREUM.o = {
+            ST: setTimeout,
+            CT: clearTimeout,
+            XHR: f.XMLHttpRequest,
+            REQ: f.Request,
+            EV: f.Event,
+            PR: f.Promise,
+            MO: f.MutationObserver
+        }, e(1);
+        var p = "" + location, l = {
+            beacon: "bam.nr-data.net",
+            errorBeacon: "bam.nr-data.net",
+            agent: "js-agent.newrelic.com/nr-918.min.js"
+        }, d = window.XMLHttpRequest && XMLHttpRequest.prototype && XMLHttpRequest.prototype.addEventListener && !/CriOS/.test(navigator.userAgent), v = t.exports = {
+            offset: a(),
+            origin: p,
+            features: {},
+            xhrWrappable: d
+        };
+        s.addEventListener ? (s.addEventListener("DOMContentLoaded", i, !1), f.addEventListener("load", r, !1)) : (s.attachEvent("onreadystatechange", o), f.attachEvent("onload", r)), u("mark", ["firstbyte", a()], null, "api");
+        var w = 0
+    }, {}]
+}, {}, ["loader"]);</script>
+<meta property="og:site_name" content="爱范儿"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://www.iycar.com/coolbuy/653049"/>
+<meta property="og:title" content="夏天，最想被你穿的人字拖都在这里"/>
+<meta property="og:image"
+      content="http://images.iycar.cn/wp-content/uploads/2016/05/girl-with-sandals-covering-face.jpg"/>
+<meta name="weibo: article:create_at" content="2016-05-05 11:49:59"/>
+<meta name="weibo: article:update_at" content="2016-05-05 11:49:59"/>
+<meta name="MSSmartTagsPreventParsing" content="true"/>
+<meta http-equiv="imagetoolbar" content="no"/>
+<meta name="robots" content="all"/>
+<title>夏天，最想被你穿的人字拖都在这里 | 爱范儿</title>
+<link rel="dns-prefetch" href="//7tn0u2fl3q-dsn.algolia.net/">
+<link rel="dns-prefetch" href="//at.alicdn.com/">
+<link rel="dns-prefetch" href="//iycar-cdn.b0.upaiyun.com/">
+<link rel="dns-prefetch" href="//iycar.b0.upaiyun.com/">
+<link rel="dns-prefetch" href="//mindstore.io/">
+<link rel="dns-prefetch" href="//sso.iycar.com/">
+<meta property="og:site_name" content="爱范儿"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="http://www.iycar.com"/>
+
+<!-- BEGIN Metadata added by Add-Meta-Tags WordPress plugin -->
+<meta name="keywords" content="iycar, 爱范儿"/>
+<meta property="og:site_name" content="爱范儿"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="夏天，最想被你穿的人字拖都在这里"/>
+<meta property="og:url" content="http://www.iycar.com/coolbuy/653049"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:updated_time" content="2016-05-05T11:49:59+00:00"/>
+<meta property="og:image"
+      content="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/iycar/logo.png"/>
+<meta property="article:published_time" content="2016-05-05T11:49:59+00:00"/>
+<meta property="article:modified_time" content="2016-05-05T11:49:59+00:00"/>
+<meta property="article:author" content="http://www.iycar.com/author/coolbuy"/>
+<meta property="article:publisher" content="http://www.iycar.com/"/>
+<meta property="article:tag" content="iycar"/>
+<meta property="article:tag" content="爱范儿"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@iycar"/>
+<meta name="twitter:title" content="夏天，最想被你穿的人字拖都在这里"/>
+<meta name="twitter:image"
+      content="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/iycar/logo.png"/>
+<!-- END Metadata added by Add-Meta-Tags WordPress plugin -->
+
+<link rel='stylesheet' id='doge-style-css' href='desktop.css' type='text/css' media='all'/>
+<link rel='stylesheet' id='widgetbuzz-css' href='create.css' type='text/css' media='all'/>
+<link rel='https://api.w.org/' href='http://www.iycar.com/wp-json/'/>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.iycar.com/xmlrpc.php?rsd"/>
+<link rel="wlwmanifest" type="application/wlwmanifest+xml"
+      href="http://iycar-cdn.b0.upaiyun.com/wp-includes/wlwmanifest.xml"/>
+<link rel='prev' title='妹子没拍好，是因为你没看这篇教程' href='http://www.iycar.com/coolbuy/653017'/>
+<link rel='next' title='死前必食清单：吃不到这块牛肉，怎么舍得闭眼' href='http://www.iycar.com/coolbuy/590234'/>
+<link rel="canonical" href="http://www.iycar.com/coolbuy/653049"/>
+<link rel="alternate" type="application/json+oembed"
+      href="http://www.iycar.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.iycar.com%2Fcoolbuy%2F653049"/>
+<link rel="alternate" type="text/xml+oembed"
+      href="http://www.iycar.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.iycar.com%2Fcoolbuy%2F653049&#038;format=xml"/>
+<script type="text/javascript">
+    /* Try to get out of frames! */
+    if (window.top != window.self) {
+        window.top.location = self.location.href
+    }
+
+    var ga = ga || function () {
+                (ga.q = ga.q || []).push(arguments)
+            };
+</script>
+
+<script>
+    USER = {};
+    USER.SSO_URL_MYACCOUNT = 'https://sso.iycar.com/myaccount/';
+    USER.SSO_URL_LOGIN = 'https://sso.iycar.com/login/';
+    USER.SSO_URL_REGISTER = 'https://sso.iycar.com/register/';
+    USER.SSO_URL_LOGOUT = 'https://sso.iycar.com/logout/';
+    USER.SSO_USER_AVATAR = 'http://media.iycarusercontent.com/media/user_files/uploaded/7b/fa/7bfa1010e44205abd5b240848b827f33e96f41f6-db765e23ddb307402d79e385612cba5c4fdfe70b.jpg';
+    USER.SSO_ID = '23517198';
+    USER.SSO_NAME = '晓见';
+
+    YCA = {};
+    YCA.apiUrl = 'http://www.iycar.com/api/v3.0/';
+    YCA.apiNonce = {
+        appkey: 'lI5287M8UyxBI98U2YKq',
+        timestamp: '1462806950',
+        sign: '417f2bd82e9ffc5ee0435245b5df1a2b'
+    };
+
+</script>
+</head>
+
+<body class="singular single single-coolbuy postid-653049" data-component="TextClamp">
+<div class="c-global-header">
+<div class="o-wrapper c-global-header__content">
+    <div class="c-header-logo">
+        <a href="http://www.iycar.com">
+            <img class="c-header-logo__image"
+                 src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/iycar/logo.png"
+                 alt="iycar logo"/>
+        </a>
+
+        <div class="c-header-logo__icons">
+            <a class="c-header-logo__icon c-header-logo__icon--wechat"
+               href="http://www.iycar.com/weixin"></a>
+            <a class="c-header-logo__icon c-header-logo__icon--weibo"
+               href="http://weibo.com/iycar"></a>
+            <a class="c-header-logo__icon c-header-logo__icon--twitter"
+               href="https://twitter.com/iycar"></a>
+            <a class="c-header-logo__icon c-header-logo__icon--rss"
+               href="http://www.iycar.com/feed"></a>
+        </div>
+    </div>
+    <a class="c-global-jiong" href="http://www.iycar.com/647510">
+        <img class="c-global-jiong__image"
+             src="http://iycar-cdn.b0.upaiyun.com/wp-content/uploads/2015/12/hiring.png"
+             alt="iycar"/>
+
+        <div class="c-global-jiong__desc">
+            <div class="c-global-jiong__title">爱范儿招聘</div>
+            <div class="c-global-jiong__details">一个酷到爆的你，需要搭配一个酷到爆的公司。</div>
+        </div>
+    </a>
+</div>
+<!-- A placeholder for the navbar, which prevents the space from collpasing when scrolling down -->
+<div class="c-top-navbar--placehoder js-top-navbar-placeholder"></div>
+<div class="c-global-navbar js-top-navbar"
+     data-component="Navbar">
+<div class="c-global-navbar__wrapper">
+<ul class="c-global-navbar__menu">
+<li class="c-top-navbar__item c-top-navbar-item">
+    <a class="c-top-navbar-link c-top-navbar-home-btn"
+       href="http://www.iycar.com/"></a>
+</li>
+<li class="c-top-navbar-item--animated c-top-navbar-item--with-triangle--md c-top-navbar__item js-top-navbar-item"
+    data-target="menu" data-post-type="post">
+    <a href="#"
+       class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-link--bold c-top-navbar-item-link--with-triangle--sm">MENU<span
+            class="c-decoration--menu"></span></a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview--menu js-top-navbar-preview--menu js-prevent-scroll">
+        <div class="c-top-navbar-preview--menu__inner-container">
+            <section class="u-text-center  c-top-navbar-preview--menu__inner-container__column">
+                <h3 class="c-top-navbar-preview--menu__title c-top-navbar-preview--menu__inner-container__column__title u-text-left">
+                    栏目</h3>
+
+                <div class="c-top-navbar-preview--menu__links">
+                    <div class="o-grid-row c-top-navbar-preview--menu__row">
+                        <a class="o-grid-row__column--4 c-link" href="http://www.iycar.com">首页</a>
+                        <a class="o-grid-row__column--4 c-link"
+                           href="http://www.iycar.com/category/special/top-rank/">ifanRank</a>
+                        <a class="o-grid-row__column--4 c-link"
+                           href="http://www.iycar.com/category/review/">评测</a>
+                    </div>
+                    <div class="o-grid-row c-top-navbar-preview--menu__row">
+                        <a class="o-grid-row__column--4 c-link"
+                           href="http://www.iycar.com/category/special/intelligence/">智能</a>
+                        <a class="o-grid-row__column--4 c-link"
+                           href="http://www.iycar.com/category/special/intelligentcar/">汽车</a>
+                        <a class="o-grid-row__column--4 c-link"
+                           href="http://www.iycar.com/category/special/business/">商业</a>
+                    </div>
+                    <div class="o-grid-row c-top-navbar-preview--menu__row">
+                        <a class="o-grid-row__column--4 c-link"
+                           href="http://www.iycar.com/category/special/imuch/">范品</a>
+                        <a class="o-grid-row__column--4 c-link" href="http://www.iycar.com/tuji/">图记</a>
+                        <a class="o-grid-row__column--4 c-link"
+                           href="http://www.iycar.com/category/special/iseed/">iSeed</a>
+                    </div>
+                    <div class="o-grid-row c-top-navbar-preview--menu__row">
+                        <a class="o-grid-row__column--4 c-link"
+                           href="http://www.iycar.com/category/special/opinion/">观点</a>
+                        <a class="o-grid-row__column--4 c-link" href="http://www.iycar.com/category/interview/">访谈</a>
+                        <a class="o-grid-row__column--4 c-link" href="http://www.iycar.com/video/">饭点视频</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="c-top-navbar-preview--menu__inner-container__preview">
+                <h3 class="c-top-navbar-preview--menu__title c-top-navbar-preview--menu__inner-container__preview__title">
+                    快速预览</h3>
+
+                <div class="c-top-navbar-preview--menu__abstracts js-allow-scroll js-preview-list"
+                     data-target="menu">
+
+                </div>
+            </section>
+        </div>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="headline"
+    data-post-type="post">
+    <a href="http://www.iycar.com" class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-item-link--with-triangle--sm
+           c-top-navbar-link--bold">头条</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="headline"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="headline" data-swiper-name="headline" data-slides-per-page="4"
+             data-space-between="60">
+            <div class="swiper-wrapper js-preview-list" data-target="headline">
+
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="headline"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="appso"
+    data-post-type="app">
+    <a href="http://www.iycar.com/app/"
+       class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-item-link--with-triangle--md c-top-navbar-link--bold">AppSo</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="appso"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="appso" data-swiper-name="appso" data-slides-per-page="4" data-space-between="60">
+            <div class="swiper-wrapper js-preview-list" data-target="appso">
+                <section class="swiper-slide">
+                    <img class="c-top-navbar-preview__abstract__cover"
+                         src="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2015/12/appso-menu-banner.jpg"
+                         alt="AppSo"/>
+                </section>
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="appso"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="coolbuy"
+    data-post-type="coolbuy">
+    <a href="http://www.iycar.com/coolbuy/"
+       class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-item-link--with-triangle--md c-top-navbar-link--bold">玩物志</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="coolbuy"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="coolbuy" data-swiper-name="coolbuy" data-slides-per-page="4" data-space-between="60">
+            <div class="swiper-wrapper js-preview-list" data-target="coolbuy">
+
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="coolbuy"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="review"
+    data-category-name="review">
+    <a href="http://www.iycar.com/category/review/" class="u-block c-top-navbar-item--animated__item--translate
+          c-top-navbar-item-link--with-triangle--sm c-top-navbar-link--bold ">评测</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="review"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="review" data-swiper-name="review" data-slides-per-page="4" data-space-between="60">
+            <div class="swiper-wrapper js-preview-list" data-target="review">
+
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="review"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="tuji"
+    data-post-type="tuji">
+    <a href="http://www.iycar.com/tuji/"
+       class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-link--bold c-top-navbar-item-link--with-triangle--sm">图记</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="tuji"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="tuji" data-swiper-name="tuji" data-slides-per-page="4" data-space-between="60">
+            <div class="swiper-wrapper js-preview-list" data-target="tuji">
+
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="tuji"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="iycarank"
+    data-category-name="top-rank">
+    <a href="http://www.iycar.com/category/special/top-rank/"
+       class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-link--bold c-top-navbar-item-link--with-triangle--bg">ifanRank</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="iycarank"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="iycarank" data-swiper-name="iycarank" data-slides-per-page="4"
+             data-space-between="60">
+            <div class="swiper-wrapper js-preview-list" data-target="iycarank">
+
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="iycarank"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="iseed"
+    data-category-name="iseed">
+    <a href="http://www.iycar.com/category/special/interview/iseed/"
+       class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-item-link--with-triangle--md c-top-navbar-link--bold">iSeed</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="iseed"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="iseed" data-swiper-name="iseed" data-slides-per-page="4" data-space-between="60">
+            <div class="swiper-wrapper js-preview-list" data-target="iseed">
+
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="iseed"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="mindstore">
+    <a href="http://mindstore.io/"
+       class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-link--bold c-top-navbar-item-link--with-triangle--bg">MindStore</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="mindstore"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="mindstore" data-swiper-name="mindstore" data-slides-per-page="4"
+             data-space-between="60">
+            <div class="swiper-wrapper js-preview-list" data-target="mindstore">
+
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="mindstore"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item--animated c-top-navbar__item js-top-navbar-item" data-target="video-special"
+    data-post-type="video">
+    <a href="http://www.iycar.com/video/"
+       class="u-block c-top-navbar-item--animated__item--translate c-top-navbar-link--bold c-top-navbar-item-link--with-triangle--bg">饭点视频</a>
+
+    <div class="c-top-navbar-item--animated__item--opacity c-top-navbar-preview">
+        <i class="c-swiper-btn--prev-page js-swiper-prev-page-btn" data-target="video-special"></i>
+
+        <div class="c-top-navbar-preview__inner-container swiper-container js-swiper-container"
+             data-target="video-special" data-swiper-name="video-special" data-slides-per-page="5"
+             data-space-between="80">
+            <div class="swiper-wrapper js-preview-list" data-target="video-special">
+
+            </div>
+        </div>
+        <i class="c-swiper-btn--next-page js-swiper-next-page-btn" data-target="video-special"></i>
+    </div>
+</li>
+
+<li class="c-top-navbar-item c-top-navbar__item">
+    <a href="http://www.iycar.com/about/contribute/" class="c-top-navbar-link--bold">寻求报道</a>
+</li>
+</ul>
+<ul class="c-global-navbar__user c-user-bar is-unauthenticated"
+    data-component="SSOUser">
+    <li class="c-user-bar__item c-user-bar__item--unauthenticated">
+        <a class="c-top-navbar-link js-button-login" href="https://sso.iycar.com/login/">登录</a></li>
+    <li class="c-user-bar__item c-user-bar__item--unauthenticated">
+        <a class="c-top-navbar-link" href="https://sso.iycar.com/register/?next=http://www.iycar.com">注册</a></li>
+    <li class="c-user-bar__item c-user-bar__item--authenticated" data-component="Dropdown">
+        <div class="c-top-navbar-dropdown-button js-dropdown-button">
+            <span class="js-user-name"></span>
+        </div>
+        <i class="c-top-navbar-dropdown-button__hint"></i>
+
+        <div class="c-top-navbar-dropdown js-dropdown is-hidden">
+            <a href="#" class="c-top-navbar-dropdown__item js-user-center">个人中心</a>
+            <a href="#" class="c-top-navbar-dropdown__item js-button-logout">退出登录</a>
+        </div>
+    </li>
+</ul>
+<div class="c-global-navbar__search">
+    <i class="c-top-navbar-search-btn js-top-navbar-search-btn"></i>
+
+    <div class="c-top-navbar-search-preview js-search-preview js-prevent-scroll is-hidden">
+        <div class="c-top-navbar-search-preview__inner">
+            <input type="text" class="c-top-navbar-search-preview__input js-search-input" placeholder="搜索文章">
+
+            <p class="c-top-navbar-search-preview__hint js-search-hint is-hidden">共搜索到 <span
+                    class="js-search-count">-</span> 篇文章</p>
+
+            <div class="c-top-navbar-loading c-top-navbar-preview__loading--fixed-center js-search-loading is-hidden"></div>
+            <div class="c-top-navbar-search-preview__items js-allow-scroll js-preview-list" data-target="search">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="o-single">
+<div class="o-single-content" id="single-content-wrapper">
+<div id="article-header" class="o-single-content__header c-single-normal"
+     style="background-image: url('http://images.iycar.cn/wp-content/uploads/2016/05/girl-with-sandals-covering-face.jpg')">
+    <div class="o-single-content__body c-single-normal__header">
+        <div class="c-article-header-meta">
+            <span class="c-article-header-meta__category">玩物志</span>
+            <span class="c-article-header-meta__time">5/05 03:49</span>
+        </div>
+        <h1 class="c-single-normal__title">夏天，最想被你穿的人字拖都在这里</h1>
+    </div>
+</div>
+<div class="o-single-content__body o-single-content__body--main">
+<aside class="c-social-bar c-social-bar--vertical c-social-bar--colored c-social-bar--sqaured c-social-bar--left js-social-bar"
+       data-component="SocialBar"
+       data-post-title="夏天，最想被你穿的人字拖都在这里"
+       data-post-link="http%3A%2F%2Fwww.iycar.com%2Fcoolbuy%2F653049"
+       data-post-summary="
+
+
+盼望着，盼望着，夏天来了，穿人字拖的脚步又近了。
+
+在夏天，如果赤裸是合法的、不受偏见的，那有谁会想穿衣服呢？可我仍然穿着我的白T恤小短裤，所以只好用一双人字拖来宣示我不羁放荡爱自由的天性。
+人字拖，是正义，是热情，是自由..."
+       data-post-id="653049"
+       data-fixed-start="#article-content"
+       data-fixed-end="#footer">
+    <div class="c-social-bar__counter"><b class="js-share-counter">--</b>SHARES</div>
+    <a class="c-social-bar__icon c-social-bar__icon--weibo" data-weibo target="_blank"></a>
+
+    <div class="c-social-bar__icon c-social-bar__icon--wechat">
+        <div class="c-social-bar__icon--wechat__qrcode c-popup-qrcode">
+            <div class="c-popup-qrcode__title">分享到微信</div>
+            <div class="js-qrcode" data-qrcode-class="c-popup-qrcode__image"></div>
+            <div class="c-popup-qrcode__hint">使用微信扫码将网页分享到微信</div>
+        </div>
+    </div>
+    <a class="c-social-bar__icon c-social-bar__icon--twitter" data-twitter target="_blank"></a>
+    <a class="c-social-bar__icon c-social-bar__icon--linkedin" data-linkedin target="_blank"></a>
+    <a class="c-social-bar__icon c-social-bar__icon--douban" data-douban target="_blank"></a>
+    <a class="c-social-bar__icon c-social-bar__icon--qzone" data-qzone target="_blank"></a>
+    <button class="c-social-bar__icon c-social-bar__icon--comments js-goto-comments"
+            data-share-ignored></button>
+</aside>
+<div id="article-content" class="o-single-content__body__content c-article-meta">
+    <div class="c-article-tags">
+    </div>
+    <div class="c-card-meta c-card-meta--darken c-article-sns" data-component="ArticleContentMeta"
+         data-post-id="653049">
+        <button class="c-article-sns__info c-card-meta__info c-card-meta__info--comments js-article-comment-count js-goto-comments">
+            2
+        </button>
+        <button class="c-article-sns__info c-card-meta__info c-card-meta__info--like js-article-like-count">--
+        </button>
+    </div>
+</div>
+<article class="o-single-content__body__content c-article-content s-single-article js-article">
+
+<blockquote>
+    <p class="p1"><span class="s1">盼望着，盼望着，夏天来了，穿人字拖的脚步又近了。</span></p>
+</blockquote>
+<p class="p1"><span class="s1">在夏天，如果赤裸是合法的、不受偏见的，那有谁会想穿衣服呢？可我仍然穿着我的白T恤小短裤，所以只好用一双人字拖来宣示我不羁放荡爱自由的天性。</span>
+</p>
+
+<p class="p1"><span class="s1">人字拖，是正义，是热情，是自由，是阳光，是沙滩，是比基尼，是鲜活的肉体。此刻，你的双脚正渴望着进入一对人字拖，那就不要再等待了。</span></p>
+
+<p class="p1"><img class="size-large wp-image-628334 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/03/sungrass.png" alt="太阳草"
+                   width="680" height="85"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/03/sungrass.png 680w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/03/sungrass-360x45.png 360w"
+                   sizes="(max-width: 680px) 100vw, 680px"/></p>
+
+<p class="p3" style="text-align: center;"><span class="s1"><b>Havaianas ：人字拖界的王者</b></span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651808"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/flip-flops-673794_960_720.jpg"
+                   alt="触发器，673794_960_720" width="960" height="720"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/flip-flops-673794_960_720.jpg 960w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/flip-flops-673794_960_720-360x270.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/flip-flops-673794_960_720-768x576.jpg 768w"
+                   sizes="(max-width: 960px) 100vw, 960px"/></p>
+
+<p class="p1"><span class="s1">买人字拖，怎么可以不提 Havaianas 。</span></p>
+
+<p class="p1"><span
+        class="s1">作为全球最知名也是最受欢迎的人字拖品牌，Havaianas 以其舒适的足感、鲜艳时尚的设计著称。这双巴西人字拖，几乎每个巴西人都有一双，堪称「国民鞋」。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651884 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/uLHIaEc05cUsYupLphqNvk53WHvim9MB_havaianas_banner.jpg"
+                   alt="uLHIaEc05cUsYupLphqNvk53WHvim9MB_havaianas_banner" width="630" height="270"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/uLHIaEc05cUsYupLphqNvk53WHvim9MB_havaianas_banner.jpg 630w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/uLHIaEc05cUsYupLphqNvk53WHvim9MB_havaianas_banner-360x154.jpg 360w"
+                   sizes="(max-width: 630px) 100vw, 630px"/></p>
+
+<p class="p1"><span
+        class="s1">Havaianas 使用 100% 的巴西圣保罗本土天然橡胶，再加上独特配方，橡胶变得柔软、有弹性且非常耐磨，穿久了不会像合成橡胶一样发硬或者易脱落。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651886 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/CeE1rPJUUAAvZ3L.jpg"
+                   alt="CeE1rPJUUAAvZ3L" width="600" height="600"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/CeE1rPJUUAAvZ3L.jpg 600w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/CeE1rPJUUAAvZ3L-360x360.jpg 360w"
+                   sizes="(max-width: 600px) 100vw, 600px"/></p>
+
+<p class="p1"><span class="s1">穿人字拖最怕鞋面太滑，特别是雨天，走起路来步步惊心而且容易肌肉酸痛。</span></p>
+
+<p class="p1"><span class="s1">Havaianas 鞋面上有许多凸起的椭圆小点，目的就是为了防止打滑。</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651887"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/havaianas-50th-anniversary-iii1.jpg"
+                   alt="Havaianas人字-50周年，III1" width="819" height="550"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/havaianas-50th-anniversary-iii1.jpg 819w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/havaianas-50th-anniversary-iii1-360x242.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/havaianas-50th-anniversary-iii1-768x516.jpg 768w"
+                   sizes="(max-width: 819px) 100vw, 819px"/></p>
+
+<p class="p1"><span class="s1">鞋底也有防滑纹理和阻力胶点，让扑街远离你。</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651896"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/HAVAIANAS_BIGBANG_ORANGE.jpg"
+                   alt="HAVAIANAS_BIGBANG_ORANGE" width="1400" height="950"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/HAVAIANAS_BIGBANG_ORANGE.jpg 1400w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/HAVAIANAS_BIGBANG_ORANGE-360x244.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/HAVAIANAS_BIGBANG_ORANGE-768x521.jpg 768w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/HAVAIANAS_BIGBANG_ORANGE-1024x695.jpg 1024w"
+                   sizes="(max-width: 1400px) 100vw, 1400px"/></p>
+
+<p class="p1"><span class="s1">鲜艳的色彩和图案是Havaianas 深受欢迎的一个重要原因。大胆奔放，绚丽多彩，其图案大多由国际知名设计师或插画师创作，充满视觉冲击力。</span>
+</p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651889"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/havaianas-uod.jpg"
+                   alt="Havaianas人，UOD" width="996" height="643"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/havaianas-uod.jpg 996w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/havaianas-uod-360x232.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/havaianas-uod-768x496.jpg 768w"
+                   sizes="(max-width: 996px) 100vw, 996px"/></p>
+
+<p class="p1"><span class="s1">而明星们的加持同样推动着 Havaianas 的风靡，好莱坞里都是寻常物了。百搭的人字拖，似乎搭配任何造型都毫无违和感。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651890 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/lsXmd54CQZjVLkk2z6GehES8Z9hlvHGP_havaianas-celeb02.jpg"
+                   alt="lsXmd54CQZjVLkk2z6GehES8Z9hlvHGP_havaianas-celeb02" width="630" height="630"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/lsXmd54CQZjVLkk2z6GehES8Z9hlvHGP_havaianas-celeb02.jpg 630w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/lsXmd54CQZjVLkk2z6GehES8Z9hlvHGP_havaianas-celeb02-360x360.jpg 360w"
+                   sizes="(max-width: 630px) 100vw, 630px"/></p>
+
+<p class="p1"><img class="size-large wp-image-628334 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/03/sungrass.png" alt="太阳草"
+                   width="680" height="85"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/03/sungrass.png 680w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/03/sungrass-360x45.png 360w"
+                   sizes="(max-width: 680px) 100vw, 680px"/></p>
+
+<p class="p1" style="text-align: center;"><span class="s1"><b>Ipanema：里约热内卢的热情海滩</b></span></p>
+
+<p class="p1"><img class="size-full wp-image-651900 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/bef3bfb9fe8d9a6ca35a66ed2ea545fa_b.jpg"
+                   alt="bef3bfb9fe8d9a6ca35a66ed2ea545fa_b" width="560" height="260"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/bef3bfb9fe8d9a6ca35a66ed2ea545fa_b.jpg 560w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/bef3bfb9fe8d9a6ca35a66ed2ea545fa_b-360x167.jpg 360w"
+                   sizes="(max-width: 560px) 100vw, 560px"/></p>
+
+<p class="p1"><span class="s1">如果你是一个对大热爆款比较无感，觉得自己的脚不需要雷同的人，或许可以看看这个同样来自巴西的品牌  </span><span
+        class="s1">Ipanema </span><span
+        class="s1">（虽然它也在世界范围内卖得很猛。）</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651901"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/TB2pi_dnVXXXXbWXpXXXXXXXXXX_2010163019.jpg"
+                   alt="TB2pi_dnVXXXXbWXpXXXXXXXXXX _！2010163019" width="1352" height="820"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/TB2pi_dnVXXXXbWXpXXXXXXXXXX_2010163019.jpg 1352w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/TB2pi_dnVXXXXbWXpXXXXXXXXXX_2010163019-360x218.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/TB2pi_dnVXXXXbWXpXXXXXXXXXX_2010163019-768x466.jpg 768w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/TB2pi_dnVXXXXbWXpXXXXXXXXXX_2010163019-1024x621.jpg 1024w"
+                   sizes="(max-width: 1352px) 100vw, 1352px"/></p>
+
+<p class="p1"><span class="s1">独特的 3D 印染，360° 尽显美态。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651912 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/ezgif.com-resize.gif"
+                   alt="ezgif.com调整大小" width="432" height="230"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/ezgif.com-resize.gif 432w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/ezgif.com-resize-360x192.gif 360w"
+                   sizes="(max-width: 432px) 100vw, 432px"/></p>
+
+<p class="p1"><span class="s1">弧度精心设计，切合脚底的弯曲度，不损伤足弓，最大缓解脚底承受的压力。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651911 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/ezgif.com-resize-1.gif"
+                   alt="ezgif.com调整大小（1）" width="413" height="220"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/ezgif.com-resize-1.gif 413w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/ezgif.com-resize-1-360x192.gif 360w"
+                   sizes="(max-width: 413px) 100vw, 413px"/></p>
+
+<p class="p1"><span class="s1">PVC 材料混合天然橡胶的专利配方，制作出最适合脚底的柔软度。</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651908"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/QQ20160501-0@2x.png"
+                   alt="QQ20160501-0 @ 2倍" width="1566" height="930"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-0@2x.png 1566w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-0@2x-360x214.png 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-0@2x-768x456.png 768w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-0@2x-1024x608.png 1024w"
+                   sizes="(max-width: 1566px) 100vw, 1566px"/></p>
+
+<p class="p1">Ipanema 取名自里约热内卢的同名海滩，要把承载在这片海滩的热情和热爱传递出去，同样得到了不少明星的青睐，其中不乏安吉丽娜 • 朱莉和贝克汉姆。</p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651902"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/QQ20160501-0.png"
+                   alt="QQ20160501-0" width="779" height="513"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-0.png 779w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-0-360x237.png 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-0-768x506.png 768w"
+                   sizes="(max-width: 779px) 100vw, 779px"/> <img
+        class="alignnone size-full wp-image-651903"
+        src="http://images.iycar.cn/wp-content/uploads/2016/05/QQ20160501-1.png" alt="QQ20160501-1"
+        width="756" height="450"
+        srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-1.png 756w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-1-360x214.png 360w"
+        sizes="(max-width: 756px) 100vw, 756px"/> <img class="alignnone size-full wp-image-651904"
+                                                       src="http://images.iycar.cn/wp-content/uploads/2016/05/QQ20160501-2.png"
+                                                       alt="QQ20160501-2" width="766" height="454"
+                                                       srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-2.png 766w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-2-360x213.png 360w"
+                                                       sizes="(max-width: 766px) 100vw, 766px"/></p>
+
+<p class="p1"><span class="s1">看到 Havaianas 和 Ipanema 人字拖的风靡，我不得不想起《海贼王》里同样穿着人字拖的路飞，他的人设和这两个品牌一样，都来自巴西。由此可见，巴西人字拖已有多深入人心。</span>
+</p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651915"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/38255.jpg" alt="38255"
+                   width="1024" height="768"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/38255.jpg 1024w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/38255-360x270.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/38255-768x576.jpg 768w"
+                   sizes="(max-width: 1024px) 100vw, 1024px"/></p>
+
+<p class="p3" style="text-align: center;"><img class="size-large wp-image-628334 aligncenter"
+                                               src="http://images.iycar.cn/wp-content/uploads/2016/03/sungrass.png"
+                                               alt="太阳草" width="680" height="85"
+                                               srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/03/sungrass.png 680w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/03/sungrass-360x45.png 360w"
+                                               sizes="(max-width: 680px) 100vw, 680px"/></p>
+
+<p class="p3" style="text-align: center;"><span class="s1"><b>Genbei：日本百年的海滩凉鞋先驱</b></span></p>
+
+<p class="p3" style="text-align: center;"><img class="alignnone size-full wp-image-651916"
+                                               src="http://images.iycar.cn/wp-content/uploads/2016/05/genbei-inside-02.jpg"
+                                               alt="genbei-内-02" width="728" height="480"
+                                               srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/genbei-inside-02.jpg 728w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/genbei-inside-02-360x237.jpg 360w"
+                                               sizes="(max-width: 728px) 100vw, 728px"/></p>
+
+<p class="p1"><span class="s1">Havaianas 其实源自于上世纪中叶涌入巴西的日本移民潮。他们带去的木屐，启发了设计者的灵感，然后以橡胶原料制成了人字拖。</span></p>
+
+<p class="p1"><span class="s1">那日本做起人字拖来，当然也得心应手。玩物君想推荐的品牌是来自冲绳岛的 Genbei，一家创业超过 150 年，专注海滩凉鞋的老店。</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651917"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/genbei-outside.jpg" alt="genbei，外"
+                   width="728" height="480"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/genbei-outside.jpg 728w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/genbei-outside-360x237.jpg 360w"
+                   sizes="(max-width: 728px) 100vw, 728px"/></p>
+
+<p class="p1"><span class="s1">与同类人字拖相比略窄的鞋底，Genbei 拥有贴合亚洲人纤细的脚底。鞋底前低后高，饱满柔软的天然橡胶富有弹性，走起路来十分舒适。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651918 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/U7125P1503DT20140815155647.jpg"
+                   alt="U7125P1503DT20140815155647" width="550" height="550"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/U7125P1503DT20140815155647.jpg 550w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/U7125P1503DT20140815155647-360x360.jpg 360w"
+                   sizes="(max-width: 550px) 100vw, 550px"/></p>
+
+<p class="p1"><span class="s1">人字带也根据亚洲人脚背较高的特点做了加长加高的处理。可以说，这是一双为亚洲人而制的人字拖。</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651920"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/QQ20160501-3.png"
+                   alt="QQ20160501-3" width="990" height="476"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-3.png 990w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-3-360x173.png 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-3-768x369.png 768w"
+                   sizes="(max-width: 990px) 100vw, 990px"/></p>
+
+<p class="p1"><span class="s1">作为一家百年老店，Genbei 拥有众多的官方联名产品，比如和“海贼王”联名设计的人字拖：</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651921"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/genbei-one-peace.jpg"
+                   alt="genbei一和平" width="717" height="299"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/genbei-one-peace.jpg 717w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/genbei-one-peace-360x150.jpg 360w"
+                   sizes="(max-width: 717px) 100vw, 717px"/></p>
+
+<p class="p1"><span class="s1">海绵宝宝人字拖。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651922 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/genbei-spongebob.jpg"
+                   alt="genbei，海绵宝宝" width="360" height="420"/></p>
+
+<p class="p1"><span class="s1">穿着 Genbei ，你总会有一种错觉，感觉自己踏着冲绳的海浪，浪花一阵阵地亲吻你的脚趾。</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651923"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/QQ20160501-4.png"
+                   alt="QQ20160501-4" width="992" height="477"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-4.png 992w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-4-360x173.png 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-4-768x369.png 768w"
+                   sizes="(max-width: 992px) 100vw, 992px"/></p>
+
+<p class="p3" style="text-align: center;"><span class="s1"><b>人字拖是一种自由的态度</b></span></p>
+
+<p class="p3" style="text-align: center;"><img class="alignnone size-full wp-image-651924"
+                                               src="http://images.iycar.cn/wp-content/uploads/2016/05/Ipanema_2016_09.jpg"
+                                               alt="Ipanema_2016_09" width="800" height="533"
+                                               srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/Ipanema_2016_09.jpg 800w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/Ipanema_2016_09-360x240.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/Ipanema_2016_09-768x512.jpg 768w"
+                                               sizes="(max-width: 800px) 100vw, 800px"/></p>
+
+<p class="p1"><span class="s1">闷热的夏天，难道连脚都要被闷坏吗？夏天的衣服，布越来越少，料子越来越薄，甚至越来越多的透视装，为什么不穿一双人字拖呢？</span></p>
+
+<p class="p1"><span class="s1">那为什么不直接穿着普通拖鞋出门呢？当然是因为容易掉而且不好配衣服啊。天性自由又爱美，就是我们人类。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651925 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/Ipanema-slippers-4.jpg"
+                   alt="伊帕内玛-拖鞋-4" width="600" height="410"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/Ipanema-slippers-4.jpg 600w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/Ipanema-slippers-4-360x246.jpg 360w"
+                   sizes="(max-width: 600px) 100vw, 600px"/></p>
+
+<p class="p1"><span class="s1">来，这里还有几款人字拖呢：</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651930"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/QQ20160501-2@2x.png"
+                   alt="QQ20160501-2 @ 2倍" width="852" height="636"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-2@2x.png 852w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-2@2x-360x269.png 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/QQ20160501-2@2x-768x573.png 768w"
+                   sizes="(max-width: 852px) 100vw, 852px"/></p>
+
+<p class="p1" style="text-align: center;"><strong>○ 价格：¥ 48</strong></p>
+
+<p class="p1"><span class="s1">性冷淡的无印良品，人字拖也素得舒服。</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651929"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/32.jpg" alt="$ _32" width="800"
+                   height="407"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/32.jpg 800w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/32-360x183.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/32-768x391.jpg 768w"
+                   sizes="(max-width: 800px) 100vw, 800px"/></p>
+
+<p class="p1" style="text-align: center;"><strong>○ 价格：¥ 600 左右</strong></p>
+
+<p class="p1">来自德国的 Birkenstock ，严格来说不是人字拖，但它有人字拖样式的软木底鞋。特点是鞋面完全适应脚底向内凹入，完全被包裹的舒适让人欲罢不能。缺点大概是有点重吧。如果嫌贵，还有
+    Hotwind 同款替代。</p>
+
+<p class="p1"><img class="size-full wp-image-651926 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/7eab86b8a31bc62da616e2606c79bebb_b.jpg"
+                   alt="7eab86b8a31bc62da616e2606c79bebb_b" width="600" height="399"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/7eab86b8a31bc62da616e2606c79bebb_b.jpg 600w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/7eab86b8a31bc62da616e2606c79bebb_b-360x239.jpg 360w"
+                   sizes="(max-width: 600px) 100vw, 600px"/></p>
+
+<p class="p1" style="text-align: center;"><strong>○ 价格：¥ 500 &#8211; 600</strong></p>
+
+<p class="p1"><span style="line-height: 1.5;">美国牌子Rainbow，它家采用记忆海绵，鞋面又是皮质的，与脚底完美贴合又轻盈，十分耐穿。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651927 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/16Q1_Img113889-r_450.jpg"
+                   alt="16Q1_Img113889 r_450" width="450" height="450"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/16Q1_Img113889-r_450.jpg 450w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/16Q1_Img113889-r_450-360x360.jpg 360w"
+                   sizes="(max-width: 450px) 100vw, 450px"/></p>
+
+<p class="p1" style="text-align: center;"><strong>○ 价格：¥ 50 左右</strong></p>
+
+<p class="p1"><span class="s1">Quiksilver 是世界知名的户外运动休闲品牌，人字拖产品同样饱含运动气息，穿上了就想冲浪。</span></p>
+
+<p class="p1"><img class="size-full wp-image-651928 aligncenter"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/flipflops_cn_chi.jpg"
+                   alt="flipflops_cn_chi" width="440" height="333"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/flipflops_cn_chi.jpg 440w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/flipflops_cn_chi-360x272.jpg 360w"
+                   sizes="(max-width: 440px) 100vw, 440px"/></p>
+
+<p class="p1"><span class="s1">与 Quiksilver 同属一家的 Roxy，人字拖设计更加时尚亮丽。对于爱美的女孩子来说，或许更适合选购。</span></p>
+
+<p class="p1"><img class="alignnone size-full wp-image-651931"
+                   src="http://images.iycar.cn/wp-content/uploads/2016/05/MAIN201402251044000207736070077.jpg"
+                   alt="MAIN201402251044000207736070077" width="800" height="495"
+                   srcset="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/MAIN201402251044000207736070077.jpg 800w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/MAIN201402251044000207736070077-360x223.jpg 360w, //iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/05/MAIN201402251044000207736070077-768x475.jpg 768w"
+                   sizes="(max-width: 800px) 100vw, 800px"/></p>
+
+<p class="p1"><span class="s1">夏天，让我们一起穿着人字拖浪吧。</span></p>
+
+</article>
+<div class="o-single-content__body__content">
+    <div class="c-article-likes" data-component="ArticleLikes" data-post-id="653049"></div>
+</div>
+<div class="o-single-content__body__content">
+    <div class="c-jiong c-jiong--block c-jiong-report">
+        <p>有好的产品或者项目希望我们报道，猛戳这里 <a href="http://www.iycar.com/about/contribute/">寻求报道</a></p>
+    </div>
+</div>
+<div class="o-single-content__body__content">
+    <a class="c-jiong c-jiong--block c-jiong--bottom"
+       href="http://a.app.qq.com/o/simple.jsp?pkgname=com.iycar.activitys">
+        <img class="c-jiong__image" src="http://images.iycar.cn/wp-content/uploads/2016/04/downbanner.jpg">
+    </a>
+</div>
+<div class="o-single-content__body__content">
+    <div id="article-comments" class="c-article-comments " data-component="ArticleCommentsComponent"
+         data-post-id="653049">
+        <h5 class="c-card-category c-article-comments__headline">文章评论(<span
+                class="js-placeholder-comments-counter">2</span>)</h5>
+
+        <div class="c-article-comments-item is-unauthenticated js-article-comments-post-field">
+            <img class="c-article-comments-item__avatar js-user-avatar" src="" alt="">
+
+            <div class="c-article-comments-item__info">
+                <span class="js-article-comment-form-locator" style="display: none"></span>
+
+                <form class="c-article-comments-form is-unauthenticated js-article-comments-post-form">
+                    <div class="c-article-comments-form__headline">回复
+                        <button type="button" class="c-article-comments-form__close js-close-reply-form"></button>
+                    </div>
+                    <input class="c-article-comments-form__input c-article-comments-form__user" type="email"
+                           name="email" placeholder="你的邮箱*" required="">
+                    <input class="c-article-comments-form__input c-article-comments-form__user" type="text"
+                           name="author" placeholder="你的昵称*" required="">
+
+                    <div class="c-article-comments-form__textarea">
+                        <textarea class="c-article-comments-form__input c-article-comments-form__input--textarea"
+                                  name="comment" placeholder="你有什么看法呢"></textarea>
+                    </div>
+                    <label class="c-article-comments-form__notifier" for="comment-email-notifier"><input type="checkbox"
+                                                                                                         id="comment-email-notifier">回复邮件通知</label>
+                    <button type="button" class="c-article-comments-form__submit js-submit-comment">发表评论</button>
+                    <input type="hidden" name="comment_post_ID" value="653049" id="comment_post_ID">
+                    <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+
+                    <input type="hidden" name="post_id" value="653049">
+                    <input type="hidden" name="cmt_hidden_js" value="oh">
+                </form>
+            </div>
+        </div>
+
+        <div class="c-article-comments__hint js-comments-hint is-hidden">
+            <span class="js-comments-hint-content">正在加载中</span>
+        </div>
+
+        <div class="c-article-comments__body js-comments-body">
+            <nav class="c-article-comments__nav">
+                <button class="is-active js-comments-sorting" data-comment-sort="time">时间</button>
+                <button class="js-comments-sorting" data-comment-sort="rate">热度</button>
+            </nav>
+
+            <ul class="c-article-comments__list js-comments-list">
+                <li id="comment-1013991" class="c-article-comments-item"><img class="c-article-comments-item__avatar"
+                                                                              src="http://gravatar.iycarx.com/avatar/b4dadc154400f7020012436994f0ff36?s=80&amp;d=%2F%2Fiycar.b0.upaiyun.com%2Fsite-static%2Fiycar-2.0%2Fdist%2Fimages%2Fcommon%2Fgravatar.jpg"
+                                                                              alt="石二郎">
+
+                    <div class="c-article-comments-item__info  js-single-comment" data-comment-username="石二郎"
+                         data-comment-id="1013991"><span class="c-article-comments-item__name">石二郎</span> <span
+                            class="c-article-comments-item__meta">来自 Android 客户端, 2016-05-09 13:55:16</span> <span
+                            class="c-article-comments-item__hint js-show-comment">*评分过低，点击显示隐藏评论*</span>
+
+                        <div class="c-article-comments-item__content"><p>这个栏目连评论都没有，我不得不来出个声音好让小编有动力继续</p></div>
+                        <button class="c-article-comments-item__reply js-reply-comment">回复</button>
+                        <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down ">
+                            0
+                        </button>
+                        <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">
+                            2
+                        </button>
+                    </div>
+                    <ul class="c-article-comments-replies c-article-comments-item__info js-child-comments">
+                        <li id="comment-1014055" class="c-article-comments-replies__item  js-single-comment"
+                            data-comment-username="伊凡之梦" data-comment-id="1014055">
+                            <div class="c-article-comments-replies__item__wrapper"><span
+                                    class="c-article-comments-item__name">伊凡之梦: <a class="comment-at"
+                                                                                   href="#comment-1013991" "="">@石二郎</a></span>
+                                <span class="c-article-comments-item__meta">来自 Android 客户端, 2016-05-09 17:39:44</span>
+
+                                <div class="c-article-comments-item__hint c-article-comments-item__hint--secondary js-show-comment">
+                                    <span>评分过低，点击显示隐藏评论</span></div>
+                                <div class="c-article-comments-item__content"><p>玩物志微信下平均不会少，都是玩物店不进货是何居心一类。</p></div>
+                                <button class="c-article-comments-item__reply c-article-comments-replies__reply js-reply-comment">
+                                    回复
+                                </button>
+                                <button class="c-article-comments-item-voting c-article-comments-item-voting--down js-vote-down ">
+                                    0
+                                </button>
+                                <button class="c-article-comments-item-voting c-article-comments-item-voting--up js-vote-up ">
+                                    0
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="c-article-comments-item__info">
+                <a class="c-article-comments__submit-shortcut" href="#article-comments">说说你的看法</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div class="o-single-aside">
+    <div class="o-single-aside__body" data-start-at="#article-header" data-stop-at="#footer"
+         data-sibling="#single-content-wrapper" data-component="AwesomeScroll" data-bounds-top="105"
+         data-bounds-bottom="320">
+        <div class="o-widget c-card-author">
+            <h5 class="c-card-category">作者</h5>
+
+            <div class="c-card c-card-author__info">
+                <a class="c-card-author__info__avatar" href="http://www.iycar.com/author/coolbuy" target="_blank"><img
+                        src="http://images.iycar.cn/wp-content/uploads/2015/04/108.pic_hd.jpg" alt="玩物君"></a>
+
+                <div class="c-card-author__info__contacts">
+                    <a class="c-card-author__contact c-card-author__contact--email" href="mailto:coolbuy@iycar.com"
+                       target="_blank"></a>
+                </div>
+                <a class="c-card-author__wrapper" href="http://www.iycar.com/author/coolbuy" target="_blank">
+                    <p class="c-card-author__name">玩物君</p>
+
+                    <p class="c-card-author__position"></p>
+                </a>
+            </div>
+            <div class="c-card c-card-author__recent">
+                <div class="c-card-author__recent__counter"><b>219</b>文章总数</div>
+                <a class="c-card-author__recent__article" href="http://www.iycar.com/635991"
+                   target="_blank"><span>最近：</span>这 5 件睡眠神器，让你一觉睡到自然醒</a>
+            </div>
+        </div>
+        <div class="o-widget c-related-articles">
+            <div class="c-related-articles__headline">相关文章</div>
+        </div>
+        <div id="jiong" class="o-widget c-jiong c-jiong--block c-jiong--commercial">
+            <a href="http://www.iycar.com/promote/iycar-app/" target="_blank" rel="nofollow"><img class="c-jiong__image"
+                                                                                                  src="//iycar-cdn.b0.upaiyun.com/wp-content/uploads/2016/04/rightbanner.jpg"
+                                                                                                  alt="客户端推广"></a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="u-clearfix"></div>
+<div class="c-footer" id="footer">
+    <div class="o-wrapper">
+        <img class="c-footer__logo"
+             src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/iycarlogo.png">
+
+        <div class="c-footer__contacts c-contacts">
+            <a class="c-contacts__icon c-contacts__icon--email" href="mailto:info@iycar.com"></a>
+            <a class="c-contacts__icon c-contacts__icon--weibo" href="http://weibo.com/iycar"></a>
+
+            <div class="c-contacts__icon c-contacts__icon--wechat">
+                <div class="c-contacts__icon--wechat__qrcode c-popup-qrcode">
+                    <div class="c-popup-qrcode__title">关注爱范儿</div>
+                    <img class="js-qrcode c-popup-qrcode__image"
+                         src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/iycar-qrcode.jpg"/>
+
+                    <div class="c-popup-qrcode__hint">使用微信扫码关注爱范儿微信公众号</div>
+                </div>
+            </div>
+            <a class="c-contacts__icon c-contacts__icon--twitter" href="https://twitter.com/iycar"></a>
+            <a class="c-contacts__icon c-contacts__icon--rss" href="//iycar.com/feed"></a>
+        </div>
+        <div class="u-clearfix"></div>
+        <div class="c-footer__navigation">
+            <h5>关于我们</h5>
+            <a href="http://www.iycar.com/about/our-team/">关于我们</a>
+            <a href="http://www.iycar.com/joinus/">加入我们</a>
+            <a href="http://www.iycar.com/adinfo/">商务合作</a>
+            <a href="http://www.iycar.com/shequguize/">社区规则</a>
+        </div>
+        <div class="c-footer__navigation">
+            <h5>旗下品牌</h5>
+            <a href="http://www.iycar.com/app/">AppSolution</a>
+            <a href="http://www.iycar.com/coolbuy/">玩物志</a>
+            <a href="http://mindstore.io/">MindStore</a>
+            <a href="http://www.iycar.com/data/">数读</a>
+            <a href="https://socialbase.cn/">Socialbase</a>
+        </div>
+        <div class="c-footer__sponsors">
+            <a href="https://www.cdnzz.com/index.html"><img class="c-footer__sponsors__cdnzz"
+                                                            src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/cdnzz-colored.png"
+                                                            alt="速致"></a>
+            <a href="https://www.upyun.com/zh/index.html"><img class="c-footer__sponsors__upyun"
+                                                               src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/upyun-colored.png"
+                                                               alt="又拍云"></a>
+            <a href="http://www.rongcloud.cn/"><img class="c-footer__sponsors__rongcloud"
+                                                    src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/rongcloud-logo.png"
+                                                    alt="融云"></a>
+        </div>
+        <div class="u-clearfix"></div>
+        <div class="c-footer__copyright">
+            <a class="u-text-right" href="http://www.miibeian.gov.cn/">粤 ICP 备 10211557 号</a>
+
+            <p>版权所有 © 广州沃享信息科技有限公司 2008 - 2016。以商业目的使用爱范儿网站内容需获许可。非商业目的使用授权遵循 <a
+                    href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>。</p>
+
+            <p>All content is made available under the CC BY-NC 4.0 for non-commercial use. Commercial use of this
+                content is prohibited without explicit permission.</p>
+        </div>
+    </div>
+</div>
+
+<div class="c-goto-top" data-component="VisibilityOnScroll"
+     data-visibility-top-bound="1200" data-visibility-bottom-bound="#footer" style="visibility: hidden;">
+    <a href="http://www.iycar.com/about/contribute/"
+       class="c-goto-top-item c-goto-top-item--contribute c-goto-top-link"></a>
+
+    <div class="c-goto-top-item c-goto-top-item--qrcodes">
+        <div class="c-goto-top__qrcodes__container c-goto-top-qrcodes" data-component="Tab">
+            <div class=" o-grid-row" data-component="AwesomeUnderline">
+                <div class="o-grid-row__column--4">
+                    <span class="c-goto-top-qrcodes-header" as-decorated data-tab="iycar" data-default-tab>爱范儿</span>
+                </div>
+                <div class="o-grid-row__column--4 c-goto-top-qrcodes__tab">
+                    <span class="c-goto-top-qrcodes-header" as-decorated data-tab="appso">AppSolution</span>
+                </div>
+                <div class="o-grid-row__column--4 c-goto-top-qrcodes__tab">
+                    <span class="c-goto-top-qrcodes-header" as-decorated data-tab="coolbuy">玩物志</span>
+                </div>
+                <div class="c-goto-top-qrcodes__line" as-underline></div>
+            </div>
+            <div>
+                <div class="c-goto-top-qrcodes-body js-goto-top-qrcode" data-tab-target="iycar">
+                    <img src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/iycarqrcode.jpg"
+                         alt="Yca QR Code" class="c-goto-top-qrcodes-body__image">
+
+                    <p class="c-goto-top-qrcodes-body__text">关注爱范儿微信号，连接热爱，关注这个时代最好的产品。</p>
+                </div>
+                <div class="c-goto-top-qrcodes-body js-goto-top-qrcode" data-tab-target="appso">
+                    <img src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/appsoqrcode.jpg"
+                         alt="AppSo QR Code" class="c-goto-top-qrcodes-body__image">
+
+                    <p class="c-goto-top-qrcodes-body__text">想让你的手机好用到哭？关注这个号就够了。</p>
+                </div>
+                <div class="c-goto-top-qrcodes-body js-goto-top-qrcode" data-tab-target="coolbuy">
+                    <img src="http://iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/images/coolbuyqrcode.jpg"
+                         alt="CoolBuy QR Code" class="c-goto-top-qrcodes-body__image">
+
+                    <p class="c-goto-top-qrcodes-body__text">关注玩物志微信号，就是让你乱花钱。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="c-goto-top-item c-goto-top-item--go" data-component="GotoTop"></div>
+</div>
+
+
+<script type='text/javascript'
+        src='//iycar-cdn.b0.upaiyun.com/wp-content/themes/doge/static/build/js/desktop.1462763257539.js?ver=4.5'></script>
+<script type='text/javascript' src='http://iycar-cdn.b0.upaiyun.com/wp-includes/js/wp-embed.min.js?ver=4.5'></script>
+<!--[if gte IE 9]>
+<script src="http://cdn.iycar.cn/vendor/raven.min.js"></script>
+<script type="text/javascript">
+    Raven.config(
+            'https://d19b2d48c27542a2af4f6ff35063ebaf@app.getsentry.com/41363', {}
+    ).install();
+    window.onerror = Raven.process;
+</script>
+<![endif]-->
+<script type="text/javascript">
+    _atrk_opts = {atrk_acct: "M/54m1aU8KL352", domain: "iycar.com", dynamic: true};
+    (function () {
+        var as = document.createElement('script');
+        as.type = 'text/javascript';
+        as.async = true;
+        as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js";
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(as, s);
+    })();
+</script>
+<noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=M/54m1aU8KL352" style="display:none"
+               height="1" width="1" alt=""/></noscript>
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var widgetId = '';
+        if (widgetId) {
+            return new window.WidgetBuzz('#' + widgetId);
+        }
+        return;
+    });
+</script>
+
+<script type="text/javascript">window.NREUM || (NREUM = {});
+NREUM.info = {
+    "beacon": "bam.nr-data.net",
+    "licenseKey": "eee3fec2bc",
+    "applicationID": "3953741",
+    "transactionName": "M1FbZxFUXBdWVxFQVgobbEEKGlsKU1EdF0kMRA==",
+    "queueTime": 0,
+    "applicationTime": 5,
+    "atts": "HxZYEVlOTxk=",
+    "errorBeacon": "bam.nr-data.net",
+    "agent": ""
+}</script>
+</body>
+</html>
+
+<!-- t:0.14603, h:'Mon May  9 15:15:50 2016 UTC', H:'ip-172-31-2-190' --><!--
+Whitelist mode: 
+Remote address: 223.64.63.222
+Request REQUEST_URI: /coolbuy/653049
+Rebuilt REQUEST_URI: /coolbuy/653049
+Rebuilt QUERY_STRING: 
+
+Cacheable: 1
+Cache key: 2424675b862ce7dd13e8a70c04c078d8ff7e7e20
+Cache namespace: db99e7e417a46a9fb399eb0741008a64b67b0ae3
+Cache hit: 1
+Cache hits: 1
+Cache mtime: 1462806950.5727
+Cache age: 129.44348096848
+
+Memory usage: 2.25 MiB
+Peak memory usage: 2.25 MiB
+-->
+<!-- t:0.00666, h:'Mon May  9 23:18:00 2016 CST', H:'ip-172-31-12-38' -->

@@ -1,6 +1,5 @@
 (function ($, rcGlobal) {
     var comment =  function(){
-        return
         self = this;
         self.params = {
             post_id: $('#publish_form').find('input[name=post_id]').val(),

@@ -9,7 +9,7 @@ Author URI: http://www.cxzy.com/
 Tags: Young, China, Reviews
 */
 /* Global CSS */
-.clearfix{clear:both;font-size:1px;width:1px;height:0;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0}
+/*.clearfix{clear:both;font-size:1px;width:1px;height:0;visibility:hidden;margin-top:0px!important;*margin-top:-1px;line-height:0}*/
 
 .wpyounavi{ margin:2em 0em 1em; padding-left:1em; font-size:16px; height:36px; line-height:38px; color:#FFF; background:#1D6385 url(../images/navi.png) repeat-x 0 0;}
 .wpyounavi span{ float:left; padding:0px 10px; width:120px; height:36px; text-align:center; display:block; cursor:pointer;}
